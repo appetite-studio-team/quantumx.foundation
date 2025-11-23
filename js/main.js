@@ -104,30 +104,36 @@
             form.addEventListener('submit', function(e) {
                 e.preventDefault();
 
-                const formData = new FormData(form);
                 const emailInput = form.querySelector('input[type="email"]');
-                const emailValue = emailInput ? emailInput.value : '';
+                if (!emailInput || !emailInput.value) return;
+
+                // Build form data as URL-encoded string (required by Netlify)
+                const formData = new URLSearchParams();
+                formData.append('form-name', 'newsletter');
+                formData.append('email', emailInput.value);
 
                 // Submit to Netlify using AJAX (as per Netlify docs)
                 fetch('/', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: new URLSearchParams(formData).toString()
+                    body: formData.toString()
                 })
-                .then(() => {
-                    // Success - show toast and reset form
-                    Toast.show();
-                    if (emailInput) {
+                .then((response) => {
+                    if (response.ok) {
+                        // Success - show toast and reset form
+                        Toast.show();
+                        emailInput.value = '';
+                    } else {
+                        console.error('Form submission failed:', response.status);
+                        Toast.show(); // Still show toast for user feedback
                         emailInput.value = '';
                     }
                 })
                 .catch((error) => {
-                    // Error - show error message
+                    // Error - log and still show toast
                     console.error('Form submission error:', error);
-                    Toast.show(); // Still show toast for user feedback
-                    if (emailInput) {
-                        emailInput.value = '';
-                    }
+                    Toast.show();
+                    emailInput.value = '';
                 });
             });
         }
