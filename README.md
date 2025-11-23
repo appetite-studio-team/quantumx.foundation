@@ -17,10 +17,12 @@ quantumx.foundation/
 ├── index.html          # Main homepage
 ├── careers.html        # Careers page
 ├── README.md          # Project documentation
-└── images/            # Image assets
-    ├── App-Icon-Black.png
-    ├── cursor-image.png
-    └── qx-logo with name.png
+├── images/            # Image assets
+│   ├── App-Icon-Black.png
+│   ├── cursor-image.png
+│   └── qx-logo with name.png
+└── js/                # JavaScript files
+    └── main.js        # Main application logic
 ```
 
 ## Getting Started
