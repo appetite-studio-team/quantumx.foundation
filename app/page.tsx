@@ -7,7 +7,7 @@ const projects = [
     id: 'roadmap',
     title: 'Quantum Computing Roadmap 2026',
     description: 'Quantum Computing Roadmap 2026',
-    image: '/images/roadmap-new.png',
+    image: '/images/roadmap-new.jpg',
     link: 'https://roadmap.quantumx.school/',
     external: true,
   },
@@ -15,7 +15,7 @@ const projects = [
     id: 'vulnerable',
     title: 'Quantum Vulnerability Database',
     description: 'Quantum Vulnerability Database',
-    image: '/images/vulnerable.png',
+    image: '/images/vulnerable.jpg',
     link: 'https://vulnerable.quantumx.technology/',
     external: true,
   },
@@ -23,7 +23,7 @@ const projects = [
     id: 'qubit',
     title: 'Qubit Database',
     description: 'Qubit Database',
-    image: '/images/qubit.png',
+    image: '/images/qubit.jpg',
     link: 'https://qubit.quantumx.technology/',
     external: true,
   },
@@ -31,21 +31,21 @@ const projects = [
     id: 'pqc',
     title: 'Post Quantum Cryptography',
     description: 'Post quantum cryptography',
-    image: '/images/pqc.png',
+    image: '/images/pqc.jpg',
     link: '',
   },
   {
     id: 'qec',
     title: 'Quantum Experience Center, Bangalore',
     description: 'Quantum Experience Center, Bangalore',
-    image: '/images/qec.png',
+    image: '/images/qec.jpg',
     link: '',
   },
 ];
 
 // Data for Launch Photo Section
 const launchPhoto = {
-  image: '/images/launch-image.png',
+  image: '/images/launch-image.jpg',
   description: 'QuantumX launch with Hon. Deputy Chief Minister of Karnataka, Shri D. K. Shivakumar',
 };
 
@@ -219,7 +219,7 @@ export default function HomePage() {
             <div className="animate-fade-in-up animate-delay-200 relative">
               <div className="aspect-square rounded-3xl overflow-hidden relative">
                 <Image
-                  src="/images/nqm.png"
+                  src="/images/nqm.jpg"
                   alt="National Quantum Mission"
                   fill
                   className="object-cover"
@@ -335,7 +335,7 @@ export default function HomePage() {
             <div className="flex flex-col items-center gap-4 animate-fade-in-up animate-delay-200">
               <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden relative ring-2 ring-gray-700 ring-offset-4 ring-offset-black">
                 <Image
-                  src="/images/ajmal-founder.png"
+                  src="/images/ajmal-founder.jpg"
                   alt="Ajmal - Founder of QuantumX Foundation"
                   fill
                   className="object-cover"
