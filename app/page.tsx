@@ -324,7 +324,7 @@ export default function HomePage() {
             {/* Quote */}
             <blockquote className="mb-12">
               <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white leading-relaxed font-light max-w-4xl mx-auto px-2">
-                The quantum revolution isn&apos;t just about faster computers — it&apos;s
+                The quantum revolution isn&apos;t just about faster computers,it&apos;s
                 about reimagining what&apos;s possible. At QuantumX Foundation, we
                 believe that open collaboration and accessible education are the
                 keys to building a quantum future that benefits everyone.
