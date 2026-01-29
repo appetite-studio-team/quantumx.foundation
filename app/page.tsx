@@ -215,16 +215,17 @@ export default function HomePage() {
               </a>
             </div>
 
-            {/* Right side - Image */}
+            {/* Right side - Video */}
             <div className="animate-fade-in-up animate-delay-200 relative">
               <div className="aspect-square rounded-3xl overflow-hidden relative">
-                <Image
-                  src="/images/nqm.jpg"
-                  alt="National Quantum Mission"
-                  fill
-                  className="object-cover"
+                <video
+                  src="/video/infinity_loop_Animation.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
               </div>
               {/* Decorative elements */}
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-blue-500/20 rounded-full blur-2xl" />
@@ -423,6 +424,22 @@ export default function HomePage() {
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 border border-gray-600 rotate-12" />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3D Quantum Computer Section */}
+      <section className="bg-black py-16 lg:py-24">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <div className="aspect-video w-full rounded-2xl overflow-hidden">
+            <iframe
+              title="Quantum Computer"
+              className="w-full h-full"
+              frameBorder="0"
+              allowFullScreen
+              allow="autoplay; fullscreen; xr-spatial-tracking"
+              src="https://sketchfab.com/models/82006aac41744663a161ab844264ac2a/embed?autostart=1&ui_theme=dark"
+            />
           </div>
         </div>
       </section>
