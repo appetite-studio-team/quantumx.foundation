@@ -9,6 +9,7 @@
 
 body {
   cursor: url('/images/cursor-image.png'), auto;
+  background-color: #000;
 }
 
 a,

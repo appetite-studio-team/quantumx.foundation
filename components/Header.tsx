@@ -26,7 +26,7 @@ export function Header() {
         </div>
       </div>
 
-      <header className="fixed top-9 left-0 right-0 bg-black z-50 border-b border-gray-800">
+      <header className="fixed top-[34px] md:top-9 left-0 right-0 bg-black z-50 border-b border-gray-800">
         <nav className="max-w-7xl mx-auto px-6 lg:px-8 py-3 flex items-center justify-between">
         <Link href="/" className="flex items-center">
           <Image

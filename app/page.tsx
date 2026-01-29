@@ -74,7 +74,7 @@ export default function HomePage() {
               {/* Top row - Large card + QEC card */}
               <div className="flex gap-3 md:gap-4 items-end">
                 {/* Card - Quantum Experience Center */}
-                <div className="project-card w-24 sm:w-28 md:w-36 lg:w-40 aspect-square rounded-xl md:rounded-2xl overflow-hidden group relative">
+                <div className="project-card w-24 sm:w-28 md:w-36 lg:w-40 aspect-square rounded-xl md:rounded-2xl overflow-hidden relative">
                   <div className="absolute inset-0">
                     <Image
                       src={projects[4].image}
@@ -83,8 +83,8 @@ export default function HomePage() {
                       className="object-cover"
                     />
                   </div>
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-all duration-300 flex items-end p-2 md:p-3">
-                    <p className="text-white text-[10px] md:text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-2 md:p-3">
+                    <p className="text-white text-[10px] md:text-xs font-medium">
                       {projects[4].description}
                     </p>
                   </div>
@@ -95,7 +95,7 @@ export default function HomePage() {
                   href={projects[1].link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="project-card w-36 sm:w-44 md:w-56 lg:w-64 aspect-square rounded-xl md:rounded-2xl overflow-hidden group relative"
+                  className="project-card w-36 sm:w-44 md:w-56 lg:w-64 aspect-square rounded-xl md:rounded-2xl overflow-hidden relative"
                 >
                   <div className="absolute inset-0">
                     <Image
@@ -105,8 +105,8 @@ export default function HomePage() {
                       className="object-cover"
                     />
                   </div>
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-all duration-300 flex items-end p-3 md:p-4">
-                    <p className="text-white text-xs md:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-3 md:p-4">
+                    <p className="text-white text-xs md:text-sm font-medium">
                       {projects[1].description}
                     </p>
                   </div>
@@ -120,7 +120,7 @@ export default function HomePage() {
                   href={projects[0].link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="project-card w-24 sm:w-28 md:w-36 lg:w-40 aspect-square rounded-xl md:rounded-2xl overflow-hidden group relative"
+                  className="project-card w-24 sm:w-28 md:w-36 lg:w-40 aspect-square rounded-xl md:rounded-2xl overflow-hidden relative"
                 >
                   <div className="absolute inset-0">
                     <Image
@@ -130,8 +130,8 @@ export default function HomePage() {
                       className="object-cover"
                     />
                   </div>
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-all duration-300 flex items-end p-2 md:p-3">
-                    <p className="text-white text-[10px] md:text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-2 md:p-3">
+                    <p className="text-white text-[10px] md:text-xs font-medium">
                       {projects[0].description}
                     </p>
                   </div>
@@ -142,7 +142,7 @@ export default function HomePage() {
                   href={projects[2].link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="project-card w-24 sm:w-28 md:w-36 lg:w-40 aspect-square rounded-xl md:rounded-2xl overflow-hidden group relative"
+                  className="project-card w-24 sm:w-28 md:w-36 lg:w-40 aspect-square rounded-xl md:rounded-2xl overflow-hidden relative"
                 >
                   <div className="absolute inset-0">
                     <Image
@@ -152,15 +152,15 @@ export default function HomePage() {
                       className="object-cover"
                     />
                   </div>
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-all duration-300 flex items-end p-2 md:p-3">
-                    <p className="text-white text-[10px] md:text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-2 md:p-3">
+                    <p className="text-white text-[10px] md:text-xs font-medium">
                       {projects[2].description}
                     </p>
                   </div>
                 </a>
 
                 {/* Card 3 - Post Quantum Cryptography */}
-                <div className="project-card w-24 sm:w-28 md:w-36 lg:w-40 aspect-square rounded-xl md:rounded-2xl overflow-hidden group relative">
+                <div className="project-card w-24 sm:w-28 md:w-36 lg:w-40 aspect-square rounded-xl md:rounded-2xl overflow-hidden relative">
                   <div className="absolute inset-0">
                     <Image
                       src={projects[3].image}
@@ -169,8 +169,8 @@ export default function HomePage() {
                       className="object-cover"
                     />
                   </div>
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-all duration-300 flex items-end p-2 md:p-3">
-                    <p className="text-white text-[10px] md:text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-2 md:p-3">
+                    <p className="text-white text-[10px] md:text-xs font-medium">
                       {projects[3].description}
                     </p>
                   </div>
