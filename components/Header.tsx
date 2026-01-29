@@ -11,7 +11,7 @@ export function Header() {
   return (
     <>
       {/* Announcement Banner */}
-      <div className="fixed top-0 left-0 right-0 z-50 py-2 px-3 md:px-4" style={{ backgroundColor: '#bdee63' }}>
+      <div className="fixed top-0 left-0 right-0 z-50 py-2 px-3 md:px-4" style={{ backgroundColor: '#b4f730' }}>
         <div className="max-w-7xl mx-auto flex items-center justify-center gap-1.5 md:gap-2 text-black text-xs md:text-sm">
           <span className="hidden sm:inline">What breaks first during a post-quantum migration?</span>
           <span className="sm:hidden text-center">Post-quantum migration</span>
@@ -19,7 +19,7 @@ export function Header() {
             href="https://www.linkedin.com/pulse/what-breaks-first-during-post-quantum-migration-quantumx-foundation-69zdc/"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-medium hover:underline whitespace-nowrap"
+            className="font-medium underline whitespace-nowrap"
           >
             Read more
           </a>
