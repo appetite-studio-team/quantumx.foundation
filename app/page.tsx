@@ -28,11 +28,12 @@ const projects = [
     external: true,
   },
   {
-    id: 'pqc',
-    title: 'Post Quantum Cryptography',
-    description: 'Post quantum cryptography',
+    id: 'school',
+    title: 'QuantumX School',
+    description: 'QuantumX School',
     image: '/images/pqc.jpg',
-    link: '',
+    link: 'https://quantumx.school/',
+    external: true,
   },
   {
     id: 'qec',
@@ -159,8 +160,13 @@ export default function HomePage() {
                   </div>
                 </a>
 
-                {/* Card 3 - Post Quantum Cryptography */}
-                <div className="project-card w-24 sm:w-28 md:w-36 lg:w-40 aspect-square rounded-xl md:rounded-2xl overflow-hidden relative">
+                {/* Card 3 - QuantumX School */}
+                <a
+                  href={projects[3].link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-card w-24 sm:w-28 md:w-36 lg:w-40 aspect-square rounded-xl md:rounded-2xl overflow-hidden relative"
+                >
                   <div className="absolute inset-0">
                     <Image
                       src={projects[3].image}
@@ -174,7 +180,7 @@ export default function HomePage() {
                       {projects[3].description}
                     </p>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </div>

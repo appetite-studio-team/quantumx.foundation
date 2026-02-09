@@ -2,28 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom cursor */
-* {
-  cursor: url('/images/cursor-image.png'), auto !important;
-}
-
 body {
-  cursor: url('/images/cursor-image.png'), auto;
   background-color: #000;
-}
-
-a,
-button,
-[role='button'],
-input[type='submit'],
-input[type='button'] {
-  cursor: url('/images/cursor-image.png'), pointer;
-}
-
-input[type='text'],
-input[type='email'],
-textarea {
-  cursor: url('/images/cursor-image.png'), text;
 }
 
 /* Smooth scroll behavior */
