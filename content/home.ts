@@ -3,7 +3,6 @@
  */
 
 export const hero = {
-  logoLabel: 'QUANTUMX',
   headlineLine1: 'THE QUANTUM',
   headlineLine2: 'FOUNDATION.',
   tagline:
@@ -17,16 +16,6 @@ export const hero = {
     { id: '6', label: 'Research' },
     { id: '7', label: 'Open Source' },
   ],
-} as const;
-
-export const intersectingCulture = {
-  badge: "Part of India's ₹6,000 Cr Quantum Mission",
-  headingLine1: "ALIGNED WITH INDIA'S",
-  headingLine2: 'QUANTUM VISION',
-  paragraph:
-    "We are proud to align our efforts with the National Quantum Mission of India, contributing to a shared goal of advancing quantum research, talent, and infrastructure across the country.",
-  videoSrc: '/video/infinity_loop_Animation.mp4',
-  posterSrc: '/images/nqm.jpg',
 } as const;
 
 export const technology = {
@@ -43,10 +32,11 @@ export const capabilities = {
     { number: '04', label: 'Experience Center & Outreach', href: '#' },
     { number: '05', label: 'Open Source & Platforms', href: '#' },
   ],
-  leftImageSrc: '/images/roadmap-new.jpg',
-  leftImageAlt: 'Quantum Computing Roadmap',
+  leftImageSrc: '/images/quantum-computer.png',
+  leftImageAlt: 'Quantum computer',
   ctaText: 'VIEW OPEN POSITIONS →',
-  ctaHref: '/careers',
+  ctaHref: 'https://wellfound.com/company/quantumx-qx-pvt-ltd',
+  ctaExternal: true,
 } as const;
 
 export const studioPhilosophy = {
@@ -60,7 +50,6 @@ export const studioPhilosophy = {
 } as const;
 
 export type HeroContent = typeof hero;
-export type IntersectingCultureContent = typeof intersectingCulture;
 export type TechnologyContent = typeof technology;
 export type CapabilitiesContent = typeof capabilities;
 export type StudioPhilosophyContent = typeof studioPhilosophy;

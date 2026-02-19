@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { hero } from '@/content/home';
+import Image from 'next/image';
 import { Menu } from '@/components/menu/Menu';
 
 export function SiteHeader() {
@@ -10,13 +10,20 @@ export function SiteHeader() {
 
   return (
     <>
-      <header className="fixed left-0 right-0 top-0 z-[10001] flex items-center justify-between px-6 pt-8 md:px-10 md:pt-10">
+      <header className="fixed left-0 right-0 top-10 z-[10001] flex items-center justify-between px-6 pt-6 md:px-10 md:pt-8">
         <Link
           href="/"
-          className="font-heading text-sm font-medium uppercase tracking-[0.2em] text-text-primary hover:text-accent"
+          className="text-text-primary hover:opacity-80 transition-opacity"
           data-cursor="link"
+          aria-label="QuantumX Foundation home"
         >
-          {hero.logoLabel}
+          <Image
+            src="/images/App-Icon-Black.png"
+            alt=""
+            width={40}
+            height={40}
+            className="h-8 w-8 md:h-9 md:w-9"
+          />
         </Link>
         <button
           type="button"

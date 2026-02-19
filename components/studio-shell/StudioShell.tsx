@@ -6,10 +6,12 @@ import { Cursor } from '@/components/cursor/Cursor';
 import { MouseTracking } from '@/components/mouse-tracking/MouseTracking';
 import { PageTransition } from '@/components/transitions/PageTransition';
 import { SiteHeader } from '@/components/site-header/SiteHeader';
+import { AnnouncementBanner } from '@/components/AnnouncementBanner';
 
 export function StudioShell({ children }: { children: ReactNode }) {
   return (
     <>
+      <AnnouncementBanner />
       <SiteHeader />
       <SmoothScroll>
         <PageTransition>{children}</PageTransition>

@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { menuItems } from '@/content/site';
+import { XIcon, LinkedInIcon } from '@/components/icons';
 
 const overlayVariants = {
   closed: { opacity: 0 },
@@ -26,6 +27,9 @@ const itemVariants = {
   }),
   exit: { opacity: 0, x: -8 },
 };
+
+const linkClassName =
+  'font-heading text-2xl font-medium uppercase tracking-tight text-text-primary hover:text-accent md:text-3xl lg:text-4xl';
 
 interface MenuProps {
   isOpen: boolean;
@@ -77,38 +81,53 @@ export function Menu({ isOpen, onClose }: MenuProps) {
                   key={item.id}
                   custom={i}
                   variants={itemVariants}
-                  className="flex flex-col items-center gap-1 md:gap-2"
+                  className={`flex flex-col items-center gap-1 md:gap-2 ${'links' in item ? 'mt-8 md:mt-10' : ''}`}
                 >
                   {'links' in item ? (
-                    <>
-                      <span className="font-heading text-xs uppercase tracking-[0.25em] text-gray-secondary">
-                        {item.label}
-                      </span>
-                      <div className="flex gap-6 md:gap-8">
+                    <div className="flex items-center justify-center gap-6 md:gap-8">
                         {item.links.map((link) => (
                           <a
                             key={link.label}
                             href={link.href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="font-heading text-2xl font-medium uppercase tracking-tight text-text-primary hover:text-accent md:text-3xl lg:text-4xl"
+                            className="text-text-primary hover:text-accent transition-colors"
                             data-cursor="link"
                             onClick={onClose}
+                            aria-label={link.label}
                           >
-                            {link.label}
+                            {link.label === 'X' ? (
+                              <XIcon className="h-8 w-8 md:h-9 md:w-9" />
+                            ) : (
+                              <LinkedInIcon className="h-8 w-8 md:h-9 md:w-9" />
+                            )}
                           </a>
                         ))}
-                      </div>
-                    </>
+                    </div>
                   ) : (
-                    <Link
-                      href={item.href}
-                      className="font-heading text-2xl font-medium uppercase tracking-tight text-text-primary hover:text-accent md:text-3xl lg:text-4xl"
-                      data-cursor="link"
-                      onClick={onClose}
-                    >
-                      {item.label}
-                    </Link>
+                    <>
+                      {'external' in item && item.external ? (
+                        <a
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={linkClassName}
+                          data-cursor="link"
+                          onClick={onClose}
+                        >
+                          {item.label}
+                        </a>
+                      ) : (
+                        <Link
+                          href={item.href}
+                          className={linkClassName}
+                          data-cursor="link"
+                          onClick={onClose}
+                        >
+                          {item.label}
+                        </Link>
+                      )}
+                    </>
                   )}
                 </motion.li>
               ))}

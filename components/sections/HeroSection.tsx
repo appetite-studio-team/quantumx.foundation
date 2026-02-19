@@ -8,7 +8,7 @@ export function HeroSection() {
   return (
     <section className="relative flex min-h-screen flex-col bg-background">
       {/* Center content */}
-      <div className="flex flex-1 flex-col items-center justify-center px-6 pt-24 pb-32 md:px-10">
+      <div className="flex flex-1 flex-col items-center justify-center px-6 pt-32 pb-32 md:px-10">
         <motion.div
           className="flex max-w-5xl flex-col items-center text-center"
           variants={staggerContainer}

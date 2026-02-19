@@ -20,17 +20,22 @@ export const site = {
   wellfoundJobsUrl: 'https://wellfound.com/company/quantumx-qx-pvt-ltd',
 } as const;
 
-/** Menu dropdown items in priority order: Socials, Careers, Projects, Founder note */
+/** Project links from OG site (for menu and capabilities) */
+export const projectLinks = [
+  { label: 'Quantum Roadmap', href: 'https://roadmap.quantumx.school/' },
+  { label: 'Vulnerability Database', href: 'https://vulnerable.quantumx.technology/' },
+  { label: 'Qubit Database', href: 'https://qubit.quantumx.technology/' },
+  { label: 'QuantumX School', href: 'https://quantumx.school/' },
+  { label: 'Quantum Experience Center', href: '/#capabilities' },
+] as const;
+
+/** Menu dropdown: Careers (Wellfound), Projects (section link), Founder note, Socials (icons) */
 export const menuItems = [
-  {
-    id: 'socials',
-    label: 'Socials',
-    links: site.externalLinks,
-  },
   {
     id: 'careers',
     label: 'Careers',
-    href: '/careers/',
+    href: site.wellfoundJobsUrl,
+    external: true,
   },
   {
     id: 'projects',
@@ -41,6 +46,11 @@ export const menuItems = [
     id: 'founder-note',
     label: 'Founder note',
     href: '/#founder-note',
+  },
+  {
+    id: 'socials',
+    label: 'Socials',
+    links: site.externalLinks,
   },
 ] as const;
 

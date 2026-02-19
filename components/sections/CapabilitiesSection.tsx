@@ -72,13 +72,26 @@ export function CapabilitiesSection() {
             viewport={defaultViewport}
             transition={{ ...defaultTransition, delay: 0.3 }}
           >
-            <Link
-              href={capabilities.ctaHref}
-              className="inline-flex items-center gap-2 font-heading text-sm font-semibold uppercase tracking-[0.2em] text-accent hover:underline"
-              data-magnetic
-            >
-              {capabilities.ctaText}
-            </Link>
+            {capabilities.ctaExternal ? (
+              <a
+                href={capabilities.ctaHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 font-heading text-sm font-semibold uppercase tracking-[0.2em] text-accent hover:underline"
+                data-magnetic
+                data-cursor="link"
+              >
+                {capabilities.ctaText}
+              </a>
+            ) : (
+              <Link
+                href={capabilities.ctaHref}
+                className="inline-flex items-center gap-2 font-heading text-sm font-semibold uppercase tracking-[0.2em] text-accent hover:underline"
+                data-magnetic
+              >
+                {capabilities.ctaText}
+              </Link>
+            )}
           </motion.div>
         </div>
       </div>

@@ -10,8 +10,9 @@ A clean, modern website for QuantumX Foundation built with **Next.js 14** and **
 - **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
 - **Modern UI**: Clean, minimalist design inspired by contemporary tech websites
 - **SEO Optimized**: Full metadata, Open Graph, and Twitter Card support
-- **Custom Fonts**: Playfair Display (serif) and Inter (sans-serif) via next/font
-- **Static Export**: Ready for deployment to Netlify, Vercel, or any static hosting
+- **Custom Fonts**: Space Grotesk (heading) and Inter (body) via next/font
+- **Framer Motion**: Section animations and transitions
+- **Lenis**: Smooth scrolling
 
 ## Project Structure
 
@@ -19,25 +20,28 @@ A clean, modern website for QuantumX Foundation built with **Next.js 14** and **
 quantumx.foundation/
 ├── app/
 │   ├── layout.tsx          # Root layout with fonts and metadata
-│   ├── page.tsx            # Home page
+│   ├── page.tsx            # Home page (6 sections)
 │   ├── globals.css         # Global styles and Tailwind imports
+│   ├── sitemap.ts
+│   ├── robots.ts
 │   └── careers/
 │       └── page.tsx        # Careers page
 ├── components/
-│   ├── Header.tsx          # Navigation header
-│   ├── Footer.tsx          # Footer with newsletter form
-│   ├── Toast.tsx           # Toast notification component
-│   ├── NewsletterForm.tsx  # Newsletter subscription form
-│   └── icons/              # SVG icon components
-│       ├── XIcon.tsx
-│       ├── LinkedInIcon.tsx
-│       ├── MenuIcon.tsx
-│       └── CheckCircleIcon.tsx
-├── public/
-│   └── images/             # Static image assets
-│       ├── App-Icon-Black.png
-│       ├── cursor-image.png
-│       └── qx-logo with name.png
+│   ├── site-header/        # App bar with logo and [MENU]
+│   ├── menu/               # Full-screen dropdown menu
+│   ├── sections/            # Hero, Quantum Speedup, Technology, Capabilities, Founder, Contact
+│   ├── studio-shell/       # Shell: header, smooth scroll, cursor, mouse tracking
+│   ├── cursor/             # Custom cursor
+│   ├── smooth-scroll/      # Lenis wrapper
+│   ├── transitions/        # Page transition
+│   └── icons/              # XIcon, LinkedInIcon, MenuIcon, CheckCircleIcon
+├── content/
+│   ├── site.ts             # Site-wide: menu, footer, links
+│   ├── home.ts             # Home page copy and image paths
+│   └── careers.ts          # Careers page copy
+├── public/images/          # App-Icon-Black.png, quantum-computer.png, ajmal-founder.jpg, etc.
+├── lib/                    # motion-variants
+├── hooks/                  # useLenis, useCursor, useMousePosition, useReducedMotion
 ├── package.json
 ├── tailwind.config.ts
 ├── tsconfig.json

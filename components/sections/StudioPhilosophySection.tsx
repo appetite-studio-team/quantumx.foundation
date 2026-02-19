@@ -16,8 +16,8 @@ export function StudioPhilosophySection() {
 
   return (
     <section ref={containerRef} id="founder-note" className="bg-background py-section px-6 text-text-primary md:px-10">
-      <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-2 md:gap-16 lg:gap-24">
-        {/* Left: founder image with parallax */}
+      <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[1fr,3fr] md:gap-16 lg:gap-24">
+        {/* Left: founder image with parallax (half the previous column width) */}
         <motion.div
           className="relative aspect-[3/4] overflow-hidden rounded-sm bg-gray-secondary/20"
           style={{ y: imageY }}
@@ -32,8 +32,8 @@ export function StudioPhilosophySection() {
           <div className="absolute inset-0 bg-gradient-to-b from-background/20 to-transparent pointer-events-none" />
         </motion.div>
 
-        {/* Right: heading + paragraph + caption */}
-        <div className="flex flex-col justify-center">
+        {/* Right: heading + paragraph + caption (center aligned) */}
+        <div className="flex flex-col items-center justify-center text-center">
           <motion.div
             variants={staggerContainer}
             initial="initial"
@@ -48,7 +48,7 @@ export function StudioPhilosophySection() {
               {studioPhilosophy.heading}
             </motion.h2>
             <motion.p
-              className="max-w-lg text-base leading-relaxed text-gray-secondary md:text-lg"
+              className="mx-auto max-w-lg text-base leading-relaxed text-gray-secondary md:text-lg"
               variants={staggerItem}
             >
               {studioPhilosophy.paragraph}
