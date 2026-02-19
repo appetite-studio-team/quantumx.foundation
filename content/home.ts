@@ -27,10 +27,10 @@ export const technology = {
 export const capabilities = {
   items: [
     { number: '01', label: 'Quantum Research & Roadmap', href: 'https://roadmap.quantumx.school/' },
-    { number: '02', label: 'Vulnerability & Qubit Databases', href: 'https://vulnerable.quantumx.technology/' },
+    { number: '02', label: 'Quantum Vulnerability System', href: 'https://vulnerable.quantumx.technology/' },
     { number: '03', label: 'QuantumX School & Education', href: 'https://quantumx.school/' },
-    { number: '04', label: 'Experience Center & Outreach', href: '#' },
-    { number: '05', label: 'Open Source & Platforms', href: '#' },
+    { number: '04', label: 'Quantum Qubit Database', href: 'https://qubit.quantumx.technology/' },
+    { number: '05', label: 'Experience Center & Outreach', href: '/coming-soon' },
   ],
   leftImageSrc: '/images/quantum-computer.png',
   leftImageAlt: 'Quantum computer',
