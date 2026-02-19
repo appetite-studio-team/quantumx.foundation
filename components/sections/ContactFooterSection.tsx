@@ -1,22 +1,12 @@
 'use client';
 
-import { useState, useCallback } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { defaultViewport, defaultTransition } from '@/lib/motion-variants';
 import { site, projectLinks } from '@/content/site';
+import { CopyEmail } from '@/components/ui/CopyEmail';
 
 export function ContactFooterSection() {
-  const [copied, setCopied] = useState(false);
-
-  const copyEmail = useCallback((e: React.MouseEvent) => {
-    e.preventDefault();
-    navigator.clipboard.writeText(site.email).then(() => {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    });
-  }, []);
-
   return (
     <footer
       id="contact"
@@ -37,24 +27,7 @@ export function ContactFooterSection() {
           viewport={defaultViewport}
           transition={defaultTransition}
         >
-          <div className="relative inline-block">
-            <button
-              type="button"
-              onClick={copyEmail}
-              className="group relative block font-heading text-xl font-bold uppercase leading-tight tracking-tight text-text-primary hover:text-accent break-words text-left sm:text-2xl md:text-4xl lg:text-5xl"
-              data-cursor="link"
-              aria-label={`Copy email ${site.email}`}
-            >
-              {site.email.toUpperCase()}
-              {/* Copy email tooltip - purple box, white text */}
-              <span
-                className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap px-4 py-2 font-heading text-sm font-medium uppercase tracking-wider text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100 pointer-events-none bg-purple-600 ${copied ? '!opacity-100' : ''}`}
-                aria-hidden
-              >
-                {copied ? 'Copied!' : 'Copy email →'}
-              </span>
-            </button>
-          </div>
+          <CopyEmail email={site.email} />
           <p className="mt-4 text-sm uppercase tracking-[0.2em] text-gray-secondary">
             {site.tagline}
           </p>
