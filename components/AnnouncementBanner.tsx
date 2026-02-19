@@ -12,10 +12,11 @@ export function AnnouncementBanner() {
           href="https://www.linkedin.com/pulse/what-breaks-first-during-post-quantum-migration-quantumx-foundation-69zdc/"
           target="_blank"
           rel="noopener noreferrer"
-          className="whitespace-nowrap font-medium underline"
+          className="inline-flex items-center gap-1 whitespace-nowrap font-medium underline"
           data-cursor="link"
         >
           Read more
+          <span aria-hidden className="text-[0.9em]">↗</span>
         </a>
       </div>
     </div>
