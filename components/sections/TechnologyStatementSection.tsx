@@ -2,9 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { defaultViewport, defaultTransition } from '@/lib/motion-variants';
-
-const PHILOSOPHY =
-  'We believe technology is not just a tool but a language. It shapes how we communicate, create and experience the world. Our work sits at the intersection of rigorous craft and forward-thinking innovation—where every pixel and every frame serves a larger idea.';
+import { technology } from '@/content/home';
 
 export function TechnologyStatementSection() {
   return (
@@ -17,7 +15,7 @@ export function TechnologyStatementSection() {
           viewport={defaultViewport}
           transition={defaultTransition}
         >
-          & TECHNOLOGY
+          {technology.heading}
         </motion.h2>
         <motion.p
           className="mt-12 max-w-2xl text-lg leading-relaxed text-gray-secondary md:mt-16 md:text-xl"
@@ -26,7 +24,7 @@ export function TechnologyStatementSection() {
           viewport={defaultViewport}
           transition={{ ...defaultTransition, delay: 0.15 }}
         >
-          {PHILOSOPHY}
+          {technology.paragraph}
         </motion.p>
       </div>
     </section>

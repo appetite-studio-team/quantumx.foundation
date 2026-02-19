@@ -1,5 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import {
+  careersHero,
+  positions,
+  whyJoinUs,
+  careersCta,
+  careersApplyEmail,
+} from '@/content/careers';
+import { site } from '@/content/site';
 
 export const metadata: Metadata = {
   title: 'Careers',
@@ -23,94 +31,43 @@ export const metadata: Metadata = {
   },
 };
 
-const positions = [
-  {
-    title: 'Quantum Research Scientist',
-    type: 'Full-time',
-    location: 'Remote',
-    description:
-      "We're seeking a quantum research scientist to lead groundbreaking research in post-quantum cryptography and quantum computing systems.",
-    emailSubject: 'Quantum Research Scientist Application',
-  },
-  {
-    title: 'Open Source Developer',
-    type: 'Full-time',
-    location: 'Remote',
-    description:
-      'Help us build open-source quantum computing tools and libraries that make quantum technology accessible to everyone.',
-    emailSubject: 'Open Source Developer Application',
-  },
-  {
-    title: 'Quantum Systems Engineer',
-    type: 'Full-time',
-    location: 'Remote',
-    description:
-      'Design and build reliable, scalable quantum systems that form the foundation of our post-quantum infrastructure.',
-    emailSubject: 'Quantum Systems Engineer Application',
-  },
-];
-
-const whyJoinUs = [
-  {
-    title: 'Open Source First',
-    description:
-      'We believe in open collaboration. Your work will contribute to open-source projects that benefit the entire quantum community.',
-  },
-  {
-    title: 'Cutting-Edge Research',
-    description:
-      'Work on the forefront of quantum technology, tackling challenges that will shape the future of computing and cryptography.',
-  },
-  {
-    title: 'Remote First',
-    description:
-      "Work from anywhere. We're a distributed team that values flexibility and work-life balance.",
-  },
-  {
-    title: 'Impact-Driven',
-    description:
-      'Your contributions will help build a more accessible and reliable quantum future for everyone.',
-  },
-];
-
 export default function CareersPage() {
   return (
-    <main className="pt-24">
+    <main className="min-h-screen bg-background text-text-primary">
       {/* Careers Hero Section */}
-      <section className="max-w-4xl mx-auto px-6 lg:px-8 py-12 lg:py-16">
-        <h1 className="serif-heading text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-          Work at QuantumX Foundation
+      <section className="mx-auto max-w-4xl px-6 py-section lg:px-8">
+        <h1 className="font-heading text-4xl font-bold uppercase leading-tight tracking-tight text-text-primary md:text-5xl lg:text-6xl">
+          {careersHero.title}
         </h1>
-        <p className="text-xl md:text-2xl text-gray-700 mb-12 leading-relaxed max-w-3xl">
-          Join us in building the foundations of the post-quantum era.
-          We&apos;re looking for passionate individuals who share our vision of
-          an open, accessible, and reliable quantum future.
+        <p className="mt-6 max-w-3xl text-xl leading-relaxed text-gray-secondary md:text-2xl">
+          {careersHero.description}
         </p>
       </section>
 
       {/* Open Positions Section */}
-      <section className="max-w-4xl mx-auto px-6 lg:px-8 py-12 lg:py-16">
-        <h2 className="serif-heading text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+      <section className="mx-auto max-w-4xl px-6 py-section lg:px-8">
+        <h2 className="font-heading text-3xl font-bold uppercase tracking-tight text-text-primary md:text-4xl">
           Open Positions
         </h2>
-        <div className="space-y-6">
+        <div className="mt-8 space-y-6">
           {positions.map((position, index) => (
             <div
               key={index}
-              className="border border-gray-200 rounded-lg p-6 hover:border-gray-300 transition-colors"
+              className="border border-gray-secondary/20 rounded-lg p-6 transition-colors hover:border-accent/30"
             >
-              <h3 className="text-2xl font-semibold text-gray-900 mb-2">
+              <h3 className="text-2xl font-semibold text-text-primary">
                 {position.title}
               </h3>
-              <p className="text-gray-600 mb-4">
+              <p className="mt-2 text-gray-secondary">
                 {position.type} • {position.location}
               </p>
-              <p className="text-gray-700 mb-4">{position.description}</p>
+              <p className="mt-4 text-text-primary/90">{position.description}</p>
               <a
-                href={`mailto:careers@quantumx.foundation?subject=${encodeURIComponent(
+                href={`mailto:${careersApplyEmail}?subject=${encodeURIComponent(
                   position.emailSubject
                 )}`}
-                className="text-gray-900 font-medium hover:underline"
+                className="mt-4 inline-block font-medium text-accent hover:underline"
+                data-cursor="link"
               >
                 Apply Now →
               </a>
@@ -119,10 +76,11 @@ export default function CareersPage() {
         </div>
         <div className="mt-12 text-center">
           <a
-            href="https://wellfound.com/company/appetite-studio/jobs"
+            href={site.wellfoundJobsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-gray-100 hover:bg-gray-200 text-gray-900 px-8 py-4 rounded-lg transition-colors font-medium"
+            className="inline-block border border-gray-secondary/30 bg-background px-8 py-4 font-medium text-text-primary transition-colors hover:border-accent hover:text-accent"
+            data-cursor="link"
           >
             For More Openings →
           </a>
@@ -130,40 +88,53 @@ export default function CareersPage() {
       </section>
 
       {/* Why Join Us Section */}
-      <section className="max-w-4xl mx-auto px-6 lg:px-8 py-12 lg:py-16">
-        <h2 className="serif-heading text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+      <section className="mx-auto max-w-4xl px-6 py-section lg:px-8">
+        <h2 className="font-heading text-3xl font-bold uppercase tracking-tight text-text-primary md:text-4xl">
           Why Join Us
         </h2>
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="mt-8 grid gap-8 md:grid-cols-2">
           {whyJoinUs.map((item, index) => (
             <div key={index}>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              <h3 className="text-xl font-semibold text-text-primary">
                 {item.title}
               </h3>
-              <p className="text-gray-700">{item.description}</p>
+              <p className="mt-3 text-gray-secondary">{item.description}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="max-w-4xl mx-auto px-6 lg:px-8 py-12 lg:py-16">
-        <div className="bg-gray-50 rounded-2xl p-8 md:p-12">
-          <h2 className="serif-heading text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Don&apos;t see a role that fits?
+      <section className="mx-auto max-w-4xl px-6 py-section lg:px-8">
+        <div className="rounded-lg border border-gray-secondary/20 bg-gray-secondary/5 p-8 md:p-12">
+          <h2 className="font-heading text-3xl font-bold uppercase tracking-tight text-text-primary md:text-4xl">
+            {careersCta.headline}
           </h2>
-          <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-            We&apos;re always looking for talented individuals who share our
-            vision. Send us your resume and tell us how you&apos;d like to
-            contribute.
+          <p className="mt-4 text-lg leading-relaxed text-gray-secondary">
+            {careersCta.body}
           </p>
           <a
-            href="mailto:hi@quantumx.foundation?subject=General Application"
-            className="inline-block bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 rounded-lg transition-colors font-medium"
+            href={`mailto:${careersCta.mailto}?subject=${encodeURIComponent(
+              careersCta.mailtoSubject
+            )}`}
+            className="mt-8 inline-block bg-accent px-8 py-4 font-medium text-background transition-opacity hover:opacity-90"
+            data-cursor="link"
+            data-magnetic
           >
-            Get in Touch
+            {careersCta.buttonText}
           </a>
         </div>
+      </section>
+
+      {/* Back to home */}
+      <section className="mx-auto max-w-4xl px-6 pb-section lg:px-8">
+        <Link
+          href="/"
+          className="text-sm uppercase tracking-[0.2em] text-gray-secondary hover:text-accent"
+          data-cursor="link"
+        >
+          ← Back to home
+        </Link>
       </section>
     </main>
   );

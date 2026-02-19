@@ -2,35 +2,11 @@
 
 import { motion } from 'framer-motion';
 import { staggerContainer, staggerItem } from '@/lib/motion-variants';
-
-const GALLERY_ITEMS = [
-  { id: 1, label: 'Motion' },
-  { id: 2, label: 'Design' },
-  { id: 3, label: 'Interactive' },
-  { id: 4, label: 'Experience' },
-  { id: 5, label: 'Culture' },
-  { id: 6, label: 'Technology' },
-  { id: 7, label: 'Production' },
-  { id: 8, label: 'Studio' },
-];
+import { hero } from '@/content/home';
 
 export function HeroSection() {
   return (
     <section className="relative flex min-h-screen flex-col bg-background">
-      {/* Top bar */}
-      <header className="absolute left-0 right-0 top-0 z-10 flex items-center justify-between px-6 pt-8 md:px-10 md:pt-10">
-        <span className="font-heading text-sm font-medium uppercase tracking-[0.2em] text-text-primary">
-          DIALECT
-        </span>
-        <button
-          type="button"
-          className="font-heading text-sm font-medium uppercase tracking-[0.2em] text-text-primary hover:text-accent"
-          data-cursor="link"
-        >
-          [MENU]
-        </button>
-      </header>
-
       {/* Center content */}
       <div className="flex flex-1 flex-col items-center justify-center px-6 pt-24 pb-32 md:px-10">
         <motion.div
@@ -43,16 +19,15 @@ export function HeroSection() {
             className="font-heading text-clamp-hero font-bold uppercase leading-[0.95] tracking-tight-heading text-text-primary"
             variants={staggerItem}
           >
-            EXPERT DIGITAL
+            {hero.headlineLine1}
             <br />
-            PRODUCTION
+            {hero.headlineLine2}
           </motion.h1>
           <motion.p
             className="mt-6 max-w-xl text-sm leading-relaxed text-gray-secondary md:text-base"
             variants={staggerItem}
           >
-            Award-winning motion, design and interactive experiences that connect
-            culture, technology and contemporary aesthetics.
+            {hero.tagline}
           </motion.p>
         </motion.div>
       </div>
@@ -67,7 +42,7 @@ export function HeroSection() {
               x: { repeat: Infinity, repeatType: 'loop', duration: 60, ease: 'linear' },
             }}
           >
-            {[...GALLERY_ITEMS, ...GALLERY_ITEMS].map((item) => (
+            {[...hero.stripItems, ...hero.stripItems].map((item) => (
               <div
                 key={`${item.id}-${item.label}`}
                 className="flex shrink-0 items-center gap-4 rounded-full border border-gray-secondary/30 bg-background/80 px-6 py-3 backdrop-blur-sm md:px-8 md:py-4"

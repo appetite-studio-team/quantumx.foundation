@@ -3,18 +3,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { defaultViewport, defaultTransition } from '@/lib/motion-variants';
-
-const INTERNAL_LINKS = [
-  { label: 'Work', href: '#' },
-  { label: 'Studio', href: '#' },
-  { label: 'Contact', href: '#contact' },
-];
-
-const EXTERNAL_LINKS = [
-  { label: 'Instagram', href: 'https://instagram.com' },
-  { label: 'LinkedIn', href: 'https://linkedin.com' },
-  { label: 'Twitter', href: 'https://twitter.com' },
-];
+import { site } from '@/content/site';
 
 export function ContactFooterSection() {
   return (
@@ -38,14 +27,14 @@ export function ContactFooterSection() {
           transition={defaultTransition}
         >
           <a
-            href="mailto:hello@studiodialect.com"
+            href={`mailto:${site.email}`}
             className="font-heading text-clamp-display font-bold uppercase tracking-tight-heading text-text-primary hover:text-accent md:text-4xl lg:text-5xl"
             data-cursor="link"
           >
-            HELLO@STUDIODIALECT.COM
+            {site.email.toUpperCase()}
           </a>
           <p className="mt-4 text-sm uppercase tracking-[0.2em] text-gray-secondary">
-            LET&apos;S CREATE THE NEW & NEXT
+            {site.tagline}
           </p>
         </motion.div>
 
@@ -60,15 +49,13 @@ export function ContactFooterSection() {
           <div>
             <p className="text-xs uppercase tracking-[0.2em] text-gray-secondary">Address</p>
             <p className="mt-2 text-sm text-text-primary">
-              123 Creative Way
-              <br />
-              London, UK
+              {site.address ?? '—'}
             </p>
           </div>
           <div>
             <p className="text-xs uppercase tracking-[0.2em] text-gray-secondary">Explore</p>
             <nav className="mt-2 flex flex-col gap-2" aria-label="Internal links">
-              {INTERNAL_LINKS.map(({ label, href }) => (
+              {site.internalLinks.map(({ label, href }) => (
                 <Link
                   key={label}
                   href={href}
@@ -83,7 +70,7 @@ export function ContactFooterSection() {
           <div>
             <p className="text-xs uppercase tracking-[0.2em] text-gray-secondary">Follow</p>
             <nav className="mt-2 flex flex-col gap-2" aria-label="External links">
-              {EXTERNAL_LINKS.map(({ label, href }) => (
+              {site.externalLinks.map(({ label, href }) => (
                 <a
                   key={label}
                   href={href}

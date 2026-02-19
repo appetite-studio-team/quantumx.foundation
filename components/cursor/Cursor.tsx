@@ -1,10 +1,11 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { useMousePosition } from '@/hooks/useMousePosition';
 import { usePrefersReducedMotion, useHasTouch } from '@/hooks/useReducedMotion';
 
-const LERP = 0.15;
+const LERP = 0.26;
 const MAGNETIC_STRENGTH = 0.4;
 
 function lerp(a: number, b: number, t: number) {
@@ -21,6 +22,7 @@ export function Cursor() {
   const [scale, setScale] = useState(1);
   const posRef = useRef({ x: 0, y: 0 });
   const rafRef = useRef<number>(0);
+  const modalOpenRef = useRef(false);
 
   useEffect(() => {
     setMounted(true);
@@ -37,10 +39,19 @@ export function Cursor() {
     };
   }, []);
 
+
   useEffect(() => {
     if (!mounted) return;
 
     const tick = () => {
+      const hasModal = !!document.querySelector('[aria-modal="true"]');
+      if (hasModal && !modalOpenRef.current) {
+        modalOpenRef.current = true;
+        setVisible(true);
+      } else if (!hasModal) {
+        modalOpenRef.current = false;
+      }
+
       const el = document.elementFromPoint(x, y);
       const link = el?.closest('a') || el?.closest('[data-cursor="link"]');
       const button =
@@ -83,9 +94,9 @@ export function Cursor() {
 
   if (!mounted || hasTouch || prefersReducedMotion) return null;
 
-  return (
+  const cursorEl = (
     <div
-      className="pointer-events-none fixed left-0 top-0 z-[10000] hidden md:block"
+      className="pointer-events-none fixed left-0 top-0 z-[99999] hidden md:block"
       aria-hidden
     >
       <div
@@ -99,4 +110,9 @@ export function Cursor() {
       />
     </div>
   );
+
+  // Portal to document.body so cursor always stacks above menu/modals
+  return typeof document !== 'undefined'
+    ? createPortal(cursorEl, document.body)
+    : null;
 }

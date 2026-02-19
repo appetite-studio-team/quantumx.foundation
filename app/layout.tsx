@@ -19,38 +19,61 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Studio Dialect — Expert Digital Production',
-    template: '%s — Studio Dialect',
+    default: 'QuantumX Foundation - Building the Foundations of the Post-Quantum Era',
+    template: '%s - QuantumX Foundation',
   },
   description:
-    'Award-winning motion, design and interactive experiences that connect culture, technology and contemporary aesthetics.',
+    'We are a deep-tech initiative building an open, accessible, and reliable quantum future. Building the foundations of the post-quantum era.',
   keywords: [
-    'motion design',
-    'digital production',
-    'interactive experiences',
-    'creative studio',
-    'design',
+    'quantum computing',
+    'post-quantum cryptography',
+    'quantum technology',
+    'quantum-safe algorithms',
+    'quantum research',
+    'open source quantum',
   ],
-  authors: [{ name: 'Studio Dialect' }],
-  creator: 'Studio Dialect',
-  metadataBase: new URL('https://studiodialect.com'),
+  authors: [{ name: 'QuantumX Foundation' }],
+  creator: 'QuantumX Foundation',
+  metadataBase: new URL('https://quantumx.foundation'),
   alternates: {
     canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://studiodialect.com/',
-    siteName: 'Studio Dialect',
-    title: 'Studio Dialect — Expert Digital Production',
+    url: 'https://quantumx.foundation/',
+    siteName: 'QuantumX Foundation',
+    title: 'QuantumX Foundation - Building the Foundations of the Post-Quantum Era',
     description:
-      'Award-winning motion, design and interactive experiences that connect culture, technology and contemporary aesthetics.',
+      'We are a deep-tech initiative building an open, accessible, and reliable quantum future.',
+    images: [
+      {
+        url: '/images/App-Icon-Black.png',
+        width: 512,
+        height: 512,
+        alt: 'QuantumX Foundation',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Studio Dialect — Expert Digital Production',
+    site: '@_Quantum_X_',
+    title: 'QuantumX Foundation - Building the Foundations of the Post-Quantum Era',
     description:
-      'Award-winning motion, design and interactive experiences that connect culture, technology and contemporary aesthetics.',
+      'We are a deep-tech initiative building an open, accessible, and reliable quantum future.',
+    images: ['/images/App-Icon-Black.png'],
+  },
+  icons: {
+    icon: '/images/App-Icon-Black.png',
+    apple: '/images/App-Icon-Black.png',
   },
 };
 
@@ -68,11 +91,16 @@ export default function RootLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Organization',
-              name: 'Studio Dialect',
-              url: 'https://studiodialect.com',
+              name: 'QuantumX Foundation',
+              url: 'https://quantumx.foundation',
+              logo: 'https://quantumx.foundation/images/App-Icon-Black.png',
               description:
-                'Award-winning motion, design and interactive experiences that connect culture, technology and contemporary aesthetics.',
-              email: 'hello@studiodialect.com',
+                'We are a deep-tech initiative building an open, accessible, and reliable quantum future. Building the foundations of the post-quantum era.',
+              email: 'hi@quantumx.foundation',
+              sameAs: [
+                'https://x.com/_Quantum_X_',
+                'https://www.linkedin.com/company/quantumx-foundation/',
+              ],
             }),
           }}
         />
