@@ -16,21 +16,23 @@ export function StudioPhilosophySection() {
 
   return (
     <section ref={containerRef} id="founder-note" className="bg-background py-section px-6 text-text-primary md:px-10">
-      <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[1fr,3fr] md:gap-16 lg:gap-24">
-        {/* Left: founder image with parallax (half the previous column width) */}
-        <motion.div
-          className="relative aspect-[3/4] overflow-hidden rounded-sm bg-gray-secondary/20"
-          style={{ y: imageY }}
-        >
+      <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-2 md:gap-16 lg:gap-24">
+        {/* Left: launch image – full width, reduced height, vertically centered */}
+        <div className="flex min-h-0 items-center">
+          <motion.div
+            className="relative aspect-[16/9] w-full overflow-hidden rounded-sm bg-gray-secondary/20 md:aspect-[2/1]"
+            style={{ y: imageY }}
+          >
           <Image
             src={studioPhilosophy.imageSrc}
             alt={studioPhilosophy.imageAlt}
             fill
-            className="object-cover"
+            className="object-cover object-center"
             sizes="(max-width: 768px) 100vw, 50vw"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/20 to-transparent pointer-events-none" />
-        </motion.div>
+          </motion.div>
+        </div>
 
         {/* Right: heading + paragraph + caption (center aligned) */}
         <div className="flex flex-col items-center justify-center text-center">
@@ -57,7 +59,7 @@ export function StudioPhilosophySection() {
               <div className="flex items-center justify-center gap-3">
                 <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full border border-gray-secondary/30 bg-gray-secondary/20">
                   <Image
-                    src={studioPhilosophy.imageSrc}
+                    src={studioPhilosophy.headshotSrc}
                     alt=""
                     fill
                     className="object-cover"

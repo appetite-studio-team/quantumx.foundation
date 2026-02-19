@@ -43,8 +43,9 @@ export const studioPhilosophy = {
   heading: 'OPEN, ACCESSIBLE, RELIABLE.',
   paragraph:
     "The quantum revolution isn't just about faster computers—it's about reimagining what's possible. At QuantumX Foundation, we believe that open collaboration and accessible education are the keys to building a quantum future that benefits everyone.",
-  imageSrc: '/images/ajmal-founder.jpg',
-  imageAlt: 'Ajmal - Founder, QuantumX Foundation',
+  imageSrc: '/images/launch-image.jpg',
+  imageAlt: 'QuantumX launch – Ajmal and team with QuantumX banner',
+  headshotSrc: '/images/ajmal-founder.jpg',
   name: 'Ajmal Ibn Mohammed Althaf',
   role: 'Founder, QuantumX Foundation',
 } as const;
