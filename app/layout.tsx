@@ -1,64 +1,56 @@
 import type { Metadata } from 'next';
-import { JetBrains_Mono } from 'next/font/google';
+import { Inter, Space_Grotesk } from 'next/font/google';
 import './globals.css';
-import { Header, Footer } from '@/components';
+import { StudioShell } from '@/components/studio-shell/StudioShell';
 
-const jetbrainsMono = JetBrains_Mono({
+const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-jetbrains',
+  variable: '--font-inter',
+  weight: ['400', '500', '600'],
+  display: 'swap',
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-heading',
   weight: ['400', '500', '600', '700'],
   display: 'swap',
 });
 
 export const metadata: Metadata = {
   title: {
-    default: 'QuantumX Foundation - Building the Foundations of the Post-Quantum Era',
-    template: '%s - QuantumX Foundation',
+    default: 'Studio Dialect — Expert Digital Production',
+    template: '%s — Studio Dialect',
   },
   description:
-    'We are a deep-tech initiative building an open, accessible, and reliable quantum future. Building the foundations of the post-quantum era.',
+    'Award-winning motion, design and interactive experiences that connect culture, technology and contemporary aesthetics.',
   keywords: [
-    'quantum computing',
-    'post-quantum cryptography',
-    'quantum technology',
-    'quantum-safe algorithms',
-    'quantum research',
-    'open source quantum',
+    'motion design',
+    'digital production',
+    'interactive experiences',
+    'creative studio',
+    'design',
   ],
-  authors: [{ name: 'QuantumX Foundation' }],
-  creator: 'QuantumX Foundation',
-  metadataBase: new URL('https://quantumx.foundation'),
+  authors: [{ name: 'Studio Dialect' }],
+  creator: 'Studio Dialect',
+  metadataBase: new URL('https://studiodialect.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://quantumx.foundation/',
-    siteName: 'QuantumX Foundation',
-    title: 'QuantumX Foundation - Building the Foundations of the Post-Quantum Era',
+    url: 'https://studiodialect.com/',
+    siteName: 'Studio Dialect',
+    title: 'Studio Dialect — Expert Digital Production',
     description:
-      'We are a deep-tech initiative building an open, accessible, and reliable quantum future.',
-    images: [
-      {
-        url: '/images/App-Icon-Black.png',
-        width: 512,
-        height: 512,
-        alt: 'QuantumX Foundation',
-      },
-    ],
+      'Award-winning motion, design and interactive experiences that connect culture, technology and contemporary aesthetics.',
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@_Quantum_X_',
-    title: 'QuantumX Foundation - Building the Foundations of the Post-Quantum Era',
+    title: 'Studio Dialect — Expert Digital Production',
     description:
-      'We are a deep-tech initiative building an open, accessible, and reliable quantum future.',
-    images: ['/images/App-Icon-Black.png'],
-  },
-  icons: {
-    icon: '/images/App-Icon-Black.png',
-    apple: '/images/App-Icon-Black.png',
+      'Award-winning motion, design and interactive experiences that connect culture, technology and contemporary aesthetics.',
   },
 };
 
@@ -68,7 +60,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={jetbrainsMono.variable}>
+    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <head>
         <script
           type="application/ld+json"
@@ -76,24 +68,18 @@ export default function RootLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Organization',
-              name: 'QuantumX Foundation',
-              url: 'https://quantumx.foundation',
-              logo: 'https://quantumx.foundation/images/App-Icon-Black.png',
+              name: 'Studio Dialect',
+              url: 'https://studiodialect.com',
               description:
-                'We are a deep-tech initiative building an open, accessible, and reliable quantum future. Building the foundations of the post-quantum era.',
-              email: 'hi@quantumx.foundation',
-              sameAs: [
-                'https://x.com/_Quantum_X_',
-                'https://www.linkedin.com/company/quantumx-foundation/',
-              ],
+                'Award-winning motion, design and interactive experiences that connect culture, technology and contemporary aesthetics.',
+              email: 'hello@studiodialect.com',
             }),
           }}
         />
       </head>
-      <body className="bg-white text-gray-900 font-sans">
-        <Header />
-        {children}
-        <Footer />
+      <body className="bg-background text-text-primary font-sans antialiased">
+        <div className="grain-overlay" aria-hidden />
+        <StudioShell>{children}</StudioShell>
       </body>
     </html>
   );
