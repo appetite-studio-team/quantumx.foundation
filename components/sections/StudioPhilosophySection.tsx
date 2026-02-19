@@ -53,11 +53,22 @@ export function StudioPhilosophySection() {
             >
               {studioPhilosophy.paragraph}
             </motion.p>
-            <motion.div className="pt-2" variants={staggerItem}>
-              <p className="font-heading text-sm font-semibold text-text-primary">
-                {studioPhilosophy.name}
-              </p>
-              <p className="text-sm text-gray-secondary">{studioPhilosophy.role}</p>
+            <motion.div className="pt-2 flex flex-col items-center" variants={staggerItem}>
+              <div className="flex items-center justify-center gap-3">
+                <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full border border-gray-secondary/30 bg-gray-secondary/20">
+                  <Image
+                    src={studioPhilosophy.imageSrc}
+                    alt=""
+                    fill
+                    className="object-cover"
+                    sizes="40px"
+                  />
+                </div>
+                <p className="font-heading text-sm font-semibold uppercase text-text-primary">
+                  {studioPhilosophy.name}
+                </p>
+              </div>
+              <p className="mt-1 text-sm text-gray-secondary">{studioPhilosophy.role}</p>
             </motion.div>
           </motion.div>
         </div>
