@@ -43,9 +43,9 @@ export const menuItems = [
     href: '/#capabilities',
   },
   {
-    id: 'founder-note',
-    label: 'Founder note',
-    href: '/#founder-note',
+    id: 'articles',
+    label: 'Articles',
+    href: '/#from-the-lab',
   },
   {
     id: 'socials',

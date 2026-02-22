@@ -3,7 +3,8 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { defaultViewport, defaultTransition } from '@/lib/motion-variants';
-import { fromTheLab } from '@/content/home';
+import { LinkedInIcon } from '@/components/icons';
+import { fromTheLab } from '@/content/from-the-lab';
 
 export function FromTheLabSection() {
   return (
@@ -53,13 +54,26 @@ export function FromTheLabSection() {
               <p className="text-base leading-relaxed text-gray-secondary">
                 {article.excerpt}
               </p>
-              <Link
-                href={article.href}
-                className="mt-auto text-sm font-medium text-text-primary underline underline-offset-4 transition-colors hover:text-accent"
-                data-cursor="link"
-              >
-                Read article
-              </Link>
+              {article.href.includes('linkedin.com') ? (
+                <a
+                  href={article.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-text-primary underline underline-offset-4 transition-colors hover:text-accent"
+                  data-cursor="link"
+                >
+                  Read article
+                  <LinkedInIcon className="h-4 w-4 shrink-0" />
+                </a>
+              ) : (
+                <Link
+                  href={article.href}
+                  className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-text-primary underline underline-offset-4 transition-colors hover:text-accent"
+                  data-cursor="link"
+                >
+                  Read article
+                </Link>
+              )}
             </motion.div>
           ))}
 
@@ -79,13 +93,16 @@ export function FromTheLabSection() {
             <p className="text-base leading-relaxed text-gray-secondary">
               {fromTheLab.comingSoon.body}
             </p>
-            <Link
+            <a
               href={fromTheLab.comingSoon.ctaHref}
-              className="mt-auto text-sm font-medium text-gray-secondary underline underline-offset-4 transition-colors hover:text-text-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-gray-secondary underline underline-offset-4 transition-colors hover:text-text-primary"
               data-cursor="link"
             >
               {fromTheLab.comingSoon.ctaText}
-            </Link>
+              <LinkedInIcon className="h-4 w-4 shrink-0" />
+            </a>
           </motion.div>
         </motion.div>
       </div>

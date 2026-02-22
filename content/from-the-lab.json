@@ -1,0 +1,25 @@
+{
+  "heading": "From the Lab",
+  "subheading": "Insights, research, and perspectives",
+  "articles": [
+    {
+      "date": "Jan 13, 2026",
+      "title": "What breaks first during a post-quantum migration?",
+      "excerpt": "Algorithms, infrastructure, or governance? Most conversations around post-quantum migration focus on swapping algorithms. But the first things that break are rarely the cryptographic primitives themselves.",
+      "href": "https://www.linkedin.com/pulse/what-breaks-first-during-post-quantum-migration-quantumx-foundation-69zdc/"
+    },
+    {
+      "date": "Dec 17, 2025",
+      "title": "We're designing for a Quantum-safe world",
+      "excerpt": "Quantum safety is often framed as a future problem. Something to think about later. We believe the groundwork needs to be laid now, before the window closes.",
+      "href": "https://www.linkedin.com/pulse/were-designing-quantum-safe-world-quantumx-foundation-ssz2c/"
+    }
+  ],
+  "comingSoon": {
+    "label": "Coming soon",
+    "title": "More insights on the way",
+    "body": "We're working on new research and perspectives. Stay tuned.",
+    "ctaText": "Follow for updates",
+    "ctaHref": "https://www.linkedin.com/company/quantumx-foundation/"
+  }
+}
