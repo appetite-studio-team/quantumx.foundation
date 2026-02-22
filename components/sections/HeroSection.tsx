@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { staggerContainer, staggerItem } from '@/lib/motion-variants';
 import { hero } from '@/content/home';
@@ -54,15 +55,18 @@ export function HeroSection() {
               x: { repeat: Infinity, repeatType: 'loop', duration: 60, ease: 'linear' },
             }}
           >
-            {[...hero.stripItems, ...hero.stripItems].map((item) => (
-              <div
-                key={`${item.id}-${item.label}`}
-                className="flex shrink-0 items-center gap-4 rounded-full border border-gray-secondary/30 bg-background/80 px-6 py-3 backdrop-blur-sm md:px-8 md:py-4"
+            {[...hero.stripItems, ...hero.stripItems].map((item, index) => (
+              <Link
+                key={`${item.id}-${item.label}-${index}`}
+                href={item.href}
+                target={item.href.startsWith('http') ? '_blank' : undefined}
+                rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                className="flex shrink-0 items-center gap-4 rounded-full border border-gray-secondary/30 bg-background/80 px-6 py-3 backdrop-blur-sm transition-colors hover:border-gray-secondary/60 hover:bg-background md:px-8 md:py-4"
               >
                 <span className="font-heading text-sm font-semibold uppercase tracking-wider text-text-primary md:text-base">
                   {item.label}
                 </span>
-              </div>
+              </Link>
             ))}
           </motion.div>
         </div>

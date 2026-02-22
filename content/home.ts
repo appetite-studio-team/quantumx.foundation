@@ -3,23 +3,23 @@
  */
 
 export const hero = {
-  headlineLine1: 'THE QUANTUM',
+  headlineLine1: 'THE QUANTUMX',
   headlineLine2: 'FOUNDATION.',
   tagline:
     'We are a deep-tech initiative building an open, accessible, and reliable quantum future. Building the foundations of the post-quantum era.',
   stripItems: [
-    { id: '1', label: 'Quantum Roadmap' },
-    { id: '2', label: 'Vulnerability Database' },
-    { id: '3', label: 'Qubit Database' },
-    { id: '4', label: 'QuantumX School' },
-    { id: '5', label: 'QEC' },
-    { id: '6', label: 'Research' },
-    { id: '7', label: 'Open Source' },
+    { id: '1', label: 'Quantum Roadmap', href: 'https://roadmap.quantumx.school/' },
+    { id: '2', label: 'Vulnerability Database', href: 'https://vulnerable.quantumx.technology/' },
+    { id: '3', label: 'Qubit Database', href: 'https://qubit.quantumx.technology/' },
+    { id: '4', label: 'QuantumX School', href: 'https://quantumx.school/' },
+    { id: '5', label: 'QEC', href: '/coming-soon' },
+    { id: '6', label: 'Research', href: '/coming-soon' },
+    { id: '7', label: 'Open Source', href: '/coming-soon' },
   ],
 } as const;
 
 export const technology = {
-  heading: '& TECHNOLOGY',
+  heading: 'TECHNOLOGY',
   paragraph:
     'We believe technology is not just a tool but a language. At QuantumX Foundation, open collaboration and accessible education are the keys to building a quantum future that benefits everyone.',
 } as const;
@@ -28,8 +28,8 @@ export const capabilities = {
   items: [
     { number: '01', label: 'Quantum Research & Roadmap', href: 'https://roadmap.quantumx.school/' },
     { number: '02', label: 'Quantum Vulnerability System', href: 'https://vulnerable.quantumx.technology/' },
-    { number: '03', label: 'QuantumX School & Education', href: 'https://quantumx.school/' },
-    { number: '04', label: 'Quantum Qubit Database', href: 'https://qubit.quantumx.technology/' },
+    { number: '03', label: 'QuantumX School', href: 'https://quantumx.school/' },
+    { number: '04', label: 'Qubit Database', href: 'https://qubit.quantumx.technology/' },
     { number: '05', label: 'Experience Center & Outreach', href: '/coming-soon' },
   ],
   leftImageSrc: '/images/quantum-computer.png',
