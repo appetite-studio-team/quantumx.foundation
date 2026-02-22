@@ -50,7 +50,36 @@ export const studioPhilosophy = {
   role: 'Founder, QuantumX Foundation',
 } as const;
 
+export const fromTheLab = {
+  heading: 'From the Lab',
+  subheading: 'Insights, research, and perspectives',
+  articles: [
+    {
+      date: 'Jan 13, 2026',
+      title: 'What breaks first during a post-quantum migration?',
+      excerpt:
+        'Algorithms, infrastructure, or governance? Most conversations around post-quantum migration focus on swapping algorithms. But the first things that break are rarely the cryptographic primitives themselves.',
+      href: '/coming-soon',
+    },
+    {
+      date: 'Dec 17, 2025',
+      title: "We're designing for a Quantum-safe world",
+      excerpt:
+        "Quantum safety is often framed as a future problem. Something to think about later. We believe the groundwork needs to be laid now, before the window closes.",
+      href: '/coming-soon',
+    },
+  ],
+  comingSoon: {
+    label: 'Coming soon',
+    title: 'More insights on the way',
+    body: "We're working on new research and perspectives. Stay tuned.",
+    ctaText: 'Subscribe for updates',
+    ctaHref: '/coming-soon',
+  },
+} as const;
+
 export type HeroContent = typeof hero;
 export type TechnologyContent = typeof technology;
 export type CapabilitiesContent = typeof capabilities;
 export type StudioPhilosophyContent = typeof studioPhilosophy;
+export type FromTheLabContent = typeof fromTheLab;

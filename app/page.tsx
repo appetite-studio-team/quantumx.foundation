@@ -3,6 +3,7 @@ import { QuantumSpeedupSection } from '@/components/sections/QuantumSpeedupSecti
 import { TechnologyStatementSection } from '@/components/sections/TechnologyStatementSection';
 import { CapabilitiesSection } from '@/components/sections/CapabilitiesSection';
 import { StudioPhilosophySection } from '@/components/sections/StudioPhilosophySection';
+import { FromTheLabSection } from '@/components/sections/FromTheLabSection';
 import { ContactFooterSection } from '@/components/sections/ContactFooterSection';
 
 export default function HomePage() {
@@ -13,6 +14,7 @@ export default function HomePage() {
       <TechnologyStatementSection />
       <CapabilitiesSection />
       <StudioPhilosophySection />
+      <FromTheLabSection />
       <ContactFooterSection />
     </main>
   );
