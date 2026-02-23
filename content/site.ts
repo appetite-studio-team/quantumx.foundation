@@ -32,12 +32,6 @@ export const projectLinks = [
 /** Menu dropdown: Careers (Wellfound), Projects (section link), Founder note, Socials (icons) */
 export const menuItems = [
   {
-    id: 'careers',
-    label: 'Careers',
-    href: site.wellfoundJobsUrl,
-    external: true,
-  },
-  {
     id: 'projects',
     label: 'Projects',
     href: '/#capabilities',
@@ -46,6 +40,17 @@ export const menuItems = [
     id: 'articles',
     label: 'Articles',
     href: '/#from-the-lab',
+  },
+  {
+    id: 'events',
+    label: 'Events',
+    href: '/#events',
+  },
+  {
+    id: 'careers',
+    label: 'Careers',
+    href: site.wellfoundJobsUrl,
+    external: true,
   },
   {
     id: 'socials',

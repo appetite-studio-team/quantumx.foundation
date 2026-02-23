@@ -1,0 +1,46 @@
+{
+  "heading": "Events",
+  "subheading": "Join us at upcoming talks, workshops, and meetups.",
+  "events": [
+    {
+      "title": "Quantum Computing Workshop — Skill Univ x QuantumX",
+      "date": "2026-02-28",
+      "displayDate": "Feb 28, 2026",
+      "location": "Startup Park, Bengaluru",
+      "thumbnail": "https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,background=white,quality=75,width=400,height=400/event-covers/pw/faa301f7-e397-451b-adc2-9adbf5d4e004.png",
+      "registerUrl": "https://luma.com/3tqticy3"
+    },
+    {
+      "title": "QuantumX Community Meetup — Bengaluru",
+      "date": "2026-03-01",
+      "displayDate": "Mar 1, 2026",
+      "location": "Bengaluru, Karnataka",
+      "thumbnail": "https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,background=white,quality=75,width=400,height=400/event-covers/85/5b7e9255-12b9-4640-b41e-144819bddb96.png",
+      "registerUrl": "https://luma.com/kv91l2z7?tk=VuAtus"
+    },
+    {
+      "title": "Decoherence in Quantum Computing & Communication",
+      "date": "2026-02-25",
+      "displayDate": "Feb 25, 2026",
+      "location": "MIT Bengaluru",
+      "thumbnail": "https://media.licdn.com/dms/image/v2/D5622AQGJX1FdOEzcJg/feedshare-shrink_1280/B56ZxYKQxCKcAc-/0/1771005611435?e=1773273600&v=beta&t=W_utzECiWb99SbaYvdrr4FXlsPCfXD07T1sWUP0jSvg",
+      "registerUrl": "https://urvishnu.github.io/quantum-ai/"
+    },
+    {
+      "title": "Quantum Technologies 101",
+      "date": "2026-02-22",
+      "displayDate": "Feb 22, 2026",
+      "location": "TinkerHub Foundation, Kochi",
+      "thumbnail": "https://appbucket-hoomans.s3.ap-south-1.amazonaws.com/1771441131597006208qctv.png",
+      "registerUrl": "https://tinkerhub.org/events/BYD1JKA6YR/quantum-technologies-101"
+    },
+    {
+      "title": "DeepTech Hackers Day — Startup Park Bengaluru",
+      "date": "2025-11-12",
+      "displayDate": "Nov 12, 2025",
+      "location": "Startup Park, Bengaluru",
+      "thumbnail": "https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,background=white,quality=75,width=400,height=400/event-covers/ns/9f055e3f-71db-4e14-8847-66fbbf9f1272.jpg",
+      "registerUrl": "https://luma.com/3tqticy3"
+    }
+  ]
+}

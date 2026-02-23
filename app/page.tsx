@@ -5,6 +5,7 @@ import { CapabilitiesSection } from '@/components/sections/CapabilitiesSection';
 import { StudioPhilosophySection } from '@/components/sections/StudioPhilosophySection';
 import { FromTheLabSection } from '@/components/sections/FromTheLabSection';
 import { ContactFooterSection } from '@/components/sections/ContactFooterSection';
+import { EventsSection } from '@/components/sections/EventsSection';
 
 export default function HomePage() {
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
       <CapabilitiesSection />
       <StudioPhilosophySection />
       <FromTheLabSection />
+      <EventsSection />
       <ContactFooterSection />
     </main>
   );
