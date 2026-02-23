@@ -9,7 +9,7 @@ export const site = {
   address: null as string | null,
   internalLinks: [
     { label: 'Work', href: '/' },
-    { label: 'Studio', href: '/' },
+    { label: 'Events', href: '/#events' },
     { label: 'Careers', href: '/careers' },
     { label: 'Contact', href: '#contact' },
   ],
