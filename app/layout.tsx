@@ -91,7 +91,7 @@ export default function RootLayout({
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){var t=localStorage.getItem('quantumx-theme');document.documentElement.setAttribute('data-theme',t==='light'?'light':'dark');})();`,
+            __html: `(function(){var t=localStorage.getItem('quantumx-theme');document.documentElement.setAttribute('data-theme',t==='dark'?'dark':'light');})();`,
           }}
         />
         <script
