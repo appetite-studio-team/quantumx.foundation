@@ -52,7 +52,6 @@ export function ContactFooterSection() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm text-text-primary hover:text-accent"
-                    data-cursor="link"
                   >
                     {label}
                   </a>
@@ -61,7 +60,6 @@ export function ContactFooterSection() {
                     key={label}
                     href={href}
                     className="text-sm text-text-primary hover:text-accent"
-                    data-cursor="link"
                   >
                     {label}
                   </Link>
@@ -77,7 +75,6 @@ export function ContactFooterSection() {
                   key={label}
                   href={href}
                   className="text-sm text-text-primary hover:text-accent"
-                  data-cursor="link"
                 >
                   {label}
                 </Link>
@@ -94,7 +91,6 @@ export function ContactFooterSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-text-primary hover:text-accent"
-                  data-cursor="link"
                 >
                   {label}
                 </a>

@@ -92,7 +92,6 @@ export function Menu({ isOpen, onClose }: MenuProps) {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-text-primary hover:text-accent transition-colors"
-                            data-cursor="link"
                             onClick={onClose}
                             aria-label={link.label}
                           >
@@ -112,7 +111,6 @@ export function Menu({ isOpen, onClose }: MenuProps) {
                           target="_blank"
                           rel="noopener noreferrer"
                           className={linkClassName}
-                          data-cursor="link"
                           onClick={onClose}
                         >
                           {item.label}
@@ -121,7 +119,6 @@ export function Menu({ isOpen, onClose }: MenuProps) {
                         <Link
                           href={item.href}
                           className={linkClassName}
-                          data-cursor="link"
                           onClick={onClose}
                         >
                           {item.label}

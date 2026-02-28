@@ -2,8 +2,8 @@
 
 export function AnnouncementBanner() {
   return (
-    <div className="fixed left-0 right-0 top-0 z-[10002] bg-white py-2 px-3 md:px-4">
-      <div className="mx-auto flex max-w-7xl items-center justify-center gap-1.5 text-center text-xs text-black md:gap-2 md:text-sm">
+    <div className="fixed left-0 right-0 top-0 z-[10002] py-2 px-3 md:px-4" style={{ backgroundColor: 'var(--color-banner-bg)', color: 'var(--color-banner-text)' }}>
+      <div className="mx-auto flex max-w-7xl items-center justify-center gap-1.5 text-center text-xs md:gap-2 md:text-sm">
         <span className="hidden sm:inline">
           What breaks first during a post-quantum migration?
         </span>
@@ -13,7 +13,6 @@ export function AnnouncementBanner() {
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1 whitespace-nowrap font-medium underline"
-          data-cursor="link"
         >
           Read more
           <span aria-hidden className="text-[0.9em]">↗</span>

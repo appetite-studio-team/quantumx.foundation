@@ -60,7 +60,6 @@ export function FromTheLabSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-text-primary underline underline-offset-4 transition-colors hover:text-accent"
-                  data-cursor="link"
                 >
                   Read article
                   <LinkedInIcon className="h-4 w-4 shrink-0" />
@@ -69,7 +68,6 @@ export function FromTheLabSection() {
                 <Link
                   href={article.href}
                   className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-text-primary underline underline-offset-4 transition-colors hover:text-accent"
-                  data-cursor="link"
                 >
                   Read article
                 </Link>
@@ -98,7 +96,6 @@ export function FromTheLabSection() {
               target="_blank"
               rel="noopener noreferrer"
               className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-gray-secondary underline underline-offset-4 transition-colors hover:text-text-primary"
-              data-cursor="link"
             >
               {fromTheLab.comingSoon.ctaText}
               <LinkedInIcon className="h-4 w-4 shrink-0" />

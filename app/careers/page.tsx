@@ -50,7 +50,6 @@ export default function CareersPage() {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block border border-gray-secondary/30 bg-background px-8 py-4 font-medium text-text-primary transition-colors hover:border-accent hover:text-accent"
-            data-cursor="link"
           >
             view open positions →
           </a>
@@ -88,7 +87,6 @@ export default function CareersPage() {
               careersCta.mailtoSubject
             )}`}
             className="mt-8 inline-block bg-accent px-8 py-4 font-medium text-background transition-opacity hover:opacity-90"
-            data-cursor="link"
             data-magnetic
           >
             {careersCta.buttonText}
@@ -101,7 +99,6 @@ export default function CareersPage() {
         <Link
           href="/"
           className="text-sm uppercase tracking-[0.2em] text-gray-secondary hover:text-accent"
-          data-cursor="link"
         >
           ← Back to home
         </Link>

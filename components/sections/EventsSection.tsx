@@ -89,7 +89,6 @@ function EventCard({ event }: { event: Event }) {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-sm bg-accent px-5 py-2.5 font-heading text-sm font-semibold uppercase tracking-[0.15em] text-background transition-all duration-300 hover:shadow-[0_0_24px_rgba(215,255,0,0.2)]"
-              data-cursor="link"
               data-magnetic
             >
               Register

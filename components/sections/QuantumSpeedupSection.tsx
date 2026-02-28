@@ -148,14 +148,14 @@ export function QuantumSpeedupSection() {
                   y1={padding.top + chartHeight * ratio}
                   x2={padding.left + chartWidth}
                   y2={padding.top + chartHeight * ratio}
-                  stroke="#333"
+                  stroke="var(--color-chart-grid)"
                   strokeDasharray="4 4"
                   strokeWidth="1"
                 />
                 <text
                   x={padding.left - 12}
                   y={padding.top + chartHeight * ratio + 4}
-                  fill="#666"
+                  fill="var(--color-chart-text)"
                   fontSize="12"
                   textAnchor="end"
                   fontFamily="var(--font-heading), sans-serif"
@@ -172,7 +172,7 @@ export function QuantumSpeedupSection() {
                   key={`x-${size}`}
                   x={xScale(actualIndex)}
                   y={height - 20}
-                  fill="#666"
+                  fill="var(--color-chart-text)"
                   fontSize="12"
                   textAnchor="middle"
                   fontFamily="var(--font-heading), sans-serif"
@@ -185,7 +185,7 @@ export function QuantumSpeedupSection() {
             <text
               x={width / 2}
               y={height - 2}
-              fill="#8a8a8a"
+              fill="var(--color-chart-axis)"
               fontSize="13"
               textAnchor="middle"
               fontFamily="var(--font-heading), sans-serif"
@@ -195,7 +195,7 @@ export function QuantumSpeedupSection() {
             <text
               x={16}
               y={height / 2}
-              fill="#8a8a8a"
+              fill="var(--color-chart-axis)"
               fontSize="13"
               textAnchor="middle"
               fontFamily="var(--font-heading), sans-serif"
@@ -253,7 +253,7 @@ export function QuantumSpeedupSection() {
                   width="150"
                   height="36"
                   rx="6"
-                  fill="rgba(10,10,10,0.95)"
+                  fill="var(--color-tooltip-bg)"
                   stroke={curveData[hoveredCurve].color}
                   strokeWidth="1"
                 />

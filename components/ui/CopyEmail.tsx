@@ -60,7 +60,6 @@ export function CopyEmail({ email, className = '' }: CopyEmailProps) {
         className="relative cursor-pointer rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
         style={{ transformOrigin: 'center' }}
         aria-label={`Copy email ${email}`}
-        data-cursor="link"
       >
         <span className="relative inline-block font-heading text-xl font-bold uppercase leading-tight tracking-tight text-text-primary transition-opacity duration-200 hover:opacity-90 sm:text-2xl md:text-4xl lg:text-5xl">
           <motion.span

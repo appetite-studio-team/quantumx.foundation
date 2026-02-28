@@ -41,7 +41,7 @@ quantumx.foundation/
 │   └── careers.ts          # Careers page copy
 ├── public/images/          # App-Icon-Black.png, quantum-computer.png, ajmal-founder.jpg, etc.
 ├── lib/                    # motion-variants
-├── hooks/                  # useLenis, useCursor, useMousePosition, useReducedMotion
+├── hooks/                  # useLenis, useMousePosition, useReducedMotion
 ├── package.json
 ├── tailwind.config.ts
 ├── tsconfig.json

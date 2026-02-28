@@ -54,7 +54,6 @@ export function CapabilitiesSection() {
                   target={item.href.startsWith('http') ? '_blank' : undefined}
                   rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   className="group flex items-center py-5 text-lg font-medium text-text-primary transition-colors hover:text-accent md:py-6 md:text-xl"
-                  data-cursor="link"
                   data-magnetic
                 >
                   <span className="block border-b border-transparent transition-colors group-hover:border-accent/50">
@@ -79,7 +78,6 @@ export function CapabilitiesSection() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 font-heading text-sm font-semibold uppercase tracking-[0.2em] text-accent hover:underline"
                 data-magnetic
-                data-cursor="link"
               >
                 {capabilities.ctaText}
               </a>
