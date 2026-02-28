@@ -1,7 +1,11 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { Inter, Space_Grotesk } from 'next/font/google';
 import './globals.css';
+import { ThemeProvider } from '@/components/theme/ThemeContext';
 import { StudioShell } from '@/components/studio-shell/StudioShell';
+
+const GA_MEASUREMENT_ID = 'G-XE37HL7ZMR';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -83,8 +87,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
+    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`} suppressHydrationWarning>
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var t=localStorage.getItem('quantumx-theme');document.documentElement.setAttribute('data-theme',t==='light'?'light':'dark');})();`,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -106,8 +115,22 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-background text-text-primary font-sans antialiased">
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
         <div className="grain-overlay" aria-hidden />
-        <StudioShell>{children}</StudioShell>
+        <ThemeProvider>
+          <StudioShell>{children}</StudioShell>
+        </ThemeProvider>
       </body>
     </html>
   );
