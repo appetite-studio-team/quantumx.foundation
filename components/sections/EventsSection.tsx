@@ -52,10 +52,10 @@ function EventCard({ event }: { event: Event }) {
 
         {/* Status badge */}
         <span
-          className={`absolute right-3 top-3 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wider backdrop-blur-sm ${
+          className={`absolute right-3 top-3 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wider shadow-md ${
             upcoming
-              ? 'border border-accent/30 bg-accent/10 text-accent'
-              : 'border border-gray-secondary/30 bg-background/60 text-gray-secondary'
+              ? 'bg-accent text-background'
+              : 'bg-background text-gray-secondary'
           }`}
         >
           {upcoming ? 'Upcoming' : 'Past'}
