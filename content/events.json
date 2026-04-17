@@ -3,6 +3,30 @@
   "subheading": "Join us at upcoming talks, workshops, and meetups.",
   "events": [
     {
+      "title": "BQIT:26",
+      "date": "2026-04-27",
+      "displayDate": "Apr 27, 2026",
+      "location": "Bristol, UK",
+      "thumbnail": "https://cdn.wpmeducation.com/53544f/4b8426cff6/A897-6376-4082-83DA-EC74.png",
+      "registerUrl": "https://www.bristol.ac.uk/qet-labs/events/bqit-workshop"
+    },
+    {
+      "title": "Research Computing Showcase Day 2026",
+      "date": "2026-04-21",
+      "displayDate": "Apr 21, 2026",
+      "location": "London",
+      "thumbnail": "https://www.imperial.ac.uk/ImageCropToolT4/imageTool/uploaded-images/screenshot-2026-01-26-at-164731_1769446278299_eventfeatured2018_x2.webp",
+      "registerUrl": "https://www.imperial.ac.uk/events/204857/research-computing-showcase-day-2026/"
+    },
+    {
+      "title": "World Quantum Day Virtual Meetup by QuantumX",
+      "date": "2026-04-14",
+      "displayDate": "Apr 14, 2026",
+      "location": "Virtual",
+      "thumbnail": "https://images.unsplash.com/photo-1717501217912-933d2792d493?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&ixid=M3wxMjQyMjF8MHwxfHNlYXJjaHwzMnx8UXVhbnR1bXxlbnwwfHx8fDE3NzU5NjU1NTB8Mg&ixlib=rb-4.1.0&q=80&w=800&h=800",
+      "registerUrl": "https://luma.com/zcprhku5?tk=DyRRML"
+    },
+    {
       "title": "Quantum Computing Workshop",
       "date": "2026-04-11",
       "displayDate": "Apr 11, 2026",
