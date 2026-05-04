@@ -5,8 +5,8 @@ import { ProblemStatementsPage } from './ProblemStatementsPage';
 const PAGE_URL = 'https://quantumx.foundation/qx-hack/problem-statements/';
 const POSTER_URL = 'https://quantumx.foundation/images/qx-hack/qx-hack-poster.png';
 
-const title = `Problem Statements — ${qxHack.meta.title}`;
-const description = `19 problem statements across beginner, intermediate, and advanced tiers. Aligned with UN SDGs — healthcare, climate, security, social impact. Pick your track for the Quantum for Social Good Hackathon.`;
+const title = `Problem Statements - ${qxHack.meta.title}`;
+const description = `19 problem statements across beginner, intermediate, and advanced tiers. Aligned with UN SDGs - healthcare, climate, security, social impact. Pick your track for the Quantum for Social Good Hackathon.`;
 
 export const metadata: Metadata = {
   title,
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         url: POSTER_URL,
         width: 800,
         height: 800,
-        alt: 'Quantum for Social Good Hackathon — Problem Statements',
+        alt: 'Quantum for Social Good Hackathon - Problem Statements',
         type: 'image/png',
       },
     ],
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     creator: '@_Quantum_X_',
     title,
     description,
-    images: [{ url: POSTER_URL, alt: 'Quantum for Social Good Hackathon — Problem Statements' }],
+    images: [{ url: POSTER_URL, alt: 'Quantum for Social Good Hackathon - Problem Statements' }],
   },
   robots: {
     index: true,

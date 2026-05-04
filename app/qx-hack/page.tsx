@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         url: POSTER_URL,
         width: 800,
         height: 800,
-        alt: 'Quantum for Social Good Hackathon — May 23, Startup Park Bengaluru',
+        alt: 'Quantum for Social Good Hackathon - May 23, Startup Park Bengaluru',
         type: 'image/png',
       },
     ],
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: POSTER_URL,
-        alt: 'Quantum for Social Good Hackathon — May 23, Startup Park Bengaluru',
+        alt: 'Quantum for Social Good Hackathon - May 23, Startup Park Bengaluru',
       },
     ],
   },
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
 };
 
 /**
- * Event JSON-LD — unlocks Google rich results: the hackathon will appear
+ * Event JSON-LD - unlocks Google rich results: the hackathon will appear
  * in search with date, venue, and register link directly in the SERP.
  * Schema: https://schema.org/Event
  */

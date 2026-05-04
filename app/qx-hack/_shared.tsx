@@ -1,5 +1,5 @@
 /**
- * Shared primitives for /qx-hack/* — icons, glass card classes, atmosphere,
+ * Shared primitives for /qx-hack/* - icons, glass card classes, atmosphere,
  * and the dark-purple CTA button styling. Keeps the hub page and the standalone
  * Problems / Rules pages visually consistent.
  */
@@ -131,6 +131,15 @@ export function ArrowLeft({ className = 'h-4 w-4' }: IconProps) {
       aria-hidden
     >
       <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+    </svg>
+  );
+}
+
+/** Disclosure caret — rotates when placed inside `<details className="group">` via `group-open:rotate-180`. */
+export function ChevronDown({ className = 'h-5 w-5' }: IconProps) {
+  return (
+    <svg className={className} {...baseIconProps}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
     </svg>
   );
 }

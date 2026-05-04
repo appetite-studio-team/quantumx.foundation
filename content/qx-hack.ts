@@ -7,7 +7,7 @@ export const qxHack = {
   meta: {
     title: 'Quantum for Social Good Hackathon',
     /** Full-length SEO title for search results (up to ~60 chars is ideal). */
-    seoTitle: 'Quantum for Social Good Hackathon — Bengaluru, May 23',
+    seoTitle: 'Quantum for Social Good Hackathon - Bengaluru, May 23',
     description:
       'A 10-hour offline quantum hackathon at Startup Park, Bengaluru on May 23. Build a functional quantum MVP with real social impact. 19 problem statements, 4 tracks, UN SDG aligned. Free entry, food + workspace provided.',
     keywords: [
@@ -50,7 +50,7 @@ export const qxHack = {
    */
   applyUrl: 'https://luma.com/x9mbuajz',
 
-  /** Google Maps link for the venue — used on the venue stat card. */
+  /** Google Maps link for the venue - used on the venue stat card. */
   venueUrl: 'https://maps.app.goo.gl/gWpFMMcUnfQTDh9P6',
 
   stats: [
@@ -66,7 +66,7 @@ export const qxHack = {
       eyebrow: '01',
       title: 'Problem statements',
       description:
-        '19 problems across beginner, intermediate, and advanced tiers. Aligned with UN SDGs — healthcare, climate, security, social impact, and more.',
+        '19 problems across beginner, intermediate, and advanced tiers. Aligned with UN SDGs - healthcare, climate, security, social impact, and more.',
       href: '/qx-hack/problem-statements',
       ctaLabel: 'View problems',
     },
@@ -74,7 +74,7 @@ export const qxHack = {
       eyebrow: '02',
       title: 'Rules & regulations',
       description:
-        'Eligibility, development rules, submission requirements, judging criteria — everything in one place.',
+        'Eligibility, development rules, submission requirements, judging criteria - everything in one place.',
       href: '/qx-hack/rules',
       ctaLabel: 'View rules',
     },
@@ -190,7 +190,7 @@ export const qxHack = {
       {
         level: 'advanced' as const,
         label: 'Advanced',
-        description: 'Complex builds \u2014 best for the final round and strong teams with quantum + ML experience.',
+        description: 'Complex builds - best for the final round and strong teams with quantum + ML experience.',
         color: 'red' as const,
         problems: [
           {

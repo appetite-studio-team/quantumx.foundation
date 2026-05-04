@@ -18,7 +18,7 @@ export function MouseTracking() {
 
   return (
     <>
-      {/* Live coordinates — top right */}
+      {/* Live coordinates - top right */}
       <div
         className="pointer-events-none fixed right-4 top-4 z-[9999] hidden font-mono text-xs text-gray-secondary md:block"
         aria-hidden

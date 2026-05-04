@@ -1,5 +1,6 @@
 'use client';
 
+import type { ReactNode } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -7,6 +8,7 @@ import { defaultViewport, defaultTransition } from '@/lib/motion-variants';
 import { qxHack } from '@/content/qx-hack';
 import {
   ArrowRight,
+  ChevronDown,
   ghostButton,
   glassCard,
   glassCardHover,
@@ -14,6 +16,196 @@ import {
   statIcons,
   type StatIconKey,
 } from './_shared';
+
+function FoldableBlock({
+  title,
+  subtitle,
+  children,
+}: {
+  title: string;
+  subtitle: string;
+  children: ReactNode;
+}) {
+  return (
+    <details className="group rounded-2xl border border-white/[0.08] bg-white/[0.02] px-5 py-5 backdrop-blur-sm md:px-8 md:py-6">
+      <summary className="cursor-pointer list-none select-none rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-violet-500/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-background)] [&::-webkit-details-marker]:hidden">
+        <div className="flex items-start justify-between gap-4">
+          <div className="min-w-0 max-w-2xl">
+            <h2 className="font-heading text-clamp-section font-bold uppercase leading-tight tracking-tight-heading text-text-primary">
+              {title}
+            </h2>
+            <p className="mt-4 text-base text-gray-secondary md:text-lg">{subtitle}</p>
+          </div>
+          <span
+            className="mt-1 flex size-10 shrink-0 items-center justify-center rounded-full border border-white/[0.12] bg-white/[0.03] text-white/55 transition-colors group-open:border-white/20 group-open:bg-white/[0.06] group-open:text-white/90"
+            aria-hidden
+          >
+            <ChevronDown className="h-5 w-5 transition-transform duration-300 group-open:rotate-180" />
+          </span>
+        </div>
+      </summary>
+      <div className="mt-8 md:mt-10">{children}</div>
+    </details>
+  );
+}
+
+const HIGHLIGHTS = [
+  {
+    icon: '🆓',
+    title: 'Free entry',
+    description: 'No participation fee. Food and workspace provided on-site.',
+  },
+  {
+    icon: '🧩',
+    title: '19 problem statements',
+    description: 'Across beginner, intermediate, and advanced tiers - aligned with UN SDGs.',
+  },
+  {
+    icon: '🎯',
+    title: '4 tracks',
+    description: 'Sustainability & Climate, Healthcare, Security & Privacy, Social Impact.',
+  },
+  {
+    icon: '🛠',
+    title: 'Tools',
+    description: 'Qiskit, PennyLane, Cirq, PyTorch, TensorFlow Quantum - all welcome.',
+  },
+  {
+    icon: '👨‍🏫',
+    title: 'Mentorship',
+    description: 'On-site mentors with 2 mandatory checkpoints to validate progress.',
+  },
+  {
+    icon: '🏆',
+    title: 'Final round',
+    description: 'Top 4 teams shortlisted. 1 winning team declared after advanced Q&A.',
+  },
+] as const;
+
+function QxHackFoldablesSection() {
+  return (
+    <section className="relative px-6 py-section md:px-10">
+      <div className="mx-auto max-w-6xl space-y-2 md:space-y-3">
+        <FoldableBlock
+          title="What to expect"
+          subtitle="Everything the poster doesn&rsquo;t tell you."
+        >
+          <motion.div
+            className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-5"
+            initial="hidden"
+            whileInView="visible"
+            viewport={defaultViewport}
+            variants={{
+              visible: { transition: { staggerChildren: 0.06, delayChildren: 0.1 } },
+              hidden: {},
+            }}
+          >
+            {HIGHLIGHTS.map((item) => (
+              <motion.div
+                key={item.title}
+                variants={{
+                  hidden: { opacity: 0, y: 16 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                transition={defaultTransition}
+                className={`${glassCard} p-6`}
+              >
+                <span className="text-2xl" aria-hidden>{item.icon}</span>
+                <h3 className="mt-3 font-heading text-base font-semibold uppercase tracking-tight text-text-primary">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-gray-secondary">
+                  {item.description}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </FoldableBlock>
+
+        <FoldableBlock
+          title="Before the day"
+          subtitle="Read the problem tracks and rules. Both live as their own pages so you can share or bookmark them directly."
+        >
+          <motion.div
+            className="grid gap-4 md:grid-cols-2 md:gap-6"
+            initial="hidden"
+            whileInView="visible"
+            viewport={defaultViewport}
+            variants={{
+              visible: { transition: { staggerChildren: 0.07, delayChildren: 0.1 } },
+              hidden: {},
+            }}
+          >
+            {qxHack.navCards.map((card) => (
+              <motion.div
+                key={card.title}
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                transition={defaultTransition}
+              >
+                <Link
+                  href={card.href}
+                  className={`${glassCard} ${glassCardHover} group flex h-full flex-col gap-5 p-7 md:p-9`}
+                >
+                  <span className="font-heading text-sm font-semibold uppercase tracking-[0.2em] text-white/40">
+                    {card.eyebrow}
+                  </span>
+                  <h3 className="font-heading text-2xl font-bold uppercase leading-tight tracking-tight text-text-primary transition-colors duration-300 group-hover:text-violet-300 md:text-3xl">
+                    {card.title}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-gray-secondary md:text-base">
+                    {card.description}
+                  </p>
+                  <span className="mt-auto inline-flex items-center gap-2 font-heading text-sm font-semibold uppercase tracking-[0.18em] text-violet-300 transition-transform duration-300 group-hover:translate-x-1">
+                    {card.ctaLabel}
+                    <ArrowRight className="h-4 w-4" />
+                  </span>
+                </Link>
+              </motion.div>
+            ))}
+          </motion.div>
+        </FoldableBlock>
+
+        <FoldableBlock
+          title="FAQ"
+          subtitle="Quick answers before you register."
+        >
+          <motion.div
+            className="grid gap-4 md:grid-cols-3 md:gap-6"
+            initial="hidden"
+            whileInView="visible"
+            viewport={defaultViewport}
+            variants={{
+              visible: { transition: { staggerChildren: 0.06, delayChildren: 0.1 } },
+              hidden: {},
+            }}
+          >
+            {qxHack.faq.map((item) => (
+              <motion.div
+                key={item.q}
+                variants={{
+                  hidden: { opacity: 0, y: 16 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                transition={defaultTransition}
+                className={`${glassCard} p-6`}
+              >
+                <h3 className="font-heading text-base font-semibold uppercase tracking-tight text-text-primary">
+                  {item.q}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-gray-secondary">
+                  {item.a}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </FoldableBlock>
+      </div>
+    </section>
+  );
+}
 
 function HeroSection() {
   const { applyUrl } = qxHack;
@@ -65,7 +257,7 @@ function HeroSection() {
         >
           <Image
             src="/images/qx-hack/qx-hack-poster.png"
-            alt="Quantum for Social Good Hackathon — May 23, Startup Park Bengaluru"
+            alt="Quantum for Social Good Hackathon - May 23, Startup Park Bengaluru"
             width={800}
             height={800}
             priority
@@ -107,7 +299,7 @@ function HeroSection() {
         </motion.p>
       </div>
 
-      {/* Partnership logos — pinned to bottom of hero */}
+      {/* Partnership logos - pinned to bottom of hero */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -216,206 +408,6 @@ function StatsSection() {
   );
 }
 
-function HighlightsSection() {
-  const highlights = [
-    {
-      icon: '🆓',
-      title: 'Free entry',
-      description: 'No participation fee. Food and workspace provided on-site.',
-    },
-    {
-      icon: '🧩',
-      title: '19 problem statements',
-      description: 'Across beginner, intermediate, and advanced tiers — aligned with UN SDGs.',
-    },
-    {
-      icon: '🎯',
-      title: '4 tracks',
-      description: 'Sustainability & Climate, Healthcare, Security & Privacy, Social Impact.',
-    },
-    {
-      icon: '🛠',
-      title: 'Tools',
-      description: 'Qiskit, PennyLane, Cirq, PyTorch, TensorFlow Quantum — all welcome.',
-    },
-    {
-      icon: '👨‍🏫',
-      title: 'Mentorship',
-      description: 'On-site mentors with 2 mandatory checkpoints to validate progress.',
-    },
-    {
-      icon: '🏆',
-      title: 'Final round',
-      description: 'Top 4 teams shortlisted. 1 winning team declared after advanced Q&A.',
-    },
-  ];
-
-  return (
-    <section className="relative px-6 py-section md:px-10">
-      <div className="mx-auto max-w-6xl">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={defaultViewport}
-          transition={defaultTransition}
-          className="max-w-2xl"
-        >
-          <h2 className="font-heading text-clamp-section font-bold uppercase leading-tight tracking-tight-heading text-text-primary">
-            What to expect
-          </h2>
-          <p className="mt-4 text-base text-gray-secondary md:text-lg">
-            Everything the poster doesn&rsquo;t tell you.
-          </p>
-        </motion.div>
-
-        <motion.div
-          className="mt-10 grid gap-4 sm:grid-cols-2 md:mt-14 md:grid-cols-3 md:gap-5"
-          initial="hidden"
-          whileInView="visible"
-          viewport={defaultViewport}
-          variants={{
-            visible: { transition: { staggerChildren: 0.06, delayChildren: 0.1 } },
-            hidden: {},
-          }}
-        >
-          {highlights.map((item) => (
-            <motion.div
-              key={item.title}
-              variants={{
-                hidden: { opacity: 0, y: 16 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={defaultTransition}
-              className={`${glassCard} p-6`}
-            >
-              <span className="text-2xl" aria-hidden>{item.icon}</span>
-              <h3 className="mt-3 font-heading text-base font-semibold uppercase tracking-tight text-text-primary">
-                {item.title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-gray-secondary">
-                {item.description}
-              </p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-    </section>
-  );
-}
-
-function NavCardsSection() {
-  return (
-    <section className="relative px-6 py-section md:px-10">
-      <div className="mx-auto max-w-6xl">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={defaultViewport}
-          transition={defaultTransition}
-          className="max-w-2xl"
-        >
-          <h2 className="font-heading text-clamp-section font-bold uppercase leading-tight tracking-tight-heading text-text-primary">
-            Before the day
-          </h2>
-          <p className="mt-4 text-base text-gray-secondary md:text-lg">
-            Read the problem tracks and rules. Both live as their own pages so
-            you can share or bookmark them directly.
-          </p>
-        </motion.div>
-
-        <motion.div
-          className="mt-10 grid gap-4 md:mt-14 md:grid-cols-2 md:gap-6"
-          initial="hidden"
-          whileInView="visible"
-          viewport={defaultViewport}
-          variants={{
-            visible: { transition: { staggerChildren: 0.07, delayChildren: 0.1 } },
-            hidden: {},
-          }}
-        >
-          {qxHack.navCards.map((card) => (
-            <motion.div
-              key={card.title}
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={defaultTransition}
-            >
-              <Link
-                href={card.href}
-                className={`${glassCard} ${glassCardHover} group flex h-full flex-col gap-5 p-7 md:p-9`}
-              >
-                <span className="font-heading text-sm font-semibold uppercase tracking-[0.2em] text-white/40">
-                  {card.eyebrow}
-                </span>
-                <h3 className="font-heading text-2xl font-bold uppercase leading-tight tracking-tight text-text-primary transition-colors duration-300 group-hover:text-violet-300 md:text-3xl">
-                  {card.title}
-                </h3>
-                <p className="text-sm leading-relaxed text-gray-secondary md:text-base">
-                  {card.description}
-                </p>
-                <span className="mt-auto inline-flex items-center gap-2 font-heading text-sm font-semibold uppercase tracking-[0.18em] text-violet-300 transition-transform duration-300 group-hover:translate-x-1">
-                  {card.ctaLabel}
-                  <ArrowRight className="h-4 w-4" />
-                </span>
-              </Link>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-    </section>
-  );
-}
-
-function FaqSection() {
-  return (
-    <section className="relative px-6 py-section md:px-10">
-      <div className="mx-auto max-w-6xl">
-        <motion.h2
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={defaultViewport}
-          transition={defaultTransition}
-          className="font-heading text-clamp-section font-bold uppercase leading-tight tracking-tight-heading text-text-primary"
-        >
-          FAQ
-        </motion.h2>
-
-        <motion.div
-          className="mt-10 grid gap-4 md:mt-12 md:grid-cols-3 md:gap-6"
-          initial="hidden"
-          whileInView="visible"
-          viewport={defaultViewport}
-          variants={{
-            visible: { transition: { staggerChildren: 0.06, delayChildren: 0.1 } },
-            hidden: {},
-          }}
-        >
-          {qxHack.faq.map((item) => (
-            <motion.div
-              key={item.q}
-              variants={{
-                hidden: { opacity: 0, y: 16 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={defaultTransition}
-              className={`${glassCard} p-6`}
-            >
-              <h3 className="font-heading text-base font-semibold uppercase tracking-tight text-text-primary">
-                {item.q}
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-gray-secondary">
-                {item.a}
-              </p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-    </section>
-  );
-}
-
 function FinalCtaSection() {
   const { applyUrl } = qxHack;
 
@@ -478,9 +470,7 @@ export function QxHackPage() {
     <main className="relative">
       <HeroSection />
       <StatsSection />
-      <HighlightsSection />
-      <NavCardsSection />
-      <FaqSection />
+      <QxHackFoldablesSection />
       <FinalCtaSection />
     </main>
   );

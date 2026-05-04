@@ -13,7 +13,7 @@ import {
 } from '../_shared';
 
 /* ------------------------------------------------------------ */
-/*  Section renderers — one per content type                     */
+/*  Section renderers - one per content type                     */
 /* ------------------------------------------------------------ */
 
 function SectionHeader({

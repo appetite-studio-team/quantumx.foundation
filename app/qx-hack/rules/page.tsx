@@ -5,8 +5,8 @@ import { RulesPage } from './RulesPage';
 const PAGE_URL = 'https://quantumx.foundation/qx-hack/rules/';
 const POSTER_URL = 'https://quantumx.foundation/images/qx-hack/qx-hack-poster.png';
 
-const title = `Rules & Regulations — ${qxHack.meta.title}`;
-const description = `Eligibility, development rules, submission requirements, judging criteria, and more — everything you need to know before the Quantum for Social Good Hackathon on May 23, Bengaluru.`;
+const title = `Rules & Regulations - ${qxHack.meta.title}`;
+const description = `Eligibility, development rules, submission requirements, judging criteria, and more - everything you need to know before the Quantum for Social Good Hackathon on May 23, Bengaluru.`;
 
 export const metadata: Metadata = {
   title,
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         url: POSTER_URL,
         width: 800,
         height: 800,
-        alt: 'Quantum for Social Good Hackathon — Rules & Regulations',
+        alt: 'Quantum for Social Good Hackathon - Rules & Regulations',
         type: 'image/png',
       },
     ],
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     creator: '@_Quantum_X_',
     title,
     description,
-    images: [{ url: POSTER_URL, alt: 'Quantum for Social Good Hackathon — Rules' }],
+    images: [{ url: POSTER_URL, alt: 'Quantum for Social Good Hackathon - Rules' }],
   },
   robots: {
     index: true,
