@@ -25,6 +25,32 @@
   --color-banner-text: #0a0a0a;
 }
 
+/*
+ * Force-dark scope. Applied to a wrapper element (e.g. /qx-hack layout) to
+ * pin the dark palette regardless of the user's site-wide theme toggle.
+ */
+.force-dark {
+  --color-background: #0a0a0a;
+  --color-text-primary: #eaeaea;
+  --color-accent: #d7ff00;
+  --color-gray-secondary: #8a8a8a;
+  --color-chart-grid: #333333;
+  --color-chart-text: #666666;
+  --color-chart-axis: #8a8a8a;
+  --color-tooltip-bg: rgba(10, 10, 10, 0.95);
+  --color-muted-border: rgba(255, 255, 255, 0.1);
+  --color-muted-bg: rgba(255, 255, 255, 0.05);
+  --color-cta-bg: #ffffff;
+  --color-cta-text: #0a0a0a;
+  --color-cta-ring: #ffffff;
+  --color-cta-ring-offset: #0a0a0a;
+  --color-banner-bg: #ffffff;
+  --color-banner-text: #0a0a0a;
+  color-scheme: dark;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+}
+
 /* Light mode: background white, text/icons/lines dark */
 [data-theme='light'] {
   --color-background: #ffffff;

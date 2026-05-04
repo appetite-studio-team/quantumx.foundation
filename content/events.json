@@ -3,6 +3,14 @@
   "subheading": "Join us at upcoming talks, workshops, and meetups.",
   "events": [
     {
+      "title": "Quantum for Social Good Hackathon",
+      "date": "2026-05-23",
+      "displayDate": "May 23, 2026",
+      "location": "Startup Park, Bengaluru",
+      "thumbnail": "/images/events/quantum-for-social-good-hackathon.png",
+      "registerUrl": "https://luma.com/x9mbuajz"
+    },
+    {
       "title": "BQIT:26",
       "date": "2026-04-27",
       "displayDate": "Apr 27, 2026",
