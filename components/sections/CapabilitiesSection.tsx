@@ -12,7 +12,7 @@ export function CapabilitiesSection() {
       <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[1fr,1.5fr] md:gap-16">
         {/* Left: image */}
         <motion.div
-          className="relative aspect-square max-w-sm overflow-hidden rounded-sm bg-gray-secondary/20"
+          className="relative aspect-square max-w-md overflow-hidden rounded-sm bg-gray-secondary/20"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={defaultViewport}
@@ -23,7 +23,7 @@ export function CapabilitiesSection() {
             alt={capabilities.leftImageAlt}
             fill
             className="object-cover"
-            sizes="(max-width: 768px) 100vw, 384px"
+            sizes="(max-width: 768px) 100vw, 448px"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent pointer-events-none" />
         </motion.div>

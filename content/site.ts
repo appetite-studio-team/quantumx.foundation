@@ -26,6 +26,7 @@ export const projectLinks = [
   { label: 'Vulnerability Database', href: 'https://vulnerable.quantumx.technology/' },
   { label: 'Qubit Database', href: 'https://qubit.quantumx.technology/' },
   { label: 'QuantumX School', href: 'https://quantumx.school/' },
+  { label: 'QuantumX Vault', href: 'https://vault.quantumx.technology/' },
   { label: 'Quantum Experience Center', href: '/coming-soon' },
 ] as const;
 

@@ -13,8 +13,8 @@ export const hero = {
     { id: '3', label: 'Qubit Database', href: 'https://qubit.quantumx.technology/' },
     { id: '4', label: 'QuantumX School', href: 'https://quantumx.school/' },
     { id: '5', label: 'QEC', href: '/coming-soon' },
-    { id: '6', label: 'Research', href: '/coming-soon' },
-    { id: '7', label: 'Open Source', href: '/coming-soon' },
+    { id: '6', label: 'Vault', href: '/coming-soon' },
+    { id: '7', label: 'Research Center', href: '/coming-soon' },
   ],
 } as const;
 
@@ -30,7 +30,8 @@ export const capabilities = {
     { number: '02', label: 'Quantum Vulnerability System', href: 'https://vulnerable.quantumx.technology/' },
     { number: '03', label: 'QuantumX School', href: 'https://quantumx.school/' },
     { number: '04', label: 'Qubit Database', href: 'https://qubit.quantumx.technology/' },
-    { number: '05', label: 'Experience Center & Outreach', href: '/coming-soon' },
+    { number: '05', label: 'QuantumX Vault', href: 'https://vault.quantumx.technology/' },
+    { number: '06', label: 'Experience Center & Outreach', href: '/coming-soon' },
   ],
   leftImageSrc: '/images/quantum-computer.png',
   leftImageAlt: 'Quantum computer',

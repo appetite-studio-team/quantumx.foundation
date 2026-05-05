@@ -75,32 +75,34 @@ export function FromTheLabSection() {
             </motion.div>
           ))}
 
-          {/* Coming soon */}
-          <motion.div
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              visible: { opacity: 1, y: 0 },
-            }}
-            transition={defaultTransition}
-            className="flex flex-col gap-5 last:md:pl-10 last:md:pr-0"
-          >
-            <p className="text-sm text-gray-secondary">{fromTheLab.comingSoon.label}</p>
-            <h3 className="font-heading text-lg font-bold uppercase leading-tight tracking-tight-heading text-gray-secondary md:text-xl">
-              {fromTheLab.comingSoon.title}
-            </h3>
-            <p className="text-base leading-relaxed text-gray-secondary">
-              {fromTheLab.comingSoon.body}
-            </p>
-            <a
-              href={fromTheLab.comingSoon.ctaHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-gray-secondary underline underline-offset-4 transition-colors hover:text-text-primary"
+          {/* Coming soon — only when there's empty room in the 3-col row */}
+          {fromTheLab.articles.length < 3 && (
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={defaultTransition}
+              className="flex flex-col gap-5 last:md:pl-10 last:md:pr-0"
             >
-              {fromTheLab.comingSoon.ctaText}
-              <LinkedInIcon className="h-4 w-4 shrink-0" />
-            </a>
-          </motion.div>
+              <p className="text-sm text-gray-secondary">{fromTheLab.comingSoon.label}</p>
+              <h3 className="font-heading text-lg font-bold uppercase leading-tight tracking-tight-heading text-gray-secondary md:text-xl">
+                {fromTheLab.comingSoon.title}
+              </h3>
+              <p className="text-base leading-relaxed text-gray-secondary">
+                {fromTheLab.comingSoon.body}
+              </p>
+              <a
+                href={fromTheLab.comingSoon.ctaHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-gray-secondary underline underline-offset-4 transition-colors hover:text-text-primary"
+              >
+                {fromTheLab.comingSoon.ctaText}
+                <LinkedInIcon className="h-4 w-4 shrink-0" />
+              </a>
+            </motion.div>
+          )}
         </motion.div>
       </div>
     </section>

@@ -3,6 +3,12 @@
   "subheading": "Insights, research, and perspectives",
   "articles": [
     {
+      "date": "May 5, 2026",
+      "title": "How Beginners can get into Quantum computing?",
+      "excerpt": "You don't need a physics degree to start learning quantum computing. What you need is the right entry point and a clear, practical path. This guide is exactly that.",
+      "href": "https://www.linkedin.com/pulse/how-beginners-can-get-quantum-computing-quantumx-foundation-wmswc/"
+    },
+    {
       "date": "Jan 13, 2026",
       "title": "What breaks first during a post-quantum migration?",
       "excerpt": "Algorithms, infrastructure, or governance? Most conversations around post-quantum migration focus on swapping algorithms. But the first things that break are rarely the cryptographic primitives themselves.",
