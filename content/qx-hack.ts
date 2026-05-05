@@ -62,16 +62,17 @@ export const qxHack = {
 
   /** Cards shown on /qx-hack that link out to the standalone pages. */
   navCards: [
+    // Hidden for now — problem statements not yet finalized.
+    // {
+    //   eyebrow: '01',
+    //   title: 'Problem statements',
+    //   description:
+    //     '19 problems across beginner, intermediate, and advanced tiers. Aligned with UN SDGs - healthcare, climate, security, social impact, and more.',
+    //   href: '/qx-hack/problem-statements',
+    //   ctaLabel: 'View problems',
+    // },
     {
       eyebrow: '01',
-      title: 'Problem statements',
-      description:
-        '19 problems across beginner, intermediate, and advanced tiers. Aligned with UN SDGs - healthcare, climate, security, social impact, and more.',
-      href: '/qx-hack/problem-statements',
-      ctaLabel: 'View problems',
-    },
-    {
-      eyebrow: '02',
       title: 'Rules & regulations',
       description:
         'Eligibility, development rules, submission requirements, judging criteria - everything in one place.',
@@ -239,7 +240,7 @@ export const qxHack = {
 
   rules: {
     heading: 'Rules & regulations',
-    subheading: '13 sections. Read them once, then go build something quantum.',
+    subheading: '12 sections. Read them once, then go build something quantum.',
     sections: [
       {
         number: '01',
@@ -370,19 +371,6 @@ export const qxHack = {
       },
       {
         number: '10',
-        title: 'Judging Criteria',
-        type: 'table' as const,
-        columns: ['Criteria', 'Weightage'],
-        rows: [
-          ['Problem relevance', '20%'],
-          ['Use of quantum computing', '25%'],
-          ['Innovation', '15%'],
-          ['Technical implementation', '20%'],
-          ['MVP / demo quality', '20%'],
-        ],
-      },
-      {
-        number: '11',
         title: 'Shortlisting & Final Round',
         type: 'list' as const,
         items: [
@@ -392,7 +380,7 @@ export const qxHack = {
         ],
       },
       {
-        number: '12',
+        number: '11',
         title: 'Intellectual Property',
         type: 'list' as const,
         items: [
@@ -401,7 +389,7 @@ export const qxHack = {
         ],
       },
       {
-        number: '13',
+        number: '12',
         title: 'Disqualification Criteria',
         type: 'list' as const,
         intro: 'Teams may be disqualified if they:',
@@ -427,6 +415,10 @@ export const qxHack = {
     {
       q: 'What should I bring?',
       a: 'A laptop, charger, and your team. Anything you build with: hardware, simulators, models, all welcome.',
+    },
+    {
+      q: 'Is there a prize?',
+      a: 'Yes — prize details are TBA. We’ll announce the prize pool and recognition closer to the day.',
     },
   ],
 } as const;

@@ -123,41 +123,6 @@ function CheckpointsSection({
   );
 }
 
-function TableSection({ section }: { section: Extract<SectionShape, { type: 'table' }> }) {
-  return (
-    <div className="overflow-x-auto">
-      <table className="w-full text-left text-sm md:text-[15px]">
-        <thead>
-          <tr className="border-b border-white/[0.08]">
-            {section.columns.map((col) => (
-              <th
-                key={col}
-                className="pb-3 pr-4 font-heading text-xs font-semibold uppercase tracking-[0.2em] text-white/50"
-              >
-                {col}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody className="divide-y divide-white/[0.04]">
-          {section.rows.map((row, i) => (
-            <tr key={i}>
-              {row.map((cell, ci) => (
-                <td
-                  key={ci}
-                  className={`py-3 pr-4 ${ci === 0 ? 'text-text-primary' : 'font-heading font-semibold text-violet-300'}`}
-                >
-                  {cell}
-                </td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
-}
-
 function MixedSection({ section }: { section: Extract<SectionShape, { type: 'mixed' }> }) {
   return (
     <div className="space-y-5">
@@ -195,7 +160,6 @@ function RuleCard({ section, index }: { section: SectionShape; index: number }) 
       {section.type === 'list' && <ListSection section={section as any} />}
       {section.type === 'keyvalue' && <KeyValueSection section={section as any} />}
       {section.type === 'checkpoints' && <CheckpointsSection section={section as any} />}
-      {section.type === 'table' && <TableSection section={section as any} />}
       {section.type === 'mixed' && <MixedSection section={section as any} />}
     </motion.section>
   );

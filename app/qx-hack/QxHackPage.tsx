@@ -80,6 +80,11 @@ const HIGHLIGHTS = [
     title: 'Final round',
     description: 'Top 4 teams shortlisted. 1 winning team declared after advanced Q&A.',
   },
+  {
+    icon: '🎒',
+    title: 'What to bring',
+    description: 'Laptop, charger, and your team. Hardware, simulators, models — all welcome.',
+  },
 ] as const;
 
 function QxHackFoldablesSection() {
