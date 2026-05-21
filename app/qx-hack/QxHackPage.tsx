@@ -514,6 +514,89 @@ function JudgesSection() {
   );
 }
 
+function OrganizersSection() {
+  return (
+    <section className="relative px-6 py-section md:px-10">
+      <div className="mx-auto max-w-6xl">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={defaultViewport}
+          transition={defaultTransition}
+          className={`${glassCard} relative overflow-hidden px-6 py-12 md:px-16 md:py-16`}
+        >
+          <div
+            className="pointer-events-none absolute inset-0 opacity-60"
+            aria-hidden
+            style={{
+              backgroundImage: `
+                linear-gradient(rgba(255,255,255,0.4) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.4) 1px, transparent 1px)
+              `,
+              backgroundSize: '48px 48px',
+              maskImage:
+                'radial-gradient(60% 60% at 50% 50%, black, transparent 80%)',
+              WebkitMaskImage:
+                'radial-gradient(60% 60% at 50% 50%, black, transparent 80%)',
+              opacity: 0.04,
+            }}
+          />
+          <div
+            className="pointer-events-none absolute inset-0"
+            aria-hidden
+            style={{
+              background:
+                'radial-gradient(60% 80% at 50% 40%, rgba(124, 58, 237, 0.18), transparent 70%)',
+            }}
+          />
+
+          <div className="relative flex flex-col items-center text-center">
+            <span className="font-heading text-xs font-semibold uppercase tracking-[0.25em] text-violet-300/80">
+              Organized by
+            </span>
+        
+
+            <div className="mt-10 flex items-center gap-8 md:mt-12 md:gap-14">
+              <a
+                href="https://quantumx.foundation/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative h-10 w-auto transition-opacity duration-300 hover:opacity-80 md:h-14"
+              >
+                <Image
+                  src="/images/qx-hack/quantumx-logo.png"
+                  alt="QuantumX Foundation"
+                  width={220}
+                  height={64}
+                  className="h-full w-auto object-contain brightness-0 invert"
+                />
+              </a>
+
+              <span className="font-heading text-2xl text-white/25 md:text-3xl">×</span>
+
+              <a
+                href="https://www.thestartuppark.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative h-10 w-auto transition-opacity duration-300 hover:opacity-80 md:h-14"
+              >
+                <Image
+                  src="/images/qx-hack/startup-park.png"
+                  alt="iQue Startup Park Bengaluru"
+                  width={280}
+                  height={64}
+                  className="h-full w-auto object-contain brightness-0 invert"
+                />
+              </a>
+            </div>
+
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
 function FinalCtaSection() {
   const { applyUrl } = qxHack;
 
@@ -578,6 +661,7 @@ export function QxHackPage() {
       <StatsSection />
       <QxHackFoldablesSection />
       <JudgesSection />
+      <OrganizersSection />
       <FinalCtaSection />
     </main>
   );
