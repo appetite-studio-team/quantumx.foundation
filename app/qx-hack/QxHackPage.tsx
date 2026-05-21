@@ -413,6 +413,107 @@ function StatsSection() {
   );
 }
 
+const JUDGES = [
+  {
+    image: '/images/qx-hack/judges/4.png',
+    name: 'Dr. Manjunath Konthe',
+    role: 'HOD & Dean — Academics',
+    org: 'HKBK College of Engineering',
+  },
+  {
+    image: '/images/qx-hack/judges/3.png',
+    name: 'Dr. Tabassum Ara',
+    role: 'HOD & Dean — IIC',
+    org: 'HKBK College of Engineering',
+  },
+  {
+    image: '/images/qx-hack/judges/2.png',
+    name: 'Akash Deb',
+    role: 'Founder & CEO',
+    org: 'ElatoAI',
+  },
+  {
+    image: '/images/qx-hack/judges/1.png',
+    name: 'Shaik Aleem Ur Rehaman',
+    role: 'Principal Design Engineer',
+    org: 'Microsoft',
+  },
+] as const;
+
+function JudgesSection() {
+  return (
+    <section className="relative px-6 py-section md:px-10">
+      <div className="mx-auto max-w-6xl">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={defaultViewport}
+          transition={defaultTransition}
+          className="max-w-2xl"
+        >
+          <span className="font-heading text-xs font-semibold uppercase tracking-[0.25em] text-violet-300/80">
+            Judging panel
+          </span>
+          <h2 className="mt-4 font-heading text-clamp-section font-bold uppercase leading-tight tracking-tight-heading text-text-primary">
+            Who you&rsquo;ll pitch to
+          </h2>
+          <p className="mt-4 text-base text-gray-secondary md:text-lg">
+            Industry leaders and academics evaluating your build for impact, feasibility, and quantum craft.
+          </p>
+        </motion.div>
+
+        <motion.div
+          className="mt-10 grid gap-4 sm:grid-cols-2 md:mt-14 md:grid-cols-4 md:gap-5"
+          initial="hidden"
+          whileInView="visible"
+          viewport={defaultViewport}
+          variants={{
+            visible: { transition: { staggerChildren: 0.08, delayChildren: 0.1 } },
+            hidden: {},
+          }}
+        >
+          {JUDGES.map((judge) => (
+            <motion.div
+              key={judge.name}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={defaultTransition}
+              className={`${glassCard} group overflow-hidden`}
+            >
+              <div className="relative aspect-[4/5] w-full overflow-hidden bg-gradient-to-b from-violet-500/10 to-white/[0.02]">
+                <Image
+                  src={judge.image}
+                  alt={judge.name}
+                  fill
+                  sizes="(min-width: 768px) 25vw, 50vw"
+                  className="object-cover object-top grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-[1.03]"
+                />
+                <div
+                  className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"
+                  aria-hidden
+                />
+              </div>
+              <div className="p-5 md:p-6">
+                <h3 className="font-heading text-base font-semibold uppercase tracking-tight text-text-primary md:text-lg">
+                  {judge.name}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-violet-300/90">
+                  {judge.role}
+                </p>
+                <p className="mt-1 text-sm leading-relaxed text-gray-secondary">
+                  {judge.org}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
 function FinalCtaSection() {
   const { applyUrl } = qxHack;
 
@@ -476,6 +577,7 @@ export function QxHackPage() {
       <HeroSection />
       <StatsSection />
       <QxHackFoldablesSection />
+      <JudgesSection />
       <FinalCtaSection />
     </main>
   );
