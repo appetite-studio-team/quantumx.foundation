@@ -30,7 +30,7 @@ export const capabilities = {
     { number: '02', label: 'Quantum Vulnerability System', href: 'https://vulnerable.quantumx.technology/' },
     { number: '03', label: 'QuantumX School', href: 'https://quantumx.school/' },
     { number: '04', label: 'Qubit Database', href: 'https://qubit.quantumx.technology/' },
-    { number: '05', label: 'QuantumX Vault', href: 'https://vault.quantumx.technology/' },
+    { number: '05', label: 'QuantumX Vault', href: '/coming-soon/' },
     { number: '06', label: 'Experience Center & Outreach', href: '/coming-soon' },
   ],
   leftImageSrc: '/images/quantum-computer.png',
