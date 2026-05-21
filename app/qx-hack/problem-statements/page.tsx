@@ -6,7 +6,7 @@ const PAGE_URL = 'https://quantumx.foundation/qx-hack/problem-statements/';
 const POSTER_URL = 'https://quantumx.foundation/images/qx-hack/qx-hack-poster.png';
 
 const title = `Problem Statements - ${qxHack.meta.title}`;
-const description = `19 problem statements across beginner, intermediate, and advanced tiers. Aligned with UN SDGs - healthcare, climate, security, social impact. Pick your track for the Quantum for Social Good Hackathon.`;
+const description = `19 official problem statements for the Quantum for Social Good Hackathon. Each maps to a real-world domain and UN SDG - healthcare, climate, security, agriculture, finance, logistics. Build with quantum computing, QML, quantum-inspired optimization, or post-quantum cryptography.`;
 
 export const metadata: Metadata = {
   title,

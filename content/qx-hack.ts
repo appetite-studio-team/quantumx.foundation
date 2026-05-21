@@ -83,157 +83,167 @@ export const qxHack = {
 
   problems: {
     heading: 'Problem statements',
-    subheading:
-      '19 problems across three difficulty levels. Every solution must include a quantum or quantum-inspired component and align with UN SDGs.',
-    tiers: [
+    theme: 'Quantum for Social Good',
+    intro:
+      'Participants are required to build a functional MVP or prototype using quantum computing, quantum machine learning (QML), quantum-inspired optimization, or post-quantum cryptography (PQC). Solutions should address real-world challenges aligned with the United Nations Sustainable Development Goals (UN SDGs).',
+    approaches: [
+      'Quantum Computing',
+      'Quantum Machine Learning (QML)',
+      'Quantum-Inspired Optimization',
+      'Post-Quantum Cryptography (PQC)',
+    ],
+    items: [
       {
-        level: 'beginner' as const,
-        label: 'Beginner',
-        description: 'Highly feasible in 10 hours. Great starting points for first-time quantum builders.',
-        color: 'emerald' as const,
-        problems: [
-          {
-            number: '01',
-            title: 'Quantum-Assisted Disease Risk Prediction',
-            summary: 'Build a predictive model using patient health data to estimate disease risk, enhanced with a quantum or hybrid ML component. Focus on classification and performance comparison.',
-          },
-          {
-            number: '02',
-            title: 'Quantum-Based Traffic Flow Optimization',
-            summary: 'Develop a system that optimizes traffic signals or routing using quantum-inspired optimization to reduce congestion and improve efficiency in urban environments.',
-          },
-          {
-            number: '03',
-            title: 'Disaster Resource Allocation using Quantum Optimization',
-            summary: 'Design an optimization system to allocate limited resources (food, medical aid, rescue teams) efficiently during disasters using quantum techniques.',
-          },
-          {
-            number: '04',
-            title: 'Quantum-Safe Secure Communication System',
-            summary: 'Create a secure communication system (chat/API) using post-quantum cryptographic algorithms to ensure protection against future quantum attacks.',
-          },
-          {
-            number: '05',
-            title: 'Smart Water Usage Prediction System',
-            sdg: 'SDG 6 \u2013 Clean Water & Sanitation',
-            summary: 'Water wastage and inefficient usage are major issues. Predict water usage patterns using historical data enhanced with a quantum ML model.',
-            challenge: 'Build a system that predicts water usage patterns using historical data and enhances predictions using a quantum-enhanced ML model.',
-            mvp: ['Input: Historical water usage data', 'Output: Predicted usage / demand'],
-          },
-          {
-            number: '06',
-            title: 'Food Distribution Optimization for NGOs',
-            sdg: 'SDG 2 \u2013 Zero Hunger',
-            summary: 'Food distribution systems often fail to efficiently allocate surplus food to areas in need.',
-            challenge: 'Design a system that optimizes food distribution routes or allocation using quantum-inspired optimization.',
-            mvp: ['Input: Food supply + demand locations', 'Output: Optimized distribution plan'],
-          },
-          {
-            number: '07',
-            title: 'Energy Consumption Forecasting for Smart Homes',
-            sdg: 'SDG 7 \u2013 Affordable & Clean Energy',
-            summary: 'Energy consumption is often unpredictable, leading to inefficiencies and higher costs.',
-            challenge: 'Create a model that predicts household energy usage and demonstrates improvement using quantum-enhanced ML.',
-            mvp: ['Input: Smart meter / energy usage data', 'Output: Energy consumption forecast'],
-          },
-          {
-            number: '08',
-            title: 'Waste Collection Route Optimization',
-            sdg: 'SDG 11 \u2013 Sustainable Cities',
-            summary: 'Inefficient waste collection routes increase fuel consumption and pollution.',
-            challenge: 'Build a system that optimizes garbage collection routes using quantum-inspired routing algorithms.',
-            mvp: ['Input: Locations + routes', 'Output: Optimized path'],
-          },
-        ],
+        number: '01',
+        title: 'Quantum-Assisted Disease Risk Prediction',
+        domain: 'Healthcare & Emergency Systems',
+        sdg: 'SDG 3 \u2013 Good Health & Well-being',
+        statement:
+          'Develop a predictive system that estimates disease risk using patient health data and enhances predictions using a hybrid quantum-classical ML approach.',
       },
       {
-        level: 'intermediate' as const,
-        label: 'Intermediate',
-        description: 'Feasible with proper scope management. Good for teams with some quantum or ML background.',
-        color: 'amber' as const,
-        problems: [
-          {
-            number: '09',
-            title: 'Climate Risk Prediction using Hybrid Quantum Models',
-            summary: 'Develop a hybrid quantum-classical model to predict environmental risks like floods or air pollution using weather or climate datasets.',
-          },
-          {
-            number: '10',
-            title: 'Post-Quantum Secure Digital Identity System',
-            summary: 'Build a secure authentication system using post-quantum cryptography to protect user identity and prevent future security vulnerabilities.',
-          },
-          {
-            number: '11',
-            title: 'Air Quality Index (AQI) Prediction',
-            sdg: 'SDG 13 \u2013 Climate Action',
-            summary: 'Air pollution is a growing concern in cities, and accurate AQI prediction can help take preventive measures.',
-            challenge: 'Develop a hybrid quantum-classical model to predict AQI levels based on environmental data.',
-            mvp: ['Input: Pollution data (PM2.5, CO, etc.)', 'Output: AQI prediction'],
-          },
-          {
-            number: '12',
-            title: 'Quantum-Based Crop Yield Prediction',
-            sdg: 'SDG 2 \u2013 Zero Hunger',
-            summary: 'Farmers often lack accurate predictions for crop yield due to changing environmental conditions.',
-            challenge: 'Build a system that predicts crop yield using environmental and soil data with a quantum-enhanced ML model.',
-            mvp: ['Input: Soil, rainfall, temperature data', 'Output: Predicted yield'],
-          },
-          {
-            number: '13',
-            title: 'Post-Quantum Secure Voting System',
-            sdg: 'SDG 16 \u2013 Peace, Justice & Strong Institutions',
-            summary: 'Electronic voting systems must be secure against future quantum attacks.',
-            challenge: 'Design a secure voting prototype using post-quantum cryptographic techniques.',
-            mvp: ['Voting interface', 'Secure vote storage', 'PQC-based encryption'],
-          },
-        ],
+        number: '02',
+        title: 'Quantum-Based Traffic Flow Optimization',
+        domain: 'Smart Cities & Urban Optimization',
+        sdg: 'SDG 11 \u2013 Sustainable Cities & Communities',
+        statement:
+          'Build a system that optimizes traffic routing or traffic signal management using quantum-inspired optimization techniques.',
       },
       {
-        level: 'advanced' as const,
-        label: 'Advanced',
-        description: 'Complex builds - best for the final round and strong teams with quantum + ML experience.',
-        color: 'red' as const,
-        problems: [
-          {
-            number: '14',
-            title: 'Quantum-Optimized Renewable Energy Distribution',
-            summary: 'Design a system to optimize renewable energy distribution across a grid using quantum or quantum-inspired optimization techniques to minimize loss and improve efficiency.',
-          },
-          {
-            number: '15',
-            title: 'Drug Interaction Optimization using Quantum Simulation',
-            summary: 'Create a prototype that simulates or analyzes drug interactions using quantum computing approaches to identify effective combinations or outcomes.',
-          },
-          {
-            number: '16',
-            title: 'Secure & Intelligent Emergency Response System',
-            summary: 'Build an integrated system combining quantum machine learning for incident prediction and post-quantum cryptography for secure communication in emergency scenarios.',
-          },
-          {
-            number: '17',
-            title: 'Quantum-Assisted Financial Fraud Detection',
-            sdg: 'SDG 8 \u2013 Decent Work & Economic Growth',
-            summary: 'Financial fraud detection requires identifying complex patterns in transaction data.',
-            challenge: 'Build a quantum-enhanced anomaly detection system for identifying fraudulent transactions.',
-            mvp: ['Input: Transaction dataset', 'Output: Fraud detection score'],
-          },
-          {
-            number: '18',
-            title: 'Emergency Hospital Resource Optimization',
-            sdg: 'SDG 3 \u2013 Good Health & Well-being',
-            summary: 'Hospitals often struggle with resource allocation (beds, ICU, staff) during emergencies.',
-            challenge: 'Design a system that optimizes hospital resource allocation using quantum optimization techniques.',
-            mvp: ['Input: Resource availability + demand', 'Output: Allocation strategy'],
-          },
-          {
-            number: '19',
-            title: 'Quantum-Based Supply Chain Optimization for Essentials',
-            sdg: 'SDG 9 \u2013 Industry & Infrastructure',
-            summary: 'Supply chains for essential goods (food, medicine) need efficient routing and allocation.',
-            challenge: 'Build a system that optimizes supply chain logistics using quantum-inspired optimization.',
-            mvp: ['Input: Supply chain nodes', 'Output: Optimized flow'],
-          },
-        ],
+        number: '03',
+        title: 'Disaster Resource Allocation using Quantum Optimization',
+        domain: 'Healthcare & Emergency Systems',
+        sdg: 'SDG 11 & 13',
+        statement:
+          'Design a resource allocation system that distributes food, medical aid, or rescue resources efficiently during disasters using optimization techniques.',
+      },
+      {
+        number: '04',
+        title: 'Quantum-Safe Secure Communication System',
+        domain: 'Cybersecurity & Digital Identity',
+        sdg: 'SDG 16 \u2013 Peace, Justice & Strong Institutions',
+        statement:
+          'Develop a secure communication platform using post-quantum cryptographic algorithms to protect data against future quantum attacks.',
+      },
+      {
+        number: '05',
+        title: 'Smart Water Usage Prediction System',
+        domain: 'Sustainability & Climate Tech',
+        sdg: 'SDG 6 \u2013 Clean Water & Sanitation',
+        statement:
+          'Build a predictive system that forecasts water consumption patterns using historical usage data and quantum-enhanced ML models.',
+      },
+      {
+        number: '06',
+        title: 'Food Distribution Optimization for NGOs',
+        domain: 'Agriculture & Food Systems',
+        sdg: 'SDG 2 \u2013 Zero Hunger',
+        statement:
+          'Create a system that optimizes food distribution routes and allocation using quantum-inspired optimization methods.',
+      },
+      {
+        number: '07',
+        title: 'Energy Consumption Forecasting for Smart Homes',
+        domain: 'Sustainability & Climate Tech',
+        sdg: 'SDG 7 \u2013 Affordable & Clean Energy',
+        statement:
+          'Develop a predictive model for smart home energy consumption using quantum-enhanced machine learning.',
+      },
+      {
+        number: '08',
+        title: 'Waste Collection Route Optimization',
+        domain: 'Smart Cities & Urban Optimization',
+        sdg: 'SDG 11 \u2013 Sustainable Cities & Communities',
+        statement:
+          'Build an optimized routing system for waste collection vehicles using quantum-inspired path optimization techniques.',
+      },
+      {
+        number: '09',
+        title: 'Climate Risk Prediction using Hybrid Quantum Models',
+        domain: 'Sustainability & Climate Tech',
+        sdg: 'SDG 13 \u2013 Climate Action',
+        statement:
+          'Develop a hybrid quantum-classical model to predict environmental risks such as floods, pollution spikes, or heatwaves.',
+      },
+      {
+        number: '10',
+        title: 'Post-Quantum Secure Digital Identity System',
+        domain: 'Cybersecurity & Digital Identity',
+        sdg: 'SDG 9 \u2013 Industry, Innovation & Infrastructure',
+        statement:
+          'Design a secure authentication and identity verification system using post-quantum cryptographic techniques.',
+      },
+      {
+        number: '11',
+        title: 'Air Quality Index (AQI) Prediction using Hybrid Quantum Models',
+        domain: 'Sustainability & Climate Tech',
+        sdg: 'SDG 13 \u2013 Climate Action',
+        statement:
+          'Build a hybrid quantum-classical model that predicts AQI levels using pollution and environmental datasets.',
+      },
+      {
+        number: '12',
+        title: 'Quantum-Based Crop Yield Prediction',
+        domain: 'Agriculture & Food Systems',
+        sdg: 'SDG 2 \u2013 Zero Hunger',
+        statement:
+          'Create a crop yield prediction system using environmental and soil parameters enhanced with quantum machine learning.',
+      },
+      {
+        number: '13',
+        title: 'Post-Quantum Secure Voting System',
+        domain: 'Cybersecurity & Digital Identity',
+        sdg: 'SDG 16 \u2013 Peace, Justice & Strong Institutions',
+        statement:
+          'Develop a secure electronic voting system using post-quantum cryptographic algorithms.',
+      },
+      {
+        number: '14',
+        title: 'Quantum-Optimized Renewable Energy Distribution',
+        domain: 'Sustainability & Climate Tech',
+        sdg: 'SDG 7 \u2013 Affordable & Clean Energy',
+        statement:
+          'Design a system that optimizes renewable energy distribution across a grid using quantum or quantum-inspired optimization techniques.',
+      },
+      {
+        number: '15',
+        title: 'Drug Interaction Optimization using Quantum Simulation',
+        domain: 'Healthcare & Emergency Systems',
+        sdg: 'SDG 3 \u2013 Good Health & Well-being',
+        statement:
+          'Build a prototype that simulates or analyzes drug interactions using quantum computing techniques.',
+      },
+      {
+        number: '16',
+        title: 'Secure & Intelligent Emergency Response System',
+        domain: 'Healthcare & Emergency Systems',
+        sdg: 'SDGs 3, 11, 16',
+        statement:
+          'Create an emergency response platform combining quantum ML for incident prediction and post-quantum cryptography for secure communication.',
+      },
+      {
+        number: '17',
+        title: 'Quantum-Assisted Financial Fraud Detection',
+        domain: 'Finance & Risk Analytics',
+        sdg: 'SDG 8 \u2013 Decent Work & Economic Growth',
+        statement:
+          'Develop a quantum-enhanced anomaly detection system for identifying fraudulent financial transactions.',
+      },
+      {
+        number: '18',
+        title: 'Emergency Hospital Resource Optimization',
+        domain: 'Healthcare & Emergency Systems',
+        sdg: 'SDG 3 \u2013 Good Health & Well-being',
+        statement:
+          'Build a resource optimization system for hospitals to allocate ICU beds, staff, and medical equipment efficiently during emergencies.',
+      },
+      {
+        number: '19',
+        title: 'Quantum-Based Supply Chain Optimization for Essentials',
+        domain: 'Logistics & Supply Chain',
+        sdg: 'SDG 9 \u2013 Industry, Innovation & Infrastructure',
+        statement:
+          'Develop a system that optimizes supply chain logistics for essential goods using quantum-inspired optimization techniques.',
       },
     ],
   },
