@@ -18,10 +18,10 @@ export function AnnouncementBanner() {
         <span className="hidden sm:inline">
           <strong className="font-semibold">QX Hack</strong>
           <span className="mx-1.5 inline-block h-3 w-px bg-white/25" aria-hidden />
-          Quantum for Social Good Hackathon — May 23, Bengaluru
+          Quantum for Social Good Hackathon, May 23, Bengaluru
         </span>
         <span className="sm:hidden">
-          <strong>QX Hack</strong> — May 23, Bengaluru
+          <strong>QX Hack</strong>, May 23, Bengaluru
         </span>
         <Link
           href="/qx-hack/"

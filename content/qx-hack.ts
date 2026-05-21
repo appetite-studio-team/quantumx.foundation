@@ -62,7 +62,7 @@ export const qxHack = {
 
   /** Cards shown on /qx-hack that link out to the standalone pages. */
   navCards: [
-    // Hidden for now — problem statements not yet finalized.
+    // Hidden for now, problem statements not yet finalized.
     // {
     //   eyebrow: '01',
     //   title: 'Problem statements',
@@ -418,7 +418,7 @@ export const qxHack = {
     },
     {
       q: 'Is there a prize?',
-      a: 'Yes — prize details are TBA. We’ll announce the prize pool and recognition closer to the day.',
+      a: 'Yes, prize details are TBA. We’ll announce the prize pool and recognition closer to the day.',
     },
   ],
 } as const;

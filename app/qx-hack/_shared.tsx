@@ -135,7 +135,7 @@ export function ArrowLeft({ className = 'h-4 w-4' }: IconProps) {
   );
 }
 
-/** Disclosure caret — rotates when placed inside `<details className="group">` via `group-open:rotate-180`. */
+/** Disclosure caret, rotates when placed inside `<details className="group">` via `group-open:rotate-180`. */
 export function ChevronDown({ className = 'h-5 w-5' }: IconProps) {
   return (
     <svg className={className} {...baseIconProps}>

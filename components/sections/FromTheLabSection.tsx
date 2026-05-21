@@ -75,7 +75,7 @@ export function FromTheLabSection() {
             </motion.div>
           ))}
 
-          {/* Coming soon — only when there's empty room in the 3-col row */}
+          {/* Coming soon, only when there's empty room in the 3-col row */}
           {fromTheLab.articles.length < 3 && (
             <motion.div
               variants={{

@@ -83,7 +83,7 @@ const HIGHLIGHTS = [
   {
     icon: '🎒',
     title: 'What to bring',
-    description: 'Laptop, charger, and your team. Hardware, simulators, models — all welcome.',
+    description: 'Laptop, charger, and your team. Hardware, simulators, models, all welcome.',
   },
 ] as const;
 
@@ -417,13 +417,13 @@ const JUDGES = [
   {
     image: '/images/qx-hack/judges/4.png',
     name: 'Dr. Manjunath Konthe',
-    role: 'HOD & Dean — Academics',
+    role: 'HOD & Dean, Academics',
     org: 'HKBK College of Engineering',
   },
   {
     image: '/images/qx-hack/judges/3.png',
     name: 'Dr. Tabassum Ara',
-    role: 'HOD & Dean — IIC',
+    role: 'HOD & Dean, IIC',
     org: 'HKBK College of Engineering',
   },
   {
@@ -514,6 +514,23 @@ function JudgesSection() {
   );
 }
 
+const ORGANIZERS = [
+  {
+    logo: '/images/qx-hack/quantumx-logo.png',
+    name: 'QuantumX Foundation',
+    href: 'https://quantumx.foundation/',
+    logoWidth: 220,
+    logoHeight: 64,
+  },
+  {
+    logo: '/images/qx-hack/startup-park.png',
+    name: 'iQue Startup Park',
+    href: 'https://www.thestartuppark.com/',
+    logoWidth: 240,
+    logoHeight: 64,
+  },
+] as const;
+
 function OrganizersSection() {
   return (
     <section className="relative px-6 py-section md:px-10">
@@ -523,74 +540,58 @@ function OrganizersSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={defaultViewport}
           transition={defaultTransition}
-          className={`${glassCard} relative overflow-hidden px-6 py-12 md:px-16 md:py-16`}
+          className="flex flex-col items-start gap-3"
         >
-          <div
-            className="pointer-events-none absolute inset-0 opacity-60"
-            aria-hidden
-            style={{
-              backgroundImage: `
-                linear-gradient(rgba(255,255,255,0.4) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.4) 1px, transparent 1px)
-              `,
-              backgroundSize: '48px 48px',
-              maskImage:
-                'radial-gradient(60% 60% at 50% 50%, black, transparent 80%)',
-              WebkitMaskImage:
-                'radial-gradient(60% 60% at 50% 50%, black, transparent 80%)',
-              opacity: 0.04,
-            }}
-          />
-          <div
-            className="pointer-events-none absolute inset-0"
-            aria-hidden
-            style={{
-              background:
-                'radial-gradient(60% 80% at 50% 40%, rgba(124, 58, 237, 0.18), transparent 70%)',
-            }}
-          />
+          <span className="font-heading text-xs font-semibold uppercase tracking-[0.25em] text-violet-300/80">
+            Organized by
+          </span>
+          <h2 className="font-heading text-clamp-section font-bold uppercase leading-tight tracking-tight-heading text-text-primary">
+            Built by two teams
+          </h2>
+          <p className="max-w-2xl text-base text-gray-secondary md:text-lg">
+            A partnership running the day end-to-end, from quantum content to the chairs you sit on.
+          </p>
+        </motion.div>
 
-          <div className="relative flex flex-col items-center text-center">
-            <span className="font-heading text-xs font-semibold uppercase tracking-[0.25em] text-violet-300/80">
-              Organized by
-            </span>
-        
-
-            <div className="mt-10 flex items-center gap-8 md:mt-12 md:gap-14">
-              <a
-                href="https://quantumx.foundation/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative h-10 w-auto transition-opacity duration-300 hover:opacity-80 md:h-14"
-              >
+        <motion.div
+          className="mt-10 grid gap-px overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.04] md:mt-14 md:grid-cols-2"
+          initial="hidden"
+          whileInView="visible"
+          viewport={defaultViewport}
+          variants={{
+            visible: { transition: { staggerChildren: 0.1, delayChildren: 0.1 } },
+            hidden: {},
+          }}
+        >
+          {ORGANIZERS.map((org) => (
+            <motion.a
+              key={org.name}
+              href={org.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              variants={{
+                hidden: { opacity: 0, y: 16 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={defaultTransition}
+              className="group relative flex flex-col gap-8 bg-[var(--color-background)] p-8 transition-colors duration-300 hover:bg-white/[0.02] md:p-12"
+            >
+              <div className="flex h-12 items-center md:h-14">
                 <Image
-                  src="/images/qx-hack/quantumx-logo.png"
-                  alt="QuantumX Foundation"
-                  width={220}
-                  height={64}
-                  className="h-full w-auto object-contain brightness-0 invert"
+                  src={org.logo}
+                  alt={org.name}
+                  width={org.logoWidth}
+                  height={org.logoHeight}
+                  className="h-full w-auto object-contain object-left brightness-0 invert"
                 />
-              </a>
+              </div>
 
-              <span className="font-heading text-2xl text-white/25 md:text-3xl">×</span>
-
-              <a
-                href="https://www.thestartuppark.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative h-10 w-auto transition-opacity duration-300 hover:opacity-80 md:h-14"
-              >
-                <Image
-                  src="/images/qx-hack/startup-park.png"
-                  alt="iQue Startup Park Bengaluru"
-                  width={280}
-                  height={64}
-                  className="h-full w-auto object-contain brightness-0 invert"
-                />
-              </a>
-            </div>
-
-          </div>
+              <span className="mt-auto inline-flex items-center gap-2 font-heading text-xs font-semibold uppercase tracking-[0.2em] text-violet-300 transition-transform duration-300 group-hover:translate-x-1">
+                Visit site
+                <ArrowRight className="h-4 w-4" />
+              </span>
+            </motion.a>
+          ))}
         </motion.div>
       </div>
     </section>
