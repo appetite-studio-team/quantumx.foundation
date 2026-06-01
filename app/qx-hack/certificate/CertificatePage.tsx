@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, type FormEvent } from 'react';
+import { useState, useEffect, useRef, type FormEvent } from 'react';
+import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -137,10 +138,20 @@ function downloadBlob(blob: Blob, filename: string) {
 /* ---------- main component ---------- */
 
 export function CertificatePage() {
+  const searchParams = useSearchParams();
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<Status>('idle');
   const [error, setError] = useState('');
   const [participantName, setParticipantName] = useState('');
+  const formRef = useRef<HTMLFormElement>(null);
+
+  // Pre-fill email from ?email= query param
+  useEffect(() => {
+    const paramEmail = searchParams.get('email');
+    if (paramEmail) {
+      setEmail(paramEmail);
+    }
+  }, [searchParams]);
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
