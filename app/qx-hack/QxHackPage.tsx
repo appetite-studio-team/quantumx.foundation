@@ -270,25 +270,33 @@ function HeroSection() {
           />
         </motion.div>
 
+        {/* Event ended badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ ...defaultTransition, delay: 0.15 }}
+          className="mt-6 inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/[0.08] px-4 py-1.5 backdrop-blur-sm"
+        >
+          <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+          <span className="font-heading text-[11px] font-semibold uppercase tracking-[0.2em] text-emerald-300">
+            Event concluded
+          </span>
+        </motion.div>
+
         {/* CTAs below poster */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ...defaultTransition, delay: 0.2 }}
-          className="mt-8 flex flex-wrap items-center justify-center gap-4"
+          className="mt-6 flex flex-wrap items-center justify-center gap-4"
         >
-          <a
-            href={applyUrl}
-            target={applyUrl.startsWith('http') ? '_blank' : undefined}
-            rel={applyUrl.startsWith('http') ? 'noopener noreferrer' : undefined}
+          <Link
+            href="/qx-hack/certificate"
             className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 font-heading text-sm font-semibold uppercase tracking-[0.18em] text-[#1a0533] transition-all duration-300 hover:bg-white/90 hover:shadow-[0_0_40px_rgba(255,255,255,0.25)]"
             data-magnetic
           >
-            Register now
+            Download certificate
             <ArrowRight className="h-4 w-4" />
-          </a>
-          <Link href="/qx-hack/rules" className={ghostButton}>
-            Read rules
           </Link>
         </motion.div>
 
@@ -299,8 +307,8 @@ function HeroSection() {
           transition={{ ...defaultTransition, delay: 0.3 }}
           className="mx-auto mt-6 max-w-md text-center text-sm leading-relaxed text-white/50 md:text-base"
         >
+          This event was held on May 23, 2026 at iQue Startup Park, Bengaluru.
           A 10-hour, offline hackathon by QuantumX &times; iQue Startup Park.
-          Build a functional quantum MVP with real social impact.
         </motion.p>
       </div>
 
@@ -599,8 +607,6 @@ function OrganizersSection() {
 }
 
 function FinalCtaSection() {
-  const { applyUrl } = qxHack;
-
   return (
     <section className="relative px-6 py-section md:px-10">
       <div className="mx-auto max-w-6xl">
@@ -622,23 +628,20 @@ function FinalCtaSection() {
           <div className="relative flex flex-col items-start gap-8 md:flex-row md:items-center md:justify-between">
             <div className="max-w-xl">
               <h2 className="font-heading text-clamp-section font-bold uppercase leading-tight tracking-tight-heading text-text-primary">
-                Ready to build?
+                Thank you for participating
               </h2>
               <p className="mt-4 text-base text-gray-secondary md:text-lg">
-                Spots are limited. Register now and we&rsquo;ll send you everything you
-                need before the day.
+                The hackathon has concluded. Download your personalized participation certificate below.
               </p>
             </div>
-            <a
-              href={applyUrl}
-              target={applyUrl.startsWith('http') ? '_blank' : undefined}
-              rel={applyUrl.startsWith('http') ? 'noopener noreferrer' : undefined}
+            <Link
+              href="/qx-hack/certificate"
               className={`${purpleButton} px-7 py-3.5`}
               data-magnetic
             >
-              Register now
+              Download certificate
               <ArrowRight className="h-4 w-4" />
-            </a>
+            </Link>
           </div>
         </motion.div>
 
