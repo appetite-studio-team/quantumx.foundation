@@ -120,7 +120,7 @@ async function generateCertificate(name: string): Promise<Blob> {
   });
 
   const modifiedPdf = await pdfDoc.save();
-  return new Blob([modifiedPdf], { type: 'application/pdf' });
+  return new Blob([modifiedPdf.buffer as ArrayBuffer], { type: 'application/pdf' });
 }
 
 function downloadBlob(blob: Blob, filename: string) {
