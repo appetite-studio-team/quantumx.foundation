@@ -150,22 +150,20 @@ export function CertificatePage() {
     setError('');
 
     try {
-      // 1. Verify email
-      const res = await fetch('/api/qx-hack/certificate', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: email.trim() }),
-      });
+      // 1. Fetch participants and verify email client-side
+      const res = await fetch('/participants.json');
+      const participants: { name: string; email: string }[] = await res.json();
+      const match = participants.find(
+        (p) => p.email.trim().toLowerCase() === email.trim().toLowerCase(),
+      );
 
-      const data = await res.json();
-
-      if (!res.ok) {
-        setError(data.error || 'Something went wrong.');
+      if (!match) {
+        setError('This email was not found in our participant list. Please check the email you registered with.');
         setStatus('error');
         return;
       }
 
-      const name = data.name as string;
+      const name = match.name;
       setParticipantName(name);
 
       // 2. Generate personalized certificate
