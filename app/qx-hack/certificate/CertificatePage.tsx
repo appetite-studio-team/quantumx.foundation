@@ -94,13 +94,13 @@ async function generateCertificate(name: string): Promise<Blob> {
   // Format name: full uppercase to match certificate style
   const displayName = name.toUpperCase();
 
-  const fontSize = 85;
+  const fontSize = 100;
   const textWidth = font.widthOfTextAtSize(displayName, fontSize);
 
   // Position the name directly below "THIS CERTIFICATE IS PROUDLY PRESENTED TO"
   // Aligned to match the left edge of "THIS" in the certificate
   const nameX = 200;
-  const nameY = height * 0.49;
+  const nameY = height * 0.42;
 
   page.drawText(displayName, {
     x: nameX,
