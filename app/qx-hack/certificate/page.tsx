@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import type { Metadata } from 'next';
 import { qxHack } from '@/content/qx-hack';
 import { CertificatePage } from './CertificatePage';
@@ -54,5 +55,9 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <CertificatePage />;
+  return (
+    <Suspense>
+      <CertificatePage />
+    </Suspense>
+  );
 }

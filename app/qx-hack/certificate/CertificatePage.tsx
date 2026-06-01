@@ -145,13 +145,49 @@ export function CertificatePage() {
   const [participantName, setParticipantName] = useState('');
   const formRef = useRef<HTMLFormElement>(null);
 
-  // Pre-fill email from ?email= query param
+  /* Auto-lookup state: 'pending' while fetching, 'found' if matched, 'not-found' or 'none' otherwise */
+  const [autoLookup, setAutoLookup] = useState<'none' | 'pending' | 'found' | 'not-found'>('none');
+
+  // Auto-lookup participant when ?email= is present
   useEffect(() => {
     const paramEmail = searchParams.get('email');
-    if (paramEmail) {
-      setEmail(paramEmail);
-    }
+    if (!paramEmail) return;
+
+    setEmail(paramEmail);
+    setAutoLookup('pending');
+
+    fetch('/participants.json')
+      .then((r) => r.json())
+      .then((participants: { name: string; email: string }[]) => {
+        const match = participants.find(
+          (p) => p.email.trim().toLowerCase() === paramEmail.trim().toLowerCase(),
+        );
+        if (match) {
+          setParticipantName(match.name);
+          setAutoLookup('found');
+        } else {
+          setAutoLookup('not-found');
+        }
+      })
+      .catch(() => {
+        setAutoLookup('not-found');
+      });
   }, [searchParams]);
+
+  async function handleDownload() {
+    if (!participantName) return;
+    setStatus('loading');
+    setError('');
+    try {
+      const blob = await generateCertificate(participantName);
+      const safeName = participantName.replace(/[^a-zA-Z0-9\s]/g, '').replace(/\s+/g, '_');
+      downloadBlob(blob, `QxHack_Certificate_${safeName}.pdf`);
+      setStatus('success');
+    } catch {
+      setError('Failed to generate certificate. Please try again.');
+      setStatus('error');
+    }
+  }
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
@@ -161,7 +197,6 @@ export function CertificatePage() {
     setError('');
 
     try {
-      // 1. Fetch participants and verify email client-side
       const res = await fetch('/participants.json');
       const participants: { name: string; email: string }[] = await res.json();
       const match = participants.find(
@@ -177,10 +212,7 @@ export function CertificatePage() {
       const name = match.name;
       setParticipantName(name);
 
-      // 2. Generate personalized certificate
       const blob = await generateCertificate(name);
-
-      // 3. Trigger download
       const safeName = name.replace(/[^a-zA-Z0-9\s]/g, '').replace(/\s+/g, '_');
       downloadBlob(blob, `QxHack_Certificate_${safeName}.pdf`);
 
@@ -190,6 +222,9 @@ export function CertificatePage() {
       setStatus('error');
     }
   }
+
+  /* Whether to show the direct download view (email matched via URL param) */
+  const showDirectDownload = autoLookup === 'found' && participantName;
 
   return (
     <main className="relative">
@@ -247,64 +282,31 @@ export function CertificatePage() {
             />
           </motion.div>
 
-          {/* Certificate download form */}
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ ...defaultTransition, delay: 0.2 }}
-            className="mt-10 w-full max-w-md"
-          >
-            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-              {/* Email input */}
-              <div className="relative">
-                <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
-                  <MailIcon className="h-5 w-5 text-white/30" />
-                </div>
-                <input
-                  id="certificate-email"
-                  type="email"
-                  value={email}
-                  onChange={(e) => {
-                    setEmail(e.target.value);
-                    if (status === 'error') {
-                      setStatus('idle');
-                      setError('');
-                    }
-                  }}
-                  placeholder="Enter your registered email"
-                  required
-                  disabled={status === 'loading'}
-                  className="w-full rounded-full border border-white/[0.12] bg-white/[0.05] py-3.5 pl-12 pr-5 font-heading text-sm tracking-wide text-white placeholder-white/35 backdrop-blur-xl transition-all duration-300 focus:border-violet-400/50 focus:bg-white/[0.08] focus:outline-none focus:ring-2 focus:ring-violet-500/20 disabled:opacity-50"
-                />
-              </div>
+          {/* ---------- AUTO-LOOKUP: Direct download view ---------- */}
+          {showDirectDownload && (
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ ...defaultTransition, delay: 0.2 }}
+              className="mt-10 w-full max-w-md text-center"
+            >
+              <p className="text-sm text-white/60">
+                Hey{' '}
+                <span className="font-semibold text-white">{participantName}</span>,
+                your certificate is ready!
+              </p>
 
-              {/* Download button */}
               <button
-                type="submit"
-                disabled={status === 'loading' || !email.trim()}
-                className="inline-flex items-center justify-center gap-2.5 rounded-full bg-white px-7 py-3.5 font-heading text-sm font-semibold uppercase tracking-[0.18em] text-[#1a0533] transition-all duration-300 hover:bg-white/90 hover:shadow-[0_0_40px_rgba(255,255,255,0.25)] disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-white disabled:hover:shadow-none"
+                type="button"
+                onClick={handleDownload}
+                disabled={status === 'loading'}
+                className="mt-5 inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-white px-7 py-3.5 font-heading text-sm font-semibold uppercase tracking-[0.18em] text-[#1a0533] transition-all duration-300 hover:bg-white/90 hover:shadow-[0_0_40px_rgba(255,255,255,0.25)] disabled:cursor-not-allowed disabled:opacity-40"
               >
                 {status === 'loading' ? (
                   <>
-                    <svg
-                      className="h-4 w-4 animate-spin"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      aria-hidden
-                    >
-                      <circle
-                        className="opacity-25"
-                        cx="12"
-                        cy="12"
-                        r="10"
-                        stroke="currentColor"
-                        strokeWidth="4"
-                      />
-                      <path
-                        className="opacity-75"
-                        fill="currentColor"
-                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
-                      />
+                    <svg className="h-4 w-4 animate-spin" fill="none" viewBox="0 0 24 24" aria-hidden>
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
                     </svg>
                     Generating...
                   </>
@@ -320,44 +322,179 @@ export function CertificatePage() {
                   </>
                 )}
               </button>
-            </form>
 
-            {/* Error message */}
-            {status === 'error' && error && (
-              <motion.p
-                initial={{ opacity: 0, y: -4 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="mt-4 text-center text-sm text-red-300/90"
-              >
-                {error}
-              </motion.p>
-            )}
-
-            {/* Success message */}
-            {status === 'success' && participantName && (
-              <motion.div
-                initial={{ opacity: 0, y: -4 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="mt-4 text-center"
-              >
-                <p className="text-sm text-emerald-300/90">
-                  Certificate generated for{' '}
-                  <span className="font-semibold text-emerald-200">{participantName}</span>
-                </p>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setStatus('idle');
-                    setEmail('');
-                    setParticipantName('');
-                  }}
-                  className="mt-2 text-xs uppercase tracking-[0.2em] text-white/40 transition-colors hover:text-white/70"
+              {status === 'error' && error && (
+                <motion.p
+                  initial={{ opacity: 0, y: -4 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="mt-4 text-sm text-red-300/90"
                 >
-                  Download another
+                  {error}
+                </motion.p>
+              )}
+
+              {status === 'success' && (
+                <motion.div initial={{ opacity: 0, y: -4 }} animate={{ opacity: 1, y: 0 }} className="mt-4">
+                  <p className="text-sm text-emerald-300/90">
+                    Certificate generated for{' '}
+                    <span className="font-semibold text-emerald-200">{participantName}</span>
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setAutoLookup('none');
+                      setStatus('idle');
+                      setEmail('');
+                      setParticipantName('');
+                    }}
+                    className="mt-2 text-xs uppercase tracking-[0.2em] text-white/40 transition-colors hover:text-white/70"
+                  >
+                    Download another
+                  </button>
+                </motion.div>
+              )}
+            </motion.div>
+          )}
+
+          {/* ---------- AUTO-LOOKUP: Loading state ---------- */}
+          {autoLookup === 'pending' && (
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ ...defaultTransition, delay: 0.2 }}
+              className="mt-10 flex w-full max-w-md items-center justify-center gap-3 text-sm text-white/50"
+            >
+              <svg className="h-4 w-4 animate-spin" fill="none" viewBox="0 0 24 24" aria-hidden>
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+              </svg>
+              Looking up your certificate…
+            </motion.div>
+          )}
+
+          {/* ---------- FALLBACK: Email input form ---------- */}
+          {(autoLookup === 'none' || autoLookup === 'not-found') && (
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ ...defaultTransition, delay: 0.2 }}
+              className="mt-10 w-full max-w-md"
+            >
+              {autoLookup === 'not-found' && (
+                <motion.p
+                  initial={{ opacity: 0, y: -4 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="mb-4 text-center text-sm text-amber-300/80"
+                >
+                  We couldn&apos;t find a certificate for the email in the link. Please try entering your registered email below.
+                </motion.p>
+              )}
+
+              <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                {/* Email input */}
+                <div className="relative">
+                  <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
+                    <MailIcon className="h-5 w-5 text-white/30" />
+                  </div>
+                  <input
+                    id="certificate-email"
+                    type="email"
+                    value={email}
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                      if (status === 'error') {
+                        setStatus('idle');
+                        setError('');
+                      }
+                    }}
+                    placeholder="Enter your registered email"
+                    required
+                    disabled={status === 'loading'}
+                    className="w-full rounded-full border border-white/[0.12] bg-white/[0.05] py-3.5 pl-12 pr-5 font-heading text-sm tracking-wide text-white placeholder-white/35 backdrop-blur-xl transition-all duration-300 focus:border-violet-400/50 focus:bg-white/[0.08] focus:outline-none focus:ring-2 focus:ring-violet-500/20 disabled:opacity-50"
+                  />
+                </div>
+
+                {/* Download button */}
+                <button
+                  type="submit"
+                  disabled={status === 'loading' || !email.trim()}
+                  className="inline-flex items-center justify-center gap-2.5 rounded-full bg-white px-7 py-3.5 font-heading text-sm font-semibold uppercase tracking-[0.18em] text-[#1a0533] transition-all duration-300 hover:bg-white/90 hover:shadow-[0_0_40px_rgba(255,255,255,0.25)] disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-white disabled:hover:shadow-none"
+                >
+                  {status === 'loading' ? (
+                    <>
+                      <svg
+                        className="h-4 w-4 animate-spin"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        aria-hidden
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        />
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                        />
+                      </svg>
+                      Generating...
+                    </>
+                  ) : status === 'success' ? (
+                    <>
+                      <CheckIcon className="h-4 w-4" />
+                      Downloaded
+                    </>
+                  ) : (
+                    <>
+                      <DownloadIcon className="h-4 w-4" />
+                      Download Certificate
+                    </>
+                  )}
                 </button>
-              </motion.div>
-            )}
-          </motion.div>
+              </form>
+
+              {/* Error message */}
+              {status === 'error' && error && (
+                <motion.p
+                  initial={{ opacity: 0, y: -4 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="mt-4 text-center text-sm text-red-300/90"
+                >
+                  {error}
+                </motion.p>
+              )}
+
+              {/* Success message */}
+              {status === 'success' && participantName && (
+                <motion.div
+                  initial={{ opacity: 0, y: -4 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="mt-4 text-center"
+                >
+                  <p className="text-sm text-emerald-300/90">
+                    Certificate generated for{' '}
+                    <span className="font-semibold text-emerald-200">{participantName}</span>
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setStatus('idle');
+                      setEmail('');
+                      setParticipantName('');
+                    }}
+                    className="mt-2 text-xs uppercase tracking-[0.2em] text-white/40 transition-colors hover:text-white/70"
+                  >
+                    Download another
+                  </button>
+                </motion.div>
+              )}
+            </motion.div>
+          )}
 
           {/* Description text */}
           <motion.p
@@ -366,8 +503,9 @@ export function CertificatePage() {
             transition={{ ...defaultTransition, delay: 0.3 }}
             className="mx-auto mt-6 max-w-md text-center text-sm leading-relaxed text-white/50 md:text-base"
           >
-            Enter the email you registered with to download your
-            personalized participation certificate.
+            {showDirectDownload
+              ? 'Click the button above to download your personalized participation certificate.'
+              : 'Enter the email you registered with to download your personalized participation certificate.'}
           </motion.p>
         </div>
 
