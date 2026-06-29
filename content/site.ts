@@ -22,12 +22,12 @@ export const site = {
 
 /** Project links from OG site (for menu and capabilities) */
 export const projectLinks = [
-  { label: 'Quantum Roadmap', href: 'https://roadmap.quantumx.school/' },
-  { label: 'Vulnerability Database', href: 'https://vulnerable.quantumx.technology/' },
-  { label: 'Qubit Database', href: 'https://qubit.quantumx.technology/' },
   { label: 'QuantumX School', href: 'https://quantumx.school/' },
   { label: 'QuantumX Vault', href: '/coming-soon/' },
-  { label: 'Quantum Experience Center', href: '/coming-soon' },
+  { label: 'Quantum Quark', href: 'https://quark.quantumx.technology/' },
+  { label: 'Qubit Database', href: 'https://qubit.quantumx.technology/' },
+  { label: 'Vulnerability Database', href: 'https://vulnerable.quantumx.technology/' },
+  { label: 'Quantum Roadmap', href: 'https://roadmap.quantumx.school/' },
 ] as const;
 
 /** Menu dropdown: Careers (Wellfound), Projects (section link), Founder note, Socials (icons) */

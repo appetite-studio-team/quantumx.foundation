@@ -18,10 +18,10 @@ export function AnnouncementBanner() {
         <span className="hidden sm:inline">
           <strong className="font-semibold">QuantumX School</strong>
           <span className="mx-1.5 inline-block h-3 w-px bg-white/25" aria-hidden />
-          June cohort about to start, register today
+          July cohort about to start, register today
         </span>
         <span className="sm:hidden">
-          <strong>QuantumX School</strong>, June cohort starting
+          <strong>QuantumX School</strong>, July cohort starting
         </span>
         <Link
           href="https://quantumx.school/"

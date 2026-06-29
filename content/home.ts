@@ -15,6 +15,7 @@ export const hero = {
     { id: '5', label: 'QEC', href: '/coming-soon' },
     { id: '6', label: 'Vault', href: '/coming-soon' },
     { id: '7', label: 'Research Center', href: '/coming-soon' },
+    { id: '8', label: 'Quantum Quark', href: 'https://quark.quantumx.technology/' },
   ],
 } as const;
 
@@ -26,12 +27,12 @@ export const technology = {
 
 export const capabilities = {
   items: [
-    { number: '01', label: 'Quantum Research & Roadmap', href: 'https://roadmap.quantumx.school/' },
-    { number: '02', label: 'Quantum Vulnerability System', href: 'https://vulnerable.quantumx.technology/' },
-    { number: '03', label: 'QuantumX School', href: 'https://quantumx.school/' },
+    { number: '01', label: 'QuantumX School', href: 'https://quantumx.school/' },
+    { number: '02', label: 'QuantumX Vault', href: '/coming-soon/' },
+    { number: '03', label: 'Quantum Quark', href: 'https://quark.quantumx.technology/' },
     { number: '04', label: 'Qubit Database', href: 'https://qubit.quantumx.technology/' },
-    { number: '05', label: 'QuantumX Vault', href: '/coming-soon/' },
-    { number: '06', label: 'Experience Center & Outreach', href: '/coming-soon' },
+    { number: '05', label: 'Quantum Vulnerability System', href: 'https://vulnerable.quantumx.technology/' },
+    { number: '06', label: 'Quantum Research & Roadmap', href: 'https://roadmap.quantumx.school/' },
   ],
   leftImageSrc: '/images/quantum-computer.png',
   leftImageAlt: 'Quantum computer',
