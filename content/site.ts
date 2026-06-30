@@ -14,6 +14,7 @@ export const site = {
   internalLinks: [
     { label: 'Jobs', href: wellfoundJobsUrl },
     { label: 'Community', href: '/events' },
+    { label: 'Academy', href: 'https://quantumx.school/' },
     { label: 'Articles', href: '/articles' },
     { label: 'Contact', href: '/contact' },
   ],
@@ -50,6 +51,12 @@ export const menuItems = [
     id: 'events',
     label: 'Community',
     href: '/events',
+  },
+  {
+    id: 'academy',
+    label: 'Academy',
+    href: 'https://quantumx.school/',
+    external: true,
   },
   {
     id: 'jobs',

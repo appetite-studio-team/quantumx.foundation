@@ -24,7 +24,7 @@ export function AnnouncementBanner() {
           <strong>QuantumX School</strong>, July cohort starting
         </span>
         <Link
-          href="https://quantumx.school/"
+          href="https://quantumx.school/apply"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1 whitespace-nowrap rounded-full bg-white px-3 py-0.5 text-xs font-semibold text-black transition-colors hover:bg-white/90"
