@@ -65,31 +65,19 @@ export function CapabilitiesSection() {
           </motion.ul>
 
           <motion.div
-            className="mt-12 md:mt-16"
+            className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4 md:mt-16"
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={defaultViewport}
             transition={{ ...defaultTransition, delay: 0.3 }}
           >
-            {capabilities.ctaExternal ? (
-              <a
-                href={capabilities.ctaHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 font-heading text-sm font-semibold uppercase tracking-[0.2em] text-accent hover:underline"
-                data-magnetic
-              >
-                {capabilities.ctaText}
-              </a>
-            ) : (
-              <Link
-                href={capabilities.ctaHref}
-                className="inline-flex items-center gap-2 font-heading text-sm font-semibold uppercase tracking-[0.2em] text-accent hover:underline"
-                data-magnetic
-              >
-                {capabilities.ctaText}
-              </Link>
-            )}
+            <Link
+              href="/projects"
+              className="inline-flex items-center gap-2 font-heading text-sm font-semibold uppercase tracking-[0.2em] text-accent hover:underline"
+              data-magnetic
+            >
+              View all projects →
+            </Link>
           </motion.div>
         </div>
       </div>

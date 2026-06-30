@@ -26,3 +26,15 @@ export type FromTheLabContent = {
 };
 
 export const fromTheLab: FromTheLabContent = data as FromTheLabContent;
+
+/** All articles, newest first. */
+export function sortedArticles(): FromTheLabArticle[] {
+  return [...fromTheLab.articles].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+}
+
+/** Landing preview: the `n` newest articles. */
+export function latestArticles(n = 3): FromTheLabArticle[] {
+  return sortedArticles().slice(0, n);
+}

@@ -68,17 +68,29 @@ export function ContactFooterSection() {
             </nav>
           </div>
           <div>
-            <p className="text-xs uppercase tracking-[0.2em] text-gray-secondary">Explore</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-gray-secondary">Company</p>
             <nav className="mt-2 flex flex-col gap-2" aria-label="Internal links">
-              {site.internalLinks.map(({ label, href }) => (
-                <Link
-                  key={label}
-                  href={href}
-                  className="text-sm text-text-primary hover:text-accent"
-                >
-                  {label}
-                </Link>
-              ))}
+              {site.internalLinks.map(({ label, href }) =>
+                href.startsWith('http') ? (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-text-primary hover:text-accent"
+                  >
+                    {label}
+                  </a>
+                ) : (
+                  <Link
+                    key={label}
+                    href={href}
+                    className="text-sm text-text-primary hover:text-accent"
+                  >
+                    {label}
+                  </Link>
+                )
+              )}
             </nav>
           </div>
           <div>

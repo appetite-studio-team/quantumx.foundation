@@ -2,54 +2,58 @@
  * Global site branding and footer content.
  */
 
+/** Jobs are not listed on-site - every jobs link redirects to Wellfound. */
+const wellfoundJobsUrl = 'https://wellfound.com/company/quantumx-qx-pvt-ltd';
+
 export const site = {
   name: 'QuantumX Foundation',
   email: 'hi@quantumx.foundation',
   tagline: 'Building the foundations of the post-quantum era.',
-  address: null as string | null,
+  address:
+    '3rd Floor, Startup Park, Opposite Police Station, Singasandra, Madivala, Bangalore South, Karnataka 560068' as string | null,
   internalLinks: [
-    { label: 'Work', href: '/' },
-    { label: 'Events', href: '/#events' },
-    { label: 'Careers', href: '/careers' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Jobs', href: wellfoundJobsUrl },
+    { label: 'Community', href: '/events' },
+    { label: 'Articles', href: '/articles' },
+    { label: 'Contact', href: '/contact' },
   ],
   externalLinks: [
     { label: 'X', href: 'https://x.com/_Quantum_X_' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/company/quantumx-foundation/' },
   ],
-  wellfoundJobsUrl: 'https://wellfound.com/company/quantumx-qx-pvt-ltd',
+  wellfoundJobsUrl,
 } as const;
 
 /** Project links from OG site (for menu and capabilities) */
 export const projectLinks = [
   { label: 'QuantumX School', href: 'https://quantumx.school/' },
-  { label: 'QuantumX Vault', href: '/coming-soon/' },
-  { label: 'Quantum Quark', href: 'https://quark.quantumx.technology/' },
+  { label: 'QuantumX Vault', href: 'http://qxvault.quantumx.technology/' },
+  { label: 'QuantumX Quark', href: 'https://quark.quantumx.technology/' },
   { label: 'Qubit Database', href: 'https://qubit.quantumx.technology/' },
   { label: 'Vulnerability Database', href: 'https://vulnerable.quantumx.technology/' },
   { label: 'Quantum Roadmap', href: 'https://roadmap.quantumx.school/' },
 ] as const;
 
-/** Menu dropdown: Careers (Wellfound), Projects (section link), Founder note, Socials (icons) */
+/** Menu dropdown: Jobs (Wellfound), Projects (section link), Founder note, Socials (icons) */
 export const menuItems = [
   {
     id: 'projects',
     label: 'Projects',
-    href: '/#capabilities',
+    href: '/projects',
   },
   {
     id: 'articles',
     label: 'Articles',
-    href: '/#from-the-lab',
+    href: '/articles',
   },
   {
     id: 'events',
-    label: 'Events',
-    href: '/#events',
+    label: 'Community',
+    href: '/events',
   },
   {
-    id: 'careers',
-    label: 'Careers',
+    id: 'jobs',
+    label: 'Jobs',
     href: site.wellfoundJobsUrl,
     external: true,
   },

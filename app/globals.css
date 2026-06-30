@@ -189,3 +189,43 @@ body {
     max-width: none;
   }
 }
+
+/* --- Event mosaic (staggered, gapless tessellation) --- */
+.event-mosaic {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.event-mosaic > * {
+  aspect-ratio: 1 / 1;
+}
+
+@media (min-width: 1024px) {
+  .event-mosaic {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    aspect-ratio: 3 / 2;
+    grid-template-areas:
+      "a a b c c d"
+      "a a b e f d"
+      "g g h e f i"
+      "j k h l l i";
+  }
+
+  .event-mosaic > * {
+    aspect-ratio: auto;
+  }
+
+  .ev-a { grid-area: a; }
+  .ev-b { grid-area: b; }
+  .ev-c { grid-area: c; }
+  .ev-d { grid-area: d; }
+  .ev-e { grid-area: e; }
+  .ev-f { grid-area: f; }
+  .ev-g { grid-area: g; }
+  .ev-h { grid-area: h; }
+  .ev-i { grid-area: i; }
+  .ev-j { grid-area: j; }
+  .ev-k { grid-area: k; }
+  .ev-l { grid-area: l; }
+}

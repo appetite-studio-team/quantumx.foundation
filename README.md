@@ -23,9 +23,7 @@ quantumx.foundation/
 │   ├── page.tsx            # Home page (6 sections)
 │   ├── globals.css         # Global styles and Tailwind imports
 │   ├── sitemap.ts
-│   ├── robots.ts
-│   └── careers/
-│       └── page.tsx        # Careers page
+│   └── robots.ts
 ├── components/
 │   ├── site-header/        # App bar with logo and [MENU]
 │   ├── menu/               # Full-screen dropdown menu
@@ -37,8 +35,7 @@ quantumx.foundation/
 │   └── icons/              # XIcon, LinkedInIcon, MenuIcon, CheckCircleIcon
 ├── content/
 │   ├── site.ts             # Site-wide: menu, footer, links
-│   ├── home.ts             # Home page copy and image paths
-│   └── careers.ts          # Careers page copy
+│   └── home.ts             # Home page copy and image paths
 ├── public/images/          # App-Icon-Black.png, quantum-computer.png, ajmal-founder.jpg, etc.
 ├── lib/                    # motion-variants
 ├── hooks/                  # useLenis, useMousePosition, useReducedMotion

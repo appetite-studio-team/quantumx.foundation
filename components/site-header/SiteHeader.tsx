@@ -5,6 +5,54 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Menu } from '@/components/menu/Menu';
 import { useTheme } from '@/components/theme/ThemeContext';
+import { menuItems } from '@/content/site';
+import { XIcon, LinkedInIcon } from '@/components/icons';
+
+const navLinkClassName =
+  'font-heading text-sm font-medium uppercase tracking-[0.2em] text-text-primary hover:text-accent transition-colors';
+
+function DesktopNav() {
+  return (
+    <nav className="hidden items-center gap-7 md:flex lg:gap-9" aria-label="Primary">
+      {menuItems.map((item) =>
+        'links' in item ? (
+          <div key={item.id} className="flex items-center gap-4">
+            {item.links.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-text-primary hover:text-accent transition-colors"
+                aria-label={link.label}
+              >
+                {link.label === 'X' ? (
+                  <XIcon className="h-4 w-4" />
+                ) : (
+                  <LinkedInIcon className="h-4 w-4" />
+                )}
+              </a>
+            ))}
+          </div>
+        ) : 'external' in item && item.external ? (
+          <a
+            key={item.id}
+            href={item.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={navLinkClassName}
+          >
+            {item.label}
+          </a>
+        ) : (
+          <Link key={item.id} href={item.href} className={navLinkClassName}>
+            {item.label}
+          </Link>
+        )
+      )}
+    </nav>
+  );
+}
 
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,6 +75,7 @@ export function SiteHeader() {
           />
         </Link>
         <div className="flex items-center gap-4 md:gap-6">
+          <DesktopNav />
           <button
             type="button"
             className="font-heading text-xs font-medium uppercase tracking-[0.2em] text-text-primary hover:text-accent transition-colors md:text-sm"
@@ -37,7 +86,7 @@ export function SiteHeader() {
           </button>
           <button
             type="button"
-            className="font-heading text-sm font-medium uppercase tracking-[0.2em] text-text-primary hover:text-accent"
+            className="font-heading text-sm font-medium uppercase tracking-[0.2em] text-text-primary hover:text-accent md:hidden"
             onClick={() => setMenuOpen(true)}
             aria-label="Open menu"
             aria-expanded={menuOpen}

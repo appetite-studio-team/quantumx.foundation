@@ -28,8 +28,8 @@ export const technology = {
 export const capabilities = {
   items: [
     { number: '01', label: 'QuantumX School', href: 'https://quantumx.school/' },
-    { number: '02', label: 'QuantumX Vault', href: '/coming-soon/' },
-    { number: '03', label: 'Quantum Quark', href: 'https://quark.quantumx.technology/' },
+    { number: '02', label: 'QuantumX Vault', href: 'http://qxvault.quantumx.technology/' },
+    { number: '03', label: 'QuantumX Quark', href: 'https://quark.quantumx.technology/' },
     { number: '04', label: 'Qubit Database', href: 'https://qubit.quantumx.technology/' },
     { number: '05', label: 'Quantum Vulnerability System', href: 'https://vulnerable.quantumx.technology/' },
     { number: '06', label: 'Quantum Research & Roadmap', href: 'https://roadmap.quantumx.school/' },

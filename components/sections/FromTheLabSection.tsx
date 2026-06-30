@@ -4,9 +4,12 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { defaultViewport, defaultTransition } from '@/lib/motion-variants';
 import { LinkedInIcon } from '@/components/icons';
-import { fromTheLab } from '@/content/from-the-lab';
+import { fromTheLab, latestArticles } from '@/content/from-the-lab';
+import { ArticleCard } from '@/components/articles/ArticleCard';
 
 export function FromTheLabSection() {
+  const articles = latestArticles(3);
+
   return (
     <section id="from-the-lab" className="bg-background py-section px-6 text-text-primary md:px-10">
       <div className="mx-auto max-w-7xl">
@@ -37,46 +40,16 @@ export function FromTheLabSection() {
             hidden: {},
           }}
         >
-          {fromTheLab.articles.map((article) => (
-            <motion.div
+          {articles.map((article) => (
+            <ArticleCard
               key={article.title}
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={defaultTransition}
-              className="flex flex-col gap-5 first:md:pr-10 md:px-10 last:md:pl-10 last:md:pr-0"
-            >
-              <p className="text-sm text-gray-secondary">{article.date}</p>
-              <h3 className="font-heading text-lg font-bold uppercase leading-tight tracking-tight-heading text-text-primary md:text-xl">
-                {article.title}
-              </h3>
-              <p className="text-base leading-relaxed text-gray-secondary">
-                {article.excerpt}
-              </p>
-              {article.href.includes('linkedin.com') ? (
-                <a
-                  href={article.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-text-primary underline underline-offset-4 transition-colors hover:text-accent"
-                >
-                  Read article
-                  <LinkedInIcon className="h-4 w-4 shrink-0" />
-                </a>
-              ) : (
-                <Link
-                  href={article.href}
-                  className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-text-primary underline underline-offset-4 transition-colors hover:text-accent"
-                >
-                  Read article
-                </Link>
-              )}
-            </motion.div>
+              article={article}
+              className="first:md:pr-10 md:px-10 last:md:pl-10 last:md:pr-0"
+            />
           ))}
 
           {/* Coming soon, only when there's empty room in the 3-col row */}
-          {fromTheLab.articles.length < 3 && (
+          {articles.length < 3 && (
             <motion.div
               variants={{
                 hidden: { opacity: 0, y: 20 },
@@ -103,6 +76,26 @@ export function FromTheLabSection() {
               </a>
             </motion.div>
           )}
+        </motion.div>
+
+        {/* View all articles */}
+        <motion.div
+          className="mt-12 md:mt-16"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={defaultViewport}
+          transition={defaultTransition}
+        >
+          <Link
+            href="/articles"
+            className="inline-flex items-center gap-2 border border-gray-secondary/30 bg-background px-8 py-4 font-heading text-sm font-semibold uppercase tracking-[0.15em] text-text-primary transition-colors hover:border-accent hover:text-accent"
+            data-magnetic
+          >
+            View all articles
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+            </svg>
+          </Link>
         </motion.div>
       </div>
     </section>

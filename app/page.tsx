@@ -4,7 +4,6 @@ import { TechnologyStatementSection } from '@/components/sections/TechnologyStat
 import { CapabilitiesSection } from '@/components/sections/CapabilitiesSection';
 import { StudioPhilosophySection } from '@/components/sections/StudioPhilosophySection';
 import { FromTheLabSection } from '@/components/sections/FromTheLabSection';
-import { ContactFooterSection } from '@/components/sections/ContactFooterSection';
 import { EventsSection } from '@/components/sections/EventsSection';
 
 export default function HomePage() {
@@ -17,7 +16,6 @@ export default function HomePage() {
       <StudioPhilosophySection />
       <FromTheLabSection />
       <EventsSection />
-      <ContactFooterSection />
     </main>
   );
 }
