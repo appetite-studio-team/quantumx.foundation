@@ -60,9 +60,9 @@ export const metadata: Metadata = {
       'We are a deep-tech initiative building an open, accessible, and reliable quantum future.',
     images: [
       {
-        url: '/images/App-Icon-Black.png',
-        width: 512,
-        height: 512,
+        url: '/images/og-cover.png',
+        width: 1200,
+        height: 630,
         alt: 'QuantumX Foundation',
       },
     ],
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     title: 'QuantumX Foundation - Building the Foundations of the Post-Quantum Era',
     description:
       'We are a deep-tech initiative building an open, accessible, and reliable quantum future.',
-    images: ['/images/App-Icon-Black.png'],
+    images: ['/images/og-cover.png'],
   },
   icons: {
     icon: '/images/App-Icon-Black.png',
