@@ -60,7 +60,7 @@ export function SiteHeader() {
 
   return (
     <>
-      <header className="fixed left-0 right-0 top-10 z-[10001] flex items-center justify-between px-6 pt-6 md:px-10 md:pt-8">
+      <header className="fixed left-0 right-0 top-0 z-[10001] flex items-center justify-between px-6 pt-6 md:px-10 md:pt-8">
         <Link
           href="/"
           className="text-text-primary hover:opacity-80 transition-opacity"
