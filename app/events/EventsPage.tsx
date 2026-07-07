@@ -28,6 +28,37 @@ export function EventsPage() {
         </motion.div>
       </section>
 
+      {/* Luma calendar CTA */}
+      <section className="mx-auto max-w-7xl px-6 pb-section md:px-10">
+        <motion.a
+          href="https://luma.com/user/quantumx"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex flex-col gap-6 rounded-lg border border-gray-secondary/20 bg-gray-secondary/5 p-8 transition-colors hover:border-accent/40 md:flex-row md:items-center md:justify-between md:p-10"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={defaultViewport}
+          transition={defaultTransition}
+          data-magnetic
+        >
+          <div className="max-w-2xl">
+            <span className="font-heading text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+              Never miss an event
+            </span>
+            <h2 className="mt-3 font-heading text-2xl font-bold uppercase leading-tight tracking-tight-heading text-text-primary md:text-3xl">
+              Follow QuantumX on Luma
+            </h2>
+            <p className="mt-3 text-base text-gray-secondary md:text-lg">
+              Subscribe to our Luma calendar to get notified about upcoming
+              workshops, meetups, and quantum events — and RSVP in one tap.
+            </p>
+          </div>
+          <span className="inline-flex shrink-0 items-center gap-2 rounded-full bg-accent px-6 py-3 font-heading text-sm font-semibold uppercase tracking-[0.15em] text-background transition-transform group-hover:translate-x-1">
+            View calendar →
+          </span>
+        </motion.a>
+      </section>
+
       {/* A look back - moments from past events */}
       <MomentsGallery />
 
