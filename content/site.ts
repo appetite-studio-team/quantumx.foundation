@@ -29,7 +29,7 @@ export const site = {
 export const projectLinks = [
   { label: 'QuantumX School', href: 'https://quantumx.school/' },
   { label: 'QuantumX Vault', href: 'http://qxvault.quantumx.technology/' },
-  { label: 'QuantumX Quark', href: 'https://quark.quantumx.technology/' },
+  { label: 'QxQuark', href: '/qxquark' },
   { label: 'Qubit Database', href: 'https://qubit.quantumx.technology/' },
   { label: 'Vulnerability Database', href: 'https://vulnerable.quantumx.technology/' },
   { label: 'Quantum Roadmap', href: 'https://roadmap.quantumx.school/' },

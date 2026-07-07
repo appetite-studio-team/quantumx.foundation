@@ -97,7 +97,7 @@ export const projectsContent: ProjectsContent = {
       icon: 'tooling',
       description:
         'Hands-on quantum tooling for builders and researchers exploring what quantum hardware can do.',
-      href: 'https://quark.quantumx.technology/',
+      href: '/qxquark',
     },
     {
       number: '04',
