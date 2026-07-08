@@ -65,7 +65,7 @@ export function ResearchPage() {
                 rel="noopener noreferrer"
                 className="mt-2 inline-flex w-fit items-center gap-2 text-sm font-medium text-text-primary underline underline-offset-4 transition-colors hover:text-accent"
               >
-                Read publication →
+                Read Abstract →
               </a>
             </motion.article>
           ))}

@@ -35,9 +35,7 @@ import {
 } from './_shared';
 import { ArchitectureDiagram } from './ArchitectureDiagram';
 
-/* External destinations - swap to real URLs once published. */
 const LINKS = {
-  whitepaper: 'https://qxace.quantumx.technology/whitepaper',
   contact: '/contact',
 };
 
@@ -200,9 +198,6 @@ function HeroSection() {
               Request Access
               <ArrowRight className="h-4 w-4" />
             </Link>
-            <a href={LINKS.whitepaper} target="_blank" rel="noopener noreferrer" className={btnSecondary} data-magnetic>
-              Read the Whitepaper
-            </a>
           </motion.div>
         </div>
 

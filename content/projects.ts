@@ -63,24 +63,24 @@ export const projectsContent: ProjectsContent = {
       {
         icon: 'learn',
         label: 'Learn & build',
-        projectNumbers: ['01', '03', '06'],
+        projectNumbers: ['03', '06'],
       },
       {
         icon: 'secure',
         label: 'Secure & track',
-        projectNumbers: ['07', '02', '04', '05'],
+        projectNumbers: ['01', '02', '04', '05'],
       },
     ],
   },
   projects: [
     {
       number: '01',
-      name: 'QuantumX School',
-      tagline: 'Learn quantum computing',
-      icon: 'education',
+      name: 'QuantumX ACE',
+      tagline: 'Adaptive cryptographic intelligence',
+      icon: 'cipher',
       description:
-        'Open quantum education - structured courses and learning paths that make quantum computing accessible to everyone.',
-      href: 'https://quantumx.school/',
+        'The Adaptive Cryptography Engine - context-aware, risk-adaptive orchestration that selects post-quantum encryption strategies in real time.',
+      href: '/qxace',
     },
     {
       number: '02',
@@ -126,15 +126,6 @@ export const projectsContent: ProjectsContent = {
       description:
         'Our research direction and roadmap toward a reliable, open quantum future.',
       href: 'https://roadmap.quantumx.school/',
-    },
-    {
-      number: '07',
-      name: 'QuantumX ACE',
-      tagline: 'Adaptive cryptographic intelligence',
-      icon: 'cipher',
-      description:
-        'The Adaptive Cryptography Engine - context-aware, risk-adaptive orchestration that selects post-quantum encryption strategies in real time.',
-      href: '/qxace',
     },
   ],
 };
