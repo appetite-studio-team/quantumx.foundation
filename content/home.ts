@@ -62,8 +62,8 @@ export const capabilities = {
   leftImageSrcLight: '/images/qx-lab-white.png',
   leftImageAlt: 'QuantumX quantum computing laboratory',
   ctaText: 'VIEW OPEN POSITIONS →',
-  ctaHref: 'https://wellfound.com/company/quantumx-qx-pvt-ltd',
-  ctaExternal: true,
+  ctaHref: '/careers',
+  ctaExternal: false,
 } as const;
 
 export const studioPhilosophy = {

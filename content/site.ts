@@ -2,7 +2,10 @@
  * Global site branding and footer content.
  */
 
-/** Jobs are not listed on-site - every jobs link redirects to Wellfound. */
+/**
+ * External Wellfound listing that hosts our open roles.
+ * On-site "Jobs"/"Careers" links point to /careers, which then links out here.
+ */
 const wellfoundJobsUrl = 'https://wellfound.com/company/quantumx-qx-pvt-ltd';
 
 export const site = {
@@ -13,7 +16,7 @@ export const site = {
     '3rd Floor, Startup Park, Opposite Police Station, Singasandra, Bangalore South, Karnataka 560068' as string | null,
   // Footer "Company" column.
   internalLinks: [
-    { label: 'Jobs', href: wellfoundJobsUrl },
+    { label: 'Jobs', href: '/careers' },
     { label: 'Community', href: '/community' },
     { label: 'Research', href: '/research' },
     { label: 'Newsroom', href: '/newsroom' },
@@ -81,8 +84,7 @@ export const menuItems = [
   {
     id: 'jobs',
     label: 'Jobs',
-    href: site.wellfoundJobsUrl,
-    external: true,
+    href: '/careers',
   },
   {
     id: 'socials',

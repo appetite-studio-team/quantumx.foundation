@@ -16,9 +16,8 @@ const channels = [
   {
     label: 'Careers',
     value: 'View open roles',
-    href: site.wellfoundJobsUrl,
+    href: '/careers',
     description: 'Join the team building the post-quantum era.',
-    external: true,
   },
   {
     label: 'LinkedIn',
