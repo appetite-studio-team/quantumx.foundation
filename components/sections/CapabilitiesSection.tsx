@@ -17,33 +17,40 @@ export function CapabilitiesSection() {
 
   return (
     <section id="capabilities" className="bg-background py-section px-6 text-text-primary md:px-10">
-      <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[1fr,1.5fr] md:gap-16">
+      <div className="mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-2 md:gap-16">
         {/* Left: image */}
-        <motion.div
-          className="relative aspect-square max-w-md overflow-hidden rounded-sm bg-gray-secondary/20"
+        <motion.figure
+          className="relative bg-background"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={defaultViewport}
           transition={defaultTransition}
         >
-          {/* Dark theme render */}
-          <Image
-            src={capabilities.leftImageSrc}
-            alt={capabilities.leftImageAlt}
-            fill
-            className="theme-dark-only object-cover"
-            sizes="(max-width: 768px) 100vw, 448px"
-          />
-          {/* Light theme render */}
-          <Image
-            src={capabilities.leftImageSrcLight}
-            alt={capabilities.leftImageAlt}
-            fill
-            className="theme-light-only object-cover"
-            sizes="(max-width: 768px) 100vw, 448px"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent pointer-events-none" />
-        </motion.div>
+          <div className="relative aspect-[16/9] w-full">
+            {/* Dark theme render */}
+            <Image
+              src={capabilities.leftImageSrc}
+              alt={capabilities.leftImageAlt}
+              fill
+              className="theme-dark-only object-cover"
+              sizes="(max-width: 768px) 100vw, 576px"
+            />
+            {/* Light theme render */}
+            <Image
+              src={capabilities.leftImageSrcLight}
+              alt={capabilities.leftImageAlt}
+              fill
+              className="theme-light-only object-cover"
+              sizes="(max-width: 768px) 100vw, 576px"
+            />
+            {/* Edge vignette — blends the render into the page background on both themes */}
+            <div
+              className="pointer-events-none absolute inset-0"
+              aria-hidden
+              style={{ boxShadow: 'inset 0 0 70px 24px var(--color-background)' }}
+            />
+          </div>
+        </motion.figure>
 
         {/* Right: foldable branches */}
         <div className="flex flex-col">
