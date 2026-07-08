@@ -36,10 +36,10 @@ import { ArchitectureDiagram } from './ArchitectureDiagram';
 /* External destinations — swap to real URLs once published. */
 const LINKS = {
   getStarted: 'https://quark.quantumx.technology/',
-  docs: 'https://quark.quantumx.technology/docs',
+  docs: 'https://github.com/Quantumx-fn/Quark#readme',
   github: 'https://github.com/quantumx-foundation',
-  modelCard: 'https://quark.quantumx.technology/model-card',
-  paper: 'https://quark.quantumx.technology/paper',
+  modelCard: 'https://github.com/Quantumx-fn/Quark/blob/main/HF_MODEL_CARD.md',
+  paper: 'https://github.com/Quantumx-fn/Quark/blob/main/paper/quark.tex',
 };
 
 /* Reusable scroll-in wrapper matching the site's fade-up rhythm. */
