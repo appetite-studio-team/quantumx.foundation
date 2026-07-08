@@ -26,11 +26,20 @@ export function CapabilitiesSection() {
           viewport={defaultViewport}
           transition={defaultTransition}
         >
+          {/* Dark theme render */}
           <Image
             src={capabilities.leftImageSrc}
             alt={capabilities.leftImageAlt}
             fill
-            className="object-cover"
+            className="theme-dark-only object-cover"
+            sizes="(max-width: 768px) 100vw, 448px"
+          />
+          {/* Light theme render */}
+          <Image
+            src={capabilities.leftImageSrcLight}
+            alt={capabilities.leftImageAlt}
+            fill
+            className="theme-light-only object-cover"
             sizes="(max-width: 768px) 100vw, 448px"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent pointer-events-none" />

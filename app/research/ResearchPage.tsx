@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { defaultViewport, defaultTransition } from '@/lib/motion-variants';
 import { research } from '@/content/research';
@@ -10,20 +11,57 @@ export function ResearchPage() {
 
   return (
     <main className="min-h-screen bg-background text-text-primary">
-      {/* Hero */}
+      {/* Hero — text + side image */}
       <section className="mx-auto max-w-7xl px-6 pt-32 pb-section md:pt-40 md:px-10">
-        <motion.div
-          initial={{ opacity: 0, y: 32 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={defaultTransition}
-        >
-          <h1 className="font-heading text-clamp-display font-bold uppercase leading-none tracking-tight-heading text-text-primary">
-            {research.heading}
-          </h1>
-          <p className="mt-6 max-w-3xl text-lg text-gray-secondary md:text-xl">
-            {research.subheading}
-          </p>
-        </motion.div>
+        <div className="grid items-center gap-10 lg:grid-cols-[1.15fr,0.85fr] lg:gap-14">
+          {/* Left: text */}
+          <motion.div
+            initial={{ opacity: 0, y: 32 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={defaultTransition}
+          >
+            <h1 className="font-heading text-clamp-display font-bold uppercase leading-none tracking-tight-heading text-text-primary">
+              {research.heading}
+            </h1>
+            <p className="mt-6 max-w-xl text-lg text-gray-secondary md:text-xl">
+              {research.subheading}
+            </p>
+          </motion.div>
+
+          {/* Right: quantum computer render */}
+          <motion.figure
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ ...defaultTransition, delay: 0.1 }}
+            className="relative mx-auto w-full max-w-md bg-background"
+          >
+            <div className="relative aspect-square w-full">
+              {/* Dark theme render */}
+              <Image
+                src="/images/quantum-computer.png"
+                alt="Quantum computer dilution refrigerator"
+                fill
+                className="theme-dark-only object-contain"
+                sizes="(max-width: 1024px) 100vw, 448px"
+                priority
+              />
+              {/* Light theme render */}
+              <Image
+                src="/images/quantum-computer.png-wbg.png"
+                alt="Quantum computer dilution refrigerator"
+                fill
+                className="theme-light-only object-contain"
+                sizes="(max-width: 1024px) 100vw, 448px"
+              />
+              {/* Edge vignette — blends the render into the page background on both themes */}
+              <div
+                className="pointer-events-none absolute inset-0"
+                aria-hidden
+                style={{ boxShadow: 'inset 0 0 60px 20px var(--color-background)' }}
+              />
+            </div>
+          </motion.figure>
+        </div>
       </section>
 
       {/* Publications */}
