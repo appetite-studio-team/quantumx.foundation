@@ -59,7 +59,7 @@ export function EventsPage() {
               workshops, meetups, and quantum events, and RSVP in one tap.
             </p>
           </div>
-          <span className="inline-flex shrink-0 items-center gap-2 rounded-full bg-accent px-6 py-3 font-heading text-sm font-semibold uppercase tracking-[0.15em] text-background transition-transform group-hover:translate-x-1">
+          <span className="inline-flex shrink-0 items-center gap-2 bg-accent px-6 py-3 font-heading text-sm font-semibold uppercase tracking-[0.15em] text-background transition-transform group-hover:translate-x-1">
             View calendar →
           </span>
         </motion.a>
@@ -101,7 +101,7 @@ export function EventsPage() {
 
           <Link
             href="/qx-hack"
-            className="group mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-heading text-sm font-semibold uppercase tracking-[0.15em] text-background transition-transform hover:translate-x-1 md:mt-10"
+            className="group mt-8 inline-flex items-center gap-2 bg-accent px-6 py-3 font-heading text-sm font-semibold uppercase tracking-[0.15em] text-background transition-transform hover:translate-x-1 md:mt-10"
             data-magnetic
           >
             Explore the hackathon →
