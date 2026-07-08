@@ -71,6 +71,18 @@
   --color-banner-text: #1a1a1a;
 }
 
+/* Theme-swapped media: show the dark-optimized asset by default,
+   swap to the light-optimized asset under [data-theme='light']. */
+.theme-light-only {
+  display: none;
+}
+[data-theme='light'] .theme-dark-only {
+  display: none;
+}
+[data-theme='light'] .theme-light-only {
+  display: block;
+}
+
 /* Disable native smooth scroll when Lenis is active (set by JS) */
 html.lenis,
 html.lenis body {
