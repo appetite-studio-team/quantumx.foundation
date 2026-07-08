@@ -37,7 +37,7 @@ import { ArchitectureDiagram } from './ArchitectureDiagram';
 const LINKS = {
   getStarted: 'https://quark.quantumx.technology/',
   docs: 'https://github.com/Quantumx-fn/Quark#readme',
-  github: 'https://github.com/quantumx-foundation',
+  github: 'https://github.com/Quantumx-fn',
   modelCard: 'https://github.com/Quantumx-fn/Quark/blob/main/HF_MODEL_CARD.md',
   paper: 'https://github.com/Quantumx-fn/Quark/blob/main/paper/quark.tex',
 };
