@@ -7,16 +7,6 @@ export const hero = {
   headlineLine2: 'FOUNDATION.',
   tagline:
     'Building the foundations of the post-quantum era.',
-  stripItems: [
-    { id: '1', label: 'Quantum Roadmap', href: 'https://roadmap.quantumx.school/' },
-    { id: '2', label: 'Vulnerability Database', href: 'https://vulnerable.quantumx.technology/' },
-    { id: '3', label: 'Qubit Database', href: 'https://qubit.quantumx.technology/' },
-    { id: '4', label: 'QuantumX School', href: 'https://quantumx.school/' },
-    { id: '5', label: 'QEC', href: '/coming-soon' },
-    { id: '6', label: 'Vault', href: '/coming-soon' },
-    { id: '7', label: 'Research Center', href: '/coming-soon' },
-    { id: '8', label: 'Quantum Quark', href: 'https://quark.quantumx.technology/' },
-  ],
 } as const;
 
 export const technology = {
