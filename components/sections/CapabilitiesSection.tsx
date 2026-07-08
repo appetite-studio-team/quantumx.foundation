@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
-import Link from 'next/link';
 import { defaultViewport, defaultTransition } from '@/lib/motion-variants';
 import { capabilities } from '@/content/home';
 
@@ -17,7 +16,7 @@ export function CapabilitiesSection() {
 
   return (
     <section id="capabilities" className="bg-background py-section px-6 text-text-primary md:px-10">
-      <div className="mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-2 md:gap-16">
+      <div className="mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-[1.25fr,1fr] md:gap-16">
         {/* Left: image */}
         <motion.figure
           className="relative bg-background"
@@ -141,22 +140,6 @@ export function CapabilitiesSection() {
               );
             })}
           </motion.ul>
-
-          <motion.div
-            className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4 md:mt-16"
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={defaultViewport}
-            transition={{ ...defaultTransition, delay: 0.3 }}
-          >
-            <Link
-              href="/projects"
-              className="inline-flex items-center gap-2 font-heading text-sm font-semibold uppercase tracking-[0.2em] text-accent hover:underline"
-              data-magnetic
-            >
-              View all projects →
-            </Link>
-          </motion.div>
         </div>
       </div>
     </section>
