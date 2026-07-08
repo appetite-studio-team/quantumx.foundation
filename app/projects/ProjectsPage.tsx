@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { defaultViewport, defaultTransition } from '@/lib/motion-variants';
 import { projectsContent } from '@/content/projects';
@@ -25,6 +26,34 @@ export function ProjectsPage() {
             {subheading}
           </p>
         </motion.div>
+      </section>
+
+      {/* Quantum lab render */}
+      <section className="mx-auto max-w-7xl px-6 pb-section md:px-10">
+        <motion.figure
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={defaultViewport}
+          transition={defaultTransition}
+          className="group relative overflow-hidden rounded-sm border border-gray-secondary/15"
+        >
+          <div className="relative aspect-[16/9] w-full bg-white">
+            <Image
+              src="/images/quantum-lab.png"
+              alt="QuantumX quantum computing laboratory - control rack, dilution refrigerator, and readout console"
+              fill
+              className="object-contain"
+              sizes="(max-width: 1280px) 100vw, 1152px"
+              priority
+            />
+          </div>
+          <figcaption className="flex items-center gap-2 border-t border-gray-secondary/15 bg-background px-5 py-4">
+            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+            <span className="font-heading text-xs font-semibold uppercase tracking-[0.2em] text-gray-secondary">
+              Inside the QuantumX Technology stack
+            </span>
+          </figcaption>
+        </motion.figure>
       </section>
 
       {/* Projects grid */}
