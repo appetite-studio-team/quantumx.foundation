@@ -15,7 +15,8 @@ export type ProjectIcon =
   | 'research'
   | 'vault'
   | 'database'
-  | 'shield';
+  | 'shield'
+  | 'cipher';
 
 export type Project = {
   number: string;
@@ -67,7 +68,7 @@ export const projectsContent: ProjectsContent = {
       {
         icon: 'secure',
         label: 'Secure & track',
-        projectNumbers: ['02', '04', '05'],
+        projectNumbers: ['07', '02', '04', '05'],
       },
     ],
   },
@@ -125,6 +126,15 @@ export const projectsContent: ProjectsContent = {
       description:
         'Our research direction and roadmap toward a reliable, open quantum future.',
       href: 'https://roadmap.quantumx.school/',
+    },
+    {
+      number: '07',
+      name: 'QuantumX ACE',
+      tagline: 'Adaptive cryptographic intelligence',
+      icon: 'cipher',
+      description:
+        'The Adaptive Cryptography Engine - context-aware, risk-adaptive orchestration that selects post-quantum encryption strategies in real time.',
+      href: '/qxace',
     },
   ],
 };

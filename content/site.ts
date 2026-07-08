@@ -11,13 +11,27 @@ export const site = {
   tagline: 'Building the foundations of the post-quantum era.',
   address:
     '3rd Floor, Startup Park, Opposite Police Station, Singasandra, Madivala, Bangalore South, Karnataka 560068' as string | null,
+  // Footer "Company" column.
   internalLinks: [
     { label: 'Jobs', href: wellfoundJobsUrl },
-    { label: 'Community', href: '/events' },
+    { label: 'Community', href: '/community' },
+    { label: 'Research', href: '/research' },
     { label: 'Newsroom', href: '/newsroom' },
     { label: 'Academy', href: 'https://quantumx.school/' },
+  ],
+  // Footer "Departments" column.
+  departmentLinks: [
+    { label: 'QuantumX Technology', href: '/projects' },
+    { label: 'QuantumX School', href: 'https://quantumx.school/' },
+    { label: 'QuantumX Community', href: '/community' },
+  ],
+  // Footer "Resources" column.
+  resourceLinks: [
     { label: 'Articles', href: '/articles' },
     { label: 'Contact', href: '/contact' },
+    { label: 'Terms of Use', href: '/terms' },
+    { label: 'Terms & Conditions', href: '/terms-and-conditions' },
+    { label: 'Privacy Policy', href: '/privacy' },
   ],
   externalLinks: [
     { label: 'X', href: 'https://x.com/_Quantum_X_' },
@@ -30,6 +44,7 @@ export const site = {
 export const projectLinks = [
   { label: 'QuantumX School', href: 'https://quantumx.school/' },
   { label: 'QuantumX Vault', href: 'http://qxvault.quantumx.technology/' },
+  { label: 'QxACE', href: '/qxace' },
   { label: 'QxQuark', href: '/qxquark' },
   { label: 'Qubit Database', href: 'https://qubit.quantumx.technology/' },
   { label: 'Vulnerability Database', href: 'https://vulnerable.quantumx.technology/' },
@@ -49,9 +64,14 @@ export const menuItems = [
     href: '/articles',
   },
   {
+    id: 'research',
+    label: 'Research',
+    href: '/research',
+  },
+  {
     id: 'events',
     label: 'Community',
-    href: '/events',
+    href: '/community',
   },
   {
     id: 'academy',

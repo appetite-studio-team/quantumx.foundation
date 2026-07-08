@@ -35,7 +35,7 @@ export function ContactFooterSection() {
 
         {/* Footer grid */}
         <motion.div
-          className="mt-16 grid gap-12 border-t border-gray-secondary/20 pt-12 md:mt-24 md:grid-cols-3 md:gap-8 md:pt-16"
+          className="mt-16 grid gap-12 border-t border-gray-secondary/20 pt-12 md:mt-24 md:grid-cols-3 md:gap-8 md:pt-16 lg:grid-cols-5"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={defaultViewport}
@@ -71,6 +71,58 @@ export function ContactFooterSection() {
             <p className="text-xs uppercase tracking-[0.2em] text-gray-secondary">Company</p>
             <nav className="mt-2 flex flex-col gap-2" aria-label="Internal links">
               {site.internalLinks.map(({ label, href }) =>
+                href.startsWith('http') ? (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-text-primary hover:text-accent"
+                  >
+                    {label}
+                  </a>
+                ) : (
+                  <Link
+                    key={label}
+                    href={href}
+                    className="text-sm text-text-primary hover:text-accent"
+                  >
+                    {label}
+                  </Link>
+                )
+              )}
+            </nav>
+          </div>
+          <div>
+            <p className="text-xs uppercase tracking-[0.2em] text-gray-secondary">Departments</p>
+            <nav className="mt-2 flex flex-col gap-2" aria-label="Department links">
+              {site.departmentLinks.map(({ label, href }) =>
+                href.startsWith('http') ? (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-text-primary hover:text-accent"
+                  >
+                    {label}
+                  </a>
+                ) : (
+                  <Link
+                    key={label}
+                    href={href}
+                    className="text-sm text-text-primary hover:text-accent"
+                  >
+                    {label}
+                  </Link>
+                )
+              )}
+            </nav>
+          </div>
+          <div>
+            <p className="text-xs uppercase tracking-[0.2em] text-gray-secondary">Resources</p>
+            <nav className="mt-2 flex flex-col gap-2" aria-label="Resource links">
+              {site.resourceLinks.map(({ label, href }) =>
                 href.startsWith('http') ? (
                   <a
                     key={label}

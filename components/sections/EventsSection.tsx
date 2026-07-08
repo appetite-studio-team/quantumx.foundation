@@ -53,7 +53,7 @@ export function EventsSection() {
           transition={defaultTransition}
         >
           <Link
-            href="/events"
+            href="/community"
             className="inline-flex items-center gap-2 border border-gray-secondary/30 bg-background px-8 py-4 font-heading text-sm font-semibold uppercase tracking-[0.15em] text-text-primary transition-colors hover:border-accent hover:text-accent"
             data-magnetic
           >

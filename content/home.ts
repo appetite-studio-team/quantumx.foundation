@@ -32,6 +32,7 @@ export const capabilities = {
       title: 'QuantumX Technology',
       description: 'Tools and infrastructure for the post-quantum era.',
       products: [
+        { label: 'QxACE', href: '/qxace' },
         { label: 'QxQuark', href: '/qxquark' },
         { label: 'Qubit Database', href: 'https://qubit.quantumx.technology/' },
         { label: 'Quantum Vulnerability System', href: 'https://vulnerable.quantumx.technology/' },
@@ -52,7 +53,7 @@ export const capabilities = {
       title: 'QuantumX Community',
       description: 'A global network building the quantum future together.',
       products: [
-        { label: 'Events & Meetups', href: '/events' },
+        { label: 'Events & Meetups', href: '/community' },
         { label: 'Luma', href: 'https://luma.com/user/quantumx' },
       ],
     },

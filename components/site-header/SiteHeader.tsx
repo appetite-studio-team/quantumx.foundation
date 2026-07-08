@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { Menu } from '@/components/menu/Menu';
 import { useTheme } from '@/components/theme/ThemeContext';
 import { menuItems } from '@/content/site';
-import { XIcon, LinkedInIcon } from '@/components/icons';
+import { XIcon, LinkedInIcon, SunIcon, MoonIcon } from '@/components/icons';
 
 const navLinkClassName =
   'font-heading text-sm font-medium uppercase tracking-[0.2em] text-text-primary hover:text-accent transition-colors';
@@ -78,11 +78,15 @@ export function SiteHeader() {
           <DesktopNav />
           <button
             type="button"
-            className="font-heading text-xs font-medium uppercase tracking-[0.2em] text-text-primary hover:text-accent transition-colors md:text-sm"
+            className="text-text-primary hover:text-accent transition-colors"
             onClick={toggleTheme}
             aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
           >
-            {theme === 'dark' ? '[LIGHT]' : '[DARK]'}
+            {theme === 'dark' ? (
+              <SunIcon className="w-5 h-5" />
+            ) : (
+              <MoonIcon className="w-5 h-5" />
+            )}
           </button>
           <button
             type="button"

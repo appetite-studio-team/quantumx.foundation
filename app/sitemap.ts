@@ -25,13 +25,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: baseUrl + '/qxace/',
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
       url: baseUrl + '/articles/',
       lastModified: now,
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: baseUrl + '/events/',
+      url: baseUrl + '/research/',
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: baseUrl + '/community/',
       lastModified: now,
       changeFrequency: 'weekly',
       priority: 0.8,
@@ -41,6 +53,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.6,
+    },
+    {
+      url: baseUrl + '/terms/',
+      lastModified: now,
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
+    {
+      url: baseUrl + '/terms-and-conditions/',
+      lastModified: now,
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
+    {
+      url: baseUrl + '/privacy/',
+      lastModified: now,
+      changeFrequency: 'yearly',
+      priority: 0.3,
     },
     {
       url: baseUrl + '/qx-hack/',

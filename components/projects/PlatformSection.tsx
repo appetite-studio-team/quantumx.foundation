@@ -72,6 +72,14 @@ function ProductIcon({ name, className }: { name: ProjectIcon; className?: strin
           <path d="M12 8v4M12 15.5v.5" />
         </Icon>
       );
+    case 'cipher':
+      return (
+        <Icon className={className}>
+          <rect x="4" y="10.5" width="16" height="10" rx="2" />
+          <path d="M8 10.5V7a4 4 0 0 1 8 0v3.5" />
+          <path d="M12 14v3" />
+        </Icon>
+      );
     default:
       return null;
   }
