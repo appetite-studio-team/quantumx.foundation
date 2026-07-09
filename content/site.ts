@@ -47,6 +47,7 @@ export const site = {
 export const projectLinks = [
   { label: 'QxACE', href: '/qxace' },
   { label: 'QxQuark', href: '/qxquark' },
+  { label: 'DsynQ', href: '/dsynq' },
   { label: 'QuantumX Vault', href: 'http://qxvault.quantumx.technology/' },
   { label: 'Qubit Database', href: 'https://qubit.quantumx.technology/' },
   { label: 'Vulnerability Database', href: 'https://vulnerable.quantumx.technology/' },

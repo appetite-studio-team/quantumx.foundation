@@ -80,6 +80,13 @@ function ProductIcon({ name, className }: { name: ProjectIcon; className?: strin
           <path d="M12 14v3" />
         </Icon>
       );
+    case 'photonics':
+      return (
+        <Icon className={className}>
+          <path d="M2 12c3.3-5 6.7-5 10 0s6.7 5 10 0" />
+          <circle cx="12" cy="12" r="1.6" />
+        </Icon>
+      );
     default:
       return null;
   }

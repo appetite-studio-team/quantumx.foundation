@@ -16,7 +16,8 @@ export type ProjectIcon =
   | 'vault'
   | 'database'
   | 'shield'
-  | 'cipher';
+  | 'cipher'
+  | 'photonics';
 
 export type Project = {
   number: string;
@@ -63,7 +64,7 @@ export const projectsContent: ProjectsContent = {
       {
         icon: 'learn',
         label: 'Learn & build',
-        projectNumbers: ['03', '06'],
+        projectNumbers: ['03', '06', '07'],
       },
       {
         icon: 'secure',
@@ -126,6 +127,15 @@ export const projectsContent: ProjectsContent = {
       description:
         'Our research direction and roadmap toward a reliable, open quantum future.',
       href: 'https://roadmap.quantumx.school/',
+    },
+    {
+      number: '07',
+      name: 'DsynQ',
+      tagline: 'Physics-driven photonic design',
+      icon: 'photonics',
+      description:
+        'Physics-driven design for quantum photonics - let Maxwell’s equations, not trial and error, shape the waveguides, resonators, and single-photon sources at the heart of quantum hardware.',
+      href: '/dsynq',
     },
   ],
 };
