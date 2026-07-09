@@ -215,6 +215,25 @@ export function AtomIcon({ className = 'h-6 w-6' }: IconProps) {
   );
 }
 
+export function SparkleIcon({ className = 'h-6 w-6' }: IconProps) {
+  return (
+    <svg className={className} {...base}>
+      <path d="M12 3l1.8 4.9L18.7 9.7l-4.9 1.8L12 16.4l-1.8-4.9L5.3 9.7l4.9-1.8L12 3Z" />
+      <path d="M18.5 15.5l.7 1.9 1.9.7-1.9.7-.7 1.9-.7-1.9-1.9-.7 1.9-.7.7-1.9Z" strokeOpacity="0.7" />
+    </svg>
+  );
+}
+
+export function DocIcon({ className = 'h-6 w-6' }: IconProps) {
+  return (
+    <svg className={className} {...base}>
+      <path d="M14 3v5h5" />
+      <path d="M6 3h8l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" />
+      <path d="M8 13h8M8 17h5" strokeOpacity="0.6" />
+    </svg>
+  );
+}
+
 export function GridIcon({ className = 'h-6 w-6' }: IconProps) {
   return (
     <svg className={className} {...base}>

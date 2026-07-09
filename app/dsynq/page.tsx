@@ -3,7 +3,7 @@ import { DsynqPage } from './DsynqPage';
 
 const title = 'DsynQ - Physics-Driven Design for Quantum Photonics';
 const description =
-  'DsynQ is an inverse-design engine for quantum photonic devices - it lets Maxwell’s equations, not trial and error, shape the fabrication-ready waveguides, resonators, and single-photon sources at the heart of quantum hardware.';
+  'DsynQ transforms photonic quantum device requirements into fabrication-ready chip designs using AI-assisted workflows - a gdsfactory layout engine paired with an AI intelligence layer that takes you from plain-language requirements to GDSII in under a minute.';
 
 export const metadata: Metadata = {
   title: 'DsynQ',
