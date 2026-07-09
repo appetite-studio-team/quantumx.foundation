@@ -27,6 +27,8 @@ export type Project = {
   icon: ProjectIcon;
   href: string;
   status?: string;
+  /** Set to group this project under the Open Source division. */
+  group?: 'opensource';
 };
 
 /** A platform category groups a set of products under one heading. */
@@ -64,12 +66,12 @@ export const projectsContent: ProjectsContent = {
       {
         icon: 'learn',
         label: 'Learn & build',
-        projectNumbers: ['03', '06', '07'],
+        projectNumbers: ['03', '04', '05'],
       },
       {
         icon: 'secure',
         label: 'Secure & track',
-        projectNumbers: ['01', '02', '04', '05'],
+        projectNumbers: ['01', '02', '06', '07'],
       },
     ],
   },
@@ -94,33 +96,6 @@ export const projectsContent: ProjectsContent = {
     },
     {
       number: '03',
-      name: 'QuantumX Quark',
-      tagline: 'Hands-on quantum tooling',
-      icon: 'tooling',
-      description:
-        'Hands-on quantum tooling for builders and researchers exploring what quantum hardware can do.',
-      href: '/qxquark',
-    },
-    {
-      number: '04',
-      name: 'Qubit Database',
-      tagline: 'Track quantum hardware',
-      icon: 'database',
-      description:
-        'A growing, open database of qubit and quantum hardware data to track the state of the field.',
-      href: 'https://qubit.quantumx.technology/',
-    },
-    {
-      number: '05',
-      name: 'Quantum Vulnerability System',
-      tagline: 'Monitor crypto at risk',
-      icon: 'shield',
-      description:
-        'Track the cryptographic vulnerabilities exposed by quantum computing and monitor what is at risk.',
-      href: 'https://vulnerable.quantumx.technology/',
-    },
-    {
-      number: '06',
       name: 'Quantum Research & Roadmap',
       tagline: 'Our research direction',
       icon: 'research',
@@ -129,13 +104,43 @@ export const projectsContent: ProjectsContent = {
       href: 'https://roadmap.quantumx.school/',
     },
     {
-      number: '07',
+      number: '04',
       name: 'DsynQ',
-      tagline: 'Physics-driven photonic design',
+      tagline: 'AI-powered photonic design',
       icon: 'photonics',
       description:
-        'Physics-driven design for quantum photonics - let Maxwell’s equations, not trial and error, shape the waveguides, resonators, and single-photon sources at the heart of quantum hardware.',
+        'Physics-driven design for quantum photonics - turn device requirements into fabrication-ready chip layouts with a gdsfactory layout engine paired with an AI intelligence layer.',
       href: '/dsynq',
+    },
+    {
+      number: '05',
+      name: 'QuantumX Quark',
+      tagline: 'Hands-on quantum tooling',
+      icon: 'tooling',
+      description:
+        'Hands-on quantum tooling for builders and researchers exploring what quantum hardware can do.',
+      href: '/qxquark',
+      group: 'opensource',
+    },
+    {
+      number: '06',
+      name: 'Qubit Database',
+      tagline: 'Track quantum hardware',
+      icon: 'database',
+      description:
+        'A growing, open database of qubit and quantum hardware data to track the state of the field.',
+      href: 'https://qubit.quantumx.technology/',
+      group: 'opensource',
+    },
+    {
+      number: '07',
+      name: 'Quantum Vulnerability System',
+      tagline: 'Monitor crypto at risk',
+      icon: 'shield',
+      description:
+        'Track the cryptographic vulnerabilities exposed by quantum computing and monitor what is at risk.',
+      href: 'https://vulnerable.quantumx.technology/',
+      group: 'opensource',
     },
   ],
 };

@@ -25,8 +25,6 @@ export const capabilities = {
         { label: 'QxACE', href: '/qxace' },
         { label: 'QxQuark', href: '/qxquark' },
         { label: 'DsynQ', href: '/dsynq' },
-        { label: 'Qubit Database', href: 'https://qubit.quantumx.technology/' },
-        { label: 'Quantum Vulnerability System', href: 'https://vulnerable.quantumx.technology/' },
         { label: 'QuantumX Vault', href: 'http://qxvault.quantumx.technology/' },
       ],
     },
@@ -37,6 +35,8 @@ export const capabilities = {
       products: [
         { label: 'QuantumX School', href: 'https://quantumx.school/' },
         { label: 'Quantum Research & Roadmap', href: 'https://roadmap.quantumx.school/' },
+        { label: 'Qubit Database', href: 'https://qubit.quantumx.technology/' },
+        { label: 'Quantum Vulnerability System', href: 'https://vulnerable.quantumx.technology/' },
       ],
     },
     {

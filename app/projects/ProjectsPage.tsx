@@ -10,6 +10,9 @@ import { ProjectCard } from '@/components/projects/ProjectCard';
 export function ProjectsPage() {
   const { heading, subheading, projects } = projectsContent;
 
+  const coreProjects = projects.filter((p) => p.group !== 'opensource');
+  const openSourceProjects = projects.filter((p) => p.group === 'opensource');
+
   return (
     <main className="min-h-screen bg-background text-text-primary">
       {/* Hero — text + side image */}
@@ -84,11 +87,49 @@ export function ProjectsPage() {
             hidden: {},
           }}
         >
-          {projects.map((project) => (
+          {coreProjects.map((project) => (
             <ProjectCard key={project.number} project={project} />
           ))}
         </motion.div>
       </section>
+
+      {/* Open Source division */}
+      {openSourceProjects.length > 0 && (
+        <section className="mx-auto max-w-7xl px-6 pb-section md:px-10">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={defaultViewport}
+            transition={defaultTransition}
+            className="mb-8 border-t border-gray-secondary/15 pt-10 md:mb-10"
+          >
+            <span className="font-heading text-xs font-semibold uppercase tracking-[0.25em] text-accent">
+              Open Source
+            </span>
+            <h2 className="mt-4 font-heading text-2xl font-bold uppercase leading-none tracking-tight-heading text-text-primary md:text-3xl">
+              Open Source Projects
+            </h2>
+            <p className="mt-4 max-w-xl text-base text-gray-secondary md:text-lg">
+              Open, community-driven tools and data anyone can use, build on, and contribute to.
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 md:gap-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={defaultViewport}
+            variants={{
+              visible: { transition: { staggerChildren: 0.08, delayChildren: 0.1 } },
+              hidden: {},
+            }}
+          >
+            {openSourceProjects.map((project) => (
+              <ProjectCard key={project.number} project={project} />
+            ))}
+          </motion.div>
+        </section>
+      )}
 
       {/* Back to home */}
       <section className="mx-auto max-w-7xl px-6 pb-section md:px-10">
