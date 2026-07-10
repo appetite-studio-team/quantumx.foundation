@@ -103,10 +103,11 @@ export function QuantumSpeedupSection() {
           transition={defaultTransition}
         >
           <h2 className="font-heading text-2xl font-bold uppercase tracking-tight text-text-primary sm:text-3xl md:text-4xl">
-            Estimated Quantum Speedup
+            Estimated Performance Scaling
           </h2>
           <p className="mx-auto mt-4 max-w-2xl px-2 text-base text-gray-secondary md:text-lg">
-            As problem complexity increases, quantum systems outperform classical computation.
+            As problem complexity increases, quantum systems hold execution time far
+            flatter than classical computation. Lower is better.
           </p>
         </motion.div>
 
@@ -202,6 +203,18 @@ export function QuantumSpeedupSection() {
               transform={`rotate(-90, 16, ${height / 2})`}
             >
               Relative Execution Time
+            </text>
+
+            {/* "Lower is better" cue - top-left of the plot area, next to the y-axis */}
+            <text
+              x={padding.left + 8}
+              y={padding.top + 14}
+              fill="var(--color-chart-axis)"
+              fontSize="12"
+              textAnchor="start"
+              fontFamily="var(--font-heading), sans-serif"
+            >
+              ↓ Lower is better
             </text>
 
             {curveData.map((curve, idx) => (

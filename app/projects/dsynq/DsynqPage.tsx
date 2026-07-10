@@ -85,7 +85,7 @@ const HERO_METRICS = [
 function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-background">
-      {/* Faint grid — same overlay used across the site */}
+      {/* Faint grid - same overlay used across the site */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.03]"
         aria-hidden
@@ -205,10 +205,9 @@ function HeroSection() {
               <span className="font-heading text-xs font-semibold uppercase tracking-[0.2em] text-gray-secondary">
                 Photonic Layout
               </span>
-              <span className="font-mono text-xs text-accent">SVG Preview</span>
             </div>
 
-            {/* Illustrative photonic layout — a Mach–Zehnder interferometer */}
+            {/* Illustrative photonic layout - a Mach–Zehnder interferometer */}
             <svg
               viewBox="0 0 320 200"
               className="mt-6 w-full text-accent"
@@ -267,7 +266,7 @@ const STEPS = [
   {
     icon: DocIcon,
     title: 'Define Requirements',
-    desc: 'Describe your device in plain language or structured fields — wavelength, platform, objective.',
+    desc: 'Describe your device in plain language or structured fields: wavelength, platform, objective.',
   },
   {
     icon: SparkleIcon,
@@ -365,7 +364,7 @@ const COMPONENTS = [
     icon: LayersIcon,
     name: 'Directional Coupler',
     label: 'Evanescent 2×2 coupler',
-    desc: 'Two waveguides brought close so light couples between them — the basis for tunable splitting and switching.',
+    desc: 'Two waveguides brought close so light couples between them, the basis for tunable splitting and switching.',
   },
   {
     icon: GridIcon,
@@ -377,7 +376,7 @@ const COMPONENTS = [
     icon: GaugeIcon,
     name: 'Mach-Zehnder Interferometer',
     label: 'Tunable interferometric switch',
-    desc: 'Two splitters bridged by two arms — the programmable unit cell of quantum photonic processors.',
+    desc: 'Two splitters bridged by two arms, the programmable unit cell of quantum photonic processors.',
   },
 ];
 

@@ -19,19 +19,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: baseUrl + '/qxquark/',
+      url: baseUrl + '/projects/qxquark/',
       lastModified: now,
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: baseUrl + '/qxace/',
+      url: baseUrl + '/projects/qxace/',
       lastModified: now,
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: baseUrl + '/dsynq/',
+      url: baseUrl + '/projects/dsynq/',
       lastModified: now,
       changeFrequency: 'weekly',
       priority: 0.8,

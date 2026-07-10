@@ -83,7 +83,7 @@ export const projectsContent: ProjectsContent = {
       icon: 'cipher',
       description:
         'The Adaptive Cryptography Engine - context-aware, risk-adaptive orchestration that selects post-quantum encryption strategies in real time.',
-      href: '/qxace',
+      href: '/projects/qxace',
     },
     {
       number: '02',
@@ -110,7 +110,7 @@ export const projectsContent: ProjectsContent = {
       icon: 'photonics',
       description:
         'Physics-driven design for quantum photonics - turn device requirements into fabrication-ready chip layouts with a gdsfactory layout engine paired with an AI intelligence layer.',
-      href: '/dsynq',
+      href: '/projects/dsynq',
     },
     {
       number: '05',
@@ -119,7 +119,7 @@ export const projectsContent: ProjectsContent = {
       icon: 'tooling',
       description:
         'Hands-on quantum tooling for builders and researchers exploring what quantum hardware can do.',
-      href: '/qxquark',
+      href: '/projects/qxquark',
       group: 'opensource',
     },
     {

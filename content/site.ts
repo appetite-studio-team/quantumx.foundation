@@ -12,6 +12,8 @@ export const site = {
   name: 'QuantumX Foundation',
   email: 'hi@quantumx.foundation',
   tagline: 'Building the foundations of the post-quantum era.',
+  // TODO: replace with the real Discord invite before shipping.
+  discordInviteUrl: 'https://discord.gg/REPLACE_ME',
   address:
     '3rd Floor, Startup Park, Opposite Police Station, Singasandra, Bangalore South, Karnataka 560068' as string | null,
   // Footer "Company" column.
@@ -39,15 +41,16 @@ export const site = {
   externalLinks: [
     { label: 'X', href: 'https://x.com/_Quantum_X_' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/company/quantumx-foundation/' },
+    { label: 'Instagram', href: 'https://www.instagram.com/quantumx.school/' },
   ],
   wellfoundJobsUrl,
 } as const;
 
 /** Project links from OG site (for menu and capabilities) */
 export const projectLinks = [
-  { label: 'QxACE', href: '/qxace' },
-  { label: 'QxQuark', href: '/qxquark' },
-  { label: 'DsynQ', href: '/dsynq' },
+  { label: 'QxACE', href: '/projects/qxace' },
+  { label: 'QxQuark', href: '/projects/qxquark' },
+  { label: 'DsynQ', href: '/projects/dsynq' },
   { label: 'QuantumX Vault', href: 'http://qxvault.quantumx.technology/' },
   { label: 'Qubit Database', href: 'https://qubit.quantumx.technology/' },
   { label: 'Vulnerability Database', href: 'https://vulnerable.quantumx.technology/' },

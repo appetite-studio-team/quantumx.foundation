@@ -42,7 +42,7 @@ export function CapabilitiesSection() {
               className="theme-light-only object-cover"
               sizes="(max-width: 768px) 100vw, 576px"
             />
-            {/* Edge vignette — blends the render into the page background on both themes */}
+            {/* Edge vignette - blends the render into the page background on both themes */}
             <div
               className="pointer-events-none absolute inset-0"
               aria-hidden
@@ -115,24 +115,23 @@ export function CapabilitiesSection() {
                         transition={{ duration: 0.3, ease: 'easeInOut' }}
                         className="overflow-hidden"
                       >
-                        <ul className="flex flex-col gap-px pb-6 pl-10 md:pl-12">
+                        <div className="flex flex-wrap gap-2 pb-6 pl-10 md:pl-12">
                           {branch.products.map((product) => (
-                            <li key={product.label}>
-                              <a
-                                href={product.href}
-                                target={isExternal(product.href) ? '_blank' : undefined}
-                                rel={isExternal(product.href) ? 'noopener noreferrer' : undefined}
-                                className="group/link flex items-center gap-2 py-2 text-base text-gray-secondary transition-colors hover:text-accent md:text-lg"
-                                data-magnetic
-                              >
-                                <span className="text-gray-secondary/60 transition-transform group-hover/link:translate-x-1 group-hover/link:text-accent">
-                                  →
-                                </span>
-                                {product.label}
-                              </a>
-                            </li>
+                            <a
+                              key={product.label}
+                              href={product.href}
+                              target={isExternal(product.href) ? '_blank' : undefined}
+                              rel={isExternal(product.href) ? 'noopener noreferrer' : undefined}
+                              className="group/link inline-flex items-center gap-2 border border-gray-secondary/25 bg-gray-secondary/5 px-4 py-2 text-sm font-medium text-text-primary transition-colors hover:border-accent/50 hover:bg-accent/10 hover:text-accent md:text-base"
+                              data-magnetic
+                            >
+                              {product.label}
+                              <span className="text-gray-secondary/60 transition-transform group-hover/link:translate-x-0.5 group-hover/link:text-accent">
+                                →
+                              </span>
+                            </a>
                           ))}
-                        </ul>
+                        </div>
                       </motion.div>
                     )}
                   </AnimatePresence>

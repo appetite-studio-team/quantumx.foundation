@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   title: 'DsynQ',
   description,
   alternates: {
-    canonical: '/dsynq/',
+    canonical: '/projects/dsynq/',
   },
   openGraph: {
     title,
     description,
-    url: 'https://quantumx.foundation/dsynq/',
+    url: 'https://quantumx.foundation/projects/dsynq/',
     images: ['/images/og-cover.png'],
   },
   twitter: {

@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   title: 'QxACE',
   description,
   alternates: {
-    canonical: '/qxace/',
+    canonical: '/projects/qxace/',
   },
   openGraph: {
     title,
     description,
-    url: 'https://quantumx.foundation/qxace/',
+    url: 'https://quantumx.foundation/projects/qxace/',
     images: ['/images/og-cover.png'],
   },
   twitter: {

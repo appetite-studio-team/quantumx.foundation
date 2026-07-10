@@ -23,7 +23,7 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: {
-    default: 'QuantumX Foundation - Building the Foundations of the Post-Quantum Era',
+    default: 'QuantumX Foundation - Building the Post-Quantum Era',
     template: '%s - QuantumX Foundation',
   },
   description:

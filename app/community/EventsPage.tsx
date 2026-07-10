@@ -6,6 +6,8 @@ import { defaultViewport, defaultTransition } from '@/lib/motion-variants';
 import { eventsContent, sortedEvents } from '@/content/events';
 import { EventCard } from '@/components/events/EventCard';
 import { MomentsGallery } from '@/components/events/MomentsGallery';
+// TODO: re-enable once the real Discord invite is set in content/site.ts:
+// import { DiscordCtaSection } from '@/components/sections/DiscordCtaSection';
 
 const hackathonStats = [
   { value: '200+', label: 'Hackers' },
@@ -129,6 +131,9 @@ export function EventsPage() {
           ))}
         </motion.div>
       </section>
+
+      {/* Join our Discord - TODO: re-enable once the real Discord invite is set */}
+      {/* <DiscordCtaSection className="pb-section" /> */}
 
       {/* Back to home */}
       <section className="mx-auto max-w-7xl px-6 pb-section md:px-10">

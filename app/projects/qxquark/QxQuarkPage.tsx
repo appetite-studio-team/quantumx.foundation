@@ -33,7 +33,7 @@ import {
 } from './_shared';
 import { ArchitectureDiagram } from './ArchitectureDiagram';
 
-/* External destinations — swap to real URLs once published. */
+/* External destinations - swap to real URLs once published. */
 const LINKS = {
   getStarted: 'https://quark.quantumx.technology/',
   docs: 'https://github.com/Quantumx-fn/Quark#readme',
@@ -127,7 +127,7 @@ const HERO_METRICS = [
 function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-background">
-      {/* Faint grid — same overlay used on the home hero / 404 */}
+      {/* Faint grid - same overlay used on the home hero / 404 */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.03]"
         aria-hidden
@@ -651,7 +651,7 @@ function BenchmarksSection() {
 
         <Reveal className="mt-8" delay={0.05}>
           <p className="mx-auto max-w-3xl text-center text-sm leading-relaxed text-gray-secondary">
-            <span className="text-accent">Note — </span>
+            <span className="text-accent">Note: </span>
             Ties the strongest baseline on out-of-distribution benchmarks while significantly
             outperforming on equivalence-aware retrieval tasks.
           </p>

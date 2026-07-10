@@ -18,7 +18,7 @@ export const cardBase =
 export const cardHover =
   'hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_8px_32px_rgba(215,255,0,0.06)]';
 
-/** Filled primary CTA — sharp-edged accent fill with black border + black label. */
+/** Filled primary CTA - sharp-edged accent fill with black border + black label. */
 export const btnPrimary =
   'inline-flex items-center justify-center gap-2 font-heading text-sm font-semibold uppercase tracking-[0.15em] px-7 py-4 rounded-none border-2 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_28px_rgba(215,255,0,0.35)] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background';
 
@@ -28,7 +28,7 @@ export const btnPrimaryStyle = {
   borderColor: '#0a0a0a',
 } as const;
 
-/** Outlined secondary CTA — bordered, lifts to accent on hover. */
+/** Outlined secondary CTA - bordered, lifts to accent on hover. */
 export const btnSecondary =
   'inline-flex items-center justify-center gap-2 rounded-none border border-gray-secondary/40 px-7 py-4 font-heading text-sm font-semibold uppercase tracking-[0.15em] text-text-primary transition-colors duration-300 hover:border-accent hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background';
 

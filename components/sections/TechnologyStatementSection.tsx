@@ -6,7 +6,7 @@ import { technology } from '@/content/home';
 
 export function TechnologyStatementSection() {
   return (
-    <section className="bg-background py-section px-6 text-text-primary md:px-10">
+    <section className="bg-background pt-section px-6 text-text-primary md:px-10">
       <div className="mx-auto max-w-4xl">
         <motion.h2
           className="font-heading text-clamp-display font-bold uppercase leading-none tracking-tight-heading text-text-primary"

@@ -11,7 +11,7 @@ export function ResearchPage() {
 
   return (
     <main className="min-h-screen bg-background text-text-primary">
-      {/* Hero — text + side image */}
+      {/* Hero - text + side image */}
       <section className="mx-auto max-w-7xl px-6 pt-32 pb-section md:pt-40 md:px-10">
         <div className="grid items-center gap-10 lg:grid-cols-[1.15fr,0.85fr] lg:gap-14">
           {/* Left: text */}
@@ -53,7 +53,7 @@ export function ResearchPage() {
                 className="theme-light-only object-contain"
                 sizes="(max-width: 1024px) 100vw, 448px"
               />
-              {/* Edge vignette — blends the render into the page background on both themes */}
+              {/* Edge vignette - blends the render into the page background on both themes */}
               <div
                 className="pointer-events-none absolute inset-0"
                 aria-hidden

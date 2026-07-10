@@ -22,9 +22,9 @@ export const capabilities = {
       title: 'QuantumX Technology',
       description: 'Tools and infrastructure for the post-quantum era.',
       products: [
-        { label: 'QxACE', href: '/qxace' },
-        { label: 'QxQuark', href: '/qxquark' },
-        { label: 'DsynQ', href: '/dsynq' },
+        { label: 'QxACE', href: '/projects/qxace' },
+        { label: 'QxQuark', href: '/projects/qxquark' },
+        { label: 'DsynQ', href: '/projects/dsynq' },
         { label: 'QuantumX Vault', href: 'http://qxvault.quantumx.technology/' },
       ],
     },

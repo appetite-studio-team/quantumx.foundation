@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { defaultViewport, defaultTransition } from '@/lib/motion-variants';
 
 /*
- * System Architecture & Pipeline — a custom React/SVG diagram rebuilt in the
+ * System Architecture & Pipeline - a custom React/SVG diagram rebuilt in the
  * site's premium dark aesthetic. Rendered as a fixed-dark "figure" panel so it
  * reads consistently in both light and dark site themes, and scrolls
  * horizontally inside its own container on small screens.
