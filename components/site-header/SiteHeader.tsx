@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { Menu } from '@/components/menu/Menu';
 import { useTheme } from '@/components/theme/ThemeContext';
 import { menuItems } from '@/content/site';
-import { XIcon, LinkedInIcon, SunIcon, MoonIcon } from '@/components/icons';
+import { XIcon, LinkedInIcon, InstagramIcon, SunIcon, MoonIcon } from '@/components/icons';
 
 const navLinkClassName =
   'font-heading text-sm font-medium uppercase tracking-[0.2em] text-text-primary hover:text-accent transition-colors';
@@ -28,6 +28,8 @@ function DesktopNav() {
               >
                 {link.label === 'X' ? (
                   <XIcon className="h-4 w-4" />
+                ) : link.label === 'Instagram' ? (
+                  <InstagramIcon className="h-4 w-4" />
                 ) : (
                   <LinkedInIcon className="h-4 w-4" />
                 )}
