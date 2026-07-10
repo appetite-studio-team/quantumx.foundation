@@ -4,6 +4,7 @@ import { TechnologyStatementSection } from '@/components/sections/TechnologyStat
 import { CapabilitiesSection } from '@/components/sections/CapabilitiesSection';
 import { FromTheLabSection } from '@/components/sections/FromTheLabSection';
 import { EventsSection } from '@/components/sections/EventsSection';
+import { NewsletterSection } from '@/components/sections/NewsletterSection';
 // TODO: re-enable once the real Discord invite is set in content/site.ts:
 // import { DiscordCtaSection } from '@/components/sections/DiscordCtaSection';
 
@@ -17,6 +18,7 @@ export default function HomePage() {
       <FromTheLabSection />
       <EventsSection />
       {/* <DiscordCtaSection /> */}
+      <NewsletterSection />
     </main>
   );
 }

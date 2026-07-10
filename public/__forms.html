@@ -1,0 +1,19 @@
+<!--
+  Static form definition for Netlify Forms detection.
+  Next.js renders the real newsletter form with JavaScript, which Netlify's
+  build-time bot cannot parse, so this hidden static copy is what registers the
+  "newsletter" form. The visible form in NewsletterSection.tsx submits to it via
+  fetch. Keep the fields here in sync with that component.
+-->
+<html>
+  <head>
+    <title>Netlify form detection</title>
+  </head>
+  <body>
+    <form name="newsletter" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="newsletter" />
+      <input type="email" name="email" />
+      <input name="bot-field" />
+    </form>
+  </body>
+</html>
