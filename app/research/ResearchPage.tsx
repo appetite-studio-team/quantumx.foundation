@@ -47,7 +47,7 @@ export function ResearchPage() {
               />
               {/* Light theme render */}
               <Image
-                src="/images/quantum-computer.png-wbg.png"
+                src="/images/quantum-computer.png-wbg.webp"
                 alt="Quantum computer dilution refrigerator"
                 fill
                 className="theme-light-only object-contain"

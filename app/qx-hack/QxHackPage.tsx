@@ -338,7 +338,7 @@ function HeroSection() {
 
           <div className="relative h-8 w-auto md:h-10">
             <Image
-              src="/images/qx-hack/startup-park.png"
+              src="/images/qx-hack/startup-park.webp"
               alt="iQue Startup Park Bengaluru"
               width={200}
               height={48}
@@ -531,7 +531,7 @@ const ORGANIZERS = [
     logoHeight: 64,
   },
   {
-    logo: '/images/qx-hack/startup-park.png',
+    logo: '/images/qx-hack/startup-park.webp',
     name: 'iQue Startup Park',
     href: 'https://www.thestartuppark.com/',
     logoWidth: 240,
