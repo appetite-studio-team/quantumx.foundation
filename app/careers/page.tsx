@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     description:
       'Join QuantumX Foundation - explore open roles and help build the foundations of the post-quantum era.',
     url: 'https://quantumx.foundation/careers/',
-    images: ['/images/App-Icon-Black.png'],
+    images: ['/images/og-cover.png'],
   },
   twitter: {
     title: 'Careers - QuantumX Foundation',
     description:
       'Join QuantumX Foundation - explore open roles and help build the foundations of the post-quantum era.',
-    images: ['/images/App-Icon-Black.png'],
+    images: ['/images/og-cover.png'],
   },
 };
 

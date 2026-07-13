@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     description:
       'How QuantumX Foundation collects, uses, and protects your information.',
     url: 'https://quantumx.foundation/privacy/',
-    images: ['/images/App-Icon-Black.png'],
+    images: ['/images/og-cover.png'],
   },
   twitter: {
     title: 'Privacy Policy - QuantumX Foundation',
     description:
       'How QuantumX Foundation collects, uses, and protects your information.',
-    images: ['/images/App-Icon-Black.png'],
+    images: ['/images/og-cover.png'],
   },
 };
 

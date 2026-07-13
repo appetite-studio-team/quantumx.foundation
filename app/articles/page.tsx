@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     description:
       'Insights, research, and perspectives from QuantumX Foundation on quantum computing and the post-quantum era.',
     url: 'https://quantumx.foundation/articles/',
-    images: ['/images/App-Icon-Black.png'],
+    images: ['/images/og-cover.png'],
   },
   twitter: {
     title: 'Articles - QuantumX Foundation',
     description:
       'Insights, research, and perspectives from QuantumX Foundation on quantum computing and the post-quantum era.',
-    images: ['/images/App-Icon-Black.png'],
+    images: ['/images/og-cover.png'],
   },
 };
 

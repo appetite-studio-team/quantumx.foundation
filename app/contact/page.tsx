@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     description:
       'Get in touch with QuantumX Foundation - partnerships, press, careers, and general enquiries.',
     url: 'https://quantumx.foundation/contact/',
-    images: ['/images/App-Icon-Black.png'],
+    images: ['/images/og-cover.png'],
   },
   twitter: {
     title: 'Contact - QuantumX Foundation',
     description:
       'Get in touch with QuantumX Foundation - partnerships, press, careers, and general enquiries.',
-    images: ['/images/App-Icon-Black.png'],
+    images: ['/images/og-cover.png'],
   },
 };
 

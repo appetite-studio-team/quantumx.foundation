@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     description:
       'Hackathons, workshops, and gatherings from QuantumX Foundation - explore our upcoming and past events.',
     url: 'https://quantumx.foundation/community/',
-    images: ['/images/App-Icon-Black.png'],
+    images: ['/images/og-cover.png'],
   },
   twitter: {
     title: 'Events - QuantumX Foundation',
     description:
       'Hackathons, workshops, and gatherings from QuantumX Foundation - explore our upcoming and past events.',
-    images: ['/images/App-Icon-Black.png'],
+    images: ['/images/og-cover.png'],
   },
 };
 

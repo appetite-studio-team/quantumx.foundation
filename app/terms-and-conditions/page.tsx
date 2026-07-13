@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     description:
       'The agreement governing your participation in QuantumX Foundation’s programs, events, and services.',
     url: 'https://quantumx.foundation/terms-and-conditions/',
-    images: ['/images/App-Icon-Black.png'],
+    images: ['/images/og-cover.png'],
   },
   twitter: {
     title: 'Terms & Conditions - QuantumX Foundation',
     description:
       'The agreement governing your participation in QuantumX Foundation’s programs, events, and services.',
-    images: ['/images/App-Icon-Black.png'],
+    images: ['/images/og-cover.png'],
   },
 };
 
