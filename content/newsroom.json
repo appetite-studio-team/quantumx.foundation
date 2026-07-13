@@ -118,7 +118,7 @@
       "date": "2025-11-26",
       "displayDate": "Nov 26, 2025",
       "title": "Attending CyberQ 2025 in Abu Dhabi",
-      "summary": "We joined CyberQ 2025 in Abu Dhabi, hosted by the Cyber Security Council and Technology Innovation Institute, to connect and explore the future of post-quantum cybersecurity.",
+      "summary": "We joined CyberQ 2025 to explore the future of post-quantum cybersecurity.",
       "image": "/images/newsroom/cyberq-2025-abu-dhabi.png",
       "href": "https://www.linkedin.com/posts/quantumx-foundation_excited-to-share-that-well-be-attending-activity-7397946275779928064-lHBJ"
     },
@@ -126,7 +126,7 @@
       "date": "2025-11-13",
       "displayDate": "Nov 13, 2025",
       "title": "A week in Kuala Lumpur at the Post-Quantum Cryptography Conference 2025",
-      "summary": "We joined the PKI Consortium's Post-Quantum Cryptography Conference 2025 in Kuala Lumpur, connecting with the global community working on the migration to quantum-safe cryptography.",
+      "summary": "We joined the global community migrating to quantum-safe cryptography in Kuala Lumpur.",
       "image": "/images/newsroom/pqc-conference-kuala-lumpur.png",
       "href": "https://www.linkedin.com/posts/quantumx-foundation_were-spending-the-week-in-kuala-lumpur-activity-7389540618332667907-2GW8"
     },
@@ -134,7 +134,7 @@
       "date": "2026-06-22",
       "displayDate": "Jun 22, 2026",
       "title": "Here's the full curriculum for our Quantum Course",
-      "summary": "8 live sessions covering quantum computing fundamentals through Qiskit programming and real-world applications, plus course notes, assignments, Discord access, and a certificate on completion.",
+      "summary": "8 live sessions on quantum computing, Qiskit programming, and real-world applications.",
       "image": "/images/newsroom/quantum-course-curriculum.png",
       "href": "https://www.linkedin.com/posts/quantumx-foundation_for-those-of-you-asking-for-the-course-curriculum-activity-7473320554876260352-IFzg"
     },
@@ -142,7 +142,7 @@
       "date": "2026-06-29",
       "displayDate": "Jun 29, 2026",
       "title": "Introducing Quark, our open-source quantum circuit fingerprinting tool",
-      "summary": "Quark is a lightweight, 647k-parameter model that turns quantum circuits into vector embeddings, so you can find duplicates and near-matches fast on a standard CPU. Apache-2.0 licensed.",
+      "summary": "A lightweight model that finds duplicate quantum circuits fast, open-source and licensed.",
       "image": "/images/newsroom/meet-quark.png",
       "href": "https://www.linkedin.com/posts/quantumx-foundation_new-product-quarks-activity-7476200202819883008-yT9a"
     },
@@ -150,7 +150,7 @@
       "date": "2026-07-13",
       "displayDate": "Jul 13, 2026",
       "title": "Meet DsynQ, our new AI-assisted quantum photonic circuit design platform",
-      "summary": "DsynQ turns quantum photonic circuit requirements into fabrication-ready chip designs, AI-assisted, in one platform. Our research preview is live now.",
+      "summary": "DsynQ turns circuit requirements into fabrication-ready chip designs. Research preview live now.",
       "image": "/images/newsroom/meet-dsynq.png",
       "href": "https://www.linkedin.com/posts/quantumx-foundation_dsynq-quantumx-activity-7482326198463664128-8mO9"
     },
@@ -158,7 +158,7 @@
       "date": "2026-07-10",
       "displayDate": "Jul 10, 2026",
       "title": "A great conversation on the future of security",
-      "summary": "Our founder, Ajmal Ibn Mohammed Althaf, spoke at the Toc H Institute's Knowledge Enhancement Programme on internet crime, human safety, and advanced cyber security practice.",
+      "summary": "Our founder spoke on internet crime, safety, and cyber security practice.",
       "image": "/images/newsroom/toc-h-knowledge-enhancement-programme.png",
       "href": "https://www.linkedin.com/posts/quantumx-foundation_a-great-conversation-on-the-future-of-security-activity-7481266190137581568-JM5U"
     }

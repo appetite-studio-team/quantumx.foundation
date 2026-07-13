@@ -28,7 +28,7 @@ export function NewsCard({ item }: { item: NewsItem }) {
         <img
           src={item.image}
           alt={item.title}
-          className="absolute inset-0 h-full w-full object-contain transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+          className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
         />
       </div>
 
