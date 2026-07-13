@@ -77,18 +77,24 @@ export function EventCard({ event }: { event: Event }) {
         {/* CTA */}
         <div className="mt-auto pt-2">
           {upcoming ? (
-            <a
-              href={event.registerUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-sm bg-accent px-5 py-2.5 font-heading text-sm font-semibold uppercase tracking-[0.15em] text-background transition-all duration-300 hover:shadow-[0_0_24px_rgba(215,255,0,0.2)]"
-              data-magnetic
-            >
-              Register
-              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-              </svg>
-            </a>
+            event.registerUrl ? (
+              <a
+                href={event.registerUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-sm bg-accent px-5 py-2.5 font-heading text-sm font-semibold uppercase tracking-[0.15em] text-background transition-all duration-300 hover:shadow-[0_0_24px_rgba(215,255,0,0.2)]"
+                data-magnetic
+              >
+                Register
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>
+              </a>
+            ) : (
+              <span className="inline-flex items-center gap-2 text-sm font-medium text-gray-secondary/60">
+                Registration TBD
+              </span>
+            )
           ) : (
             <span className="inline-flex items-center gap-2 text-sm font-medium text-gray-secondary/60">
               Event ended

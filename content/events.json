@@ -3,6 +3,14 @@
   "subheading": "Join us at upcoming talks, workshops, and meetups.",
   "events": [
     {
+      "title": "2 Day FDP on Quantum Computing",
+      "date": "2026-08-12",
+      "displayDate": "Aug 12-13, 2026",
+      "location": "Tirunelveli, Tamil Nadu",
+      "thumbnail": "/images/events/2-day-fdp-on-quantum-computing.png",
+      "registerUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfSnjVMEALOeUvwTo0-xDMEt91ABivE-pyG-Kk3JWC1vZe0Ug/viewform"
+    },
+    {
       "title": "Quantum for Social Good Hackathon",
       "date": "2026-05-23",
       "displayDate": "May 23, 2026",
