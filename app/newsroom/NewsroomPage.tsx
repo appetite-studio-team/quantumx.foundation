@@ -4,8 +4,12 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { defaultViewport, defaultTransition } from '@/lib/motion-variants';
 import { StudioPhilosophySection } from '@/components/sections/StudioPhilosophySection';
+import { newsroomContent, sortedNewsItems } from '@/content/newsroom';
+import { NewsCard } from '@/components/newsroom/NewsCard';
 
 export function NewsroomPage() {
+  const newsItems = sortedNewsItems();
+
   return (
     <main className="min-h-screen bg-background text-text-primary">
       {/* Hero */}
@@ -27,6 +31,33 @@ export function NewsroomPage() {
 
       {/* Founder note / launch moment */}
       <StudioPhilosophySection />
+
+      {/* News grid */}
+      <section className="mx-auto max-w-7xl px-6 pb-section md:px-10">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={defaultViewport}
+          transition={defaultTransition}
+          className="mb-10 font-heading text-2xl font-bold uppercase leading-tight tracking-tight-heading text-text-primary md:text-3xl"
+        >
+          {newsroomContent.heading}
+        </motion.h2>
+        <motion.div
+          className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 md:gap-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={defaultViewport}
+          variants={{
+            visible: { transition: { staggerChildren: 0.08, delayChildren: 0.1 } },
+            hidden: {},
+          }}
+        >
+          {newsItems.map((item) => (
+            <NewsCard key={item.title} item={item} />
+          ))}
+        </motion.div>
+      </section>
 
       {/* Back to home */}
       <section className="mx-auto max-w-7xl px-6 pb-section md:px-10">
