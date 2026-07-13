@@ -3,12 +3,28 @@
   "subheading": "Join us at upcoming talks, workshops, and meetups.",
   "events": [
     {
+      "title": "QX School Bootcamp",
+      "date": "2026-08-29",
+      "displayDate": "Aug 29-30, 2026",
+      "location": "Bengaluru, Karnataka",
+      "thumbnail": "/images/events/qx-school-bootcamp.png",
+      "registerUrl": ""
+    },
+    {
       "title": "2 Day FDP on Quantum Computing",
       "date": "2026-08-12",
       "displayDate": "Aug 12-13, 2026",
       "location": "Tirunelveli, Tamil Nadu",
       "thumbnail": "/images/events/2-day-fdp-on-quantum-computing.png",
       "registerUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfSnjVMEALOeUvwTo0-xDMEt91ABivE-pyG-Kk3JWC1vZe0Ug/viewform"
+    },
+    {
+      "title": "ISTE-BNY One Week Knowledge Enhancement Programme - 2026",
+      "date": "2026-07-06",
+      "displayDate": "Jul 6-11, 2026",
+      "location": "Virtual",
+      "thumbnail": "/images/events/iste-bny-knowledge-enhancement-programme.png",
+      "registerUrl": ""
     },
     {
       "title": "Quantum for Social Good Hackathon",
