@@ -8,18 +8,18 @@ import { defaultViewport, defaultTransition } from '@/lib/motion-variants';
 // tessellate into a gapless, uneven mosaic; on small screens they collapse to a
 // clean 2-column square grid. See `.event-mosaic` in globals.css.
 const tiles = [
-  { src: '/images/moments/image-1.png', area: 'ev-a' },
-  { src: '/images/moments/image-2.png', area: 'ev-b' },
-  { src: '/images/moments/image-3.png', area: 'ev-c' },
-  { src: '/images/moments/image-4.png', area: 'ev-d' },
-  { src: '/images/moments/image-5.png', area: 'ev-e' },
-  { src: '/images/moments/image-6.png', area: 'ev-f' },
-  { src: '/images/moments/image-7.png', area: 'ev-g' },
-  { src: '/images/moments/image-8.png', area: 'ev-h' },
-  { src: '/images/moments/image-9.png', area: 'ev-i' },
-  { src: '/images/moments/image-10.png', area: 'ev-j' },
-  { src: '/images/moments/image-11.png', area: 'ev-k' },
-  { src: '/images/moments/image-12.png', area: 'ev-l' },
+  { src: '/images/moments/image-1.webp', area: 'ev-a' },
+  { src: '/images/moments/image-2.webp', area: 'ev-b' },
+  { src: '/images/moments/image-3.webp', area: 'ev-c' },
+  { src: '/images/moments/image-4.webp', area: 'ev-d' },
+  { src: '/images/moments/image-5.webp', area: 'ev-e' },
+  { src: '/images/moments/image-6.webp', area: 'ev-f' },
+  { src: '/images/moments/image-7.webp', area: 'ev-g' },
+  { src: '/images/moments/image-8.webp', area: 'ev-h' },
+  { src: '/images/moments/image-9.webp', area: 'ev-i' },
+  { src: '/images/moments/image-10.webp', area: 'ev-j' },
+  { src: '/images/moments/image-11.webp', area: 'ev-k' },
+  { src: '/images/moments/image-12.webp', area: 'ev-l' },
 ];
 
 export function MomentsGallery() {

@@ -46,7 +46,7 @@ export function ProjectsPage() {
               {/* Dark theme render */}
               <div className="theme-dark-only absolute inset-0">
                 <Image
-                  src="/images/qc-lab.png"
+                  src="/images/qc-lab.webp"
                   alt="QuantumX quantum computing laboratory - control rack, dilution refrigerator, and readout console"
                   fill
                   className="object-cover"
@@ -57,7 +57,7 @@ export function ProjectsPage() {
               {/* Light theme render */}
               <div className="theme-light-only absolute inset-0">
                 <Image
-                  src="/images/qx-lab-white.png"
+                  src="/images/qx-lab-white.webp"
                   alt="QuantumX quantum computing laboratory - control rack, dilution refrigerator, and readout console"
                   fill
                   className="object-cover"

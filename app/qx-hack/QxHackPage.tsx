@@ -423,25 +423,25 @@ function StatsSection() {
 
 const JUDGES = [
   {
-    image: '/images/qx-hack/judges/4.png',
+    image: '/images/qx-hack/judges/4.webp',
     name: 'Dr. Manjunath Konthe',
     role: 'HOD & Dean, Academics',
     org: 'HKBK College of Engineering',
   },
   {
-    image: '/images/qx-hack/judges/3.png',
+    image: '/images/qx-hack/judges/3.webp',
     name: 'Dr. Tabassum Ara',
     role: 'HOD & Dean, IIC',
     org: 'HKBK College of Engineering',
   },
   {
-    image: '/images/qx-hack/judges/2.png',
+    image: '/images/qx-hack/judges/2.webp',
     name: 'Akash Deb',
     role: 'Founder & CEO',
     org: 'ElatoAI',
   },
   {
-    image: '/images/qx-hack/judges/1.png',
+    image: '/images/qx-hack/judges/1.webp',
     name: 'Shaik Aleem Ur Rehaman',
     role: 'Principal Design Engineer',
     org: 'Microsoft',
