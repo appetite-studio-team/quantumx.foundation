@@ -1,0 +1,26 @@
+# Netlify header rules for the static export in `out/`.
+# See https://docs.netlify.com/routing/headers/
+
+# Next.js build assets are content-hashed, so they're safe to cache forever.
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Images are not content-hashed, so allow revalidation while still caching
+# aggressively at the edge and in the browser.
+/images/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/favicon.ico
+  Cache-Control: public, max-age=604800
+
+# HTML documents should always be revalidated so content updates and
+# metadata changes go live immediately.
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
