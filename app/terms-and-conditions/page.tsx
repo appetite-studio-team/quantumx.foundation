@@ -13,9 +13,17 @@ export const metadata: Metadata = {
     description:
       'The agreement governing your participation in QuantumX Foundation’s programs, events, and services.',
     url: 'https://quantumx.foundation/terms-and-conditions/',
-    images: ['/images/og-cover.png'],
+    images: [
+      {
+        url: '/images/og-cover.png',
+        width: 1200,
+        height: 630,
+        alt: 'Terms & Conditions - QuantumX Foundation',
+      },
+    ],
   },
   twitter: {
+    card: 'summary_large_image',
     title: 'Terms & Conditions - QuantumX Foundation',
     description:
       'The agreement governing your participation in QuantumX Foundation’s programs, events, and services.',

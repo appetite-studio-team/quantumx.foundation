@@ -5,6 +5,10 @@ import { RandomComingSoonCaption } from '@/components/coming-soon-caption';
 export const metadata: Metadata = {
   title: 'Coming Soon',
   description: "We're heavily working on this. Stay tuned.",
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 export default function ComingSoonPage() {

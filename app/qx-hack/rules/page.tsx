@@ -53,6 +53,24 @@ export const metadata: Metadata = {
   },
 };
 
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://quantumx.foundation/' },
+    { '@type': 'ListItem', position: 2, name: qxHack.meta.title, item: PAGE_URL.replace('/rules/', '/') },
+    { '@type': 'ListItem', position: 3, name: 'Rules & Regulations', item: PAGE_URL },
+  ],
+};
+
 export default function Page() {
-  return <RulesPage />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <RulesPage />
+    </>
+  );
 }

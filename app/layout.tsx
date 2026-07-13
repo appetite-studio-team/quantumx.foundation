@@ -113,6 +113,24 @@ export default function RootLayout({
             }),
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: 'QuantumX Foundation',
+              url: 'https://quantumx.foundation',
+              description:
+                'We are a deep-tech initiative building an open, accessible, and reliable quantum future. Building the foundations of the post-quantum era.',
+              publisher: {
+                '@type': 'Organization',
+                name: 'QuantumX Foundation',
+              },
+              inLanguage: 'en',
+            }),
+          }}
+        />
       </head>
       <body className="bg-background text-text-primary font-sans antialiased">
         <Script

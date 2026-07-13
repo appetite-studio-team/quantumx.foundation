@@ -55,6 +55,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: baseUrl + '/newsroom/',
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
       url: baseUrl + '/careers/',
       lastModified: now,
       changeFrequency: 'weekly',
@@ -101,6 +107,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: 'weekly',
       priority: 0.7,
+    },
+    {
+      url: baseUrl + '/qx-hack/certificate/',
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.4,
     },
   ];
 }
