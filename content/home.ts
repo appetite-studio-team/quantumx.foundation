@@ -58,9 +58,9 @@ export const capabilities = {
 } as const;
 
 export const studioPhilosophy = {
-  heading: 'OPEN, ACCESSIBLE, RELIABLE.',
+  heading: 'OFFICIALLY LAUNCHED.',
   paragraph:
-    "The quantum revolution isn't just about faster computers, it's about reimagining what's possible. At QuantumX Foundation, we believe that open collaboration and accessible education are the keys to building a quantum future that benefits everyone.",
+    "QuantumX Foundation was officially launched by the Hon'ble Deputy CM of Karnataka, Shri D.K. Shivakumar, joining Karnataka's Rs. 1,000-crore Quantum Mission toward a $20B quantum economy and the state's goal of becoming the quantum capital of Asia by 2035. Just the beginning for us.",
   imageSrc: '/images/launch-image.jpg',
   imageAlt: 'QuantumX launch – Ajmal and team with QuantumX banner',
   headshotSrc: '/images/ajmal-founder.jpg',
