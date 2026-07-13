@@ -16,6 +16,7 @@ export const site = {
   discordInviteUrl: 'https://discord.gg/REPLACE_ME',
   address:
     '3rd Floor, Startup Park, Opposite Police Station, Singasandra, Bangalore South, Karnataka 560068' as string | null,
+  mapUrl: 'https://maps.app.goo.gl/fhyThBjLeGu8QUSb9',
   // Footer "Company" column.
   internalLinks: [
     { label: 'Jobs', href: '/careers' },

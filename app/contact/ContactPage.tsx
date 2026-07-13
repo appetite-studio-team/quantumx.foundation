@@ -77,7 +77,7 @@ export function ContactPage() {
                 {site.address}
               </address>
               <a
-                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(site.address)}`}
+                href={site.mapUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-3 inline-block text-sm uppercase tracking-[0.2em] text-gray-secondary hover:text-accent"
