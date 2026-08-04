@@ -3,6 +3,14 @@
   "subheading": "Announcements, talks, and moments from the QuantumX Foundation community.",
   "items": [
     {
+      "date": "2026-08-04",
+      "displayDate": "Aug 4, 2026",
+      "title": "QuantumX selected as a Qiskit Fall Fest 2026 host",
+      "summary": "We've been selected as an official host for IBM's Qiskit Fall Fest 2026.",
+      "image": "/images/newsroom/qiskit-fall-fest-2026.webp",
+      "href": "https://www.linkedin.com/posts/quantumx-foundation_were-super-excited-to-announce-that-quantumx-activity-7490337968432414720-vhCV"
+    },
+    {
       "date": "2026-06-05",
       "displayDate": "Jun 5, 2026",
       "title": "Meet the winning teams of QX Hack",

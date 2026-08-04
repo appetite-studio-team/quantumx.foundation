@@ -3,6 +3,14 @@
   "subheading": "Join us at upcoming talks, workshops, and meetups.",
   "events": [
     {
+      "title": "IBM x QuantumX: Qiskit Fall Fest 2026",
+      "date": "2026-10-01",
+      "displayDate": "TBD",
+      "location": "Bengaluru, Karnataka",
+      "thumbnail": "/images/events/ibm-qiskit-fall-fest-2026.webp",
+      "registerUrl": ""
+    },
+    {
       "title": "QX School Bootcamp",
       "date": "2026-08-29",
       "displayDate": "Aug 29-30, 2026",
