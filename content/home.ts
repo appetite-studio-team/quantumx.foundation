@@ -66,6 +66,7 @@ export const studioPhilosophy = {
   headshotSrc: '/images/ajmal-founder.jpg',
   name: 'Ajmal Ibn Mohammed Althaf',
   role: 'Founder, QuantumX Foundation',
+  profileHref: '/founder/ajmal',
 } as const;
 
 export type HeroContent = typeof hero;

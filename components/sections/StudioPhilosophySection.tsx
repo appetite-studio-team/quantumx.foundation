@@ -3,6 +3,7 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { staggerContainer, staggerItem, defaultViewport } from '@/lib/motion-variants';
 import { studioPhilosophy } from '@/content/home';
 
@@ -56,7 +57,10 @@ export function StudioPhilosophySection() {
               {studioPhilosophy.paragraph}
             </motion.p>
             <motion.div className="pt-2 flex flex-col items-center" variants={staggerItem}>
-              <div className="flex items-center justify-center gap-3">
+              <Link
+                href={studioPhilosophy.profileHref}
+                className="group flex items-center justify-center gap-3"
+              >
                 <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full border border-gray-secondary/30 bg-gray-secondary/20">
                   <Image
                     src={studioPhilosophy.headshotSrc}
@@ -66,10 +70,10 @@ export function StudioPhilosophySection() {
                     sizes="40px"
                   />
                 </div>
-                <p className="font-heading text-sm font-semibold uppercase text-text-primary">
+                <p className="font-heading text-sm font-semibold uppercase text-text-primary transition-colors group-hover:text-accent">
                   {studioPhilosophy.name}
                 </p>
-              </div>
+              </Link>
               <p className="mt-1 text-sm text-gray-secondary">{studioPhilosophy.role}</p>
             </motion.div>
           </motion.div>
