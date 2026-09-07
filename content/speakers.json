@@ -3,6 +3,16 @@
   "subheading": "Researchers, founders, and engineers who have spoken at QuantumX events, workshops, and community sessions.",
   "speakers": [
     {
+      "name": "Shaik Aleem Ur Rehaman",
+      "title": "Principal Design Engineer, Microsoft",
+      "photo": "/images/speakers/shaik-aleem-ur-rehaman.webp"
+    },
+    {
+      "name": "Toji Thomas",
+      "title": "Technical Support Engineer, Thorlabs",
+      "photo": "/images/speakers/toji-thomas.webp"
+    },
+    {
       "name": "Dr. Tabassum Ara",
       "title": "Professor & Head, AI & ML, HKBK College of Engineering",
       "photo": "/images/speakers/tabassum-ara.webp"
@@ -13,9 +23,9 @@
       "photo": "/images/speakers/manjunath-r-kounte.webp"
     },
     {
-      "name": "Dr. Kameshwari AVS",
-      "title": "Assistant Professor, VIT Vellore",
-      "photo": "/images/speakers/kameshwari-avs.webp"
+      "name": "Vandna Chaturvedi",
+      "title": "C-DAC India",
+      "photo": "/images/speakers/vandna-chaturvedi.webp"
     },
     {
       "name": "Ajmal Ibn Mohammed Althaf",
@@ -39,19 +49,9 @@
       "photo": "/images/speakers/amar-dixit.webp"
     },
     {
-      "name": "Vandna Chaturvedi",
-      "title": "C-DAC India",
-      "photo": "/images/speakers/vandna-chaturvedi.webp"
-    },
-    {
-      "name": "Shaik Aleem Ur Rehaman",
-      "title": "Principal Design Engineer, Microsoft",
-      "photo": "/images/speakers/shaik-aleem-ur-rehaman.webp"
-    },
-    {
-      "name": "Toji Thomas",
-      "title": "Technical Support Engineer, Thorlabs",
-      "photo": "/images/speakers/toji-thomas.webp"
+      "name": "Dr. Kameshwari AVS",
+      "title": "Assistant Professor, VIT Vellore",
+      "photo": "/images/speakers/kameshwari-avs.webp"
     },
     {
       "name": "Akash Deb",
