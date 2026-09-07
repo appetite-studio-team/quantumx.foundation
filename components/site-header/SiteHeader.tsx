@@ -9,14 +9,14 @@ import { menuItems } from '@/content/site';
 import { XIcon, LinkedInIcon, InstagramIcon, SunIcon, MoonIcon } from '@/components/icons';
 
 const navLinkClassName =
-  'font-heading text-sm font-medium uppercase tracking-[0.2em] text-text-primary hover:text-accent transition-colors';
+  'font-heading text-xs font-medium uppercase tracking-[0.12em] text-text-primary hover:text-accent transition-colors xl:text-sm xl:tracking-[0.2em]';
 
 function DesktopNav() {
   return (
-    <nav className="hidden items-center gap-7 md:flex lg:gap-9" aria-label="Primary">
+    <nav className="hidden items-center gap-5 lg:flex xl:gap-8" aria-label="Primary">
       {menuItems.map((item) =>
         'links' in item ? (
-          <div key={item.id} className="flex items-center gap-4">
+          <div key={item.id} className="flex items-center gap-3 xl:gap-4">
             {item.links.map((link) => (
               <a
                 key={link.label}
@@ -65,7 +65,7 @@ export function SiteHeader() {
       <header className="fixed left-0 right-0 top-0 z-[10001] flex items-center justify-between px-6 pt-6 md:px-10 md:pt-8">
         <Link
           href="/"
-          className="text-text-primary hover:opacity-80 transition-opacity"
+          className="shrink-0 text-text-primary hover:opacity-80 transition-opacity"
           aria-label="QuantumX Foundation home"
         >
           <Image
@@ -92,7 +92,7 @@ export function SiteHeader() {
           </button>
           <button
             type="button"
-            className="font-heading text-sm font-medium uppercase tracking-[0.2em] text-text-primary hover:text-accent md:hidden"
+            className="font-heading text-sm font-medium uppercase tracking-[0.2em] text-text-primary hover:text-accent lg:hidden"
             onClick={() => setMenuOpen(true)}
             aria-label="Open menu"
             aria-expanded={menuOpen}

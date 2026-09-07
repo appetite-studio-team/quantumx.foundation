@@ -1,6 +1,8 @@
 export { XIcon } from './XIcon';
 export { LinkedInIcon } from './LinkedInIcon';
 export { InstagramIcon } from './InstagramIcon';
+export { YouTubeIcon } from './YouTubeIcon';
+export { GlobeIcon } from './GlobeIcon';
 export { MenuIcon } from './MenuIcon';
 export { CheckCircleIcon } from './CheckCircleIcon';
 export { CopyIcon } from './CopyIcon';

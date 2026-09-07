@@ -21,6 +21,7 @@ export const site = {
   internalLinks: [
     { label: 'Jobs', href: '/careers' },
     { label: 'Community', href: '/community' },
+    { label: 'Speakers', href: '/speakers' },
     { label: 'Research', href: '/research' },
     { label: 'Newsroom', href: '/newsroom' },
     { label: 'Academy', href: 'https://quantumx.school/' },
@@ -79,6 +80,11 @@ export const menuItems = [
     id: 'events',
     label: 'Community',
     href: '/community',
+  },
+  {
+    id: 'speakers',
+    label: 'Speakers',
+    href: '/speakers',
   },
   {
     id: 'academy',
