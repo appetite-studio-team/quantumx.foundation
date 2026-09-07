@@ -3,59 +3,9 @@
   "subheading": "Researchers, founders, and engineers who have spoken at QuantumX events, workshops, and community sessions.",
   "speakers": [
     {
-      "name": "Ajmal Ibn Mohammed Althaf",
-      "title": "Founder, CEO & Scientific Lead, QuantumX Foundation",
-      "photo": "/images/speakers/ajmal.webp",
-      "profileUrl": "/founder/ajmal",
-      "links": {
-        "linkedin": "https://www.linkedin.com/in/ajmal-ima/"
-      }
-    },
-    {
-      "name": "Muhammed Ameen Sulaiman",
-      "title": "Director, QuantumX Foundation",
-      "photo": "/images/speakers/ameen.webp",
-      "profileUrl": "/founder/ameen"
-    },
-    {
-      "name": "Shafi Shoukath",
-      "title": "Founder, WOI.eco",
-      "photo": "/images/speakers/shafi-shoukath.webp"
-    },
-    {
-      "name": "Arundas Janardhanan",
-      "title": "CEO, Startup Park Bengaluru",
-      "photo": "/images/speakers/arundas-janardhanan.webp"
-    },
-    {
-      "name": "Amar Dixit",
-      "title": "CEO, SwiftSeeds, WOI India",
-      "photo": "/images/speakers/amar-dixit.webp"
-    },
-    {
-      "name": "Raul John Aju",
-      "title": "CEO, ThinkCraft.learn",
-      "photo": "/images/speakers/raul-john-aju.webp"
-    },
-    {
-      "name": "Akash Deb",
-      "title": "Founder & CEO, Elato AI",
-      "photo": "/images/speakers/akash-deb.webp"
-    },
-    {
-      "name": "Akshat Agarwal",
-      "title": "Founder, Arrayah Australia",
-      "photo": "/images/speakers/akshat-agarwal.webp"
-    },
-    {
-      "name": "Abdul Samad",
-      "title": "Founder, Appetite",
-      "photo": "/images/speakers/abdul-samad.webp"
-    },
-    {
       "name": "Dr. Tabassum Ara",
-      "title": "HOD & Dean IIC, HKBK College of Engineering",
-      "photo": ""
+      "title": "Professor & Head, AI & ML, HKBK College of Engineering",
+      "photo": "/images/speakers/tabassum-ara.webp"
     },
     {
       "name": "Dr. Manjunath R Kounte",
@@ -66,6 +16,27 @@
       "name": "Dr. Kameshwari AVS",
       "title": "Assistant Professor, VIT Vellore",
       "photo": "/images/speakers/kameshwari-avs.webp"
+    },
+    {
+      "name": "Ajmal Ibn Mohammed Althaf",
+      "title": "Founder, CEO & Scientific Lead, QuantumX Foundation",
+      "photo": "/images/speakers/ajmal.webp",
+      "profileUrl": "/founder/ajmal"
+    },
+    {
+      "name": "Muhammed Ameen Sulaiman",
+      "title": "Director, QuantumX Foundation",
+      "photo": "/images/speakers/ameen.webp"
+    },
+    {
+      "name": "Shafi Shoukath",
+      "title": "Founder, WOI.eco",
+      "photo": "/images/speakers/shafi-shoukath.webp"
+    },
+    {
+      "name": "Amar Dixit",
+      "title": "CEO, SwiftSeeds, WOI India",
+      "photo": "/images/speakers/amar-dixit.webp"
     },
     {
       "name": "Vandna Chaturvedi",
@@ -83,6 +54,21 @@
       "photo": "/images/speakers/toji-thomas.webp"
     },
     {
+      "name": "Akash Deb",
+      "title": "Founder & CEO, Elato AI",
+      "photo": "/images/speakers/akash-deb.webp"
+    },
+    {
+      "name": "Akshat Agarwal",
+      "title": "Founder, Arrayah Australia",
+      "photo": "/images/speakers/akshat-agarwal.webp"
+    },
+    {
+      "name": "Abdul Samad",
+      "title": "Founder, Appetite",
+      "photo": "/images/speakers/abdul-samad.webp"
+    },
+    {
       "name": "Shreyansu Panda",
       "title": "Research Engineer, QuantumX Foundation",
       "photo": "/images/speakers/shreyansu-panda.webp"
@@ -91,6 +77,16 @@
       "name": "Sampark Bhol",
       "title": "Research Engineer, QuantumX Foundation",
       "photo": "/images/speakers/sampark-bhol.webp"
+    },
+    {
+      "name": "Arundas Janardhanan",
+      "title": "CEO, Startup Park Bengaluru",
+      "photo": "/images/speakers/arundas-janardhanan.webp"
+    },
+    {
+      "name": "Raul John Aju",
+      "title": "CEO, ThinkCraft.learn",
+      "photo": "/images/speakers/raul-john-aju.webp"
     }
   ]
 }
