@@ -1,22 +1,22 @@
 import type { Metadata } from 'next';
 import { FounderProfile } from '@/components/founder/FounderProfile';
-import { ajmal } from '@/content/founders';
+import { ameen } from '@/content/founders';
 import { founderMetadata, founderJsonLd, founderBreadcrumbJsonLd } from '@/lib/founder-seo';
 
-export const metadata: Metadata = founderMetadata(ajmal);
+export const metadata: Metadata = founderMetadata(ameen);
 
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(founderJsonLd(ajmal)) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(founderJsonLd(ameen)) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(founderBreadcrumbJsonLd(ajmal)) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(founderBreadcrumbJsonLd(ameen)) }}
       />
-      <FounderProfile founder={ajmal} />
+      <FounderProfile founder={ameen} />
     </>
   );
 }

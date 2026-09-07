@@ -4,14 +4,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { defaultViewport, defaultTransition } from '@/lib/motion-variants';
-import { ajmal } from '@/content/founders';
+import type { Founder } from '@/content/founders';
 import { site } from '@/content/site';
 import { CopyButton } from '@/components/ui/CopyButton';
 import { LinkedInIcon } from '@/components/icons';
 
-export function AjmalPage() {
-  const founder = ajmal;
-
+/** Shared layout for every /founder/<slug> page. */
+export function FounderProfile({ founder }: { founder: Founder }) {
   return (
     <main className="min-h-screen bg-background text-text-primary">
       {/* Hero - name + portrait */}
@@ -23,7 +22,7 @@ export function AjmalPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={defaultTransition}
           >
-            <p className="text-xs uppercase tracking-[0.2em] text-gray-secondary">Founder</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-gray-secondary">{founder.eyebrow}</p>
             <h1 className="mt-4 font-heading text-clamp-display font-bold uppercase leading-none tracking-tight-heading text-text-primary">
               {founder.name}
             </h1>
@@ -45,16 +44,18 @@ export function AjmalPage() {
               ))}
             </ul>
 
-            <a
-              href={founder.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`${founder.name} on LinkedIn`}
-              className="mt-6 inline-flex items-center gap-2.5 border border-gray-secondary/30 px-4 py-2.5 text-xs uppercase tracking-[0.2em] text-gray-secondary transition-colors hover:border-accent/60 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-            >
-              <LinkedInIcon className="h-4 w-4 shrink-0" />
-              LinkedIn
-            </a>
+            {founder.linkedin ? (
+              <a
+                href={founder.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${founder.name} on LinkedIn`}
+                className="mt-6 inline-flex items-center gap-2.5 border border-gray-secondary/30 px-4 py-2.5 text-xs uppercase tracking-[0.2em] text-gray-secondary transition-colors hover:border-accent/60 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              >
+                <LinkedInIcon className="h-4 w-4 shrink-0" />
+                LinkedIn
+              </a>
+            ) : null}
           </motion.div>
 
           {/* Right: portrait */}
@@ -127,8 +128,7 @@ export function AjmalPage() {
             Work with us
           </h2>
           <p className="mt-4 max-w-2xl text-base text-gray-secondary md:text-lg">
-            Research collaborations, speaking invitations, and mentorship requests are all welcome.
-            Write directly and it lands on the right desk.
+            {founder.contactBlurb}
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a
