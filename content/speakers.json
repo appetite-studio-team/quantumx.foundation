@@ -13,16 +13,6 @@
       "photo": "/images/speakers/toji-thomas.webp"
     },
     {
-      "name": "Dr. Tabassum Ara",
-      "title": "Professor & Head, AI & ML, HKBK College of Engineering",
-      "photo": "/images/speakers/tabassum-ara.webp"
-    },
-    {
-      "name": "Dr. Manjunath R Kounte",
-      "title": "Dean-Academics, Professor & HOD, Electronics and Communication Engineering",
-      "photo": "/images/speakers/manjunath-r-kounte.webp"
-    },
-    {
       "name": "Vandna Chaturvedi",
       "title": "C-DAC India",
       "photo": "/images/speakers/vandna-chaturvedi.webp"
@@ -34,11 +24,6 @@
       "profileUrl": "/founder/ajmal"
     },
     {
-      "name": "Muhammed Ameen Sulaiman",
-      "title": "Director, QuantumX Foundation",
-      "photo": "/images/speakers/ameen.webp"
-    },
-    {
       "name": "Shafi Shoukath",
       "title": "Founder, WOI.eco",
       "photo": "/images/speakers/shafi-shoukath.webp"
@@ -47,6 +32,26 @@
       "name": "Amar Dixit",
       "title": "CEO, SwiftSeeds, WOI India",
       "photo": "/images/speakers/amar-dixit.webp"
+    },
+    {
+      "name": "Abdul Samad",
+      "title": "Founder, Appetite",
+      "photo": "/images/speakers/abdul-samad.webp"
+    },
+    {
+      "name": "Dr. Tabassum Ara",
+      "title": "Professor & Head, AI & ML, HKBK College of Engineering",
+      "photo": "/images/speakers/tabassum-ara.webp"
+    },
+    {
+      "name": "Dr. Manjunath R Kounte",
+      "title": "Dean-Academics, Professor & HOD, Electronics and Communication Engineering",
+      "photo": "/images/speakers/manjunath-r-kounte.webp"
+    },
+    {
+      "name": "Muhammed Ameen Sulaiman",
+      "title": "Director, QuantumX Foundation",
+      "photo": "/images/speakers/ameen.webp"
     },
     {
       "name": "Dr. Kameshwari AVS",
@@ -62,11 +67,6 @@
       "name": "Akshat Agarwal",
       "title": "Founder, Arrayah Australia",
       "photo": "/images/speakers/akshat-agarwal.webp"
-    },
-    {
-      "name": "Abdul Samad",
-      "title": "Founder, Appetite",
-      "photo": "/images/speakers/abdul-samad.webp"
     },
     {
       "name": "Shreyansu Panda",
