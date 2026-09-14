@@ -11,6 +11,7 @@ const wellfoundJobsUrl = 'https://wellfound.com/company/quantumx-qx-pvt-ltd';
 export const site = {
   name: 'QuantumX Foundation',
   email: 'hi@quantumx.foundation',
+  eventsEmail: 'events@quantumx.community',
   tagline: 'Building the foundations of the post-quantum era.',
   // TODO: replace with the real Discord invite before shipping.
   discordInviteUrl: 'https://discord.gg/REPLACE_ME',

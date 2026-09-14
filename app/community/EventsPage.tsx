@@ -6,6 +6,7 @@ import { defaultViewport, defaultTransition } from '@/lib/motion-variants';
 import { eventsContent, sortedEvents } from '@/content/events';
 import { EventCard } from '@/components/events/EventCard';
 import { MomentsGallery } from '@/components/events/MomentsGallery';
+import { site } from '@/content/site';
 // TODO: re-enable once the real Discord invite is set in content/site.ts:
 // import { DiscordCtaSection } from '@/components/sections/DiscordCtaSection';
 
@@ -134,6 +135,20 @@ export function EventsPage() {
 
       {/* Join our Discord - TODO: re-enable once the real Discord invite is set */}
       {/* <DiscordCtaSection className="pb-section" /> */}
+
+      {/* Queries */}
+      <section className="mx-auto max-w-7xl px-6 pb-section md:px-10">
+        <p className="text-base text-gray-secondary md:text-lg">
+          For any queries, please reach out to{' '}
+          <a
+            href={`mailto:${site.eventsEmail}`}
+            className="text-text-primary underline underline-offset-4 hover:text-accent"
+          >
+            {site.eventsEmail}
+          </a>
+          .
+        </p>
+      </section>
 
       {/* Back to home */}
       <section className="mx-auto max-w-7xl px-6 pb-section md:px-10">
