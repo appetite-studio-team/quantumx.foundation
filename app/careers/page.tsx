@@ -4,14 +4,14 @@ import { CareersPage } from './CareersPage';
 export const metadata: Metadata = {
   title: 'Careers',
   description:
-    'Join QuantumX Foundation - explore open roles and help build the foundations of the post-quantum era.',
+    'Work on post-quantum cryptography, quantum photonics, and open quantum tooling at QuantumX in Bengaluru.',
   alternates: {
     canonical: '/careers/',
   },
   openGraph: {
     title: 'Careers - QuantumX Foundation',
     description:
-      'Join QuantumX Foundation - explore open roles and help build the foundations of the post-quantum era.',
+      'Work on post-quantum cryptography, quantum photonics, and open quantum tooling at QuantumX in Bengaluru.',
     url: 'https://quantumx.foundation/careers/',
     images: [
       {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Careers - QuantumX Foundation',
     description:
-      'Join QuantumX Foundation - explore open roles and help build the foundations of the post-quantum era.',
+      'Work on post-quantum cryptography, quantum photonics, and open quantum tooling at QuantumX in Bengaluru.',
     images: ['/images/og-cover.png'],
   },
 };
