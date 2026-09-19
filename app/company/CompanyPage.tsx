@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { defaultViewport, defaultTransition } from '@/lib/motion-variants';
 import { company } from '@/content/company';
 import { site } from '@/content/site';
-import { LinkedInIcon } from '@/components/icons';
+import { LinkedInIcon, XIcon } from '@/components/icons';
 
 export function CompanyPage() {
   return (
@@ -132,14 +132,6 @@ export function CompanyPage() {
                     {founder.role}
                   </p>
                   <div className="mt-auto flex flex-wrap items-center gap-3 pt-6">
-                    {founder.slug ? (
-                      <Link
-                        href={`/founder/${founder.slug}`}
-                        className="inline-flex items-center border border-accent/50 px-5 py-2.5 text-xs uppercase tracking-[0.2em] text-text-primary transition-colors hover:border-accent hover:text-accent"
-                      >
-                        Read profile →
-                      </Link>
-                    ) : null}
                     {founder.linkedin ? (
                       <a
                         href={founder.linkedin}
@@ -150,6 +142,17 @@ export function CompanyPage() {
                       >
                         <LinkedInIcon className="h-4 w-4 shrink-0" />
                         LinkedIn
+                      </a>
+                    ) : null}
+                    {founder.x ? (
+                      <a
+                        href={founder.x}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${founder.name} on X`}
+                        className="inline-flex items-center gap-2 border border-gray-secondary/30 px-4 py-2.5 text-xs uppercase tracking-[0.2em] text-gray-secondary transition-colors hover:border-accent/60 hover:text-accent"
+                      >
+                        <XIcon className="h-4 w-4 shrink-0" />X
                       </a>
                     ) : null}
                   </div>

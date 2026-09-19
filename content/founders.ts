@@ -9,8 +9,10 @@ export type Founder = {
   /** Small label above the name in the hero. */
   eyebrow: string;
   role: string;
-  email: string;
+  /** Personal inbox. Profiles without one fall back to the team address. */
+  email?: string;
   linkedin?: string;
+  x?: string;
   photo: string;
   photoAlt: string;
   bio: string[];
@@ -30,6 +32,7 @@ export const ajmal: Founder = {
   role: 'Founder, CEO & Scientific Lead',
   email: 'ajmal@quantumx.foundation',
   linkedin: 'https://www.linkedin.com/in/ajmal-ima/',
+  x: 'https://x.com/ajmalphyx',
   photo: '/images/founder/ajmal.webp',
   photoAlt: 'Ajmal Ibn Mohammed Althaf, Founder, CEO and Scientific Lead at QuantumX, speaking on stage',
   bio: [
@@ -53,6 +56,7 @@ export const ameen: Founder = {
   role: 'Co-Founder, CTO & Product Lead',
   email: 'ameen@quantumx.foundation',
   linkedin: 'https://www.linkedin.com/in/ameenx/',
+  x: 'https://x.com/emeenx',
   photo: '/images/founder/ameen.webp',
   photoAlt: 'Muhammed Ameen Sulaiman, Co-Founder, CTO and Product Lead at QuantumX',
   bio: [
@@ -71,4 +75,26 @@ export const ameen: Founder = {
     'Product collaborations, engineering partnerships, and technical conversations are all welcome. Write directly and it lands on the right desk.',
 };
 
-export const founders = { ajmal, ameen } as const;
+export const samad: Founder = {
+  slug: 'samad',
+  name: 'Abdul Samad',
+  eyebrow: 'Leadership',
+  role: 'Director',
+  linkedin: 'https://www.linkedin.com/in/4samad/',
+  x: 'https://x.com/_4samad',
+  photo: '/images/speakers/abdul-samad.webp',
+  photoAlt: 'Abdul Samad, Director at QuantumX',
+  bio: [
+    'Abdul Samad is a Director at QuantumX and a founder who has spent his career building technology for public good. He brings a venture builder\'s view to the company: how ambitious technology becomes products, partnerships, and programs that reach people.',
+    'He is the Founder and CEO of Appetite Studio, the technology studio he has led since 2022. Appetite works with governments, public-good organizations, and mission-driven teams to put AI, blockchain, and modern software to work for people, communities, and the planet.',
+    'Alongside Appetite, he has founded Givvest, co-founded Ente Ward, and is building AIM States, each an attempt to use technology to change how communities organize, give, and govern.',
+    'A buildspace alumnus and a familiar face in the builder community, he judges founder and AI programs, including the Great Agent Hackathon at The Great Product Festival 2026. He describes himself as a social activist and a tech optimist, and that pairing drives his work at QuantumX: frontier technology is only worth building if it ends up serving the public.',
+  ],
+  focusAreas: ['Public-Good Technology', 'Venture Building', 'Product Strategy'],
+  metaDescription:
+    'Abdul Samad is a Director at QuantumX and Founder and CEO of Appetite Studio, building technology for public good across AI, blockchain, and digital infrastructure.',
+  contactBlurb:
+    'Partnerships, public-sector collaborations, and conversations about building technology for public good are all welcome. Write in and it lands on the right desk.',
+};
+
+export const founders = { ajmal, ameen, samad } as const;

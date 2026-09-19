@@ -55,7 +55,9 @@ const people = company.leadership.members.map((member) => {
     name: member.name,
     jobTitle: member.role,
     image: `${baseUrl}${member.photo}`,
-    ...(member.linkedin ? { sameAs: [member.linkedin] } : {}),
+    ...(member.linkedin || member.x
+      ? { sameAs: [member.linkedin, member.x].filter(Boolean) }
+      : {}),
   };
 });
 

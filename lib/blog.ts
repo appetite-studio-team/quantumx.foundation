@@ -73,7 +73,9 @@ function founderAuthor(founder: Founder): BlogAuthor {
     href: `/founder/${founder.slug}/`,
     bio: founder.metaDescription,
     jobTitle: founder.role,
-    ...(founder.linkedin ? { sameAs: [founder.linkedin] } : {}),
+    ...(founder.linkedin || founder.x
+      ? { sameAs: [founder.linkedin, founder.x].filter((url): url is string => Boolean(url)) }
+      : {}),
   };
 }
 

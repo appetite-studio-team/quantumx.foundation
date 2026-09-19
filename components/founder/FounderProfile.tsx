@@ -7,10 +7,12 @@ import { defaultViewport, defaultTransition } from '@/lib/motion-variants';
 import type { Founder } from '@/content/founders';
 import { site } from '@/content/site';
 import { CopyButton } from '@/components/ui/CopyButton';
-import { LinkedInIcon } from '@/components/icons';
+import { LinkedInIcon, XIcon } from '@/components/icons';
 
 /** Shared layout for every /founder/<slug> page. */
 export function FounderProfile({ founder }: { founder: Founder }) {
+  const email = founder.email ?? site.email;
+
   return (
     <main className="min-h-screen bg-background text-text-primary">
       {/* Hero - name + portrait */}
@@ -22,7 +24,9 @@ export function FounderProfile({ founder }: { founder: Founder }) {
             animate={{ opacity: 1, y: 0 }}
             transition={defaultTransition}
           >
-            <p className="text-xs uppercase tracking-[0.2em] text-gray-secondary">{founder.eyebrow}</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-gray-secondary">
+              {founder.eyebrow}
+            </p>
             <h1 className="mt-4 font-heading text-clamp-display font-bold uppercase leading-none tracking-tight-heading text-text-primary">
               {founder.name}
             </h1>
@@ -41,17 +45,32 @@ export function FounderProfile({ founder }: { founder: Founder }) {
               ))}
             </ul>
 
-            {founder.linkedin ? (
-              <a
-                href={founder.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`${founder.name} on LinkedIn`}
-                className="mt-6 inline-flex items-center gap-2.5 border border-gray-secondary/30 px-4 py-2.5 text-xs uppercase tracking-[0.2em] text-gray-secondary transition-colors hover:border-accent/60 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-              >
-                <LinkedInIcon className="h-4 w-4 shrink-0" />
-                LinkedIn
-              </a>
+            {founder.linkedin || founder.x ? (
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                {founder.linkedin ? (
+                  <a
+                    href={founder.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${founder.name} on LinkedIn`}
+                    className="inline-flex items-center gap-2.5 border border-gray-secondary/30 px-4 py-2.5 text-xs uppercase tracking-[0.2em] text-gray-secondary transition-colors hover:border-accent/60 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                  >
+                    <LinkedInIcon className="h-4 w-4 shrink-0" />
+                    LinkedIn
+                  </a>
+                ) : null}
+                {founder.x ? (
+                  <a
+                    href={founder.x}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${founder.name} on X`}
+                    className="inline-flex items-center gap-2.5 border border-gray-secondary/30 px-4 py-2.5 text-xs uppercase tracking-[0.2em] text-gray-secondary transition-colors hover:border-accent/60 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                  >
+                    <XIcon className="h-4 w-4 shrink-0" />X
+                  </a>
+                ) : null}
+              </div>
             ) : null}
           </motion.div>
 
@@ -103,7 +122,10 @@ export function FounderProfile({ founder }: { founder: Founder }) {
           <h2 className="text-xs uppercase tracking-[0.2em] text-gray-secondary">About</h2>
           <div className="space-y-6">
             {founder.bio.map((paragraph) => (
-              <p key={paragraph} className="max-w-3xl text-base leading-relaxed text-gray-secondary md:text-lg">
+              <p
+                key={paragraph}
+                className="max-w-3xl text-base leading-relaxed text-gray-secondary md:text-lg"
+              >
                 {paragraph}
               </p>
             ))}
@@ -129,23 +151,25 @@ export function FounderProfile({ founder }: { founder: Founder }) {
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a
-              href={`mailto:${founder.email}`}
+              href={`mailto:${email}`}
               className="inline-flex items-center border border-accent/50 px-6 py-3 text-sm uppercase tracking-[0.2em] text-text-primary transition-colors hover:border-accent hover:text-accent"
             >
-              {founder.email} →
+              {email} →
             </a>
-            <CopyButton value={founder.email} label="Copy email" />
+            <CopyButton value={email} label="Copy email" />
           </div>
-          <p className="mt-5 text-sm text-gray-secondary">
-            For anything team wide,{' '}
-            <a
-              href={`mailto:${site.email}`}
-              className="text-text-primary underline underline-offset-4 hover:text-accent"
-            >
-              {site.email}
-            </a>
-            .
-          </p>
+          {founder.email ? (
+            <p className="mt-5 text-sm text-gray-secondary">
+              For anything team wide,{' '}
+              <a
+                href={`mailto:${site.email}`}
+                className="text-text-primary underline underline-offset-4 hover:text-accent"
+              >
+                {site.email}
+              </a>
+              .
+            </p>
+          ) : null}
         </motion.div>
       </section>
 

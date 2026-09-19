@@ -3,7 +3,7 @@
  * Founders are pulled from content/founders.ts so names and titles stay in one place.
  */
 
-import { ajmal, ameen } from './founders';
+import { ajmal, ameen, samad } from './founders';
 
 /** A leadership card. Only founders have a `slug`, which links to their /founder/<slug> profile. */
 export type LeadershipMember = {
@@ -14,14 +14,7 @@ export type LeadershipMember = {
   photo: string;
   photoAlt: string;
   linkedin?: string;
-};
-
-const abdulSamad: LeadershipMember = {
-  name: 'Abdul Samad',
-  eyebrow: 'Leadership',
-  role: 'Director',
-  photo: '/images/speakers/abdul-samad.webp',
-  photoAlt: 'Abdul Samad, Director at QuantumX',
+  x?: string;
 };
 
 export const company = {
@@ -73,6 +66,6 @@ export const company = {
   leadership: {
     heading: 'Founders & leadership',
     intro: 'QuantumX is led by a founding team that spans quantum science, product, and engineering.',
-    members: [ajmal, ameen, abdulSamad] as LeadershipMember[],
+    members: [ajmal, ameen, samad] as LeadershipMember[],
   },
 } as const;

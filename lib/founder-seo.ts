@@ -51,7 +51,7 @@ export function founderJsonLd(founder: Founder) {
     url: founderUrl(founder),
     image: `${baseUrl}${founder.photo}`,
     jobTitle: founder.role,
-    email: founder.email,
+    ...(founder.email ? { email: founder.email } : {}),
     description: founder.metaDescription,
     worksFor: {
       '@type': 'Organization',
@@ -62,7 +62,9 @@ export function founderJsonLd(founder: Founder) {
       ? { alumniOf: { '@type': 'CollegeOrUniversity', name: founder.alumniOf } }
       : {}),
     knowsAbout: founder.focusAreas,
-    ...(founder.linkedin ? { sameAs: [founder.linkedin] } : {}),
+    ...(founder.linkedin || founder.x
+      ? { sameAs: [founder.linkedin, founder.x].filter(Boolean) }
+      : {}),
   };
 }
 
