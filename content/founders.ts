@@ -82,17 +82,17 @@ export const samad: Founder = {
   role: 'Director',
   linkedin: 'https://www.linkedin.com/in/4samad/',
   x: 'https://x.com/_4samad',
-  photo: '/images/speakers/abdul-samad.webp',
+  photo: '/images/founder/samad.webp',
   photoAlt: 'Abdul Samad, Director at QuantumX',
   bio: [
     'Abdul Samad is a Director at QuantumX and a founder who has spent his career building technology for public good. He brings a venture builder\'s view to the company: how ambitious technology becomes products, partnerships, and programs that reach people.',
-    'He is the Founder and CEO of Appetite Studio, the technology studio he has led since 2022. Appetite works with governments, public-good organizations, and mission-driven teams to put AI, blockchain, and modern software to work for people, communities, and the planet.',
-    'Alongside Appetite, he has founded Givvest, co-founded Ente Ward, and is building AIM States, each an attempt to use technology to change how communities organize, give, and govern.',
-    'A buildspace alumnus and a familiar face in the builder community, he judges founder and AI programs, including the Great Agent Hackathon at The Great Product Festival 2026. He describes himself as a social activist and a tech optimist, and that pairing drives his work at QuantumX: frontier technology is only worth building if it ends up serving the public.',
+    'For years he has worked with governments, public-good organizations, and mission-driven teams to put AI, blockchain, and modern software to work for people, communities, and the planet.',
+    'He has founded Givvest, co-founded Ente Ward, and is building AIM States, each an attempt to use technology to change how communities organize, give, and govern.',
+    'He describes himself as a social activist and a tech optimist, and that pairing drives his work at QuantumX: frontier technology is only worth building if it ends up serving the public.',
   ],
   focusAreas: ['Public-Good Technology', 'Venture Building', 'Product Strategy'],
   metaDescription:
-    'Abdul Samad is a Director at QuantumX and Founder and CEO of Appetite Studio, building technology for public good across AI, blockchain, and digital infrastructure.',
+    'Abdul Samad is a Director at QuantumX and a founder building technology for public good across AI, blockchain, and digital infrastructure.',
   contactBlurb:
     'Partnerships, public-sector collaborations, and conversations about building technology for public good are all welcome. Write in and it lands on the right desk.',
 };
