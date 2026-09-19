@@ -32,7 +32,7 @@ export function EventCard({ event }: { event: Event }) {
         visible: { opacity: 1, y: 0 },
       }}
       transition={defaultTransition}
-      className="group relative flex flex-col overflow-hidden rounded-sm border border-gray-secondary/15 bg-gray-secondary/5 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_8px_32px_rgba(215,255,0,0.06)]"
+      className="group relative flex flex-col overflow-hidden rounded-sm border border-gray-secondary/15 bg-gray-secondary/5 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_8px_32px_rgba(168,85,247,0.06)]"
     >
       {/* Thumbnail */}
       <div className="relative aspect-[16/10] overflow-hidden">
@@ -54,7 +54,7 @@ export function EventCard({ event }: { event: Event }) {
               : 'bg-background text-gray-secondary'
           }`}
         >
-          {upcoming ? 'Upcoming' : 'Past'}
+          {upcoming ? 'Upcoming' : 'Completed'}
         </span>
       </div>
 
@@ -85,7 +85,7 @@ export function EventCard({ event }: { event: Event }) {
                 href={event.registerUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-sm bg-accent px-5 py-2.5 font-heading text-sm font-semibold uppercase tracking-[0.15em] text-background transition-all duration-300 hover:shadow-[0_0_24px_rgba(215,255,0,0.2)]"
+                className="inline-flex items-center gap-2 rounded-sm bg-accent px-5 py-2.5 font-heading text-sm font-semibold uppercase tracking-[0.15em] text-background transition-all duration-300 hover:shadow-[0_0_24px_rgba(168,85,247,0.2)]"
                 data-magnetic
               >
                 Register
