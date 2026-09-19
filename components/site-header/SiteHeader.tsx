@@ -77,7 +77,7 @@ function DesktopNav() {
 
   return (
     <nav ref={navRef} className="hidden items-center gap-6 lg:flex xl:gap-10" aria-label="Primary">
-      {navItems.map((item) => {
+      {navItems.map((item, index) => {
         if (!('links' in item)) {
           const active = isActive(pathname, item.href);
           return (
@@ -95,6 +95,9 @@ function DesktopNav() {
         const open = openId === item.id;
         const active = item.links.some((link) => isActive(pathname, link.href));
         const panelId = `nav-panel-${item.id}`;
+        // The last dropdown sits near the viewport edge, so anchor it to the right to avoid clipping.
+        const panelPosition =
+          index === navItems.length - 1 ? 'right-0' : 'left-1/2 -translate-x-1/2';
 
         return (
           <div
@@ -127,20 +130,19 @@ function DesktopNav() {
             </button>
             <AnimatePresence>
               {open && (
-                <motion.div
-                  id={panelId}
-                  initial={{ opacity: 0, y: -4 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -4 }}
-                  transition={{ duration: 0.15, ease: [0.22, 1, 0.36, 1] }}
-                  className="absolute left-1/2 top-full -translate-x-1/2 pt-4"
-                >
-                  <div className="w-72 border border-[var(--color-muted-border)] bg-background p-2 shadow-2xl">
+                <div id={panelId} className={`absolute top-full pt-4 ${panelPosition}`}>
+                  <motion.div
+                    initial={{ opacity: 0, y: -4 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -4 }}
+                    transition={{ duration: 0.15, ease: [0.22, 1, 0.36, 1] }}
+                    className="w-72 border border-[var(--color-muted-border)] bg-background p-2 shadow-2xl"
+                  >
                     {item.links.map((link) => (
                       <DropdownLink key={link.href} link={link} onSelect={() => setOpenId(null)} />
                     ))}
-                  </div>
-                </motion.div>
+                  </motion.div>
+                </div>
               )}
             </AnimatePresence>
           </div>
