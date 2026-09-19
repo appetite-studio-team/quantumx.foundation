@@ -1,12 +1,8 @@
 'use client';
 
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { defaultViewport, defaultTransition } from '@/lib/motion-variants';
 import { site } from '@/content/site';
-import { projectsContent } from '@/content/projects';
-
-const focusAreas = ['Post-quantum cryptography', 'Quantum photonics', 'Open-source tooling'];
 
 function ArrowIcon({ className = 'h-4 w-4' }: { className?: string }) {
   return (
@@ -57,94 +53,7 @@ export function CareersPage() {
               Pitch yourself
             </a>
           </div>
-
-          <ul className="mt-12 flex flex-wrap gap-x-6 gap-y-2 border-t border-gray-secondary/15 pt-6">
-            {focusAreas.map((area) => (
-              <li
-                key={area}
-                className="font-heading text-xs font-medium uppercase tracking-[0.2em] text-gray-secondary"
-              >
-                {area}
-              </li>
-            ))}
-          </ul>
         </motion.div>
-      </section>
-
-      {/* What you'd work on: the actual product surface */}
-      <section
-        aria-labelledby="work-heading"
-        className="mx-auto max-w-7xl px-6 pb-section md:px-10"
-      >
-        <div className="mb-8 flex flex-col gap-3 md:mb-10 md:flex-row md:items-end md:justify-between">
-          <h2
-            id="work-heading"
-            className="font-heading text-2xl font-bold uppercase leading-tight tracking-tight-heading text-text-primary md:text-3xl"
-          >
-            What you&apos;d work on
-          </h2>
-          <Link
-            href="/projects"
-            className="font-heading text-xs font-semibold uppercase tracking-[0.2em] text-gray-secondary transition-colors hover:text-accent"
-          >
-            All projects →
-          </Link>
-        </div>
-
-        <motion.ul
-          className="border-t border-gray-secondary/15"
-          initial="hidden"
-          whileInView="visible"
-          viewport={defaultViewport}
-          variants={{
-            visible: { transition: { staggerChildren: 0.05, delayChildren: 0.05 } },
-            hidden: {},
-          }}
-        >
-          {projectsContent.projects.map((project) => {
-            const external = project.href.startsWith('http');
-            const row = (
-              <>
-                <span className="w-8 shrink-0 font-heading text-xs font-semibold tracking-[0.2em] text-gray-secondary">
-                  {project.number}
-                </span>
-                <span className="flex min-w-0 flex-1 flex-col gap-1 md:flex-row md:items-baseline md:gap-6">
-                  <span className="font-heading text-lg font-bold uppercase leading-tight tracking-tight text-text-primary transition-colors duration-300 group-hover:text-accent md:w-72 md:shrink-0 md:text-xl">
-                    {project.name}
-                  </span>
-                  <span className="text-sm text-gray-secondary md:text-base">{project.tagline}</span>
-                </span>
-                {project.group === 'opensource' && (
-                  <span className="hidden shrink-0 border border-gray-secondary/25 px-2 py-1 font-heading text-[10px] font-semibold uppercase tracking-[0.15em] text-gray-secondary sm:inline">
-                    Open source
-                  </span>
-                )}
-                <ArrowIcon className="h-4 w-4 shrink-0 text-gray-secondary transition-all duration-300 group-hover:translate-x-1 group-hover:text-accent" />
-              </>
-            );
-            const rowClass =
-              'group flex items-center gap-4 py-5 md:gap-6 md:py-6';
-
-            return (
-              <motion.li
-                key={project.number}
-                variants={{ hidden: { opacity: 0, y: 12 }, visible: { opacity: 1, y: 0 } }}
-                transition={defaultTransition}
-                className="border-b border-gray-secondary/15"
-              >
-                {external ? (
-                  <a href={project.href} target="_blank" rel="noopener noreferrer" className={rowClass}>
-                    {row}
-                  </a>
-                ) : (
-                  <Link href={project.href} className={rowClass}>
-                    {row}
-                  </Link>
-                )}
-              </motion.li>
-            );
-          })}
-        </motion.ul>
       </section>
 
       {/* How to apply: two clear paths */}
@@ -207,7 +116,7 @@ export function CareersPage() {
               rel="noopener noreferrer"
               className="underline underline-offset-4 transition-colors hover:text-accent"
             >
-              Startup Park, Singasandra, Bengaluru
+              Startup Park, Koramangala, Bengaluru
             </a>
           </p>
         )}
