@@ -7,8 +7,6 @@ import { TagList } from '@/components/blog/TagList';
 import { MIN_POSTS_TO_INDEX_TAG, getAllTags, getPostsByTag } from '@/lib/blog';
 import { breadcrumbJsonLd, tagMetadata } from '@/lib/blog-seo';
 
-export const dynamicParams = false;
-
 export function generateStaticParams() {
   return getAllTags().map((tag) => ({ tag: tag.slug }));
 }

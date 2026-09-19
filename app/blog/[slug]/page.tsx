@@ -14,8 +14,6 @@ import {
 } from '@/lib/blog';
 import { breadcrumbJsonLd, postJsonLd, postMetadata } from '@/lib/blog-seo';
 
-export const dynamicParams = false;
-
 export function generateStaticParams() {
   return getAllPosts().map((post) => ({ slug: post.slug }));
 }
