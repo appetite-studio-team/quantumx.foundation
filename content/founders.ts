@@ -53,14 +53,14 @@ export const ameen: Founder = {
   slug: 'ameen',
   name: 'Muhammed Ameen Sulaiman',
   eyebrow: 'Co-Founder',
-  role: 'Co-Founder, CTO & Product Lead',
+  role: 'Co-Founder & CTO',
   email: 'ameen@quantumx.foundation',
   linkedin: 'https://www.linkedin.com/in/ameenx/',
   x: 'https://x.com/emeenx',
   photo: '/images/founder/ameen.webp',
-  photoAlt: 'Muhammed Ameen Sulaiman, Co-Founder, CTO and Product Lead at QuantumX',
+  photoAlt: 'Muhammed Ameen Sulaiman, Co-Founder and CTO at QuantumX',
   bio: [
-    'Muhammed Ameen Sulaiman is a technologist, product builder, and Co-Founder, CTO & Product Lead at QuantumX, where he works across the organization\'s technology, products, and digital infrastructure.',
+    'Muhammed Ameen Sulaiman is a technologist, product builder, and Co-Founder and CTO at QuantumX, where he works across the organization\'s technology, products, and digital infrastructure.',
     'His work focuses on turning ambitious ideas in emerging technology into products that can be built, deployed, and used in the real world. At QuantumX, he works across product strategy, engineering, system architecture, and execution, helping transform research and technical concepts into practical tools and platforms.',
     'He has built and shipped products across mobile, web, AI, blockchain, and decentralized systems, with experience spanning the full product lifecycle from early concepts and technical architecture to development, deployment, and iteration. His approach combines technical depth with a strong focus on usability, execution, and long-term product thinking.',
     'At QuantumX, Muhammed contributes to the development of its technology ecosystem, working alongside researchers and engineers to build infrastructure for the emerging quantum technology landscape. His work spans product development, developer infrastructure, research tooling, and technology platforms that support the broader QuantumX ecosystem.',
@@ -70,7 +70,7 @@ export const ameen: Founder = {
   ],
   focusAreas: ['Product Engineering', 'Emerging Technology', 'Digital Infrastructure'],
   metaDescription:
-    'Muhammed Ameen Sulaiman is Co-Founder, CTO and Product Lead at QuantumX, building product engineering, emerging technology, and digital infrastructure into systems people can rely on.',
+    'Muhammed Ameen Sulaiman is Co-Founder and CTO at QuantumX, building product engineering, emerging technology, and digital infrastructure into systems people can rely on.',
   contactBlurb:
     'Product collaborations, engineering partnerships, and technical conversations are all welcome. Write directly and it lands on the right desk.',
 };
