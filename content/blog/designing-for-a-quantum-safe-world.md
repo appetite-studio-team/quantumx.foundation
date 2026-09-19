@@ -4,6 +4,7 @@ description: 'Quantum safety is not a future problem. Why harvest-now-decrypt-la
 date: '2025-12-17'
 author: quantumx
 cover: '/images/blog/designing-for-a-quantum-safe-world.webp'
+source: 'https://www.linkedin.com/pulse/were-designing-quantum-safe-world-quantumx-foundation-ssz2c/'
 tags:
   - Post-Quantum Cryptography
   - Security
