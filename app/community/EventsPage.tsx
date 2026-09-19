@@ -7,8 +7,7 @@ import { eventsContent, sortedEvents } from '@/content/events';
 import { EventCard } from '@/components/events/EventCard';
 import { MomentsGallery } from '@/components/events/MomentsGallery';
 import { site } from '@/content/site';
-// TODO: re-enable once the real Discord invite is set in content/site.ts:
-// import { DiscordCtaSection } from '@/components/sections/DiscordCtaSection';
+import { DiscordCtaSection } from '@/components/sections/DiscordCtaSection';
 
 const hackathonStats = [
   { value: '200+', label: 'Hackers' },
@@ -68,6 +67,30 @@ export function EventsPage() {
         </motion.a>
       </section>
 
+      {/* A look back - moments from past events */}
+      <MomentsGallery />
+
+      {/* All events grid */}
+      <section className="mx-auto max-w-7xl px-6 pb-section md:px-10">
+        <motion.div
+          className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 md:gap-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={defaultViewport}
+          variants={{
+            visible: { transition: { staggerChildren: 0.08, delayChildren: 0.1 } },
+            hidden: {},
+          }}
+        >
+          {events.map((event) => (
+            <EventCard key={event.title} event={event} />
+          ))}
+        </motion.div>
+      </section>
+
+      {/* Join our Discord */}
+      <DiscordCtaSection className="mb-section" />
+
       {/* Hackathon recap */}
       <section className="mx-auto max-w-7xl px-6 pb-section md:px-10">
         <motion.div
@@ -111,30 +134,6 @@ export function EventsPage() {
           </Link>
         </motion.div>
       </section>
-
-      {/* A look back - moments from past events */}
-      <MomentsGallery />
-
-      {/* All events grid */}
-      <section className="mx-auto max-w-7xl px-6 pb-section md:px-10">
-        <motion.div
-          className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 md:gap-8"
-          initial="hidden"
-          whileInView="visible"
-          viewport={defaultViewport}
-          variants={{
-            visible: { transition: { staggerChildren: 0.08, delayChildren: 0.1 } },
-            hidden: {},
-          }}
-        >
-          {events.map((event) => (
-            <EventCard key={event.title} event={event} />
-          ))}
-        </motion.div>
-      </section>
-
-      {/* Join our Discord - TODO: re-enable once the real Discord invite is set */}
-      {/* <DiscordCtaSection className="pb-section" /> */}
 
       {/* Queries */}
       <section className="mx-auto max-w-7xl px-6 pb-section md:px-10">

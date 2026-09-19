@@ -8,3 +8,4 @@ export { CheckCircleIcon } from './CheckCircleIcon';
 export { CopyIcon } from './CopyIcon';
 export { SunIcon } from './SunIcon';
 export { MoonIcon } from './MoonIcon';
+export { DiscordIcon } from './DiscordIcon';

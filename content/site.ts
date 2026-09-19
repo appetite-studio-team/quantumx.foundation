@@ -13,8 +13,7 @@ export const site = {
   email: 'hi@quantumx.foundation',
   eventsEmail: 'events@quantumx.community',
   tagline: 'Building the foundations of the post-quantum era.',
-  // TODO: replace with the real Discord invite before shipping.
-  discordInviteUrl: 'https://discord.gg/REPLACE_ME',
+  discordInviteUrl: 'https://discord.com/invite/2w3pgqTQY',
   address:
     '3rd Floor, Startup Park, Opposite Police Station, Singasandra, Bangalore South, Karnataka 560068' as string | null,
   mapUrl: 'https://maps.app.goo.gl/fhyThBjLeGu8QUSb9',
