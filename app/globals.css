@@ -154,6 +154,127 @@ body {
   letter-spacing: -0.02em;
 }
 
+/*
+ * Blog article body. Posts are rendered from Markdown to plain HTML, so the
+ * elements are styled here rather than with utility classes.
+ */
+.blog-prose {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--color-text-primary);
+}
+
+.blog-prose > * + * {
+  margin-top: 1.4em;
+}
+
+.blog-prose h2,
+.blog-prose h3 {
+  font-family: var(--font-heading), var(--font-inter), sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  /* Clear the fixed banner and header when jumping from the table of contents. */
+  scroll-margin-top: 9rem;
+}
+
+.blog-prose h2 {
+  margin-top: 2.4em;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  text-transform: uppercase;
+}
+
+.blog-prose h3 {
+  margin-top: 2em;
+  font-size: 1.3rem;
+}
+
+.blog-prose h2 + *,
+.blog-prose h3 + * {
+  margin-top: 0.8em;
+}
+
+.blog-prose p,
+.blog-prose li {
+  color: var(--color-gray-secondary);
+}
+
+.blog-prose strong {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.blog-prose a {
+  color: var(--color-text-primary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: var(--color-accent);
+  transition: color 0.2s ease;
+}
+
+.blog-prose a:hover {
+  color: var(--color-accent);
+}
+
+.blog-prose ul,
+.blog-prose ol {
+  padding-left: 1.4em;
+}
+
+.blog-prose ul {
+  list-style: square;
+}
+
+.blog-prose ol {
+  list-style: decimal;
+}
+
+.blog-prose li + li {
+  margin-top: 0.5em;
+}
+
+.blog-prose li::marker {
+  color: var(--color-accent);
+}
+
+.blog-prose blockquote {
+  border-left: 2px solid var(--color-accent);
+  padding-left: 1.25em;
+  font-style: italic;
+}
+
+.blog-prose hr {
+  border: 0;
+  border-top: 1px solid var(--color-muted-border);
+  margin: 3em 0;
+}
+
+.blog-prose code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.9em;
+  background: var(--color-muted-bg);
+  padding: 0.15em 0.35em;
+}
+
+.blog-prose pre {
+  overflow-x: auto;
+  background: var(--color-muted-bg);
+  border: 1px solid var(--color-muted-border);
+  padding: 1.25em;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.blog-prose pre code {
+  background: none;
+  padding: 0;
+}
+
+.blog-prose img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Toast (keep for any notifications) */
 .toast {
   position: fixed;

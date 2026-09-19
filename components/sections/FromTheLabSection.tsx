@@ -4,11 +4,11 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { defaultViewport, defaultTransition } from '@/lib/motion-variants';
 import { LinkedInIcon } from '@/components/icons';
-import { fromTheLab, latestArticles } from '@/content/from-the-lab';
-import { ArticleCard } from '@/components/articles/ArticleCard';
+import { fromTheLab } from '@/content/from-the-lab';
+import { PostCard } from '@/components/blog/PostCard';
+import type { BlogPostSummary } from '@/lib/blog';
 
-export function FromTheLabSection() {
-  const articles = latestArticles(3);
+export function FromTheLabSection({ posts }: { posts: BlogPostSummary[] }) {
 
   return (
     <section id="from-the-lab" className="bg-background py-section px-6 text-text-primary md:px-10">
@@ -40,16 +40,17 @@ export function FromTheLabSection() {
             hidden: {},
           }}
         >
-          {articles.map((article) => (
-            <ArticleCard
-              key={article.title}
-              article={article}
+          {posts.map((post) => (
+            <PostCard
+              key={post.slug}
+              post={post}
               className="first:md:pr-10 md:px-10 last:md:pl-10 last:md:pr-0"
+              bodyClassName="[img+&]:pt-6"
             />
           ))}
 
           {/* Coming soon, only when there's empty room in the 3-col row */}
-          {articles.length < 3 && (
+          {posts.length < 3 && (
             <motion.div
               variants={{
                 hidden: { opacity: 0, y: 20 },
@@ -78,7 +79,7 @@ export function FromTheLabSection() {
           )}
         </motion.div>
 
-        {/* View all articles */}
+        {/* Link to the blog */}
         <motion.div
           className="mt-12 md:mt-16"
           initial={{ opacity: 0, y: 16 }}
@@ -87,11 +88,11 @@ export function FromTheLabSection() {
           transition={defaultTransition}
         >
           <Link
-            href="/articles"
+            href="/blog/"
             className="inline-flex items-center gap-2 border border-gray-secondary/30 bg-background px-8 py-4 font-heading text-sm font-semibold uppercase tracking-[0.15em] text-text-primary transition-colors hover:border-accent hover:text-accent"
             data-magnetic
           >
-            View all articles
+            Visit the blog
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
             </svg>

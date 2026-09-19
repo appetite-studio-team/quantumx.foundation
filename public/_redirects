@@ -1,0 +1,7 @@
+# Netlify redirect rules for the static export in `out/`.
+# See https://docs.netlify.com/routing/redirects/
+
+# The Articles section was renamed to Blog. Keep old links and search results
+# working.
+/articles     /blog/     301
+/articles/*   /blog/:splat   301

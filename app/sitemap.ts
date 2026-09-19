@@ -1,9 +1,33 @@
 import type { MetadataRoute } from 'next';
+import { MIN_POSTS_TO_INDEX_TAG, getAllPosts, getAllTags } from '@/lib/blog';
 
 const baseUrl = 'https://quantumx.foundation';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
+  const posts = getAllPosts();
+  // The blog index changes whenever a post is published or updated.
+  const blogUpdated = posts.reduce(
+    (latest, post) => (post.updated > latest ? post.updated : latest),
+    posts[0]?.updated ?? ''
+  );
+
+  const postEntries: MetadataRoute.Sitemap = posts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}/`,
+    lastModified: new Date(post.updated),
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
+
+  // Only tag archives that are indexable (see MIN_POSTS_TO_INDEX_TAG).
+  const tagEntries: MetadataRoute.Sitemap = getAllTags()
+    .filter((tag) => tag.count >= MIN_POSTS_TO_INDEX_TAG)
+    .map((tag) => ({
+      url: `${baseUrl}/blog/tag/${tag.slug}/`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.5,
+    }));
 
   return [
     {
@@ -37,11 +61,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: baseUrl + '/articles/',
-      lastModified: now,
+      url: baseUrl + '/blog/',
+      lastModified: blogUpdated ? new Date(blogUpdated) : now,
       changeFrequency: 'weekly',
       priority: 0.8,
     },
+    ...postEntries,
+    ...tagEntries,
     {
       url: baseUrl + '/research/',
       lastModified: now,

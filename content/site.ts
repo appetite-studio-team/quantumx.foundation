@@ -37,7 +37,7 @@ export const site = {
   ],
   // Footer "Resources" column.
   resourceLinks: [
-    { label: 'Articles', href: '/articles' },
+    { label: 'Blog', href: '/blog' },
     { label: 'Terms of Use', href: '/terms' },
     { label: 'Terms & Conditions', href: '/terms-and-conditions' },
     { label: 'Privacy Policy', href: '/privacy' },
@@ -74,9 +74,9 @@ export const menuItems = [
     href: '/projects',
   },
   {
-    id: 'articles',
-    label: 'Articles',
-    href: '/articles',
+    id: 'blog',
+    label: 'Blog',
+    href: '/blog',
   },
   {
     id: 'research',
