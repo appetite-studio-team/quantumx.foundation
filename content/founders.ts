@@ -78,21 +78,21 @@ export const ameen: Founder = {
 export const samad: Founder = {
   slug: 'samad',
   name: 'Abdul Samad',
-  eyebrow: 'Leadership',
-  role: 'Director',
+  eyebrow: 'Co-Founder',
+  role: 'Co-Founder & Venture Creation Lead',
   linkedin: 'https://www.linkedin.com/in/4samad/',
   x: 'https://x.com/_4samad',
   photo: '/images/founder/samad.webp',
-  photoAlt: 'Abdul Samad, Director at QuantumX',
+  photoAlt: 'Abdul Samad, Co-Founder and Venture Creation Lead at QuantumX',
   bio: [
-    'Abdul Samad is a Director at QuantumX and a founder who has spent his career building technology for public good. He brings a venture builder\'s view to the company: how ambitious technology becomes products, partnerships, and programs that reach people.',
+    'Abdul Samad is Co-Founder and Venture Creation Lead at QuantumX, and has spent his career building technology for public good. He leads how QuantumX turns ambitious technology into new ventures, products, and partnerships that reach people.',
     'For years he has worked with governments, public-good organizations, and mission-driven teams to put AI, blockchain, and modern software to work for people, communities, and the planet.',
     'He has founded Givvest, co-founded Ente Ward, and is building AIM States, each an attempt to use technology to change how communities organize, give, and govern.',
     'He describes himself as a social activist and a tech optimist, and that pairing drives his work at QuantumX: frontier technology is only worth building if it ends up serving the public.',
   ],
   focusAreas: ['Public-Good Technology', 'Venture Building', 'Product Strategy'],
   metaDescription:
-    'Abdul Samad is a Director at QuantumX and a founder building technology for public good across AI, blockchain, and digital infrastructure.',
+    'Abdul Samad is Co-Founder and Venture Creation Lead at QuantumX, building technology for public good across AI, blockchain, and digital infrastructure.',
   contactBlurb:
     'Partnerships, public-sector collaborations, and conversations about building technology for public good are all welcome. Write in and it lands on the right desk.',
 };
