@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { menuItems } from '@/content/site';
+import { navItems, joinCta, site } from '@/content/site';
 import { XIcon, LinkedInIcon, InstagramIcon } from '@/components/icons';
 
 const overlayVariants = {
@@ -29,7 +29,16 @@ const itemVariants = {
 };
 
 const linkClassName =
-  'font-heading text-2xl font-medium uppercase tracking-tight text-text-primary hover:text-accent md:text-3xl lg:text-4xl';
+  'font-heading text-2xl font-medium uppercase tracking-tight text-text-primary hover:text-accent md:text-3xl';
+
+const groupLabelClassName =
+  'font-heading text-[11px] font-medium uppercase tracking-[0.2em] text-gray-secondary';
+
+function SocialIcon({ label, className }: { label: string; className: string }) {
+  if (label === 'X') return <XIcon className={className} />;
+  if (label === 'Instagram') return <InstagramIcon className={className} />;
+  return <LinkedInIcon className={className} />;
+}
 
 interface MenuProps {
   isOpen: boolean;
@@ -75,62 +84,71 @@ export function Menu({ isOpen, onClose }: MenuProps) {
             className="fixed inset-0 z-[10003] flex items-center justify-center px-6 md:px-10"
             onClick={(e) => e.stopPropagation()}
           >
-            <ul className="flex flex-col gap-1 text-center md:gap-2">
-              {menuItems.map((item, i) => (
-                <motion.li
-                  key={item.id}
-                  custom={i}
-                  variants={itemVariants}
-                  className={`flex flex-col items-center gap-1 md:gap-2 ${'links' in item ? 'mt-8 md:mt-10' : ''}`}
+            <div className="flex max-h-full w-full max-w-md flex-col items-center gap-8 overflow-y-auto py-24 text-center md:gap-10">
+              <ul className="flex flex-col gap-7 md:gap-9">
+                {navItems.map((item, i) => (
+                  <motion.li key={item.id} custom={i} variants={itemVariants}>
+                    {'links' in item ? (
+                      <div className="flex flex-col items-center gap-1">
+                        <p className={groupLabelClassName}>{item.label}</p>
+                        {item.links.map((link) =>
+                          link.external ? (
+                            <a
+                              key={link.href}
+                              href={link.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className={linkClassName}
+                              onClick={onClose}
+                            >
+                              {link.label}
+                            </a>
+                          ) : (
+                            <Link key={link.href} href={link.href} className={linkClassName} onClick={onClose}>
+                              {link.label}
+                            </Link>
+                          )
+                        )}
+                      </div>
+                    ) : (
+                      <Link href={item.href} className={linkClassName} onClick={onClose}>
+                        {item.label}
+                      </Link>
+                    )}
+                  </motion.li>
+                ))}
+              </ul>
+              <motion.div
+                custom={navItems.length}
+                variants={itemVariants}
+                className="flex flex-col items-center gap-8"
+              >
+                <a
+                  href={joinCta.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[var(--color-cta-bg)] px-8 py-3 font-heading text-sm font-medium uppercase tracking-[0.2em] text-[var(--color-cta-text)] transition-opacity hover:opacity-85"
+                  onClick={onClose}
                 >
-                  {'links' in item ? (
-                    <div className="flex items-center justify-center gap-6 md:gap-8">
-                        {item.links.map((link) => (
-                          <a
-                            key={link.label}
-                            href={link.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-text-primary hover:text-accent transition-colors"
-                            onClick={onClose}
-                            aria-label={link.label}
-                          >
-                            {link.label === 'X' ? (
-                              <XIcon className="h-8 w-8 md:h-9 md:w-9" />
-                            ) : link.label === 'Instagram' ? (
-                              <InstagramIcon className="h-8 w-8 md:h-9 md:w-9" />
-                            ) : (
-                              <LinkedInIcon className="h-8 w-8 md:h-9 md:w-9" />
-                            )}
-                          </a>
-                        ))}
-                    </div>
-                  ) : (
-                    <>
-                      {'external' in item && item.external ? (
-                        <a
-                          href={item.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={linkClassName}
-                          onClick={onClose}
-                        >
-                          {item.label}
-                        </a>
-                      ) : (
-                        <Link
-                          href={item.href}
-                          className={linkClassName}
-                          onClick={onClose}
-                        >
-                          {item.label}
-                        </Link>
-                      )}
-                    </>
-                  )}
-                </motion.li>
-              ))}
-            </ul>
+                  {joinCta.label}
+                </a>
+                <div className="flex items-center justify-center gap-6 md:gap-8">
+                  {site.externalLinks.map((link) => (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-text-primary hover:text-accent transition-colors"
+                      onClick={onClose}
+                      aria-label={link.label}
+                    >
+                      <SocialIcon label={link.label} className="h-7 w-7 md:h-8 md:w-8" />
+                    </a>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
             <button
               type="button"
               onClick={onClose}

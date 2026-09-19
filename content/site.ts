@@ -61,54 +61,59 @@ export const projectLinks = [
   { label: 'Quantum Roadmap', href: 'https://roadmap.quantumx.school/' },
 ] as const;
 
-/** Menu dropdown: Jobs (Wellfound), Projects (section link), Founder note, Socials (icons) */
-export const menuItems = [
-  {
-    id: 'company',
-    label: 'Company',
-    href: '/company',
-  },
+/** Primary navigation. Items with `links` render as dropdowns on desktop and grouped sections in the mobile menu. */
+export type NavLink = {
+  label: string;
+  href: string;
+  description: string;
+  external?: boolean;
+};
+
+export type NavItem =
+  | { id: string; label: string; href: string; external?: boolean }
+  | { id: string; label: string; links: readonly NavLink[] };
+
+export const navItems: readonly NavItem[] = [
   {
     id: 'projects',
     label: 'Projects',
     href: '/projects',
   },
   {
-    id: 'blog',
-    label: 'Blog',
-    href: '/blog',
+    id: 'learn',
+    label: 'Learn',
+    links: [
+      {
+        label: 'Academy',
+        href: 'https://quantumx.school/',
+        description: 'Courses in quantum computing and security',
+        external: true,
+      },
+      { label: 'Blog', href: '/blog', description: 'Explainers and perspectives on quantum' },
+      { label: 'Research', href: '/research', description: 'Papers and ongoing work' },
+    ],
   },
   {
-    id: 'research',
-    label: 'Research',
-    href: '/research',
-  },
-  {
-    id: 'events',
+    id: 'community',
     label: 'Community',
-    href: '/community',
+    links: [
+      { label: 'Community', href: '/community', description: 'Events, meetups and hackathons' },
+      { label: 'Speakers', href: '/speakers', description: 'Voices from our stages' },
+    ],
   },
   {
-    id: 'speakers',
-    label: 'Speakers',
-    href: '/speakers',
+    id: 'about',
+    label: 'About',
+    links: [
+      { label: 'Company', href: '/company', description: 'Founders, leadership and mission' },
+      { label: 'Jobs', href: '/careers', description: 'Open roles at QuantumX' },
+    ],
   },
-  {
-    id: 'academy',
-    label: 'Academy',
-    href: 'https://quantumx.school/',
-    external: true,
-  },
-  {
-    id: 'jobs',
-    label: 'Jobs',
-    href: '/careers',
-  },
-  {
-    id: 'socials',
-    label: 'Socials',
-    links: site.externalLinks,
-  },
-] as const;
+];
+
+export const joinCta = {
+  label: 'Join',
+  href: 'https://quantumx.community/',
+} as const;
 
 export type Site = typeof site;

@@ -1,57 +1,151 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Menu } from '@/components/menu/Menu';
 import { useTheme } from '@/components/theme/ThemeContext';
-import { menuItems } from '@/content/site';
-import { XIcon, LinkedInIcon, InstagramIcon, SunIcon, MoonIcon } from '@/components/icons';
+import { navItems, joinCta, type NavLink } from '@/content/site';
+import { SunIcon, MoonIcon } from '@/components/icons';
 
 const navLinkClassName =
-  'font-heading text-xs font-medium uppercase tracking-[0.12em] text-text-primary hover:text-accent transition-colors xl:text-sm xl:tracking-[0.2em]';
+  'font-heading text-xs font-medium uppercase tracking-[0.12em] transition-colors hover:text-accent xl:text-sm xl:tracking-[0.2em]';
+
+const isActive = (pathname: string, href: string) =>
+  href.startsWith('/') && (pathname === href || pathname.startsWith(`${href}/`));
+
+function DropdownLink({ link, onSelect }: { link: NavLink; onSelect: () => void }) {
+  const content = (
+    <>
+      <span className="block font-heading text-xs font-medium uppercase tracking-[0.16em] text-text-primary transition-colors group-hover:text-accent">
+        {link.label}
+        {link.external && <span aria-hidden="true"> ↗</span>}
+      </span>
+      <span className="mt-1 block text-xs text-gray-secondary">{link.description}</span>
+    </>
+  );
+  const className =
+    'group block px-4 py-3 transition-colors hover:bg-[var(--color-muted-bg)] focus-visible:bg-[var(--color-muted-bg)] focus-visible:outline-none';
+
+  return link.external ? (
+    <a href={link.href} target="_blank" rel="noopener noreferrer" className={className} onClick={onSelect}>
+      {content}
+    </a>
+  ) : (
+    <Link href={link.href} className={className} onClick={onSelect}>
+      {content}
+    </Link>
+  );
+}
 
 function DesktopNav() {
+  const pathname = usePathname();
+  const [openId, setOpenId] = useState<string | null>(null);
+  const navRef = useRef<HTMLElement>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout>>();
+
+  useEffect(() => setOpenId(null), [pathname]);
+
+  useEffect(() => {
+    if (!openId) return;
+    const handlePointer = (e: PointerEvent) => {
+      if (!navRef.current?.contains(e.target as Node)) setOpenId(null);
+    };
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key !== 'Escape') return;
+      navRef.current?.querySelector<HTMLButtonElement>(`[data-nav-trigger="${openId}"]`)?.focus();
+      setOpenId(null);
+    };
+    document.addEventListener('pointerdown', handlePointer);
+    document.addEventListener('keydown', handleKey);
+    return () => {
+      document.removeEventListener('pointerdown', handlePointer);
+      document.removeEventListener('keydown', handleKey);
+    };
+  }, [openId]);
+
+  const openNow = (id: string) => {
+    clearTimeout(closeTimer.current);
+    setOpenId(id);
+  };
+  const closeSoon = () => {
+    clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => setOpenId(null), 120);
+  };
+
   return (
-    <nav className="hidden items-center gap-5 lg:flex xl:gap-8" aria-label="Primary">
-      {menuItems.map((item) =>
-        'links' in item ? (
-          <div key={item.id} className="flex items-center gap-3 xl:gap-4">
-            {item.links.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-text-primary hover:text-accent transition-colors"
-                aria-label={link.label}
-              >
-                {link.label === 'X' ? (
-                  <XIcon className="h-4 w-4" />
-                ) : link.label === 'Instagram' ? (
-                  <InstagramIcon className="h-4 w-4" />
-                ) : (
-                  <LinkedInIcon className="h-4 w-4" />
-                )}
-              </a>
-            ))}
-          </div>
-        ) : 'external' in item && item.external ? (
-          <a
+    <nav ref={navRef} className="hidden items-center gap-6 lg:flex xl:gap-10" aria-label="Primary">
+      {navItems.map((item) => {
+        if (!('links' in item)) {
+          const active = isActive(pathname, item.href);
+          return (
+            <Link
+              key={item.id}
+              href={item.href}
+              aria-current={active ? 'page' : undefined}
+              className={`${navLinkClassName} ${active ? 'text-accent' : 'text-text-primary'}`}
+            >
+              {item.label}
+            </Link>
+          );
+        }
+
+        const open = openId === item.id;
+        const active = item.links.some((link) => isActive(pathname, link.href));
+        const panelId = `nav-panel-${item.id}`;
+
+        return (
+          <div
             key={item.id}
-            href={item.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={navLinkClassName}
+            className="relative"
+            onPointerEnter={(e) => e.pointerType === 'mouse' && openNow(item.id)}
+            onPointerLeave={(e) => e.pointerType === 'mouse' && closeSoon()}
+            onBlur={(e) => {
+              if (!e.currentTarget.contains(e.relatedTarget as Node)) closeSoon();
+            }}
           >
-            {item.label}
-          </a>
-        ) : (
-          <Link key={item.id} href={item.href} className={navLinkClassName}>
-            {item.label}
-          </Link>
-        )
-      )}
+            <button
+              type="button"
+              data-nav-trigger={item.id}
+              aria-expanded={open}
+              aria-controls={panelId}
+              onClick={() => (open ? setOpenId(null) : openNow(item.id))}
+              className={`${navLinkClassName} flex items-center gap-1.5 ${
+                active || open ? 'text-accent' : 'text-text-primary'
+              }`}
+            >
+              {item.label}
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 10 6"
+                className={`h-1.5 w-2.5 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
+              >
+                <path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" strokeWidth="1.5" />
+              </svg>
+            </button>
+            <AnimatePresence>
+              {open && (
+                <motion.div
+                  id={panelId}
+                  initial={{ opacity: 0, y: -4 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -4 }}
+                  transition={{ duration: 0.15, ease: [0.22, 1, 0.36, 1] }}
+                  className="absolute left-1/2 top-full -translate-x-1/2 pt-4"
+                >
+                  <div className="w-72 border border-[var(--color-muted-border)] bg-background p-2 shadow-2xl">
+                    {item.links.map((link) => (
+                      <DropdownLink key={link.href} link={link} onSelect={() => setOpenId(null)} />
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        );
+      })}
     </nav>
   );
 }
@@ -78,6 +172,14 @@ export function SiteHeader() {
         </Link>
         <div className="flex items-center gap-4 md:gap-6">
           <DesktopNav />
+          <a
+            href={joinCta.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden bg-[var(--color-cta-bg)] px-4 py-2 font-heading text-xs font-medium uppercase tracking-[0.16em] text-[var(--color-cta-text)] transition-opacity hover:opacity-85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-cta-ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-cta-ring-offset)] sm:inline-flex"
+          >
+            {joinCta.label}
+          </a>
           <button
             type="button"
             className="text-text-primary hover:text-accent transition-colors"
