@@ -1,22 +1,83 @@
 'use client';
 
+import { useRef, type CSSProperties, type PointerEvent } from 'react';
 import { motion } from 'framer-motion';
 import { staggerContainer, staggerItem } from '@/lib/motion-variants';
 import { hero } from '@/content/home';
 
+const GRID_SIZE = 60;
+/** Max distance in px the grid drifts toward the cursor. */
+const PARALLAX = 10;
+
+/** Grid lines that drift with the cursor via --px/--py, set on the section. */
+function gridLines(color: string): CSSProperties {
+  return {
+    backgroundImage: `
+      linear-gradient(${color} 1px, transparent 1px),
+      linear-gradient(90deg, ${color} 1px, transparent 1px)
+    `,
+    backgroundSize: `${GRID_SIZE}px ${GRID_SIZE}px`,
+    backgroundPosition: 'var(--px, 0px) var(--py, 0px)',
+  };
+}
+
 export function HeroSection() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const frame = useRef<number | null>(null);
+
+  // Pointer position is written to CSS variables so the grid reacts without re-rendering.
+  const handlePointerMove = (event: PointerEvent<HTMLElement>) => {
+    if (event.pointerType !== 'mouse') return;
+    const section = sectionRef.current;
+    if (!section) return;
+    const { clientX, clientY } = event;
+    if (frame.current !== null) cancelAnimationFrame(frame.current);
+    frame.current = requestAnimationFrame(() => {
+      const rect = section.getBoundingClientRect();
+      const x = clientX - rect.left;
+      const y = clientY - rect.top;
+      section.style.setProperty('--mx', `${x}px`);
+      section.style.setProperty('--my', `${y}px`);
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        section.style.setProperty('--px', `${((x / rect.width) * 2 - 1) * PARALLAX}px`);
+        section.style.setProperty('--py', `${((y / rect.height) * 2 - 1) * PARALLAX}px`);
+      }
+      section.style.setProperty('--spot', '1');
+    });
+  };
+
+  const handlePointerLeave = () => {
+    const section = sectionRef.current;
+    if (!section) return;
+    section.style.setProperty('--px', '0px');
+    section.style.setProperty('--py', '0px');
+    section.style.setProperty('--spot', '0');
+  };
+
+  const spotlightMask = `radial-gradient(${GRID_SIZE * 4}px circle at var(--mx, 50%) var(--my, 50%), #000 0%, transparent 100%)`;
+
   return (
-    <section className="relative flex min-h-screen flex-col bg-background">
-      {/* Subtle grid overlay – same as 404 for consistent box/lines feel */}
+    <section
+      ref={sectionRef}
+      onPointerMove={handlePointerMove}
+      onPointerLeave={handlePointerLeave}
+      className="relative flex min-h-screen flex-col overflow-hidden bg-background"
+    >
+      {/* Base grid */}
       <div
-        className="absolute inset-0 pointer-events-none opacity-[0.03]"
         aria-hidden
+        className="pointer-events-none absolute inset-0 opacity-[0.08] transition-[background-position] duration-700 ease-out motion-reduce:transition-none"
+        style={gridLines('var(--color-text-primary)')}
+      />
+      {/* Accent spotlight: lights up the grid lines around the cursor */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 transition-[opacity,background-position] duration-700 ease-out motion-reduce:transition-none"
         style={{
-          backgroundImage: `
-            linear-gradient(var(--color-text-primary) 1px, transparent 1px),
-            linear-gradient(90deg, var(--color-text-primary) 1px, transparent 1px)
-          `,
-          backgroundSize: '60px 60px',
+          ...gridLines('var(--color-accent)'),
+          opacity: 'calc(var(--spot, 0) * 0.6)',
+          maskImage: spotlightMask,
+          WebkitMaskImage: spotlightMask,
         }}
       />
       {/* Center content */}
