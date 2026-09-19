@@ -7,7 +7,7 @@ import type { Founder } from '@/content/founders';
 
 const baseUrl = 'https://quantumx.foundation';
 
-export function founderUrl(founder: Founder): string {
+export function founderUrl(founder: Pick<Founder, 'slug'>): string {
   return `${baseUrl}/founder/${founder.slug}/`;
 }
 

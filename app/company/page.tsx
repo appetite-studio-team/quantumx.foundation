@@ -47,15 +47,17 @@ export const metadata: Metadata = {
   },
 };
 
-const people = company.leadership.members.map((founder) => ({
-  '@type': 'Person',
-  '@id': `${founderUrl(founder)}#person`,
-  name: founder.name,
-  jobTitle: founder.role,
-  url: founderUrl(founder),
-  image: `${baseUrl}${founder.photo}`,
-  ...(founder.linkedin ? { sameAs: [founder.linkedin] } : {}),
-}));
+const people = company.leadership.members.map((member) => {
+  const url = member.slug ? founderUrl({ slug: member.slug }) : undefined;
+  return {
+    '@type': 'Person',
+    ...(url ? { '@id': `${url}#person`, url } : {}),
+    name: member.name,
+    jobTitle: member.role,
+    image: `${baseUrl}${member.photo}`,
+    ...(member.linkedin ? { sameAs: [member.linkedin] } : {}),
+  };
+});
 
 const aboutJsonLd = {
   '@context': 'https://schema.org',

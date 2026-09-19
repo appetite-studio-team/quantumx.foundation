@@ -29,9 +29,6 @@ export function FounderProfile({ founder }: { founder: Founder }) {
             <p className="mt-5 font-heading text-base font-semibold uppercase tracking-[0.12em] text-accent md:text-lg">
               {founder.role}
             </p>
-            <p className="mt-5 max-w-xl text-lg text-gray-secondary md:text-xl">
-              {founder.headline}
-            </p>
 
             <ul className="mt-8 flex flex-wrap gap-2">
               {founder.focusAreas.map((area) => (

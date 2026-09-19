@@ -11,7 +11,6 @@ export type Founder = {
   role: string;
   email: string;
   linkedin?: string;
-  headline: string;
   photo: string;
   photoAlt: string;
   bio: string[];
@@ -31,7 +30,6 @@ export const ajmal: Founder = {
   role: 'Founder, CEO & Scientific Lead',
   email: 'ajmal@quantumx.foundation',
   linkedin: 'https://www.linkedin.com/in/ajmal-ima/',
-  headline: 'Driving quantum innovation, from molecular quantum mechanics to the tools built on top of it.',
   photo: '/images/founder/ajmal.webp',
   photoAlt: 'Ajmal Ibn Mohammed Althaf, Founder, CEO and Scientific Lead at QuantumX, speaking on stage',
   bio: [
@@ -55,8 +53,6 @@ export const ameen: Founder = {
   role: 'Co-Founder, CTO & Product Lead',
   email: 'ameen@quantumx.foundation',
   linkedin: 'https://www.linkedin.com/in/ameenx/',
-  headline:
-    'Building the systems behind ambitious ideas, from emerging technology and digital infrastructure to products designed for real-world impact.',
   photo: '/images/founder/ameen.webp',
   photoAlt: 'Muhammed Ameen Sulaiman, Co-Founder, CTO and Product Lead at QuantumX',
   bio: [

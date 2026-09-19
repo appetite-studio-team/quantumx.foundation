@@ -5,6 +5,25 @@
 
 import { ajmal, ameen } from './founders';
 
+/** A leadership card. Only founders have a `slug`, which links to their /founder/<slug> profile. */
+export type LeadershipMember = {
+  slug?: string;
+  name: string;
+  eyebrow: string;
+  role: string;
+  photo: string;
+  photoAlt: string;
+  linkedin?: string;
+};
+
+const abdulSamad: LeadershipMember = {
+  name: 'Abdul Samad',
+  eyebrow: 'Leadership',
+  role: 'Director',
+  photo: '/images/speakers/abdul-samad.webp',
+  photoAlt: 'Abdul Samad, Director at QuantumX',
+};
+
 export const company = {
   eyebrow: 'The Company',
   heading: 'About QuantumX',
@@ -54,6 +73,6 @@ export const company = {
   leadership: {
     heading: 'Founders & leadership',
     intro: 'QuantumX is led by a founding team that spans quantum science, product, and engineering.',
-    members: [ajmal, ameen],
+    members: [ajmal, ameen, abdulSamad] as LeadershipMember[],
   },
 } as const;

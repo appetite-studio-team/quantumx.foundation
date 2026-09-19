@@ -71,7 +71,7 @@ export function CompanyPage() {
         </motion.div>
 
         <motion.ul
-          className="mt-10 grid gap-6 md:grid-cols-2 md:gap-8"
+          className="mt-10 grid gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3"
           initial="hidden"
           whileInView="visible"
           viewport={defaultViewport}
@@ -82,7 +82,7 @@ export function CompanyPage() {
         >
           {company.leadership.members.map((founder) => (
             <motion.li
-              key={founder.slug}
+              key={founder.name}
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },
@@ -90,41 +90,56 @@ export function CompanyPage() {
               transition={defaultTransition}
             >
               <article className="flex h-full flex-col border border-gray-secondary/20">
-                <Link
-                  href={`/founder/${founder.slug}`}
-                  className="group relative block aspect-[4/3] w-full overflow-hidden bg-gray-secondary/10"
-                  aria-label={`${founder.name}, ${founder.role}`}
-                >
-                  <Image
-                    src={founder.photo}
-                    alt={founder.photoAlt}
-                    fill
-                    className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                </Link>
+                {founder.slug ? (
+                  <Link
+                    href={`/founder/${founder.slug}`}
+                    className="group relative block aspect-[4/3] w-full overflow-hidden bg-gray-secondary/10"
+                    aria-label={`${founder.name}, ${founder.role}`}
+                  >
+                    <Image
+                      src={founder.photo}
+                      alt={founder.photoAlt}
+                      fill
+                      className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  </Link>
+                ) : (
+                  <div className="relative aspect-[4/3] w-full overflow-hidden bg-gray-secondary/10">
+                    <Image
+                      src={founder.photo}
+                      alt={founder.photoAlt}
+                      fill
+                      className="object-cover object-center"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  </div>
+                )}
                 <div className="flex flex-1 flex-col p-6 md:p-8">
                   <p className="text-xs uppercase tracking-[0.2em] text-gray-secondary">
                     {founder.eyebrow}
                   </p>
                   <h3 className="mt-3 font-heading text-2xl font-bold uppercase leading-tight tracking-tight-heading text-text-primary md:text-3xl">
-                    <Link href={`/founder/${founder.slug}`} className="hover:text-accent">
-                      {founder.name}
-                    </Link>
+                    {founder.slug ? (
+                      <Link href={`/founder/${founder.slug}`} className="hover:text-accent">
+                        {founder.name}
+                      </Link>
+                    ) : (
+                      founder.name
+                    )}
                   </h3>
                   <p className="mt-3 font-heading text-sm font-semibold uppercase tracking-[0.12em] text-accent">
                     {founder.role}
                   </p>
-                  <p className="mt-4 text-base leading-relaxed text-gray-secondary">
-                    {founder.headline}
-                  </p>
                   <div className="mt-auto flex flex-wrap items-center gap-3 pt-6">
-                    <Link
-                      href={`/founder/${founder.slug}`}
-                      className="inline-flex items-center border border-accent/50 px-5 py-2.5 text-xs uppercase tracking-[0.2em] text-text-primary transition-colors hover:border-accent hover:text-accent"
-                    >
-                      Read profile →
-                    </Link>
+                    {founder.slug ? (
+                      <Link
+                        href={`/founder/${founder.slug}`}
+                        className="inline-flex items-center border border-accent/50 px-5 py-2.5 text-xs uppercase tracking-[0.2em] text-text-primary transition-colors hover:border-accent hover:text-accent"
+                      >
+                        Read profile →
+                      </Link>
+                    ) : null}
                     {founder.linkedin ? (
                       <a
                         href={founder.linkedin}
