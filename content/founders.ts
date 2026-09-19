@@ -54,6 +54,7 @@ export const ameen: Founder = {
   eyebrow: 'Co-Founder',
   role: 'Co-Founder, CTO & Product Lead',
   email: 'ameen@quantumx.foundation',
+  linkedin: 'https://www.linkedin.com/in/ameenx/',
   headline:
     'Building the systems behind ambitious ideas, from emerging technology and digital infrastructure to products designed for real-world impact.',
   photo: '/images/founder/ameen.webp',

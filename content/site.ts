@@ -20,6 +20,7 @@ export const site = {
   mapUrl: 'https://maps.app.goo.gl/fhyThBjLeGu8QUSb9',
   // Footer "Company" column.
   internalLinks: [
+    { label: 'The Company', href: '/company' },
     { label: 'Jobs', href: '/careers' },
     { label: 'Community', href: '/community' },
     { label: 'Speakers', href: '/speakers' },
@@ -62,6 +63,11 @@ export const projectLinks = [
 
 /** Menu dropdown: Jobs (Wellfound), Projects (section link), Founder note, Socials (icons) */
 export const menuItems = [
+  {
+    id: 'company',
+    label: 'Company',
+    href: '/company',
+  },
   {
     id: 'projects',
     label: 'Projects',
