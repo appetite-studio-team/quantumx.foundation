@@ -212,7 +212,7 @@ export function ArchitectureDiagram() {
       <div
         className="pointer-events-none absolute inset-0 opacity-60"
         aria-hidden
-        style={{ background: 'radial-gradient(60% 50% at 45% 20%, rgba(215,255,0,0.05), transparent 70%)' }}
+        style={{ background: 'radial-gradient(60% 50% at 45% 20%, rgba(168,85,247,0.05), transparent 70%)' }}
       />
 
       <div className="relative overflow-x-auto px-5 py-8 md:px-10 md:py-12">
@@ -225,7 +225,7 @@ export function ArchitectureDiagram() {
             <Chevron />
 
             {/* Engine */}
-            <div className="relative flex w-60 shrink-0 flex-col justify-center rounded-2xl border border-accent/30 bg-accent/[0.04] p-3 shadow-[0_0_40px_-12px_rgba(215,255,0,0.25)]">
+            <div className="relative flex w-60 shrink-0 flex-col justify-center rounded-2xl border border-accent/30 bg-accent/[0.04] p-3 shadow-[0_0_40px_-12px_rgba(168,85,247,0.25)]">
               <p className="mb-3 text-center font-heading text-sm font-bold uppercase tracking-tight text-white">
                 QxQuark Engine
               </p>

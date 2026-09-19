@@ -145,7 +145,7 @@ function HeroSection() {
         aria-hidden
         style={{
           background:
-            'radial-gradient(closest-side, rgba(215,255,0,0.10), transparent 70%)',
+            'radial-gradient(closest-side, rgba(168,85,247,0.10), transparent 70%)',
         }}
       />
 
@@ -153,7 +153,7 @@ function HeroSection() {
         {/* Left: copy */}
         <div>
           <motion.span
-            className="inline-flex items-center gap-2 rounded-none border-2 border-[#0a0a0a] bg-accent px-4 py-1.5 font-heading text-xs font-semibold uppercase tracking-[0.25em] text-[#0a0a0a]"
+            className="inline-flex items-center gap-2 rounded-none border-2 border-[#0a0a0a] bg-accent px-4 py-1.5 font-heading text-xs font-semibold uppercase tracking-[0.25em] text-background"
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={defaultTransition}
@@ -232,7 +232,7 @@ function HeroSection() {
             aria-hidden
             style={{
               background:
-                'radial-gradient(60% 60% at 70% 20%, rgba(215,255,0,0.08), transparent 70%)',
+                'radial-gradient(60% 60% at 70% 20%, rgba(168,85,247,0.08), transparent 70%)',
             }}
           />
           <div className={`relative ${terminalCard}`}>
@@ -249,7 +249,7 @@ function HeroSection() {
             <div className="bg-[#0c0c0e] px-5 py-5">
             <p className="mb-3 font-mono text-[13px] text-[#8b8b94] md:text-sm">
               <span className="text-[#27c93f]">$</span>{' '}
-              <span className="text-[#d7ff00]">python</span> similarity.py
+              <span className="text-[#a855f7]">python</span> similarity.py
             </p>
             <pre className="overflow-x-auto font-mono text-[13px] leading-relaxed text-[#d4d4d8] md:text-sm">
               <code>
@@ -265,7 +265,7 @@ function HeroSection() {
                 ))}
                 <div className="mt-2 whitespace-pre">
                   <span className="text-[#27c93f]">$</span>{' '}
-                  <span className="inline-block h-[1.05em] w-[0.55em] translate-y-[0.16em] animate-pulse bg-[#d7ff00]" />
+                  <span className="inline-block h-[1.05em] w-[0.55em] translate-y-[0.16em] animate-pulse bg-[#a855f7]" />
                 </div>
               </code>
             </pre>
@@ -395,7 +395,7 @@ function PerformanceSection() {
                 <div
                   className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full opacity-60 blur-2xl"
                   aria-hidden
-                  style={{ background: 'radial-gradient(closest-side, rgba(215,255,0,0.10), transparent 70%)' }}
+                  style={{ background: 'radial-gradient(closest-side, rgba(168,85,247,0.10), transparent 70%)' }}
                 />
                 <p className="font-heading text-5xl font-bold uppercase tracking-tight-heading text-accent md:text-6xl">
                   <Counter to={p.counter.to} suffix={p.counter.suffix ?? ''} />
@@ -475,7 +475,7 @@ function ProblemSection() {
             <div
               className="pointer-events-none absolute inset-0 opacity-70"
               aria-hidden
-              style={{ background: 'radial-gradient(60% 100% at 0% 50%, rgba(215,255,0,0.08), transparent 70%)' }}
+              style={{ background: 'radial-gradient(60% 100% at 0% 50%, rgba(168,85,247,0.08), transparent 70%)' }}
             />
             <p className="relative text-lg font-medium leading-relaxed text-text-primary md:text-xl">
               <span className="text-accent">&ldquo;</span>
@@ -851,7 +851,7 @@ function PlaygroundSection() {
             <div
               className="pointer-events-none absolute -top-20 right-0 h-56 w-56 rounded-full opacity-50 blur-3xl"
               aria-hidden
-              style={{ background: 'radial-gradient(closest-side, rgba(215,255,0,0.10), transparent 70%)' }}
+              style={{ background: 'radial-gradient(closest-side, rgba(168,85,247,0.10), transparent 70%)' }}
             />
 
             {/* Example selector */}
@@ -936,7 +936,7 @@ function OpenSourceSection() {
             <div className="flex items-center gap-3 bg-[#0c0c0e] px-5 py-6 font-mono text-sm md:text-base">
               <span className="select-none text-[#27c93f]">$</span>
               <span className="text-[#d4d4d8]">pip install qx-quark</span>
-              <span className="inline-block h-[1.05em] w-[0.55em] translate-y-[0.16em] animate-pulse bg-[#d7ff00]" />
+              <span className="inline-block h-[1.05em] w-[0.55em] translate-y-[0.16em] animate-pulse bg-[#a855f7]" />
             </div>
           </div>
         </Reveal>
@@ -979,7 +979,7 @@ function FinalCtaSection() {
               aria-hidden
               style={{
                 background:
-                  'radial-gradient(50% 80% at 50% 0%, rgba(215,255,0,0.08), transparent 70%)',
+                  'radial-gradient(50% 80% at 50% 0%, rgba(168,85,247,0.08), transparent 70%)',
               }}
             />
             <div className="relative mx-auto max-w-2xl">

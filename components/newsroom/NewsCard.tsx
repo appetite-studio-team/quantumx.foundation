@@ -21,7 +21,7 @@ export function NewsCard({ item }: { item: NewsItem }) {
         visible: { opacity: 1, y: 0 },
       }}
       transition={defaultTransition}
-      className="group relative flex flex-col overflow-hidden rounded-sm border border-gray-secondary/15 bg-gray-secondary/5 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_8px_32px_rgba(215,255,0,0.06)]"
+      className="group relative flex flex-col overflow-hidden rounded-sm border border-gray-secondary/15 bg-gray-secondary/5 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_8px_32px_rgba(168,85,247,0.06)]"
     >
       {/* Thumbnail */}
       <div className="relative aspect-square overflow-hidden bg-gray-secondary/20">

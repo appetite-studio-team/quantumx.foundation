@@ -5,7 +5,7 @@
 :root {
   --color-background: #0a0a0a;
   --color-text-primary: #eaeaea;
-  --color-accent: #d7ff00;
+  --color-accent: #a855f7;
   --color-gray-secondary: #8a8a8a;
   /* Chart (QuantumSpeedupSection) */
   --color-chart-grid: #333333;
@@ -32,7 +32,7 @@
 .force-dark {
   --color-background: #0a0a0a;
   --color-text-primary: #eaeaea;
-  --color-accent: #d7ff00;
+  --color-accent: #a855f7;
   --color-gray-secondary: #8a8a8a;
   --color-chart-grid: #333333;
   --color-chart-text: #666666;
@@ -55,7 +55,7 @@
 [data-theme='light'] {
   --color-background: #ffffff;
   --color-text-primary: #1a1a1a;
-  --color-accent: #9ebb00;
+  --color-accent: #9333ea;
   --color-gray-secondary: #555555;
   --color-chart-grid: #dddddd;
   --color-chart-text: #555555;

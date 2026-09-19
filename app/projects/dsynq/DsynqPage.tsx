@@ -100,14 +100,14 @@ function HeroSection() {
       <div
         className="pointer-events-none absolute -top-40 right-[-10%] h-[520px] w-[520px] rounded-full opacity-60 blur-3xl"
         aria-hidden
-        style={{ background: 'radial-gradient(closest-side, rgba(215,255,0,0.10), transparent 70%)' }}
+        style={{ background: 'radial-gradient(closest-side, rgba(168,85,247,0.10), transparent 70%)' }}
       />
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 pt-36 pb-section md:grid-cols-2 md:gap-16 md:px-10 md:pt-44">
         {/* Left: copy */}
         <div>
           <motion.span
-            className="inline-flex items-center gap-2 rounded-none border-2 border-[#0a0a0a] bg-accent px-4 py-1.5 font-heading text-xs font-semibold uppercase tracking-[0.25em] text-[#0a0a0a]"
+            className="inline-flex items-center gap-2 rounded-none border-2 border-[#0a0a0a] bg-accent px-4 py-1.5 font-heading text-xs font-semibold uppercase tracking-[0.25em] text-background"
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={defaultTransition}
@@ -198,7 +198,7 @@ function HeroSection() {
           <div
             className="pointer-events-none absolute -inset-4 opacity-70 blur-2xl"
             aria-hidden
-            style={{ background: 'radial-gradient(60% 60% at 70% 20%, rgba(215,255,0,0.08), transparent 70%)' }}
+            style={{ background: 'radial-gradient(60% 60% at 70% 20%, rgba(168,85,247,0.08), transparent 70%)' }}
           />
           <div className={`relative overflow-hidden ${cardBase} p-6 md:p-8`}>
             <div className="flex items-center justify-between">
@@ -508,7 +508,7 @@ function FinalCtaSection() {
             <div
               className="pointer-events-none absolute inset-0 opacity-70"
               aria-hidden
-              style={{ background: 'radial-gradient(50% 80% at 50% 0%, rgba(215,255,0,0.08), transparent 70%)' }}
+              style={{ background: 'radial-gradient(50% 80% at 50% 0%, rgba(168,85,247,0.08), transparent 70%)' }}
             />
             <div className="relative mx-auto max-w-2xl">
               <span className="inline-flex text-accent">

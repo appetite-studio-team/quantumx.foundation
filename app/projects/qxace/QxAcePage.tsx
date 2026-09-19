@@ -130,14 +130,14 @@ function HeroSection() {
       <div
         className="pointer-events-none absolute -top-40 right-[-10%] h-[520px] w-[520px] rounded-full opacity-60 blur-3xl"
         aria-hidden
-        style={{ background: 'radial-gradient(closest-side, rgba(215,255,0,0.10), transparent 70%)' }}
+        style={{ background: 'radial-gradient(closest-side, rgba(168,85,247,0.10), transparent 70%)' }}
       />
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 pt-36 pb-section md:grid-cols-2 md:gap-16 md:px-10 md:pt-44">
         {/* Left: copy */}
         <div>
           <motion.span
-            className="inline-flex items-center gap-2 rounded-none border-2 border-[#0a0a0a] bg-accent px-4 py-1.5 font-heading text-xs font-semibold uppercase tracking-[0.25em] text-[#0a0a0a]"
+            className="inline-flex items-center gap-2 rounded-none border-2 border-[#0a0a0a] bg-accent px-4 py-1.5 font-heading text-xs font-semibold uppercase tracking-[0.25em] text-background"
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={defaultTransition}
@@ -211,7 +211,7 @@ function HeroSection() {
           <div
             className="pointer-events-none absolute -inset-4 opacity-70 blur-2xl"
             aria-hidden
-            style={{ background: 'radial-gradient(60% 60% at 70% 20%, rgba(215,255,0,0.08), transparent 70%)' }}
+            style={{ background: 'radial-gradient(60% 60% at 70% 20%, rgba(168,85,247,0.08), transparent 70%)' }}
           />
           <div className={`relative ${terminalCard}`}>
             <div className={terminalBar}>
@@ -225,7 +225,7 @@ function HeroSection() {
             <div className="bg-[#0c0c0e] px-5 py-5">
               <p className="mb-3 font-mono text-[13px] text-[#8b8b94] md:text-sm">
                 <span className="text-[#27c93f]">$</span>{' '}
-                <span className="text-[#d7ff00]">python</span> protect.py
+                <span className="text-[#a855f7]">python</span> protect.py
               </p>
               <pre className="overflow-x-auto font-mono text-[13px] leading-relaxed text-[#d4d4d8] md:text-sm">
                 <code>
@@ -241,7 +241,7 @@ function HeroSection() {
                   ))}
                   <div className="mt-2 whitespace-pre">
                     <span className="text-[#27c93f]">$</span>{' '}
-                    <span className="inline-block h-[1.05em] w-[0.55em] translate-y-[0.16em] animate-pulse bg-[#d7ff00]" />
+                    <span className="inline-block h-[1.05em] w-[0.55em] translate-y-[0.16em] animate-pulse bg-[#a855f7]" />
                   </div>
                 </code>
               </pre>
@@ -293,7 +293,7 @@ function ShiftSection() {
               <div
                 className="pointer-events-none absolute inset-0 opacity-70"
                 aria-hidden
-                style={{ background: 'radial-gradient(70% 100% at 100% 0%, rgba(215,255,0,0.08), transparent 70%)' }}
+                style={{ background: 'radial-gradient(70% 100% at 100% 0%, rgba(168,85,247,0.08), transparent 70%)' }}
               />
               <span className="relative font-heading text-xs font-semibold uppercase tracking-[0.2em] text-accent">
                 QuantumX ACE
@@ -697,7 +697,7 @@ function ObjectivesSection() {
                 <div
                   className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full opacity-60 blur-2xl"
                   aria-hidden
-                  style={{ background: 'radial-gradient(closest-side, rgba(215,255,0,0.10), transparent 70%)' }}
+                  style={{ background: 'radial-gradient(closest-side, rgba(168,85,247,0.10), transparent 70%)' }}
                 />
                 <p className="font-heading text-5xl font-bold uppercase tracking-tight-heading text-accent md:text-6xl">
                   <Counter to={p.counter.to} />
@@ -781,7 +781,7 @@ function EncryptionCallout() {
             <div
               className="pointer-events-none absolute inset-0 opacity-70"
               aria-hidden
-              style={{ background: 'radial-gradient(60% 100% at 50% 0%, rgba(215,255,0,0.08), transparent 70%)' }}
+              style={{ background: 'radial-gradient(60% 100% at 50% 0%, rgba(168,85,247,0.08), transparent 70%)' }}
             />
             <p className="relative text-lg font-medium leading-relaxed text-text-primary md:text-xl">
               <span className="text-accent">&ldquo;</span>
@@ -822,7 +822,7 @@ function FinalCtaSection() {
             <div
               className="pointer-events-none absolute inset-0 opacity-70"
               aria-hidden
-              style={{ background: 'radial-gradient(50% 80% at 50% 0%, rgba(215,255,0,0.08), transparent 70%)' }}
+              style={{ background: 'radial-gradient(50% 80% at 50% 0%, rgba(168,85,247,0.08), transparent 70%)' }}
             />
             <div className="relative mx-auto max-w-2xl">
               <h2 className="font-heading text-clamp-section font-bold uppercase leading-tight tracking-tight-heading text-text-primary">

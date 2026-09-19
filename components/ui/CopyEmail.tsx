@@ -95,7 +95,7 @@ export function CopyEmail({ email, className = '' }: CopyEmailProps) {
         <motion.span
           className="pointer-events-none absolute inset-0 -z-10 rounded opacity-0 blur-xl transition-opacity duration-200"
           whileHover={{ opacity: 1 }}
-          style={{ boxShadow: '0 0 40px rgba(215, 255, 0, 0.08)' }}
+          style={{ boxShadow: '0 0 40px rgba(168, 85, 247, 0.08)' }}
           aria-hidden
         />
       </motion.button>

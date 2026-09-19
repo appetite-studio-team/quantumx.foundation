@@ -118,7 +118,7 @@ function Node({
 }) {
   const toneCls =
     tone === 'primary'
-      ? 'border-accent/40 bg-accent/[0.05] shadow-[0_0_40px_-12px_rgba(215,255,0,0.3)]'
+      ? 'border-accent/40 bg-accent/[0.05] shadow-[0_0_40px_-12px_rgba(168,85,247,0.3)]'
       : tone === 'terminal'
         ? 'border-accent/25 bg-gradient-to-br from-accent/[0.08] to-white/[0.02]'
         : 'border-white/[0.09] bg-white/[0.03]';
@@ -158,7 +158,7 @@ export function ArchitectureDiagram() {
       <div
         className="pointer-events-none absolute inset-0 opacity-60"
         aria-hidden
-        style={{ background: 'radial-gradient(60% 45% at 50% 15%, rgba(215,255,0,0.06), transparent 70%)' }}
+        style={{ background: 'radial-gradient(60% 45% at 50% 15%, rgba(168,85,247,0.06), transparent 70%)' }}
       />
 
       <div className="relative overflow-x-auto px-5 py-10 md:px-10 md:py-14">

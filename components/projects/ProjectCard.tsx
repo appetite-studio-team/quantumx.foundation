@@ -31,7 +31,7 @@ export function ProjectCard({ project }: { project: Project }) {
         visible: { opacity: 1, y: 0 },
       }}
       transition={defaultTransition}
-      className="group relative flex flex-col rounded-sm border border-gray-secondary/15 bg-gray-secondary/5 p-6 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_8px_32px_rgba(215,255,0,0.06)] md:p-8"
+      className="group relative flex flex-col rounded-sm border border-gray-secondary/15 bg-gray-secondary/5 p-6 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_8px_32px_rgba(168,85,247,0.06)] md:p-8"
     >
       {/* Number + status */}
       <div className="flex items-center justify-between">

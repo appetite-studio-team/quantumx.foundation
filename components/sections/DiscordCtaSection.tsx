@@ -8,14 +8,14 @@ import { site } from '@/content/site';
 /**
  * "Join our Discord" band, ported from the QFF 2026 landing page.
  * A full-bleed accent band with an oversized Discord glyph clipped behind the copy.
- * Text uses a fixed dark ink so it stays legible on the accent in both themes.
+ * Text uses the background color so it stays legible on the accent in both themes.
  * `className` controls the outer spacing so it can match its neighbours.
  */
 export function DiscordCtaSection({ className = 'my-section' }: { className?: string }) {
   return (
     <section
       aria-labelledby="discord-cta-heading"
-      className={`relative isolate overflow-hidden bg-accent px-6 py-16 text-[#0a0a0a] md:px-10 md:py-24 ${className}`}
+      className={`relative isolate overflow-hidden bg-accent px-6 py-16 text-background md:px-10 md:py-24 ${className}`}
     >
       <div
         aria-hidden="true"
@@ -52,7 +52,7 @@ export function DiscordCtaSection({ className = 'my-section' }: { className?: st
             href={site.discordInviteUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center gap-3 bg-[#0a0a0a] px-6 py-3 font-heading text-sm font-semibold uppercase tracking-[0.15em] text-accent transition-transform hover:translate-x-1"
+            className="mt-8 inline-flex items-center gap-3 bg-[#0a0a0a] px-6 py-3 font-heading text-sm font-semibold uppercase tracking-[0.15em] text-white transition-transform hover:translate-x-1"
             data-magnetic
           >
             <DiscordIcon className="h-4 w-4" />

@@ -2,7 +2,7 @@
  * Shared primitives for the QxACE (Adaptive Cryptography Engine) product page.
  *
  * Mirrors the QxQuark product-page design language (theme-aware CSS variables,
- * lime accent, Space Grotesk headings, sharp/soft card rhythm, fixed-dark
+ * purple accent, Space Grotesk headings, sharp/soft card rhythm, fixed-dark
  * terminal) so the page reads as if it shipped alongside the rest of
  * quantumx.foundation.
  */
@@ -17,11 +17,11 @@ export const cardBase =
   'rounded-sm border border-gray-secondary/15 bg-gray-secondary/5 transition-all duration-500';
 
 export const cardHover =
-  'hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_8px_32px_rgba(215,255,0,0.06)]';
+  'hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_8px_32px_rgba(168,85,247,0.06)]';
 
 /** Filled primary CTA - sharp-edged accent fill with black border + black label. */
 export const btnPrimary =
-  'inline-flex items-center justify-center gap-2 font-heading text-sm font-semibold uppercase tracking-[0.15em] px-7 py-4 rounded-none border-2 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_28px_rgba(215,255,0,0.35)] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background';
+  'inline-flex items-center justify-center gap-2 font-heading text-sm font-semibold uppercase tracking-[0.15em] px-7 py-4 rounded-none border-2 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_28px_rgba(168,85,247,0.35)] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background';
 
 export const btnPrimaryStyle = {
   backgroundColor: 'var(--color-accent)',
@@ -51,7 +51,7 @@ export const terminalBar =
 /** Fixed code-token colors for use on the dark terminal background. */
 export const termToken: Record<string, string> = {
   kw: 'text-[#8b8b94]',
-  fn: 'text-[#d7ff00]',
+  fn: 'text-[#a855f7]',
   num: 'text-[#b6e84f]',
   op: 'text-[#8b8b94]',
   cm: 'text-[#6b8f3d]',
