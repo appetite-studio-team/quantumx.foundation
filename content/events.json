@@ -3,12 +3,52 @@
   "subheading": "Join us at upcoming talks, workshops, and meetups.",
   "events": [
     {
-      "title": "IBM x QuantumX: Qiskit Fall Fest 2026",
-      "date": "2026-10-01",
-      "displayDate": "TBD",
-      "location": "Bengaluru, Karnataka",
-      "thumbnail": "/images/events/ibm-qiskit-fall-fest-2026.webp",
+      "title": "Qiskit Fall Fest 2026: Quantum Community Connect",
+      "date": "2026-10-10",
+      "displayDate": "Oct 10, 2026",
+      "location": "Startup Park, Bengaluru",
+      "thumbnail": "/images/events/qff26-event-1.webp",
+      "registerUrl": "https://luma.com/1sxdwrff"
+    },
+    {
+      "title": "Qiskit Fall Fest 2026: Foundations of Quantum Computing",
+      "date": "2026-10-17",
+      "displayDate": "Oct 17, 2026",
+      "location": "Online",
+      "thumbnail": "/images/events/qff26-event-2.webp",
+      "registerUrl": "https://luma.com/8jpgnkcg"
+    },
+    {
+      "title": "Qiskit Fall Fest 2026: Quantum Hack Day Kochi",
+      "date": "2026-11-01",
+      "displayDate": "Nov 1, 2026",
+      "location": "TinkerSpace, Kochi",
+      "thumbnail": "/images/events/qff26-event-3.webp",
+      "registerUrl": "https://luma.com/ndjvmw7w"
+    },
+    {
+      "title": "Qiskit Fall Fest 2026: Quantum and Qiskit 101",
+      "date": "2026-11-06",
+      "displayDate": "Nov 6, 2026",
+      "location": "Startup Park, Bengaluru",
+      "thumbnail": "/images/events/qff26-event-4.webp",
+      "registerUrl": "https://luma.com/hczdve5y"
+    },
+    {
+      "title": "Qiskit Fall Fest 2026: Hands-On Quantum Programming with Qiskit",
+      "date": "2026-11-16",
+      "displayDate": "Nov 16, 2026",
+      "location": "HKBK College of Engineering, Bengaluru",
+      "thumbnail": "/images/events/qff26-event-5.webp",
       "registerUrl": ""
+    },
+    {
+      "title": "Qiskit Fall Fest 2026: QuantumX Summit",
+      "date": "2026-11-28",
+      "displayDate": "Nov 28, 2026",
+      "location": "Startup Park, Bengaluru",
+      "thumbnail": "/images/events/qff26-event-6.webp",
+      "registerUrl": "https://luma.com/rzpptnuq"
     },
     {
       "title": "QX School Bootcamp",
