@@ -5,6 +5,7 @@ import { TechnologyStatementSection } from '@/components/sections/TechnologyStat
 import { CapabilitiesSection } from '@/components/sections/CapabilitiesSection';
 import { FromTheLabSection } from '@/components/sections/FromTheLabSection';
 import { EventsSection } from '@/components/sections/EventsSection';
+import { RoomsSection } from '@/components/sections/RoomsSection';
 import { NewsletterSection } from '@/components/sections/NewsletterSection';
 import { latestPosts } from '@/lib/blog';
 // TODO: re-enable once the real Discord invite is set in content/site.ts:
@@ -49,6 +50,7 @@ export default function HomePage() {
       <CapabilitiesSection />
       <FromTheLabSection posts={latestPosts(3)} />
       <EventsSection />
+      <RoomsSection />
       {/* <DiscordCtaSection /> */}
       <NewsletterSection />
     </main>
