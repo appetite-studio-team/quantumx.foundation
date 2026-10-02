@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { QuantumSpeedupSection } from '@/components/sections/QuantumSpeedupSection';
-import { TechnologyStatementSection } from '@/components/sections/TechnologyStatementSection';
-import { CapabilitiesSection } from '@/components/sections/CapabilitiesSection';
+import { PillarSections } from '@/components/sections/PillarSections';
 import { FromTheLabSection } from '@/components/sections/FromTheLabSection';
 import { EventsSection } from '@/components/sections/EventsSection';
 import { RoomsSection } from '@/components/sections/RoomsSection';
@@ -46,8 +45,7 @@ export default function HomePage() {
     <main>
       <HeroSection />
       <QuantumSpeedupSection />
-      <TechnologyStatementSection />
-      <CapabilitiesSection />
+      <PillarSections />
       <FromTheLabSection posts={latestPosts(3)} />
       <EventsSection />
       <RoomsSection />
