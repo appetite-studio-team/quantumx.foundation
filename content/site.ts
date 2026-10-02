@@ -21,7 +21,7 @@ export const site = {
   internalLinks: [
     { label: 'The Company', href: '/company' },
     { label: 'Jobs', href: '/careers' },
-    { label: 'Community', href: '/community' },
+    { label: 'Community', href: 'https://quantumx.community/' },
     { label: 'Speakers', href: '/speakers' },
     { label: 'Research', href: '/research' },
     { label: 'Newsroom', href: '/newsroom' },
@@ -32,7 +32,7 @@ export const site = {
   departmentLinks: [
     { label: 'QuantumX Technology', href: '/projects' },
     { label: 'QuantumX School', href: 'https://quantumx.school/' },
-    { label: 'QuantumX Community', href: '/community' },
+    { label: 'QuantumX Community', href: 'https://quantumx.community/' },
   ],
   // Footer "Resources" column.
   resourceLinks: [
@@ -96,7 +96,12 @@ export const navItems: readonly NavItem[] = [
     id: 'community',
     label: 'Community',
     links: [
-      { label: 'Community', href: '/community', description: 'Events, meetups and hackathons' },
+      {
+        label: 'Community',
+        href: 'https://quantumx.community/',
+        description: 'Events, meetups and hackathons',
+        external: true,
+      },
       { label: 'Speakers', href: '/speakers', description: 'Voices from our stages' },
     ],
   },

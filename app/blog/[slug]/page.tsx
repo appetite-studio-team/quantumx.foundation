@@ -199,12 +199,14 @@ export default function Page({ params }: { params: { slug: string } }) {
                   >
                     QuantumX School →
                   </a>
-                  <Link
-                    href="/community/"
+                  <a
+                    href="https://quantumx.community/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 border border-gray-secondary/30 px-5 py-3 font-heading text-xs font-semibold uppercase tracking-[0.15em] text-text-primary transition-colors hover:border-accent hover:text-accent"
                   >
                     Community
-                  </Link>
+                  </a>
                 </div>
               </aside>
             </div>

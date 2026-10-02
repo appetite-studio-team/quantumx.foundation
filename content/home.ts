@@ -44,7 +44,7 @@ export const capabilities = {
       title: 'QuantumX Community',
       description: 'A global network building the quantum future together.',
       products: [
-        { label: 'Events & Meetups', href: '/community' },
+        { label: 'Events & Meetups', href: 'https://quantumx.community/' },
         { label: 'Luma', href: 'https://luma.com/user/quantumx' },
       ],
     },

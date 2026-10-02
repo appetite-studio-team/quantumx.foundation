@@ -5,3 +5,8 @@
 # working.
 /articles     /blog/     301
 /articles/*   /blog/:splat   301
+
+# The community page moved to its own site. Forced (`!`) so the rule wins over
+# the statically exported page that still exists in `out/community/`.
+/community    https://quantumx.community/   301!
+/community/*  https://quantumx.community/   301!

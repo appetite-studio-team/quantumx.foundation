@@ -55,7 +55,7 @@ export const company = {
       number: '04',
       title: 'QuantumX Community',
       description: 'Events, hackathons, and meetups for the global quantum community.',
-      href: '/community',
+      href: 'https://quantumx.community/',
     },
   ],
   milestone: {
