@@ -13,7 +13,7 @@ function ArrowIcon({ className = 'h-4 w-4' }: { className?: string }) {
 }
 
 export function CareersPage() {
-  const pitchHref = `mailto:${site.email}?subject=${encodeURIComponent('Careers: ')}`;
+  const pitchHref = `mailto:${site.careersEmail}?subject=${encodeURIComponent('Careers: ')}`;
 
   return (
     <main className="min-h-screen bg-background text-text-primary">
@@ -101,7 +101,7 @@ export function CareersPage() {
               cover letter.
             </p>
             <span className="mt-8 inline-flex items-center gap-2 font-heading text-sm font-semibold uppercase tracking-[0.15em] text-text-primary transition-colors group-hover:text-accent">
-              {site.email}
+              {site.careersEmail}
               <ArrowIcon className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </span>
           </a>
