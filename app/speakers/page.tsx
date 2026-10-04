@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     url: 'https://quantumx.foundation/speakers/',
     images: [
       {
-        url: '/images/og-cover.png',
+        url: '/images/brand/og-cover.png',
         width: 1200,
         height: 630,
         alt: 'Speakers - QuantumX Foundation',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: 'Speakers - QuantumX Foundation',
     description:
       'Researchers, founders, and engineers who have spoken at QuantumX Foundation events, workshops, and community sessions.',
-    images: ['/images/og-cover.png'],
+    images: ['/images/brand/og-cover.png'],
   },
 };
 

@@ -16,14 +16,14 @@ export const blogDescription =
   'Guides and research notes on quantum computing, post-quantum cryptography, quantum-safe security, and building a career in quantum, from QuantumX Foundation.';
 export const blogRssPath = '/blog/rss.xml';
 
-const defaultImage = '/images/og-cover.png';
+const defaultImage = '/images/brand/og-cover.png';
 const publisher = {
   '@type': 'Organization',
   name: 'QuantumX Foundation',
   url: siteUrl,
   logo: {
     '@type': 'ImageObject',
-    url: `${siteUrl}/images/App-Icon-Black.png`,
+    url: `${siteUrl}/images/brand/app-icon-black.png`,
   },
 };
 

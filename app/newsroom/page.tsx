@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     url: 'https://quantumx.foundation/newsroom/',
     images: [
       {
-        url: '/images/og-cover.png',
+        url: '/images/brand/og-cover.png',
         width: 1200,
         height: 630,
         alt: 'Newsroom - QuantumX Foundation',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title: 'Newsroom - QuantumX Foundation',
     description:
       'Announcements, milestones, and stories from QuantumX Foundation.',
-    images: ['/images/og-cover.png'],
+    images: ['/images/brand/og-cover.png'],
   },
 };
 
@@ -50,7 +50,7 @@ const newsArticleListJsonLd = {
         name: 'QuantumX Foundation',
         logo: {
           '@type': 'ImageObject',
-          url: 'https://quantumx.foundation/images/App-Icon-Black.png',
+          url: 'https://quantumx.foundation/images/brand/app-icon-black.png',
         },
       },
     },

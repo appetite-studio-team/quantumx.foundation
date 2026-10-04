@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     url: 'https://quantumx.foundation/projects/',
     images: [
       {
-        url: '/images/og-cover.png',
+        url: '/images/brand/og-cover.png',
         width: 1200,
         height: 630,
         alt: 'Projects - QuantumX Foundation',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: 'Projects - QuantumX Foundation',
     description:
       'The QuantumX ecosystem - the tools, platforms, and research we build to make the post-quantum era open, accessible, and reliable.',
-    images: ['/images/og-cover.png'],
+    images: ['/images/brand/og-cover.png'],
   },
 };
 

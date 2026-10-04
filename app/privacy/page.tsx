@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     url: 'https://quantumx.foundation/privacy/',
     images: [
       {
-        url: '/images/og-cover.png',
+        url: '/images/brand/og-cover.png',
         width: 1200,
         height: 630,
         alt: 'Privacy Policy - QuantumX Foundation',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: 'Privacy Policy - QuantumX Foundation',
     description:
       'How QuantumX Foundation collects, uses, and protects your information.',
-    images: ['/images/og-cover.png'],
+    images: ['/images/brand/og-cover.png'],
   },
 };
 

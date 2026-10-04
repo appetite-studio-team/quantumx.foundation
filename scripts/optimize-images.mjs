@@ -17,7 +17,7 @@ import sharp from 'sharp';
 
 const IMAGES_DIR = path.join(process.cwd(), 'public', 'images');
 
-const KEEP_PNG = new Set(['og-cover.png', 'App-Icon-Black.png', 'qx-hack-poster.png']);
+const KEEP_PNG = new Set(['og-cover.png', 'app-icon-black.png', 'qx-hack-poster.png']);
 
 // Skip tiny files where format conversion overhead isn't worth it.
 const MIN_SIZE_BYTES = 20 * 1024;

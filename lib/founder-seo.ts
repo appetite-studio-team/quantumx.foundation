@@ -27,7 +27,7 @@ export function founderMetadata(founder: Founder): Metadata {
       url: founderUrl(founder),
       images: [
         {
-          url: '/images/og-cover.png',
+          url: '/images/brand/og-cover.png',
           width: 1200,
           height: 630,
           alt: title,
@@ -38,7 +38,7 @@ export function founderMetadata(founder: Founder): Metadata {
       card: 'summary_large_image',
       title,
       description,
-      images: ['/images/og-cover.png'],
+      images: ['/images/brand/og-cover.png'],
     },
   };
 }

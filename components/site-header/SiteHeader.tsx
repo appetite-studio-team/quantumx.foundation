@@ -165,7 +165,7 @@ export function SiteHeader() {
           aria-label="QuantumX Foundation home"
         >
           <Image
-            src="/images/App-Icon-Black.png"
+            src="/images/brand/app-icon-black.png"
             alt=""
             width={40}
             height={40}

@@ -60,7 +60,7 @@ export const metadata: Metadata = {
       'We are a deep-tech initiative building an open, accessible, and reliable quantum future.',
     images: [
       {
-        url: '/images/og-cover.png',
+        url: '/images/brand/og-cover.png',
         width: 1200,
         height: 630,
         alt: 'QuantumX Foundation',
@@ -73,11 +73,11 @@ export const metadata: Metadata = {
     title: 'QuantumX Foundation - Building the Foundations of the Post-Quantum Era',
     description:
       'We are a deep-tech initiative building an open, accessible, and reliable quantum future.',
-    images: ['/images/og-cover.png'],
+    images: ['/images/brand/og-cover.png'],
   },
   icons: {
-    icon: '/images/App-Icon-Black.png',
-    apple: '/images/App-Icon-Black.png',
+    icon: '/images/brand/app-icon-black.png',
+    apple: '/images/brand/app-icon-black.png',
   },
 };
 
@@ -102,7 +102,7 @@ export default function RootLayout({
               '@type': 'Organization',
               name: 'QuantumX Foundation',
               url: 'https://quantumx.foundation',
-              logo: 'https://quantumx.foundation/images/App-Icon-Black.png',
+              logo: 'https://quantumx.foundation/images/brand/app-icon-black.png',
               description:
                 'We are a deep-tech initiative building an open, accessible, and reliable quantum future. Building the foundations of the post-quantum era.',
               email: 'hi@quantumx.foundation',

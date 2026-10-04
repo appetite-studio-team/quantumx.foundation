@@ -38,7 +38,7 @@ export function ResearchPage() {
             <div className="relative aspect-square w-full">
               {/* Dark theme render */}
               <Image
-                src="/images/quantum-computer.webp"
+                src="/images/research/quantum-computer.webp"
                 alt="Quantum computer dilution refrigerator"
                 fill
                 className="theme-dark-only object-contain"
@@ -47,7 +47,7 @@ export function ResearchPage() {
               />
               {/* Light theme render */}
               <Image
-                src="/images/quantum-computer.png-wbg.webp"
+                src="/images/research/quantum-computer-transparent.webp"
                 alt="Quantum computer dilution refrigerator"
                 fill
                 className="theme-light-only object-contain"

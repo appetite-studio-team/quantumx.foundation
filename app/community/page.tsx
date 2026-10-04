@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     url: 'https://quantumx.foundation/community/',
     images: [
       {
-        url: '/images/og-cover.png',
+        url: '/images/brand/og-cover.png',
         width: 1200,
         height: 630,
         alt: 'Community - QuantumX Foundation',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: 'Community - QuantumX Foundation',
     description:
       'Hackathons, workshops, and gatherings from QuantumX Foundation - explore our upcoming and past events.',
-    images: ['/images/og-cover.png'],
+    images: ['/images/brand/og-cover.png'],
   },
 };
 

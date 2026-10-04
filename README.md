@@ -36,7 +36,7 @@ quantumx.foundation/
 ├── content/
 │   ├── site.ts             # Site-wide: menu, footer, links
 │   └── home.ts             # Home page copy and image paths
-├── public/images/          # App-Icon-Black.png, quantum-computer.png, ajmal-founder.jpg, etc.
+├── public/images/          # brand/, home/, founder/, events/, newsroom/, blog/, etc.
 ├── lib/                    # motion-variants
 ├── hooks/                  # useLenis, useMousePosition, useReducedMotion
 ├── package.json

@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     url: pageUrl,
     images: [
       {
-        url: '/images/og-cover.png',
+        url: '/images/brand/og-cover.png',
         width: 1200,
         height: 630,
         alt: 'QuantumX Foundation: the company and its founders',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title,
     description: company.metaDescription,
-    images: ['/images/og-cover.png'],
+    images: ['/images/brand/og-cover.png'],
   },
 };
 
@@ -75,7 +75,7 @@ const aboutJsonLd = {
     '@id': `${baseUrl}/#organization`,
     name: site.name,
     url: baseUrl,
-    logo: `${baseUrl}/images/App-Icon-Black.png`,
+    logo: `${baseUrl}/images/brand/app-icon-black.png`,
     description: company.intro,
     email: site.email,
     ...(site.address

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     url: 'https://quantumx.foundation/terms-and-conditions/',
     images: [
       {
-        url: '/images/og-cover.png',
+        url: '/images/brand/og-cover.png',
         width: 1200,
         height: 630,
         alt: 'Terms & Conditions - QuantumX Foundation',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: 'Terms & Conditions - QuantumX Foundation',
     description:
       'The agreement governing your participation in QuantumX Foundation’s programs, events, and services.',
-    images: ['/images/og-cover.png'],
+    images: ['/images/brand/og-cover.png'],
   },
 };
 
