@@ -47,15 +47,17 @@ export function NewsCard({ item }: { item: NewsItem }) {
           {item.summary}
         </p>
 
-        <a
-          href={item.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-sm font-medium text-text-primary underline underline-offset-4 transition-colors hover:text-accent"
-        >
-          Read more
-          <RedirectIcon className="h-4 w-4 shrink-0" />
-        </a>
+        {item.href && (
+          <a
+            href={item.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-medium text-text-primary underline underline-offset-4 transition-colors hover:text-accent"
+          >
+            Read more
+            <RedirectIcon className="h-4 w-4 shrink-0" />
+          </a>
+        )}
       </div>
     </motion.div>
   );

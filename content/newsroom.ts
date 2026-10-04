@@ -11,7 +11,8 @@ export type NewsItem = {
   title: string;
   summary: string;
   image: string;
-  href: string;
+  /** Optional link to the full post. Cards without one hide "Read more". */
+  href?: string;
 };
 
 export type NewsroomContent = {
