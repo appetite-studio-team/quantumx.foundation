@@ -24,3 +24,9 @@
 /*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
+
+# Business card contact files (see app/vcard). Static hosting ignores the
+# route's own headers, so set them here so phones open the "Add contact" sheet.
+/vcard/*
+  Content-Type: text/vcard; charset=utf-8
+  Cache-Control: public, max-age=0, must-revalidate

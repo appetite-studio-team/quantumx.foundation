@@ -23,6 +23,14 @@ export type Founder = {
   alumniOf?: string;
   /** Copy for the "Get in touch" block. */
   contactBlurb: string;
+  /** Details as printed on the business card. Used by /bc and the downloadable vCard. */
+  card: {
+    name: string;
+    title: string;
+    email: string;
+    /** International format, e.g. '+91 97466 70322'. */
+    phone: string;
+  };
 };
 
 export const ajmal: Founder = {
@@ -47,6 +55,12 @@ export const ajmal: Founder = {
   alumniOf: 'VIT Vellore',
   contactBlurb:
     'Research collaborations, speaking invitations, and mentorship requests are all welcome. Write directly and it lands on the right desk.',
+  card: {
+    name: 'Ajmal Ibn Mohammed Althaf',
+    title: 'Director, Chief Scientific Lead',
+    email: 'ajmal@quantumx.foundation',
+    phone: '+91 79022 71729',
+  },
 };
 
 export const ameen: Founder = {
@@ -73,6 +87,12 @@ export const ameen: Founder = {
     'Muhammed Ameen Sulaiman is Co-Founder and CTO at QuantumX, building product engineering, emerging technology, and digital infrastructure into systems people can rely on.',
   contactBlurb:
     'Product collaborations, engineering partnerships, and technical conversations are all welcome. Write directly and it lands on the right desk.',
+  card: {
+    name: 'Muhammed Ameen',
+    title: 'Director, Operations',
+    email: 'ameen@quantumx.foundation',
+    phone: '+91 97466 70322',
+  },
 };
 
 export const samad: Founder = {
@@ -80,6 +100,7 @@ export const samad: Founder = {
   name: 'Abdul Samad',
   eyebrow: 'Co-Founder',
   role: 'Co-Founder & Venture Architect',
+  email: 'samad@quantumx.foundation',
   linkedin: 'https://www.linkedin.com/in/4samad/',
   x: 'https://x.com/_4samad',
   photo: '/images/founder/samad.webp',
@@ -95,6 +116,17 @@ export const samad: Founder = {
     'Abdul Samad is Co-Founder and Venture Architect at QuantumX, building technology for public good across AI, blockchain, and digital infrastructure.',
   contactBlurb:
     'Partnerships, public-sector collaborations, and conversations about building technology for public good are all welcome. Write in and it lands on the right desk.',
+  card: {
+    name: 'Abdul Samad',
+    title: 'Director, Venture Architect',
+    email: 'samad@quantumx.foundation',
+    phone: '+91 81299 00880',
+  },
 };
 
 export const founders = { ajmal, ameen, samad } as const;
+
+export type FounderSlug = keyof typeof founders;
+
+/** Display order on /bc. */
+export const founderList: Founder[] = [ajmal, ameen, samad];
