@@ -34,6 +34,7 @@ export const site = {
     { label: 'QuantumX Technology', href: '/projects' },
     { label: 'QuantumX School', href: 'https://quantumx.school/' },
     { label: 'QuantumX Community', href: 'https://quantumx.community/' },
+    { label: 'QuantumX Ventures', href: 'https://quantumx.ventures/' },
   ],
   // Footer "Resources" column.
   resourceLinks: [

@@ -69,7 +69,24 @@ export const studioPhilosophy = {
   profileHref: '/founder/ajmal',
 } as const;
 
+export const ventures = {
+  eyebrow: 'QuantumX Ventures',
+  heading: 'QUANTUM, PUT TO WORK.',
+  paragraph:
+    'A venture studio for quantum technology. We start companies alongside the people doing the science, instead of waiting to invest in them later.',
+  focusAreas: [
+    'Quantum computing',
+    'Quantum software',
+    'Post-quantum security',
+    'Quantum sensing',
+    'Infrastructure & enabling tech',
+  ],
+  ctaText: 'BUILD WITH US →',
+  ctaHref: 'https://quantumx.ventures/',
+} as const;
+
 export type HeroContent = typeof hero;
 export type TechnologyContent = typeof technology;
 export type CapabilitiesContent = typeof capabilities;
 export type StudioPhilosophyContent = typeof studioPhilosophy;
+export type VenturesContent = typeof ventures;

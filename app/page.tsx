@@ -4,6 +4,7 @@ import { QuantumSpeedupSection } from '@/components/sections/QuantumSpeedupSecti
 import { TechnologyStatementSection } from '@/components/sections/TechnologyStatementSection';
 import { CapabilitiesSection } from '@/components/sections/CapabilitiesSection';
 import { FromTheLabSection } from '@/components/sections/FromTheLabSection';
+import { VenturesSection } from '@/components/sections/VenturesSection';
 import { EventsSection } from '@/components/sections/EventsSection';
 import { RoomsSection } from '@/components/sections/RoomsSection';
 import { NewsletterSection } from '@/components/sections/NewsletterSection';
@@ -49,6 +50,7 @@ export default function HomePage() {
       <TechnologyStatementSection />
       <CapabilitiesSection />
       <FromTheLabSection posts={latestPosts(3)} />
+      <VenturesSection />
       <EventsSection />
       <RoomsSection />
       {/* <DiscordCtaSection /> */}
