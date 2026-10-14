@@ -16,7 +16,7 @@ export const site = {
   tagline: 'Building the foundations of the post-quantum era.',
   discordInviteUrl: 'https://discord.com/invite/2w3pgqTQY',
   address:
-    '3rd Floor, Startup Park, Opposite Police Station, Singasandra, Bangalore South, Karnataka 560068' as string | null,
+    '3rd Floor, Startup Park, Koramangala, Bengaluru, Karnataka 560068' as string | null,
   mapUrl: 'https://maps.app.goo.gl/fhyThBjLeGu8QUSb9',
   // Footer "Company" column.
   internalLinks: [

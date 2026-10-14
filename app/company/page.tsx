@@ -82,8 +82,8 @@ const aboutJsonLd = {
       ? {
           address: {
             '@type': 'PostalAddress',
-            streetAddress: '3rd Floor, Startup Park, Opposite Police Station, Singasandra',
-            addressLocality: 'Bangalore',
+            streetAddress: '3rd Floor, Startup Park, Koramangala',
+            addressLocality: 'Bengaluru',
             addressRegion: 'Karnataka',
             postalCode: '560068',
             addressCountry: 'IN',
