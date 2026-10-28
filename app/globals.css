@@ -83,6 +83,11 @@
   display: block;
 }
 
+/* Associate logos ship white-on-transparent for the dark theme. */
+[data-theme='light'] .associate-logo {
+  filter: invert(1);
+}
+
 /* Disable native smooth scroll when Lenis is active (set by JS) */
 html.lenis,
 html.lenis body {

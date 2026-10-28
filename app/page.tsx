@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { HeroSection } from '@/components/sections/HeroSection';
+import { AssociatesSection } from '@/components/sections/AssociatesSection';
 import { QuantumSpeedupSection } from '@/components/sections/QuantumSpeedupSection';
 import { TechnologyStatementSection } from '@/components/sections/TechnologyStatementSection';
 import { CapabilitiesSection } from '@/components/sections/CapabilitiesSection';
@@ -46,6 +47,7 @@ export default function HomePage() {
   return (
     <main>
       <HeroSection />
+      <AssociatesSection />
       <QuantumSpeedupSection />
       <TechnologyStatementSection />
       <CapabilitiesSection />
