@@ -64,6 +64,36 @@
       "photo": "/images/speakers/akshat-agarwal.webp"
     },
     {
+      "name": "Dr. Subarna Roy",
+      "title": "Chief Data Scientist & Quantum Ambassador, IBM",
+      "photo": "/images/speakers/subarna-roy.webp"
+    },
+    {
+      "name": "Zachary Pederson",
+      "title": "Management Team, Girls in Quantum",
+      "photo": "/images/speakers/zachary-pederson.webp"
+    },
+    {
+      "name": "Dhruv Sachdeva",
+      "title": "Quantum Content Lead, tomorrowmensch & IBM Qiskit Advocate",
+      "photo": "/images/speakers/dhruv-sachdeva.webp"
+    },
+    {
+      "name": "Vyahriti Vootla",
+      "title": "Research, Girls in Quantum",
+      "photo": "/images/speakers/vyahriti-vootla.webp"
+    },
+    {
+      "name": "Ishita Anand",
+      "title": "Project and Team Management, Girls in Quantum",
+      "photo": "/images/speakers/ishita-anand.webp"
+    },
+    {
+      "name": "Astha",
+      "title": "Content and Design, Girls in Quantum",
+      "photo": "/images/speakers/astha.webp"
+    },
+    {
       "name": "Shreyansu Panda",
       "title": "Research Engineer, QuantumX Foundation",
       "photo": "/images/speakers/shreyansu-panda.webp"
