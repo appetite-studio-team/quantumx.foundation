@@ -112,6 +112,12 @@ export const navItems: readonly NavItem[] = [
     label: 'About',
     links: [
       { label: 'Company', href: '/company', description: 'Founders, leadership and mission' },
+      {
+        label: 'Ventures',
+        href: 'https://quantumx.ventures/',
+        description: 'Our venture studio for quantum companies',
+        external: true,
+      },
       { label: 'Jobs', href: '/careers', description: 'Open roles at QuantumX' },
       { label: 'Newsroom', href: '/newsroom', description: 'Press, announcements and coverage' },
     ],
