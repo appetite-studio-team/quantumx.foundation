@@ -12,6 +12,8 @@ export type Event = {
   location: string;
   thumbnail: string;
   registerUrl: string;
+  /** Optional event page, shown as a "View details" link next to Register. */
+  detailsUrl?: string;
 };
 
 export type EventsContent = {

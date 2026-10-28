@@ -78,7 +78,7 @@ export function EventCard({ event }: { event: Event }) {
         </h3>
 
         {/* CTA */}
-        <div className="mt-auto pt-2">
+        <div className="mt-auto flex flex-wrap items-center gap-3 pt-2">
           {upcoming ? (
             event.registerUrl ? (
               <a
@@ -102,6 +102,16 @@ export function EventCard({ event }: { event: Event }) {
             <span className="inline-flex items-center gap-2 text-sm font-medium text-gray-secondary/60">
               Event ended
             </span>
+          )}
+          {event.detailsUrl && (
+            <a
+              href={event.detailsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-sm border border-gray-secondary/25 px-5 py-2.5 font-heading text-sm font-semibold uppercase tracking-[0.15em] text-text-primary transition-colors duration-300 hover:border-accent/50 hover:text-accent"
+            >
+              View details
+            </a>
           )}
         </div>
       </div>

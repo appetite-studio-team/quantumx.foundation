@@ -24,7 +24,8 @@
       "displayDate": "Nov 1, 2026",
       "location": "TinkerSpace, Kochi",
       "thumbnail": "/images/events/qff26-event-3.webp",
-      "registerUrl": "https://luma.com/ndjvmw7w"
+      "registerUrl": "https://luma.com/ndjvmw7w",
+      "detailsUrl": "https://qff26.quantumx.foundation/kochi-hack"
     },
     {
       "title": "Qiskit Fall Fest 2026: Quantum and Qiskit 101",
