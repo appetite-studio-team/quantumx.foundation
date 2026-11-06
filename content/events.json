@@ -8,7 +8,8 @@
       "displayDate": "Oct 10, 2026",
       "location": "Startup Park, Bengaluru",
       "thumbnail": "/images/events/qff26-event-1.webp",
-      "registerUrl": "https://luma.com/1sxdwrff"
+      "registerUrl": "https://luma.com/1sxdwrff",
+      "detailsUrl": "https://qff26.quantumx.foundation/#program"
     },
     {
       "title": "Qiskit Fall Fest 2026: Foundations of Quantum Computing",
@@ -16,7 +17,8 @@
       "displayDate": "Oct 17, 2026",
       "location": "Online",
       "thumbnail": "/images/events/qff26-event-2.webp",
-      "registerUrl": "https://luma.com/8jpgnkcg"
+      "registerUrl": "https://luma.com/8jpgnkcg",
+      "detailsUrl": "https://qff26.quantumx.foundation/#program"
     },
     {
       "title": "Qiskit Fall Fest 2026: Quantum Hack Day Kochi",
@@ -33,7 +35,8 @@
       "displayDate": "Nov 6, 2026",
       "location": "Startup Park, Bengaluru",
       "thumbnail": "/images/events/qff26-event-4.webp",
-      "registerUrl": "https://luma.com/hczdve5y"
+      "registerUrl": "https://luma.com/hczdve5y",
+      "detailsUrl": "https://qff26.quantumx.foundation/#program"
     },
     {
       "title": "Qiskit Fall Fest 2026: Hands-On Quantum Programming with Qiskit",
@@ -41,7 +44,8 @@
       "displayDate": "Nov 16, 2026",
       "location": "HKBK College of Engineering, Bengaluru",
       "thumbnail": "/images/events/qff26-event-5.webp",
-      "registerUrl": ""
+      "registerUrl": "https://luma.com/79i0vamg",
+      "detailsUrl": "https://qff26.quantumx.foundation/#program"
     },
     {
       "title": "Qiskit Fall Fest 2026: QuantumX Summit",
@@ -49,7 +53,8 @@
       "displayDate": "Nov 28, 2026",
       "location": "Startup Park, Bengaluru",
       "thumbnail": "/images/events/qff26-event-6.webp",
-      "registerUrl": "https://luma.com/rzpptnuq"
+      "registerUrl": "https://luma.com/rzpptnuq",
+      "detailsUrl": "https://qff26.quantumx.foundation/#program"
     },
     {
       "title": "QX School Bootcamp",
