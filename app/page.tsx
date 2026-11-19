@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { AssociatesSection } from '@/components/sections/AssociatesSection';
+import BuildathonPartnerSection from '@/components/sections/BuildathonPartnerSection';
 import { QuantumSpeedupSection } from '@/components/sections/QuantumSpeedupSection';
 import { TechnologyStatementSection } from '@/components/sections/TechnologyStatementSection';
 import { CapabilitiesSection } from '@/components/sections/CapabilitiesSection';
@@ -47,6 +48,10 @@ export default function HomePage() {
   return (
     <main>
       <HeroSection />
+      <BuildathonPartnerSection
+        className="bg-background px-6 pt-section md:px-10"
+        inner="mx-auto w-full max-w-6xl"
+      />
       <AssociatesSection />
       <QuantumSpeedupSection />
       <TechnologyStatementSection />
