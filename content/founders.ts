@@ -41,7 +41,7 @@ export const ajmal: Founder = {
   email: 'ajmal@quantumx.foundation',
   linkedin: 'https://www.linkedin.com/in/ajmal-ima/',
   x: 'https://x.com/ajmalphyx',
-  photo: '/images/founder/ajmal.webp',
+  photo: '/images/founder/ajmal-portrait.webp',
   photoAlt: 'Ajmal Ibn Mohammed Althaf, Founder, CEO and Scientific Lead at QuantumX',
   bio: [
     'Ajmal leads QuantumX as Founder, CEO and Scientific Lead, holding both the direction of the company and its scientific agenda. His remit runs the length of the applied quantum stack: photonic device design, circuit-level tooling for near-term hardware, and the post-quantum cryptographic transition now reshaping global security infrastructure.',
