@@ -42,7 +42,7 @@ export const ajmal: Founder = {
   linkedin: 'https://www.linkedin.com/in/ajmal-ima/',
   x: 'https://x.com/ajmalphyx',
   photo: '/images/founder/ajmal.webp',
-  photoAlt: 'Ajmal Ibn Mohammed Althaf, Founder, CEO and Scientific Lead at QuantumX, speaking on stage',
+  photoAlt: 'Ajmal Ibn Mohammed Althaf, Founder, CEO and Scientific Lead at QuantumX',
   bio: [
     'Ajmal leads QuantumX as Founder, CEO and Scientific Lead, holding both the direction of the company and its scientific agenda. His remit runs the length of the applied quantum stack: photonic device design, circuit-level tooling for near-term hardware, and the post-quantum cryptographic transition now reshaping global security infrastructure.',
     'Under his direction, QuantumX has moved work from theory into shipped systems. DsynQ pairs a gdsfactory layout engine with an AI intelligence layer to turn device requirements into fabrication-ready photonic chip layouts. QuantumX ACE orchestrates post-quantum encryption strategies in real time, selecting them against live risk context. Quark, released open source, fingerprints equivalent quantum circuits at scale.',
