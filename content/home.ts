@@ -63,7 +63,7 @@ export const studioPhilosophy = {
     "QuantumX Foundation was officially launched by the Hon'ble Chief Minister of Karnataka, Shri D.K. Shivakumar, joining Karnataka's Rs. 1,000-crore Quantum Mission toward a $20B quantum economy and the state's goal of becoming the quantum capital of Asia by 2035. Just the beginning for us.",
   imageSrc: '/images/home/launch-image.webp',
   imageAlt: 'QuantumX launch – Ajmal and team with QuantumX banner',
-  headshotSrc: '/images/founder/ajmal-headshot.webp',
+  headshotSrc: '/images/founder/ajmal-headshot-3256eba3.webp',
   name: 'Ajmal Ibn Mohammed Althaf',
   role: 'Founder, QuantumX Foundation',
   profileHref: '/founder/ajmal',
