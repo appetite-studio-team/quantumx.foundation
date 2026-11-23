@@ -10,6 +10,7 @@ import { VenturesSection } from '@/components/sections/VenturesSection';
 import { EventsSection } from '@/components/sections/EventsSection';
 import { RoomsSection } from '@/components/sections/RoomsSection';
 import { NewsletterSection } from '@/components/sections/NewsletterSection';
+import { AskAiSection } from '@/components/sections/AskAiSection';
 import { latestPosts } from '@/lib/blog';
 // TODO: re-enable once the real Discord invite is set in content/site.ts:
 // import { DiscordCtaSection } from '@/components/sections/DiscordCtaSection';
@@ -62,6 +63,7 @@ export default function HomePage() {
       <RoomsSection />
       {/* <DiscordCtaSection /> */}
       <NewsletterSection />
+      <AskAiSection />
     </main>
   );
 }
