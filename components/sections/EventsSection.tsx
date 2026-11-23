@@ -7,7 +7,7 @@ import { eventsContent, recentEvents } from '@/content/events';
 import { EventCard } from '@/components/events/EventCard';
 
 export function EventsSection() {
-  const events = recentEvents(3);
+  const events = recentEvents(6);
 
   return (
     <section id="events" className="bg-background py-section px-6 text-text-primary md:px-10">
